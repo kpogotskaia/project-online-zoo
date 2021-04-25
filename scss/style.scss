@@ -39,11 +39,11 @@ $min-width: 320;
   .header__list {
     display: flex;
     margin-top: 41px;
+    li {
+        margin-left: 83px;
+    }
   }
   
-  .header__list li{
-    margin-left: 83px;
-  }
   
   .header__link {
     font-family: "Roboto", sans-serif;
@@ -51,30 +51,49 @@ $min-width: 320;
     text-decoration: none;
     font-size: 16px;
     font-weight: 900;
-    line-height: 18,75px;
-    
+    line-height: 18,75px;    
   }
   
   .header__logo {
     text-decoration: none;
     display: flex;
     flex-direction: column;
+    h1 {
+        font-family: "Roboto" sans-serif;
+        font-weight: 900;
+        font-size: 36px;
+        color: #333;        
+    }
+    p {
+            font-family: "Roboto" sans-serif;
+            font-weight: 900;
+            font-size: 18px;
+            color: #333;
+            margin-top: -30px;
+        }
+  }
+ 
+
+.header__revers {
+    width: 54px;
+    height: 30px;
+    background: #f2f2f2;
+    border-radius: 190px;
+    margin-top: 32px;
   }
   
-  .header__logo h1 {
-    font-family: "Roboto" sans-serif;
-    font-weight: 900;
-    font-size: 36px;
-    color: #333;
+  .header__revers-light {
+    width: 20px;
+    height: 20px;
+    background: #FFFFFF;
+    box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+    border-radius: 50%;
+    margin: 4.5px 0 0 5px;
+  }
+  
+  .section-one {
+    width: 100%;
+    height: 940px;
+    background-image: url("../assets/firstScreen.png");
     
   }
-  
-  .header__logo {
-      p {
-    font-family: "Roboto" sans-serif;
-    font-weight: 900;
-    font-size: 18px;
-    color: #333;
-    margin-top: -30px;
-  }
-}
