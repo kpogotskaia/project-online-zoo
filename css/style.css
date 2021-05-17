@@ -157,7 +157,7 @@ h1, h2, h3, h4, h5, h6 {
     width: 478px;
     text-align: center;
     margin-left: 120px;
-    padding: 40px 0 40px 0px;
+    padding: 10px 0 40px 0px;
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 500;
@@ -198,11 +198,80 @@ h1, h2, h3, h4, h5, h6 {
   color: #828282; }
 
 .form input {
+  outline: none;
   width: 335px;
   height: 56px;
   border: 1px solid #828282;
   box-sizing: border-box;
-  border-radius: 5px; }
+  border-radius: 5px;
+  font-size: 18px; }
+
+.form input:focus {
+  border: 1px solid #4BD8B5; }
+
+.form label {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 116.5%;
+  color: #828282; }
 
 .form__choice, .form__popap {
+  display: flex;
+  position: relative; }
+
+.form__choice-choose, .form__choice-donate {
+  margin-right: 55px; }
+  .form__choice-choose .choose, .form__choice-donate .choose {
+    position: absolute;
+    top: 20px;
+    left: 15px; }
+  .form__choice-choose .donate, .form__choice-donate .donate {
+    position: absolute;
+    top: 20px;
+    right: 260px; }
+
+.form__popap-about label, .form__popap-checkout label {
+  position: absolute;
   display: flex; }
+
+.form__popap-about-name, .form__popap-about-email,
+.form__popap-about-phone {
+  margin-right: 55px;
+  margin-bottom: 29px; }
+  .form__popap-about-name .name, .form__popap-about-email .name,
+  .form__popap-about-phone .name {
+    position: absolute;
+    top: 75px;
+    left: 15px; }
+  .form__popap-about-name .email, .form__popap-about-email .email,
+  .form__popap-about-phone .email {
+    position: absolute;
+    top: 160px;
+    left: 15px; }
+  .form__popap-about-name .phone, .form__popap-about-email .phone,
+  .form__popap-about-phone .phone {
+    position: absolute;
+    top: 245px;
+    left: 15px; }
+
+.form__popap-checkout-card, .form__popap-checkout-date,
+.form__popap-checkout-cvc {
+  margin-right: 55px;
+  margin-bottom: 29px; }
+  .form__popap-checkout-card .card, .form__popap-checkout-date .card,
+  .form__popap-checkout-cvc .card {
+    position: absolute;
+    top: 75px;
+    right: 240px; }
+  .form__popap-checkout-card .date, .form__popap-checkout-date .date,
+  .form__popap-checkout-cvc .date {
+    position: absolute;
+    top: 160px;
+    right: 250px; }
+  .form__popap-checkout-card .cvc, .form__popap-checkout-date .cvc,
+  .form__popap-checkout-cvc .cvc {
+    position: absolute;
+    top: 245px;
+    right: 290px; }
