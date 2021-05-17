@@ -145,7 +145,7 @@ $min-width: 320;
       width: 478px;
       text-align: center;
       margin-left: 120px;
-      padding: 40px 0 40px 0px;
+      padding: 10px 0 40px 0px;
       font-family: "Roboto", sans-serif;
       font-style: normal;
       font-weight: 500;
@@ -180,7 +180,7 @@ $min-width: 320;
     text-align: center;
   }
 .form {
-h3 {
+  h3 {
   font-family: "Roboto", sans-serif;
   font-style: normal;
   font-weight: bold;
@@ -189,17 +189,93 @@ h3 {
   color: #828282;
   } 
   input {
+  outline: none;
   width: 335px;
   height: 56px;
   border: 1px solid #828282;
   box-sizing: border-box;
   border-radius: 5px;
+  font-size: 18px;
+  }
+  input:focus {
+    border: 1px solid #4BD8B5;
+  }
+  label {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 116.5%;
+    color: #828282;
   }
 }
 
 .form__choice, .form__popap {
-  display: flex;
+  display: flex;  
+  position: relative;
 }
 
+.form__choice-choose, .form__choice-donate {
+  margin-right: 55px;
+  .choose {
+    position: absolute;
+    top: 20px;
+    left: 15px;
+  }
+  .donate {
+    position: absolute;
+    top: 20px;
+    right: 260px;
+  }
+}
+
+.form__popap-about, .form__popap-checkout {
+  label {
+    position: absolute;
+    display: flex;
+  }
+}
+
+.form__popap-about-name, .form__popap-about-email, 
+.form__popap-about-phone {
+  margin-right: 55px;
+  margin-bottom: 29px;
+  .name {
+    position: absolute;
+    top: 75px;
+    left: 15px;
+  }
+  .email {
+    position: absolute;
+    top: 160px;
+    left: 15px
+  }
+  .phone {
+    position: absolute;
+    top: 245px;
+    left: 15px
+  }
+}
+
+.form__popap-checkout-card, .form__popap-checkout-date, 
+.form__popap-checkout-cvc {
+  margin-right: 55px;
+  margin-bottom: 29px;
+  .card {
+    position: absolute;
+    top: 75px;
+    right: 240px;
+  }
+  .date {
+    position: absolute;
+    top: 160px;
+    right: 250px;
+  }
+  .cvc {
+    position: absolute;
+    top: 245px;
+    right: 290px;
+  }
+}
 
 
