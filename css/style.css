@@ -123,7 +123,7 @@ h1, h2, h3, h4, h5, h6 {
   padding-top: 120px;
   margin-left: 210px; }
   .section-one__title h1 {
-    font-family: "Roboto, sens-serif";
+    font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 900;
     font-size: 89px;
@@ -135,3 +135,74 @@ h1, h2, h3, h4, h5, h6 {
   height: 421px;
   display: flex;
   margin-left: 700px; }
+
+/* style popap */
+.wrapper__popap {
+  display: flex;
+  width: 1200px;
+  height: 795px;
+  background: #F9F9F9;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.19); }
+
+.wrapper__popap-img {
+  background-image: url("../assets/popap-decs/popap.png");
+  width: 197px;
+  height: 795px; }
+
+.container__popap {
+  width: 725px;
+  margin-left: 136px;
+  margin-top: 100px; }
+  .container__popap p {
+    width: 478px;
+    text-align: center;
+    margin-left: 120px;
+    padding: 40px 0 40px 0px;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 116.5%;
+    color: #828282; }
+  .container__popap button {
+    margin-left: 240px;
+    width: 245px;
+    height: 55px;
+    background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
+    border-radius: 3px;
+    /*text*/
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 21px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #FFFFFF; }
+
+.container__popap-title h3 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 116.5%;
+  text-transform: uppercase;
+  color: #313131;
+  text-align: center; }
+
+.form h3 {
+  font-family: "Roboto", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 116.5%;
+  color: #828282; }
+
+.form input {
+  width: 335px;
+  height: 56px;
+  border: 1px solid #828282;
+  box-sizing: border-box;
+  border-radius: 5px; }
+
+.form__choice, .form__popap {
+  display: flex; }
