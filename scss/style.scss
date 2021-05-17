@@ -207,6 +207,7 @@ $min-width: 320;
     font-size: 14px;
     line-height: 116.5%;
     color: #828282;
+    background: #F9F9F9;
   }
 }
 
@@ -276,6 +277,23 @@ $min-width: 320;
     top: 245px;
     right: 290px;
   }
+}
+
+.form input:focus + .choose,  .form input:focus + .donate{
+  top: - 8px;
+  color: #4BD8B5;
+}
+.form input:focus + .name, .form input:focus + .card {
+  top: 48px;
+  color: #4BD8B5;
+}
+.form input:focus + .email, .form input:focus + .date {
+  top: 133px;
+  color: #4BD8B5;
+}
+.form input:focus + .phone, .form input:focus + .cvc {
+  top: 218px;
+  color: #4BD8B5;
 }
 
 

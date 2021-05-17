@@ -215,7 +215,8 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: 500;
   font-size: 14px;
   line-height: 116.5%;
-  color: #828282; }
+  color: #828282;
+  background: #F9F9F9; }
 
 .form__choice, .form__popap {
   display: flex;
@@ -275,3 +276,19 @@ h1, h2, h3, h4, h5, h6 {
     position: absolute;
     top: 245px;
     right: 290px; }
+
+.form input:focus + .choose, .form input:focus + .donate {
+  top: -8px;
+  color: #4BD8B5; }
+
+.form input:focus + .name, .form input:focus + .card {
+  top: 48px;
+  color: #4BD8B5; }
+
+.form input:focus + .email, .form input:focus + .date {
+  top: 133px;
+  color: #4BD8B5; }
+
+.form input:focus + .phone, .form input:focus + .cvc {
+  top: 218px;
+  color: #4BD8B5; }
