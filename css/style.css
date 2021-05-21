@@ -279,6 +279,38 @@ button {
   padding-top: 25px;
   border-radius: 5px; }
 
+.section-two__benefits {
+  height: 413px;
+  background: #F2F2F2;
+  margin-top: 100px; }
+  .section-two__benefits .container {
+    display: flex;
+    flex-direction: row; }
+    .section-two__benefits .container div {
+      margin-left: 180px;
+      margin-right: 30px; }
+      .section-two__benefits .container div img {
+        margin: 100px 0 0 50px; }
+      .section-two__benefits .container div h3 {
+        margin: -60px 160px 0 0;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        color: #333333; }
+      .section-two__benefits .container div p {
+        margin: 20px 0 0 -80px;
+        width: 380px;
+        height: 48px;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #4F4F4F; }
+
 /* style popap */
 .wrapper__popap {
   display: flex;
