@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
     <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src=" http://code.jquery.com/jquery-1.7.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Online Zoo</title>
 </head>
@@ -19,12 +20,12 @@
                         <p>online</p>
                     </a>
                     <nav class="header__menu">
-                        <ul class="header__list">
+                        <ul class="header__menu-list">
                                 <li>
-                                <a href="#" class="header__link">About</a>
+                                <a href="#" class="header__link active">About</a>
                                 </li>
                                 <li>
-                                    <a href="#" class="header__link">Zoos</a>
+                                    <a href="file:///C:/Users/aleks/project-online-zoo/index.html" class="header__link ">Zoos</a>
                                 </li>
                                 <li>
                                     <a href="#" class="header__link">Map</a>
@@ -62,17 +63,19 @@
                 <img class="section-one__gallery-img" src="assets/glery1screen/fox.png" alt="eagle">
                 <img class="section-one__gallery-img" src="assets/glery1screen/eleph.png" alt="eagle">
                 <img class="section-one__gallery-img" src="assets/glery1screen/cat.png" alt="eagle">
-                </div>
+            </div>
                <div class="section-one__gallery-line">
                    <div class="gallery__line-ellipse">
                        <div></div>
                    </div>
                </div>
-                <div class="section-one__gallery-scroll">
-                    <span></span>
-                    <h3>02/</h3>
-                    <p>08</p>                
-            </div>
+                <div class="section__gallery-scroll">
+                    <span>02 /</span>
+                    <span>08</span>
+                    <div class="gallery__scroll-line">
+                        <div class="gallery__scroll-button"></div>
+                    </div>                                    
+                </div>
             <div class="section-one__sociales">
                 <a href="" class="instagram">
                     <img src="assets/sociales/instagram.png" alt="instagram">
@@ -89,6 +92,39 @@
             </div>
         </div>
     </div>
+    <div class="section-two">
+        <div class="container">
+            <h3>How it works?</h3>
+            <p>As a voice for wildlife, we are devastated by the impact 
+                of the 2020 Australian bushfires on precious species and 
+                their habitat, and we are determined to assist in all 
+                aspects, including providing veterinary support and 
+                raising much-needed emergency funds. Zoo Online saves
+                wildlife and inspires everyone to make conservation
+                a priority in their lives. Animals have the right 
+                to a pain-free and happy life. They have equal 
+                claim to the resources of this planet, and deserve 
+                a life of dignity and compassion.As a voice for wildlife,
+                we are devastated by the impact of the 2020 Australian 
+                bushfires on precious species and their habitat.</p>
+            <div class="section-two__gallery">
+                <img src="assets/rectangles/deers.png" alt="deers">
+            </div>
+            <div class="section__gallery-scroll">
+                <span>01 /</span>
+                <span>04</span>
+                <div class="gallery__scroll-line">
+                    <div class="gallery__scroll-button"></div>
+                </div> 
+            </div>
+            <button class="button">watch online
+                <div class="button__play-icon">
+                    <span></span>
+                </div>
+            </button>
+            
+        </div>
+    <script src="script.js"></script>
 </body>
 </html>
 
