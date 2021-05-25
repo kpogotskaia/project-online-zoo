@@ -60,9 +60,16 @@ h1, h2, h3, h4, h5, h6, p, span {
   width: 1620px;
   margin-left: 150px; }
 
-.container__second {
+.container-second {
   width: 1202px;
   margin-left: 360px; }
+
+.section__heading {
+  padding: 100px 0 35px 0;
+  font-size: 48px;
+  line-height: 56px;
+  text-align: center;
+  margin: 0; }
 
 .header {
   height: 94px; }
@@ -121,6 +128,7 @@ h1, h2, h3, h4, h5, h6, p, span {
   border-radius: 50%;
   margin: 4.5px 0 0 5px; }
 
+/* section one - Watch your favorite animal online */
 .section-one {
   width: auto;
   height: 940px;
@@ -283,17 +291,13 @@ button {
   flex-direction: column;
   justify-content: space-between; }
 
+/*section two - How it works */
 .section-two {
   height: 1296px; }
-  .section-two .container h3 {
-    margin-top: 100px;
-    font-size: 48px;
-    line-height: 56px;
-    text-align: center; }
   .section-two .container p {
     width: 790px;
     height: 80px;
-    margin: 30px 0 0 412px;
+    margin-left: 412px;
     font-weight: normal;
     text-align: center;
     font-size: 14px;
@@ -344,13 +348,9 @@ button {
       color: #4F4F4F;
       text-align: center; }
 
+/*section tree - Pets in Zoo*/
 .section-tree {
   height: 854px; }
-  .section-tree h3 {
-    font-style: normal;
-    font-size: 48px;
-    line-height: 56px;
-    text-align: center; }
 
 .section-tree__slider {
   width: 1202px;
@@ -428,18 +428,11 @@ button {
 .section-tree .container .button__choose-favorite {
   margin: 30px 0 0 702px; }
 
-/* Pay and feed screen */
+/* Section four - Pay and feed */
 .section-four {
   height: 754px;
   background: #F2F2F2; }
-  .section-four .container__second h3 {
-    padding-top: 100px;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 56px;
-    text-align: center; }
-  .section-four .container__second p {
+  .section-four .container-second p {
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
@@ -470,6 +463,49 @@ button {
       margin: 18px 0 0 55px; }
   .section-four__donation .arrow {
     margin-top: 215px; }
+
+/* section five - Testimonials*/
+.section-five {
+  height: 810px; }
+  .section-five .section__gallery-scroll {
+    margin: 50px 0 0 480px; }
+    .section-five .section__gallery-scroll span {
+      color: #333333; }
+    .section-five .section__gallery-scroll .gallery__scroll-line {
+      margin-left: -15px; }
+      .section-five .section__gallery-scroll .gallery__scroll-line .gallery__scroll-button {
+        background: #333333; }
+  .section-five button {
+    margin: 50px 0 0 465px; }
+
+.testimonials {
+  width: 1200px;
+  display: flex;
+  justify-content: space-between; }
+  .testimonials .testimonials__card {
+    padding-top: 47px;
+    width: 585px;
+    height: 310px;
+    box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
+    border-radius: 5px; }
+    .testimonials .testimonials__card div {
+      margin-left: 260px;
+      width: 68px;
+      height: 68px;
+      border: 1px solid slategrey;
+      border-radius: 50%; }
+    .testimonials .testimonials__card h3 {
+      text-align: center; }
+    .testimonials .testimonials__card p {
+      width: 470px;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      margin-left: 90px; }
+
+.testimonials__card-user {
+  background-image: url(../assets/users/user1.png);
+  background-size: cover; }
 
 /* style popap */
 .wrapper__popap {
