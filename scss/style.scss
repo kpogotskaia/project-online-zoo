@@ -22,6 +22,10 @@ $min-width: 320;
     width: 1620px;
     margin-left: 150px;
   }
+.container__second {
+  width: 1202px;
+  margin-left: 360px;
+}
   
   .header {
     height: 94px;
@@ -455,6 +459,59 @@ $min-width: 320;
     margin: 30px 0 0 702px;
   }
 }
+}
+
+/* Pay and feed screen */
+.section-four {
+  height: 754px;
+  background: #F2F2F2;
+  .container__second {
+    h3 {
+      padding-top: 100px;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 56px;
+      text-align: center;
+    }
+    p {
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      text-align: center;
+      margin: 0;
+    }
+  }  
+  button {
+    margin: 60px 0 0 480px;
+  }
+}
+.section-four__donation {
+  display: flex;
+  justify-content: space-between;
+  .section-four__donation-card {
+    width: 245px;
+    height: 245px;
+    border: 2px solid #628d90;
+    border-radius: 50%;
+    margin-top: 92px;
+    img {
+      margin: 70px 0 0 90px;
+    }
+    h5 {
+      position: absolute;
+      width: 135px;
+      height: 46px;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+      margin: 18px 0 0 55px;
+    }
+  }
+  .arrow {
+    margin-top: 215px;
+  }
 }
 
   /* style popap */
