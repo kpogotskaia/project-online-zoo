@@ -504,8 +504,6 @@ $min-width: 320;
   }
 }
 
-
-
 /* section five - Testimonials*/
 
 .section-five {
@@ -561,7 +559,23 @@ $min-width: 320;
  background-size: cover;
 }
 
+/*section six - Map*/
 
+.section-six {
+  height: 904px;
+  background: #F2F2F2;
+  .map__vector {
+    background-image: url(../assets/Vector.png);
+    background: no-repeat;
+  }
+}
+
+.map {
+  width: 1200px;
+  height: 498px;
+  background-image: url(../assets/map.png);
+  position: relative;
+}
 
   /* style popap */
   .wrapper__popap {

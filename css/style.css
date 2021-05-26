@@ -507,6 +507,20 @@ button {
   background-image: url(../assets/users/user1.png);
   background-size: cover; }
 
+/*section six - Map*/
+.section-six {
+  height: 904px;
+  background: #F2F2F2; }
+  .section-six .map__vector {
+    background-image: url(../assets/Vector.png);
+    background: no; }
+
+.map {
+  width: 1200px;
+  height: 498px;
+  background-image: url(../assets/map.png);
+  position: relative; }
+
 /* style popap */
 .wrapper__popap {
   display: flex;
