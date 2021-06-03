@@ -45,7 +45,7 @@
             </div> 
         </header>
     </div>
-    <div class="section-one">
+    <section class="section-one">
         <div class="container">
             <div class="section-one__title">
                <h1>Watch your favorite animal online</h1> 
@@ -105,8 +105,8 @@
                 </a>
             </div>
         </div>
-    </div>
-    <div class="section-two">
+    </section>
+    <section class="section-two">
         <div class="container">
             <h1 class="section__heading">How it works?</h1>
             <p>As a voice for wildlife, we are devastated by the impact 
@@ -160,8 +160,8 @@
                         eserve a life of dignity and compassion.</p>
                 </div>
         </div> 
-    </div>
-    <div class="section-tree">
+    </section>
+    <section class="section-tree">
         <div class="container">
             <h1 class="section__heading">Pets in Zoo</h1>
             <span class="left__button"></span>
@@ -194,8 +194,8 @@
             <button class="button__choose-favorite">Choose your favorite                
             </button>
         </div>
-    </div>
-    <div class="section-four">
+    </section>
+    <section class="section-four">
         <div class="container-second">
             <h1 class="section__heading">Pay and feed</h1>
             <p>The opportunity to easily and naturally 
@@ -226,8 +226,8 @@
             </div>
             <button>donate</button>
         </div>
-    </div>
-    <div class="section-five">
+    </section>
+    <section class="section-five">
         <div class="section-five__arrow-left"></div>
             <div class="container-second">
                 <h1 class="section__heading">Testimonials</h1>
@@ -259,13 +259,14 @@
                 <button>leave feedback</button>
             </div>
         <div class="section-five__arrow-right"></div>
-    </div>
-    <div class="section-six">
+    </section>
+    <section class="section-six">
+        <h3 class="section__heading">Map</h3>
         <div class="tooltip">
             <img src="assets/vector/eagleTooltip.png" alt="">
             <h3>West End Bald Eagle</h3>
-            <p>Region: an an island near Los Angeles</p>
-            <p>Population: more than 270pairs in 2013</p>
+            <p><b>Region:</b> an an island near Los Angeles</p>
+            <p><b>Population:</b> more than 270pairs in 2013</p>
         </div>
         <div class="container-second">
             <div class="map">
@@ -288,64 +289,74 @@
                 </div>
             </button>
         </div>
-    </div>
-    <script src="script.js"></script>
+    </section>
+    <footer>
+        
+    </footer>
 
-    <div class="wrapper__popap">
-        <div class="wrapper__popap-img"></div>
-        <div class="container__popap">
-            <div class="container__popap-title">
-                <h3>Donate for your animal</h3>
-            </div>            
-                <div class="form form__choice">
-                    <div class="form__choice-choose">
-                        <input type="text" name="" id="choose" placeholder=" "/>                    
-                        <label class="choose" for="choose">Choose an animal</label>
-                    </div>
-                    <div class="form__choice-donate">
-                        <input type="text" name="" id="donate" placeholder=" "/>
-                        <label class="donate" for="donate">To donate</label>
-                    </div>
-                </div>
-            <div class="form__popap">
-                <div class="form form__popap-about">
-                    <h3 class="form__about-title">About you</h3>
-                    <div class="form__popap-about-name">
-                        <input type="text" name="" id="name" placeholder=" "/>
-                        <label class="name" for="name">Name</label>
-                    </div>
-                    <div class="form__popap-about-email">
-                        <input type="text" name="" id="email" placeholder=" "/>
-                        <label class="email" for="email">Email</label>
-                    </div>
-                    <div class="form__popap-about-phone">
-                        <input type="text" name="" id="phone" placeholder=" "/>
-                        <label class="phone" for="phone">Phone</label>
-                    </div>
-                </div>
-                <div class="form form__popap-checkout">
-                    <h3 class="form__checkout-title">Checkout</h3>
-                    <div class="form__popap-checkout-card">
-                        <input type="text" name="" id="card-number" placeholder=" "/>
-                        <label class="card" for="card-number">Card number</label>
-                    </div>
-                    <div class="form__popap-checkout-date">
-                        <input type="text" name="" id="expiry-date" placeholder=" "/>
-                        <label class="date" for="expiry-date">Expiry date</label>
-                    </div>
-                    <div class="form__popap-checkout-cvc">
-                        <input type="text" name="" id="cvc" placeholder=" "/>
-                        <label class="cvc" for="cvc">CVC</label>
-                    </div>
-                </div>
+
+<div class="wrapper__popup">        
+        <div class="wrapper__popup-img"></div>
+               
+        <form class="form__section">
+            <h3>Donate for your animal</h3>
+            <div >
+                <fieldset class="form__block">
+                    <label class="box">
+                        <input type="text" placeholder=""/>
+                        <span>Choose an animal</span>
+                    </label> 
+                    <label class="box"> 
+                        <input type="text" placeholder=""/>
+                        <span>To donate</span> 
+                    </label>
+                </fieldset>
+            </div>
+            <div class="form__block">
+                <fieldset class="form__colum form__about">
+                    <legend class="">About you</legend>
+                    <label class="box">
+                        <input type="text" placeholder=""/>
+                        <span>Name</span>
+                    </label>    
+                    <label class="box">
+                        <input type="email" placeholder=""/>
+                        <span>Email</span>
+                    </label>
+                    <label class="box">
+                        <input type="tel" placeholder=""/>
+                        <span>Phone</span>
+                    </label>       
+                </fieldset>
+
+                <fieldset class="form__colum form__checkout">
+                    <legend class="">Checkout</legend>
+                    <label class="box">
+                        <input type="text" placeholder=""/>
+                        <span>Card number</span>
+                    </label>   
+                    <label class="box">
+                        <input type="date"placeholder=""/>
+                        <span>Expiry date</span>
+                    </label>                  
+                    <label class="box">
+                        <input type="text"placeholder=""/>
+                        <span>CVC</span>
+                    </label>
+                </fieldset>
             </div>
             <p>If don’t cancel your subscription 
                 before the trial ends on April 15, 
                 2021, you agree that you will 
                 automatically be charged</p>
-            <button>donate</button>
-        </div>
-    </div>
+            <input value="DONATE" class="popup__button" type="submit"></input>
+        </form>
+</div>
+
+
+    <script src="script.js"></script>
+  
+
 </body>
 </html>
 

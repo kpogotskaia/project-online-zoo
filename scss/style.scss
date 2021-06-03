@@ -569,7 +569,6 @@ $min-width: 320;
     background: no-repeat;
   }
 }
-
 .map {
   width: 1200px;
   height: 498px;
@@ -578,177 +577,115 @@ $min-width: 320;
 }
 
   /* style popap */
-  .wrapper__popap {
-    display: flex;
-    width: 1200px;
-    height: 795px;
-    background: #F9F9F9;
-    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.19);
-  }
-
-  .wrapper__popap-img {
-    background-image: url("../assets/popap-decs/popap.png");
-    width: 197px;
-    height: 795px;
-  }
-
-  .container__popap {
-    width: 725px;
-    margin-left: 136px;
-    margin-top: 100px;
-     p {
-      width: 478px;
-      text-align: center;
-      margin-left: 120px;
-      padding: 10px 0 40px 0px;
-      font-family: "Roboto", sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 13px;
-      line-height: 116.5%;
-      color: #828282;      
-     }
-     button {
-      margin-left: 240px; 
-      width: 245px;
-      height: 55px;     
-      background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
-      border-radius: 3px;
-      /*text*/
-      font-family: "Roboto", sans-serif;
-      font-weight: 700;
-      font-size: 20px;
-      line-height: 21px;
-      text-align: center;
-      text-transform: uppercase;
-      color: #FFFFFF;
-     }
-  }
-  .container__popap-title h3 {
-    font-family: "Roboto", sans-serif;
+.wrapper__popup {
+  margin-top: 100px;
+  display: flex;
+  background: #F9F9F9;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.19);    
+  h3 {
+    text-align: center;
     font-style: normal;
     font-weight: bold;
     font-size: 24px;
-    line-height: 116.5%;
     text-transform: uppercase;
-    color: #313131;
+  }   
+  p {      
     text-align: center;
-  }
-.form {
-  h3 {
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 18px;
-  line-height: 116.5%;
-  color: #828282;
-  } 
-  input {
-  outline: none;
-  width: 335px;
-  height: 56px;
-  border: 1px solid #828282;
-  box-sizing: border-box;
-  border-radius: 5px;
-  font-size: 18px;
-  }
-  input:focus {
-    border: 1px solid #4BD8B5;
-  }
-  label {
     font-family: "Roboto", sans-serif;
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 116.5%;
+    font-size: 13px;
     color: #828282;
-    background: #F9F9F9;
-  }
+    }
+  .popup__button {
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 16px;
+    border-radius: 5px;
+    margin: 40px 0 0 220px;
+    color: #f2f2f2;
+    width: 245px;
+    height: 55px;
+    background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+    }  
 }
-
-.form__choice, .form__popap {
-  display: flex;  
+.wrapper__popup-img {
+  display: block;
+    min-width: 197px;
+    height: 790px;
+    background: url("../assets/popap-decs/popap.png");
+    background-size: cover;
+    background-repeat: no-repeat;    
+}
+.form__section {
+  margin: 82px 139px;
+}
+input {
   position: relative;
+  width: 330px;
+  margin-top: 15px;
+  background: #F9F9F9;
+  &:focus {
+    label {
+      top: -8px
+    }
+  }
 }
 
-.form__choice-choose, .form__choice-donate {
-  margin-right: 55px;
-  .choose {
+label {
+  position: relative;
+  height: 56px;
+  border: 1px solid #628d90;
+  border-radius: 5px;  
+  span {
     position: absolute;
-    top: 20px;
     left: 15px;
-  }
-  .donate {
-    position: absolute;
     top: 20px;
-    right: 260px;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 13px;
+    color: #828282;
   }
 }
-
-.form__popap-about, .form__popap-checkout {
-  label {
-    position: absolute;
-    display: flex;
-  }
+label:focus {
+  border: 1px solid #4BD8B5;
 }
-
-.form__popap-about-name, .form__popap-about-email, 
-.form__popap-about-phone {
-  margin-right: 55px;
-  margin-bottom: 29px;
-  .name {
-    position: absolute;
-    top: 75px;
-    left: 15px;
-  }
-  .email {
-    position: absolute;
-    top: 160px;
-    left: 15px
-  }
-  .phone {
-    position: absolute;
-    top: 245px;
-    left: 15px
-  }
-}
-
-.form__popap-checkout-card, .form__popap-checkout-date, 
-.form__popap-checkout-cvc {
-  margin-right: 55px;
-  margin-bottom: 29px;
-  .card {
-    position: absolute;
-    top: 75px;
-    right: 240px;
-  }
-  .date {
-    position: absolute;
-    top: 160px;
-    right: 250px;
-  }
-  .cvc {
-    position: absolute;
-    top: 245px;
-    right: 290px;
-  }
-}
-
-.form input:focus + .choose,  .form input:focus + .donate{
-  top: - 8px;
-  color: #4BD8B5;
-}
-.form input:focus + .name, .form input:focus + .card {
-  top: 48px;
-  color: #4BD8B5;
-}
-.form input:focus + .email, .form input:focus + .date {
-  top: 133px;
-  color: #4BD8B5;
-}
-.form input:focus + .phone, .form input:focus + .cvc {
-  top: 218px;
+.is-valid {
   color: #4BD8B5;
 }
 
+.is-invalid {
+  color: red;
+}
+legend {
+  font-family: "Roboto" ,sans-serif;
+  margin-bottom: 30px;
+  color: #828282;
+  font-size: 21px;
+  font-weight: bold;
+  font-style: normal;
+}
+.form__block {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 40px;
+}
 
+.form__colum {
+  height: 276px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;  
+}
+
+/* mobil */
+@media screen and (max-width: 639px) {
+  .wrapper__popup-img {
+    display: none;
+  }
+  .form__block {
+    display: block;
+  }
+}
