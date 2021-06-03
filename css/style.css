@@ -522,72 +522,93 @@ button {
   position: relative; }
 
 /* style popap */
-.wrapper__popup {
+.wrapper_popup {
   margin-top: 100px;
   display: flex;
   background: #F9F9F9;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.19); }
-  .wrapper__popup h3 {
-    text-align: center;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    text-transform: uppercase; }
-  .wrapper__popup p {
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    color: #828282; }
-  .wrapper__popup .popup__button {
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 16px;
-    border-radius: 5px;
-    margin: 40px 0 0 220px;
-    color: #f2f2f2;
-    width: 245px;
-    height: 55px;
-    background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%); }
-
-.wrapper__popup-img {
-  display: block;
-  min-width: 197px;
-  height: 790px;
-  background: url("../assets/popap-decs/popap.png");
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.form__section {
-  margin: 82px 139px; }
-
-input {
-  position: relative;
-  width: 330px;
-  margin-top: 15px;
-  background: #F9F9F9; }
-  input:focus label {
-    top: -8px; }
-
-label {
-  position: relative;
-  height: 56px;
-  border: 1px solid #628d90;
-  border-radius: 5px; }
-  label span {
-    position: absolute;
-    left: 15px;
-    top: 20px;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    color: #828282; }
-
-label:focus {
-  border: 1px solid #4BD8B5; }
+  .wrapper_popup__img {
+    display: block;
+    min-width: 197px;
+    height: 790px;
+    background: url("../assets/popap-decs/popap.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .wrapper_popup .donation_form {
+    margin: 82px 139px; }
+    .wrapper_popup .donation_form__title {
+      text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      text-transform: uppercase; }
+    .wrapper_popup .donation_form__animal_section {
+      display: flex; }
+      .wrapper_popup .donation_form__animal_section label + label {
+        margin-left: 55px; }
+    .wrapper_popup .donation_form__block {
+      display: flex;
+      margin: 40px 0; }
+      .wrapper_popup .donation_form__block fieldset + fieldset {
+        margin-left: 55px; }
+      .wrapper_popup .donation_form__block label + label {
+        margin-top: 15px; }
+    .wrapper_popup .donation_form fieldset {
+      margin-inline-start: 0;
+      margin-inline-end: 0; }
+    .wrapper_popup .donation_form legend {
+      font-family: "Roboto" ,sans-serif;
+      margin-bottom: 30px;
+      color: #828282;
+      font-size: 21px;
+      font-weight: bold;
+      font-style: normal; }
+    .wrapper_popup .donation_form label {
+      position: relative;
+      display: block; }
+      .wrapper_popup .donation_form label input {
+        position: relative;
+        height: 56px;
+        border: 1px solid #628d90;
+        border-radius: 5px;
+        width: 335px;
+        padding-left: 26px;
+        background: #F9F9F9; }
+        .wrapper_popup .donation_form label input:focus {
+          border: 1px solid #4BD8B5; }
+      .wrapper_popup .donation_form label input:focus + span {
+        top: -6px; }
+      .wrapper_popup .donation_form label span {
+        position: absolute;
+        left: 26px;
+        top: 20px;
+        padding: 0 15px;
+        background: #F9F9F9;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        color: #828282; }
+    .wrapper_popup .donation_form__info {
+      margin: 0 125px;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      color: #828282; }
+    .wrapper_popup .donation_form__submit {
+      display: block;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 16px;
+      border-radius: 5px;
+      margin: 40px auto;
+      color: #f2f2f2;
+      width: 245px;
+      height: 55px;
+      background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%); }
 
 .is-valid {
   color: #4BD8B5; }
@@ -595,28 +616,15 @@ label:focus {
 .is-invalid {
   color: red; }
 
-legend {
-  font-family: "Roboto" ,sans-serif;
-  margin-bottom: 30px;
-  color: #828282;
-  font-size: 21px;
-  font-weight: bold;
-  font-style: normal; }
-
-.form__block {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px; }
-
-.form__colum {
-  height: 276px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column; }
-
-/* mobil */
-@media screen and (max-width: 639px) {
-  .wrapper__popup-img {
-    display: none; }
-  .form__block {
-    display: block; } }
+/* desktop */
+@media screen and (min-width: 1280px) {
+  body {
+    overflow: hidden; }
+  .wrapper_popup {
+    position: fixed;
+    width: 1200px;
+    height: 790px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0; } }

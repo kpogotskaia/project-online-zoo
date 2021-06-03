@@ -17,6 +17,8 @@ h1,h2,h3,h4,h5,h6,p,span{color: #333333;font-size: inherit;font-weight: 900; fon
 //<variables>
 $max-width-conteiner: 1625px;
 $min-width: 320;
+$input-padding: 26px;
+$horizontal-input-margin: 55px;
 
 .container {
     width: 1620px;
@@ -577,81 +579,131 @@ $min-width: 320;
 }
 
   /* style popap */
-.wrapper__popup {
+.wrapper_popup {
   margin-top: 100px;
   display: flex;
   background: #F9F9F9;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.19);
-  h3 {
-    text-align: center;
-    font-style: normal;
-    font-weight: bold;
-    font-size: 24px;
-    text-transform: uppercase;
+
+  &__img {
+    display: block;
+      min-width: 197px;
+      height: 790px;
+      background: url("../assets/popap-decs/popap.png");
+      background-size: cover;
+      background-repeat: no-repeat;
   }
-  p {
-    text-align: center;
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    color: #828282;
+
+  .donation_form {
+    margin: 82px 139px;
+
+    &__title {
+      text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 24px;
+      text-transform: uppercase;
     }
-  .popup__button {
-    font-family: "Roboto", sans-serif;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 16px;
-    border-radius: 5px;
-    margin: 40px 0 0 220px;
-    color: #f2f2f2;
-    width: 245px;
-    height: 55px;
-    background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+
+    &__animal_section {
+      display: flex;
+
+      label + label {
+        margin-left: $horizontal-input-margin;
+      }
     }
-}
-.wrapper__popup-img {
-  display: block;
-    min-width: 197px;
-    height: 790px;
-    background: url("../assets/popap-decs/popap.png");
-    background-size: cover;
-    background-repeat: no-repeat;
-}
-.form__section {
-  margin: 82px 139px;
-}
-input {
-  position: relative;
-  width: 330px;
-  margin-top: 15px;
-  background: #F9F9F9;
-  &:focus {
+
+    &__block {
+      display: flex;
+      // justify-content: space-between;
+      margin: 40px 0;
+
+      fieldset + fieldset {
+        margin-left: $horizontal-input-margin;
+      }
+
+      label + label {
+        margin-top: 15px;
+      }
+
+    }
+
+    fieldset {
+      margin-inline-start: 0;
+      margin-inline-end: 0;
+    }
+
+    legend {
+      font-family: "Roboto" ,sans-serif;
+      margin-bottom: 30px;
+      color: #828282;
+      font-size: 21px;
+      font-weight: bold;
+      font-style: normal;
+    }
+
     label {
-      top: -8px
+      position: relative;
+      display: block;
+
+      input {
+        position: relative;
+        height: 56px;
+        border: 1px solid #628d90;
+        border-radius: 5px;
+        width: 335px;
+        padding-left: $input-padding;
+        background: #F9F9F9;
+
+        &:focus {
+          border: 1px solid #4BD8B5;
+        }
+      }
+
+      input:focus + span {
+        top: -6px;
+      }
+
+      span {
+        position: absolute;
+        left: $input-padding;
+        top: 20px;
+        padding: 0 15px;
+        background: #F9F9F9;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        color: #828282;
+      }
+    }
+
+    &__info {
+      margin: 0 125px;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      color: #828282;
+    }
+
+    &__submit {
+      display: block;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 16px;
+      border-radius: 5px;
+      margin: 40px auto;
+      color: #f2f2f2;
+      width: 245px;
+      height: 55px;
+      background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
     }
   }
 }
 
-label {
-  position: relative;
-  height: 56px;
-  border: 1px solid #628d90;
-  border-radius: 5px;
-  span {
-    position: absolute;
-    left: 15px;
-    top: 20px;
-    font-family: "Poppins", sans-serif;
-    font-style: normal;
-    font-weight: 500;
-    font-size: 13px;
-    color: #828282;
-  }
-}
-label:focus {
-  border: 1px solid #4BD8B5;
-}
 .is-valid {
   color: #4BD8B5;
 }
@@ -659,33 +711,20 @@ label:focus {
 .is-invalid {
   color: red;
 }
-legend {
-  font-family: "Roboto" ,sans-serif;
-  margin-bottom: 30px;
-  color: #828282;
-  font-size: 21px;
-  font-weight: bold;
-  font-style: normal;
-}
-.form__block {
-  display: flex;
-  justify-content: space-between;
-  margin-bottom: 40px;
-}
 
-.form__colum {
-  height: 276px;
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-}
-
-/* mobil */
-@media screen and (max-width: 639px) {
-  .wrapper__popup-img {
-    display: none;
+/* desktop */
+@media screen and (min-width: 1280px) {
+  body {
+    overflow: hidden;
   }
-  .form__block {
-    display: block;
+
+  .wrapper_popup {
+    position: fixed;
+    width: 1200px;
+    height: 790px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
   }
 }
