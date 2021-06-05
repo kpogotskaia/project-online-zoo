@@ -58,11 +58,11 @@ h1, h2, h3, h4, h5, h6, p, span {
 
 .container {
   width: 1620px;
-  margin-left: 150px; }
+  margin: 0 150px; }
 
 .container-second {
   width: 1202px;
-  margin-left: 360px; }
+  margin: 0 360px; }
 
 .section__heading {
   padding: 100px 0 35px 0;
@@ -297,7 +297,7 @@ button {
   .section-two .container p {
     width: 790px;
     height: 80px;
-    margin-left: 412px;
+    margin: 0 412px;
     font-weight: normal;
     text-align: center;
     font-size: 14px;
@@ -521,7 +521,7 @@ button {
   background-image: url(../assets/map.png);
   position: relative; }
 
-/* style popap */
+/* style popup */
 .wrapper_popup {
   margin-top: 100px;
   display: flex;
@@ -628,3 +628,43 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0; } }
+
+/* tablet */
+@media screen and (max-width: 1199px) {
+  .wrapper_popup__img {
+    min-width: 139px;
+    height: auto; }
+  .wrapper_popup .donation_form {
+    margin: 82px 80px 82px 61px; }
+    .wrapper_popup .donation_form__animal_section {
+      display: block; }
+      .wrapper_popup .donation_form__animal_section label + label {
+        margin: 15px 0 0 0; }
+    .wrapper_popup .donation_form__title {
+      margin-left: 15px;
+      text-align: start; }
+    .wrapper_popup .donation_form__block {
+      display: block; }
+      .wrapper_popup .donation_form__block fieldset + fieldset {
+        margin: 30px 80px 0 0; }
+    .wrapper_popup .donation_form__info {
+      margin: 0px 155px 0 15px; }
+    .wrapper_popup .donation_form__submit {
+      display: inline;
+      margin-left: 45px; } }
+
+/* mobil */
+@media screen and (max-width: 639px) {
+  .wrapper_popup__img {
+    display: none;
+    height: auto; }
+  .donation_form__animal_section {
+    display: block; }
+    .donation_form__animal_section label + label {
+      margin-top: 15px; }
+  .donation_form__block {
+    display: block; }
+    .donation_form__block fieldset + fieldset {
+      margin-top: 30px; }
+  .donation_form__info {
+    margin: 0 15px; } }

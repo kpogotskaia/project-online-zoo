@@ -22,11 +22,11 @@ $horizontal-input-margin: 55px;
 
 .container {
     width: 1620px;
-    margin-left: 150px;
+    margin: 0 150px;
   }
 .container-second {
   width: 1202px;
-  margin-left: 360px;
+  margin: 0 360px;
 }
 .section__heading {
   padding: 100px 0 35px 0;
@@ -295,7 +295,7 @@ $horizontal-input-margin: 55px;
       p {
         width: 790px;
         height: 80px;
-        margin-left: 412px;
+        margin: 0 412px;
         font-weight: normal;
         text-align: center;
         font-size: 14px;
@@ -578,7 +578,7 @@ $horizontal-input-margin: 55px;
   position: relative;
 }
 
-  /* style popap */
+  /* style popup */
 .wrapper_popup {
   margin-top: 100px;
   display: flex;
@@ -587,11 +587,11 @@ $horizontal-input-margin: 55px;
 
   &__img {
     display: block;
-      min-width: 197px;
-      height: 790px;
-      background: url("../assets/popap-decs/popap.png");
-      background-size: cover;
-      background-repeat: no-repeat;
+    min-width: 197px;
+    height: 790px;
+    background: url("../assets/popap-decs/popap.png");
+    background-size: cover;
+    background-repeat: no-repeat;
   }
 
   .donation_form {
@@ -615,7 +615,6 @@ $horizontal-input-margin: 55px;
 
     &__block {
       display: flex;
-      // justify-content: space-between;
       margin: 40px 0;
 
       fieldset + fieldset {
@@ -726,5 +725,81 @@ $horizontal-input-margin: 55px;
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0;
+
+  }  
+}
+
+ /* tablet */
+ @media screen and (max-width: 1199px) {
+  .wrapper_popup {
+    &__img {
+      min-width: 139px;
+      height: auto;
+    }
+    .donation_form {
+        margin: 82px 80px 82px 61px;
+          &__animal_section {
+          display: block;
+          label + label {
+            margin: 15px 0 0 0;
+          }
+        }
+        &__title {
+      margin-left: 15px;
+      text-align: start;
+      }
+
+      &__block {
+        display: block;
+
+        fieldset + fieldset {
+          margin: 30px 80px 0 0;
+        }
+      }
+      &__info {
+        margin: 0px 155px 0 15px;
+      }
+
+      &__submit {
+        display: inline;
+        margin-left: 45px;
+      }
+    }
   }
 }
+
+/* mobil */
+@media screen and (max-width: 639px) {
+  .wrapper_popup {
+    &__img {
+      display: none;
+      height: auto;
+    }
+  }
+  
+  .donation_form {
+    &__animal_section {
+      display: block;
+
+      label + label {
+        margin-top: 15px;
+      }
+    }
+
+    &__block {
+      display: block;
+
+      fieldset + fieldset {
+        margin-top: 30px;
+      }
+    }
+
+    &__info {
+      margin: 0 15px;
+    }
+  }
+}
+
+
+
+
