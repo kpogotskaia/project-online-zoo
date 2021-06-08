@@ -1,3 +1,6 @@
+body {
+  overflow-x: hidden; }
+
 * {
   padding: 0;
   border: 0; }
@@ -492,64 +495,39 @@ button {
   position: relative; }
 
 .wrapper_popup {
-  margin-top: 100px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
   display: flex;
   background: #F9F9F9;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.19); }
   .wrapper_popup__img {
-    display: block;
-    min-width: 197px;
-    height: 790px;
-    background: url("../assets/popap-decs/popap.png");
-    background-size: cover;
-    background-repeat: no-repeat; }
+    display: none; }
   .wrapper_popup .donation_form {
-    margin: 82px 139px; }
-    .wrapper_popup .donation_form__close {
-      position: absolute;
-      right: 20px;
-      top: 20;
-      margin: 0;
-      height: 40px;
-      width: 40px;
-      background-color: #c7c7c770;
-      font-size: 40px; }
-      .wrapper_popup .donation_form__close .sr-only {
-        position: absolute;
-        white-space: nowrap;
-        width: 1px;
-        height: 1px;
-        overflow: hidden;
-        border: 0;
-        padding: 0;
-        clip: rect(0 0 0 0);
-        clip-path: inset(50%);
-        margin: -1px; }
+    margin: 80px 20px; }
     .wrapper_popup .donation_form__title {
+      margin: 24px 0 44px;
       text-align: center;
       font-style: normal;
       font-weight: bold;
-      font-size: 24px;
+      font-size: 20px;
       text-transform: uppercase; }
     .wrapper_popup .donation_form__animal_section {
-      display: flex; }
+      display: block; }
       .wrapper_popup .donation_form__animal_section label + label {
-        margin-left: 55px; }
-    .wrapper_popup .donation_form__block {
-      display: flex;
-      margin: 40px 0; }
-      .wrapper_popup .donation_form__block fieldset + fieldset {
-        margin-left: 55px; }
-      .wrapper_popup .donation_form__block label + label {
-        margin-top: 15px; }
+        margin-top: 30px; }
+    .wrapper_popup .donation_form__block label + label {
+      margin-top: 30px; }
     .wrapper_popup .donation_form fieldset {
+      margin-top: 30px;
       margin-inline-start: 0;
       margin-inline-end: 0; }
     .wrapper_popup .donation_form legend {
       font-family: "Roboto" ,sans-serif;
       margin-bottom: 30px;
       color: #828282;
-      font-size: 21px;
+      font-size: 18px;
       font-weight: bold;
       font-style: normal; }
     .wrapper_popup .donation_form label {
@@ -560,7 +538,7 @@ button {
         height: 56px;
         border: 1px solid #628d90;
         border-radius: 5px;
-        width: 335px;
+        width: 100%;
         padding-left: 26px;
         background: #F9F9F9; }
         .wrapper_popup .donation_form label input:focus {
@@ -580,7 +558,7 @@ button {
         font-size: 13px;
         color: #828282; }
     .wrapper_popup .donation_form__info {
-      margin: 0 125px;
+      margin: 30px 0;
       text-align: center;
       font-family: "Roboto", sans-serif;
       font-style: normal;
@@ -592,13 +570,22 @@ button {
       font-family: "Roboto", sans-serif;
       font-style: normal;
       font-weight: 900;
-      font-size: 16px;
+      font-size: 18px;
       border-radius: 5px;
       margin: 40px auto;
       color: #f2f2f2;
       width: 245px;
       height: 55px;
       background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%); }
+  .wrapper_popup__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #c7c7c770;
+    font-size: 40px; }
 
 .is-valid {
   color: #4BD8B5; }
@@ -606,50 +593,59 @@ button {
 .is-invalid {
   color: red; }
 
+@media screen and (min-width: 640px) {
+  .wrapper_popup__img {
+    display: block;
+    min-width: 139px;
+    height: auto;
+    background: url("../assets/popap-decs/popap.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .wrapper_popup .donation_form {
+    margin: 80px 13%; }
+    .wrapper_popup .donation_form__animal_section {
+      display: block; }
+    .wrapper_popup .donation_form__title {
+      margin: 24px 0 48px;
+      font-size: 24px; }
+    .wrapper_popup .donation_form fieldset {
+      margin-top: 35px; }
+    .wrapper_popup .donation_form label {
+      position: relative;
+      display: block; }
+    .wrapper_popup .donation_form__block {
+      display: block; } }
+
 @media screen and (min-width: 1280px) {
   body {
     overflow: hidden; }
   .wrapper_popup {
     position: fixed;
     width: 1200px;
-    height: 790px;
+    height: 795px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    margin: 0; } }
-
-@media screen and (max-width: 1279px) {
-  .wrapper_popup__img {
-    min-width: 139px;
-    height: auto; }
-  .wrapper_popup .donation_form__animal_section {
-    display: block; }
-    .wrapper_popup .donation_form__animal_section label + label {
-      margin: 15px 0 0 0; }
-  .wrapper_popup .donation_form__title {
-    margin-left: 15px;
-    text-align: start; }
-  .wrapper_popup .donation_form__block {
-    display: block; }
-    .wrapper_popup .donation_form__block fieldset + fieldset {
-      margin: 30px 80px 0 0; }
-  .wrapper_popup .donation_form__info {
-    margin: 0px 155px 0 15px; }
-  .wrapper_popup .donation_form__submit {
-    display: inline;
-    margin-left: 45px; } }
-
-@media screen and (max-width: 639px) {
-  .wrapper_popup__img {
-    display: none;
-    height: auto; }
-  .donation_form__animal_section {
-    display: block; }
-    .donation_form__animal_section label + label {
-      margin-top: 15px; }
-  .donation_form__block {
-    display: block; }
-    .donation_form__block fieldset + fieldset {
-      margin-top: 30px; }
-  .donation_form__info {
-    margin: 0 15px; } }
+    margin: 0; }
+    .wrapper_popup__img {
+      height: auto;
+      min-width: 197px; }
+    .wrapper_popup .donation_form {
+      margin: 80px 139px; }
+      .wrapper_popup .donation_form__title {
+        margin: 20px 0 48px; }
+      .wrapper_popup .donation_form__animal_section {
+        display: flex; }
+        .wrapper_popup .donation_form__animal_section label + label {
+          margin-top: 0;
+          margin-left: 55px; }
+      .wrapper_popup .donation_form label input {
+        width: 335px; }
+      .wrapper_popup .donation_form__block {
+        display: flex; }
+        .wrapper_popup .donation_form__block fieldset {
+          margin-top: 40px; }
+        .wrapper_popup .donation_form__block fieldset + fieldset {
+          margin-left: 55px; }
+      .wrapper_popup .donation_form__info {
+        margin: 40px 110px; } }
