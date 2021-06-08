@@ -13,23 +13,6 @@
 a:focus, a:active {
   outline: none; }
 
-nav, footer, header {
-  display: block; }
-
-html, body {
-  width: 100%;
-  height: 100%;
-  font-size: 100%;
-  line-height: 1;
-  margin: 0;
-  padding: 0; }
-
-input, button, textarea {
-  font-family: inherit; }
-
-input::-ms-clear {
-  display: none; }
-
 button {
   cursor: pointer; }
 
@@ -57,11 +40,9 @@ h1, h2, h3, h4, h5, h6, p, span {
   font-style: normal; }
 
 .container {
-  width: 1620px;
   margin: 0 150px; }
 
 .container-second {
-  width: 1202px;
   margin: 0 360px; }
 
 .section__heading {
@@ -72,77 +53,87 @@ h1, h2, h3, h4, h5, h6, p, span {
   margin: 0; }
 
 .header {
-  height: 94px; }
-
-.header__body {
   display: flex;
   justify-content: space-between; }
-
-.header__menu {
-  margin-top: 41px; }
-  .header__menu .header__menu-list {
-    display: flex; }
-    .header__menu .header__menu-list li {
-      margin-left: 83px; }
-
-.header__link {
-  font-family: "Roboto", sans-serif;
-  color: #333;
-  text-decoration: none;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 18,75px; }
+  .header__logo {
+    text-decoration: none;
+    display: flex;
+    flex-direction: column;
+    padding-top: 30px; }
+    .header__logo span:first-child {
+      font-size: 36px;
+      font-weight: 900;
+      line-height: 42px; }
+    .header__logo span:nth-child(2) {
+      font-size: 18px;
+      font-weight: 900;
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.08em; }
+  .header__menu {
+    margin-top: 41px; }
+    .header__menu-list {
+      display: flex; }
+      .header__menu-list li {
+        margin-left: 83px; }
+        .header__menu-list li .header__link {
+          font-family: "Roboto", sans-serif;
+          color: #333;
+          text-decoration: none;
+          font-size: 16px;
+          font-weight: 500;
+          line-height: 18,75px; }
+  .header__revers {
+    width: 54px;
+    height: 30px;
+    background: #f2f2f2;
+    border-radius: 190px;
+    margin-top: 50px; }
+  .header .header__revers-btn {
+    width: 20px;
+    height: 20px;
+    background: #FEFEFE;
+    box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+    border-radius: 50%;
+    margin: 4.5px 0 0 5px; }
 
 .active {
   font-weight: 900;
   border-bottom: 1px solid #333333; }
 
-.header__logo {
-  text-decoration: none;
-  display: flex;
-  flex-direction: column;
-  padding-top: 32px; }
-  .header__logo span:first-child {
-    font-size: 36px;
-    font-weight: 900;
-    line-height: 42px; }
-  .header__logo span:nth-child(2) {
-    font-size: 18px;
-    font-weight: 900;
-    font-size: 18px;
-    line-height: 21px;
-    letter-spacing: 0.08em; }
-
-.header__revers {
-  width: 54px;
-  height: 30px;
-  background: #f2f2f2;
-  border-radius: 190px;
-  margin-top: 50px; }
-
-.header__revers-light {
-  width: 20px;
-  height: 20px;
-  background: #FFFFFF;
-  box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
-  border-radius: 50%;
-  margin: 4.5px 0 0 5px; }
-
 /* section one - Watch your favorite animal online */
 .section-one {
   width: auto;
-  height: 940px;
+  height: auto;
   background: linear-gradient(rgba(119, 119, 119, 0.719), rgba(0, 0, 0, 0.541)), url("../assets/glery1screen/wild.jpg");
   background-size: cover; }
 
-.section-one__title {
-  width: 1200px;
-  height: 208px; }
-  .section-one__title h1 {
-    padding: 146px 0 0 210px;
-    font-size: 89px;
-    line-height: 104px;
-    color: #FEFEFE; }
+.favorite-animal {
+  margin-top: 35px; }
+  .favorite-animal__title {
+    padding: 205px 0 0 360px; }
+    .favorite-animal__title h1 {
+      font-size: 90px;
+      line-height: 105px;
+      color: #FEFEFE; }
+  .favorite-animal__gallery {
+    margin: 0 0 115px 840px; }
+    .favorite-animal__gallery-img {
+      display: flex; }
+      .favorite-animal__gallery-img .img-active {
+        margin: -80px 15px 0 30px; }
+        .favorite-animal__gallery-img .img-active p {
+          width: 194px;
+          height: 48px;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          color: #FFFFFF;
+          margin: 230px 0 -40px 20px; }
+      .favorite-animal__gallery-img .img {
+        margin-top: -30px;
+        width: 187px;
+        height: 265px; }
 
 button {
   display: flex;
@@ -151,7 +142,7 @@ button {
   justify-content: center;
   width: 245px;
   height: 55px;
-  margin: 197px 0px 0px 210px;
+  margin: 197px 0px 0px 360px;
   background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
   border-radius: 3px;
   font-family: "Roboto", sans-serif;
@@ -161,45 +152,24 @@ button {
   line-height: 21px;
   text-align: center;
   text-transform: uppercase;
-  color: #FFFFFF; }
-
-.button__play-icon {
-  width: 32px;
-  height: 32px;
-  margin-right: 10px;
-  border: 1px solid #FFFFFF;
-  border-radius: 50px; }
-  .button__play-icon span {
-    border-radius: 5px;
-    position: relative;
-    color: #fff; }
-  .button__play-icon span::after {
-    content: '';
-    position: absolute;
-    bottom: -20px;
-    left: -1px;
-    border: 5px solid transparent;
-    border-left: 5px solid #fff; }
-
-.section-one__gallery {
-  width: 1124px;
-  margin: 0 0 0 760px; }
-  .section-one__gallery .gallery {
-    display: flex; }
-    .section-one__gallery .gallery .img-active {
-      margin: -80px 15px 0 30px; }
-      .section-one__gallery .gallery .img-active p {
-        width: 194px;
-        height: 48px;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        color: #FFFFFF;
-        margin: 230px 0 -40px 20px; }
-    .section-one__gallery .gallery .img {
-      margin-top: -30px;
-      width: 187px;
-      height: 265px; }
+  color: #FEFEFE; }
+  button .button__play-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    border: 1px solid #FEFEFE;
+    border-radius: 50px; }
+    button .button__play-icon span {
+      border-radius: 5px;
+      position: relative;
+      color: #fff; }
+    button .button__play-icon span::after {
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: -1px;
+      border: 5px solid transparent;
+      border-left: 5px solid #fff; }
 
 .gallery-eagle {
   background-image: url("../assets/glery1screen/eagle.png");
@@ -521,7 +491,6 @@ button {
   background-image: url(../assets/map.png);
   position: relative; }
 
-/* style popup */
 .wrapper_popup {
   margin-top: 100px;
   display: flex;
@@ -536,6 +505,26 @@ button {
     background-repeat: no-repeat; }
   .wrapper_popup .donation_form {
     margin: 82px 139px; }
+    .wrapper_popup .donation_form__close {
+      position: absolute;
+      right: 20px;
+      top: 20;
+      margin: 0;
+      height: 40px;
+      width: 40px;
+      background-color: #c7c7c770;
+      font-size: 40px; }
+      .wrapper_popup .donation_form__close .sr-only {
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+        height: 1px;
+        overflow: hidden;
+        border: 0;
+        padding: 0;
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        margin: -1px; }
     .wrapper_popup .donation_form__title {
       text-align: center;
       font-style: normal;
@@ -577,6 +566,7 @@ button {
         .wrapper_popup .donation_form label input:focus {
           border: 1px solid #4BD8B5; }
       .wrapper_popup .donation_form label input:focus + span {
+        color: #4BD8B5;
         top: -6px; }
       .wrapper_popup .donation_form label span {
         position: absolute;
@@ -616,7 +606,6 @@ button {
 .is-invalid {
   color: red; }
 
-/* desktop */
 @media screen and (min-width: 1280px) {
   body {
     overflow: hidden; }
@@ -629,31 +618,27 @@ button {
     transform: translate(-50%, -50%);
     margin: 0; } }
 
-/* tablet */
-@media screen and (max-width: 1199px) {
+@media screen and (max-width: 1279px) {
   .wrapper_popup__img {
     min-width: 139px;
     height: auto; }
-  .wrapper_popup .donation_form {
-    margin: 82px 80px 82px 61px; }
-    .wrapper_popup .donation_form__animal_section {
-      display: block; }
-      .wrapper_popup .donation_form__animal_section label + label {
-        margin: 15px 0 0 0; }
-    .wrapper_popup .donation_form__title {
-      margin-left: 15px;
-      text-align: start; }
-    .wrapper_popup .donation_form__block {
-      display: block; }
-      .wrapper_popup .donation_form__block fieldset + fieldset {
-        margin: 30px 80px 0 0; }
-    .wrapper_popup .donation_form__info {
-      margin: 0px 155px 0 15px; }
-    .wrapper_popup .donation_form__submit {
-      display: inline;
-      margin-left: 45px; } }
+  .wrapper_popup .donation_form__animal_section {
+    display: block; }
+    .wrapper_popup .donation_form__animal_section label + label {
+      margin: 15px 0 0 0; }
+  .wrapper_popup .donation_form__title {
+    margin-left: 15px;
+    text-align: start; }
+  .wrapper_popup .donation_form__block {
+    display: block; }
+    .wrapper_popup .donation_form__block fieldset + fieldset {
+      margin: 30px 80px 0 0; }
+  .wrapper_popup .donation_form__info {
+    margin: 0px 155px 0 15px; }
+  .wrapper_popup .donation_form__submit {
+    display: inline;
+    margin-left: 45px; } }
 
-/* mobil */
 @media screen and (max-width: 639px) {
   .wrapper_popup__img {
     display: none;
