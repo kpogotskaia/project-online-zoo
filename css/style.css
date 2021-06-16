@@ -110,33 +110,88 @@ h1, h2, h3, h4, h5, h6, p, span {
   height: auto;
   background: linear-gradient(rgba(119, 119, 119, 0.719), rgba(0, 0, 0, 0.541)), url("../assets/glery1screen/wild.jpg");
   background-size: cover; }
-
-.favorite-animal {
-  margin-top: 35px; }
-  .favorite-animal__title {
-    padding: 205px 0 0 360px; }
-    .favorite-animal__title h1 {
+  .section-one .container .favorite-animal {
+    margin-top: 35px; }
+    .section-one .container .favorite-animal__title h1 {
+      padding: 205px 520px 0 210px;
       font-size: 90px;
       line-height: 105px;
-      color: #FEFEFE; }
-  .favorite-animal__gallery {
-    margin: 0 0 115px 840px; }
-    .favorite-animal__gallery-img {
-      display: flex; }
-      .favorite-animal__gallery-img .img-active {
-        margin: -80px 15px 0 30px; }
-        .favorite-animal__gallery-img .img-active p {
-          width: 194px;
-          height: 48px;
-          font-weight: normal;
-          font-size: 14px;
-          line-height: 16px;
-          color: #FFFFFF;
-          margin: 230px 0 -40px 20px; }
-      .favorite-animal__gallery-img .img {
-        margin-top: -30px;
-        width: 187px;
-        height: 265px; }
+      color: #FEFEFE;
+      margin: 0; }
+  .section-one .container .section-one__sociales {
+    margin-top: 180px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .section-one .container .section-one__sociales a {
+      padding-bottom: 15px; }
+  .section-one__gallery {
+    margin: 0 0 115px 840px;
+    border: 1px solid white; }
+    .section-one__gallery-imgs {
+      display: flex;
+      justify-content: space-between; }
+      .section-one__gallery-imgs .img {
+        width: 140px;
+        height: 205px;
+        background-size: cover; }
+      .section-one__gallery-imgs .img-active p {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FFFFFF;
+        margin: -120px 10px -40px 20px; }
+      .section-one__gallery-imgs .gallery-panda {
+        width: 245px;
+        height: 350px;
+        background-size: cover; }
+    .section-one__gallery-line {
+      width: 1083px;
+      height: 0px;
+      margin: -170px 0px 0px -90px;
+      border: 1px solid #b8b8b8; }
+    .section-one__gallery .gallery__line-ellipse {
+      width: 13px;
+      height: 13px;
+      border: 1px solid #FEFEFE;
+      border-radius: 50%;
+      margin: -6px 0px  0px -10px; }
+      .section-one__gallery .gallery__line-ellipse div {
+        width: 5px;
+        height: 5px;
+        border-radius: 50%;
+        margin: 3px 0px  0px 3px;
+        /* base */
+        background: #f2f2f2; }
+    .section-one__gallery-scroll {
+      width: 245px;
+      height: 50px;
+      margin: 220px 0px 0px 218px; }
+      .section-one__gallery-scroll span:first-child {
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 28px;
+        color: #FEFEFE;
+        margin-left: 70px; }
+      .section-one__gallery-scroll :nth-child(2n) {
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 28px;
+        color: rgba(189, 189, 189, 0.57); }
+    .section-one__gallery .gallery__scroll-line {
+      width: 245px;
+      height: 5px;
+      background: rgba(189, 189, 189, 0.57); }
+    .section-one__gallery .gallery__scroll-button {
+      width: 30px;
+      height: 5px;
+      padding-top: 5px;
+      margin: 0 0px 0px 30px;
+      background: #FEFEFE; }
 
 button {
   display: flex;
@@ -145,7 +200,7 @@ button {
   justify-content: center;
   width: 245px;
   height: 55px;
-  margin: 197px 0px 0px 360px;
+  margin: 50px 1165px 0px 210px;
   background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
   border-radius: 3px;
   font-family: "Roboto", sans-serif;
@@ -173,96 +228,6 @@ button {
       left: -1px;
       border: 5px solid transparent;
       border-left: 5px solid #fff; }
-
-.gallery-eagle {
-  background-image: url("../assets/glery1screen/eagle.png");
-  background-size: cover; }
-
-.gallery-panda {
-  width: 245px;
-  height: 352px;
-  background-image: url("../assets/glery1screen/panda.png");
-  background-size: cover; }
-
-.gallery-monkey {
-  background-image: url("../assets/glery1screen/monkey.png");
-  background-size: cover; }
-
-.gallery-croc {
-  background-image: url("../assets/glery1screen/croc.png");
-  background-size: cover; }
-
-.gallery-fox {
-  background-image: url("../assets/glery1screen/fox.png");
-  background-size: cover; }
-
-.gallery-eleph {
-  background-image: url("../assets/glery1screen/eleph.png");
-  background-size: cover; }
-
-.gallery-cat {
-  background-image: url("../assets/glery1screen/cat.png");
-  background-size: cover; }
-
-.section-one__gallery-line {
-  width: 1083px;
-  height: 0px;
-  margin: -170px 0px 0px -90px;
-  border: 1px solid #b8b8b8; }
-
-.gallery__line-ellipse {
-  width: 13px;
-  height: 13px;
-  border: 1px solid #FEFEFE;
-  border-radius: 50%;
-  margin: -6px 0px  0px -10px; }
-  .gallery__line-ellipse div {
-    width: 5px;
-    height: 5px;
-    border-radius: 50%;
-    margin: 3px 0px  0px 3px;
-    /* base */
-    background: #f2f2f2; }
-
-.section__gallery-scroll {
-  width: 245px;
-  height: 50px;
-  margin: 220px 0px 0px 218px; }
-  .section__gallery-scroll span:first-child {
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-    font-weight: 900;
-    font-size: 24px;
-    line-height: 28px;
-    color: #FEFEFE;
-    margin-left: 70px; }
-  .section__gallery-scroll :nth-child(2n) {
-    font-family: "Roboto", sans-serif;
-    text-align: center;
-    font-weight: 700;
-    font-size: 16px;
-    line-height: 28px;
-    color: rgba(189, 189, 189, 0.57); }
-
-.gallery__scroll-line {
-  width: 245px;
-  height: 5px;
-  background: rgba(189, 189, 189, 0.57); }
-
-.gallery__scroll-button {
-  width: 30px;
-  height: 5px;
-  padding-top: 5px;
-  margin: 0 0px 0px 30px;
-  background: #FEFEFE; }
-
-.section-one__sociales {
-  margin-top: -125px;
-  width: 20px;
-  height: 107px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between; }
 
 /*section two - How it works */
 .section-two {
