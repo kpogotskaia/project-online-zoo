@@ -10,7 +10,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
     <title>Online Zoo</title>
 </head>
-<body>
+<body class="hidden-scroll">
     <header>
         <div class="container">
             <div class="header">
@@ -306,60 +306,70 @@
 
     </footer>
 
-<div class="wrapper_popup">
-        <div class="wrapper_popup__img"></div>
-        <form class="donation_form">
-            <h3 class="donation_form__title">Donate for your animal</h3>
-            <fieldset class="donation_form__animal_section">
-                <label class="box">
-                    <input type="text" placeholder=""/>
-                    <span>Choose an animal</span>
-                </label>
-                <label class="box">
-                    <input type="text" placeholder=""/>
-                    <span>To donate</span>
-                </label>
-            </fieldset>
-            <div class="donation_form__block">
-                <fieldset>
-                    <legend >About you</legend>
-                    <label class="box">
+    <div class="donation-popup">
+        <div class="donation-popup__wrapper">
+            <div class="donation-popup__img"></div>
+            <form class="donation_form">
+                <h3 class="donation_form__title">Donate for your animal</h3>
+                <fieldset class="donation_form__animal_section">
+                    <label class="input-section">
                         <input type="text" placeholder=""/>
-                        <span>Name</span>
+                        <span class="input-section__message">Choose an animal</span>
+                        <span class="input-section__error-message is-hidden">Invalid value</span>
                     </label>
-                    <label class="box">
-                        <input type="email" placeholder=""/>
-                        <span>Email</span>
-                    </label>
-                    <label class="box">
-                        <input type="tel" placeholder=""/>
-                        <span>Phone</span>
+                    <label class="input-section">
+                        <input type="text" placeholder=""/>
+                        <span class="input-section__message">To donate</span>
+                        <span class="input-section__error-message is-hidden">Invalid value</span>
                     </label>
                 </fieldset>
+                <div class="donation_form__block">
+                    <fieldset>
+                        <legend >About you</legend>
+                        <label class="input-section">
+                            <input type="text" placeholder=""/>
+                            <span class="input-section__message">Name</span>
+                            <span class="input-section__error-message is-hidden">Invalid value</span>
+                        </label>
+                        <label class="input-section">
+                            <input type="email" placeholder=""/>
+                            <span class="input-section__message">Email</span>
+                            <span class="input-section__error-message is-hidden">Invalid value</span>
+                        </label>
+                        <label class="input-section">
+                            <input type="tel" placeholder=""/>
+                            <span class="input-section__message">Phone</span>
+                            <span class="input-section__error-message is-hidden">Invalid value</span>
+                        </label>
+                    </fieldset>
 
-                <fieldset>
-                    <legend>Checkout</legend>
-                    <label class="box">
-                        <input type="text" placeholder=""/>
-                        <span>Card number</span>
-                    </label>
-                    <label class="box">
-                        <input type="date"placeholder=""/>
-                        <span>Expiry date</span>
-                    </label>
-                    <label class="box">
-                        <input type="text"placeholder=""/>
-                        <span>CVC</span>
-                    </label>
-                </fieldset>
-            </div>
-            <p class="donation_form__info">If don’t cancel your subscription
-                before the trial ends on April 15,
-                2021, you agree that you will
-                automatically be charged</p>
-            <input value="DONATE" class="donation_form__submit" type="submit"></input>
-        </form>
-        <button class="wrapper_popup__close">×</button>
+                    <fieldset>
+                        <legend>Checkout</legend>
+                        <label class="input-section">
+                            <input type="text" placeholder=""/>
+                            <span class="input-section__message">Card number</span>
+                            <span class="input-section__error-message is-hidden">Invalid value</span>
+                        </label>
+                        <label class="input-section">
+                            <input type="date"placeholder=""/>
+                            <span class="input-section__message">Expiry date</span>
+                            <span class="input-section__error-message is-hidden">Invalid value</span>
+                        </label>
+                        <label class="input-section">
+                            <input type="text"placeholder=""/>
+                            <span class="input-section__message">CVC</span>
+                            <span class="input-section__error-message is-hidden">Invalid value</span>
+                        </label>
+                    </fieldset>
+                </div>
+                <p class="donation_form__info">If don’t cancel your subscription
+                    before the trial ends on April 15,
+                    2021, you agree that you will
+                    automatically be charged</p>
+                <input value="DONATE" class="donation_form__submit" type="submit"></input>
+            </form>
+        </div>
+        <button class="donation-popup__close">×</button>
     </div>
 -->
     <script src="script.js"></script>

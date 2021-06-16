@@ -15,10 +15,12 @@ h1,h2,h3,h4,h5,h6,p,span{color: #333333;font-size: inherit;font-weight: 900; fon
 $max-width-conteiner: 1625px;
 $input-vertical-distance: 30px;
 $min-width: 320;
-$input-padding: 26px;
+$input-padding: 8px;
 $horizontal-input-margin: 30px;
 $horizontal-input-margin-desktop: 55px;
 $white: #FEFEFE;
+$error-color: #f44336;
+$focus-color: #4BD8B5;
 $font:  "Roboto", sans-serif;
 
 //head page
@@ -587,14 +589,20 @@ button {
 }
 
   // style popup
-.wrapper_popup {
-  position: absolute;
+.donation-popup {
+  position: fixed;
+  height: 100vh;
+  overflow: auto;
   width: 100%;
   top: 0;
   left: 0;
-  display: flex;
+
   background: #F9F9F9;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.19);
+
+  &__wrapper {
+    display: flex;
+  }
 
   &__img {
     display: none;
@@ -615,13 +623,14 @@ button {
     &__animal_section {
       display: block;
 
-      label + label {
-        margin-top: $input-vertical-distance;
-      }
+    }
+
+    .input-section + .input-section {
+      margin-top: $input-vertical-distance;
     }
 
     &__block {
-      label + label {
+      .input-section + .input-section {
         margin-top: $input-vertical-distance;
       }
     }
@@ -641,11 +650,11 @@ button {
       font-style: normal;
     }
 
-    label {
+    .input-section {
       position: relative;
       display: block;
 
-      input {
+      & input {
         position: relative;
         height: 56px;
         border: 1px solid #628d90;
@@ -653,18 +662,18 @@ button {
         width: 100%;
         padding-left: $input-padding;
         background: #F9F9F9;
-
-        &:focus {
-          border: 1px solid #4BD8B5;
-        }
       }
 
-      input:focus + span {
-        color: #4BD8B5;
+      & input.is-focused {
+        border: 1px solid $focus-color;
+      }
+
+      & input.is-focused + .input-section__message {
+        color: $focus-color;
         top: -6px;
       }
 
-      span {
+      &__message {
         position: absolute;
         left: $input-padding;
         top: 20px;
@@ -675,6 +684,25 @@ button {
         font-weight: 500;
         font-size: 13px;
         color: #828282;
+      }
+
+      &__error-message {
+        position: absolute;
+        bottom: -17px;
+        left: 0;
+        font-weight: 400;
+        font-size: 13px;
+      }
+
+      &.is-invalid {
+        & input {
+          border: 1px solid $error-color;
+        }
+
+        & .input-section__message.input-section__message,
+        & .input-section__error-message {
+          color: $error-color;
+        }
       }
     }
 
@@ -715,17 +743,21 @@ button {
   }
 }
 
+.hidden-scroll {
+  overflow: hidden;
+}
+
 .is-valid {
   color: #4BD8B5;
 }
 
-.is-invalid {
-  color: red;
+.is-hidden {
+  visibility: hidden;
 }
 
  // tablet
  @media screen and (min-width: 640px) {
-  .wrapper_popup {
+  .donation-popup {
     &__img {
       display: block;
       min-width: 139px;
@@ -751,10 +783,9 @@ button {
         margin-top: 35px;
       }
 
-      label {
+      .input-section {
         position: relative;
         display: block;
-
       }
 
       &__block {
@@ -770,7 +801,7 @@ button {
    overflow: hidden;
   }
 
-  .wrapper_popup {
+  .donation-popup {
     position: fixed;
     width: 1200px;
     height: 795px;
@@ -780,12 +811,11 @@ button {
     margin: 0;
 
     &__img {
-      height: auto;
       min-width: 197px;
     }
 
     .donation_form {
-      margin: 80px 139px;
+      margin: 77px 139px 40px;
 
       &__title {
         margin: 20px 0 48px;
@@ -794,13 +824,14 @@ button {
       &__animal_section {
         display: flex;
 
-        label + label {
+        .input-section + .input-section {
           margin-top: 0;
           margin-left: $horizontal-input-margin-desktop;
         }
       }
 
-      label {
+
+      .input-section {
         input {
           width: 335px;
         }

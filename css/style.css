@@ -459,61 +459,64 @@ button {
   background-image: url(../assets/map.png);
   position: relative; }
 
-.wrapper_popup {
-  position: absolute;
+.donation-popup {
+  position: fixed;
+  height: 100vh;
+  overflow: auto;
   width: 100%;
   top: 0;
   left: 0;
-  display: flex;
   background: #F9F9F9;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.19); }
-  .wrapper_popup__img {
+  .donation-popup__wrapper {
+    display: flex; }
+  .donation-popup__img {
     display: none; }
-  .wrapper_popup .donation_form {
+  .donation-popup .donation_form {
     margin: 80px 20px; }
-    .wrapper_popup .donation_form__title {
+    .donation-popup .donation_form__title {
       margin: 24px 0 44px;
       text-align: center;
       font-style: normal;
       font-weight: bold;
       font-size: 20px;
       text-transform: uppercase; }
-    .wrapper_popup .donation_form__animal_section {
+    .donation-popup .donation_form__animal_section {
       display: block; }
-      .wrapper_popup .donation_form__animal_section label + label {
-        margin-top: 30px; }
-    .wrapper_popup .donation_form__block label + label {
+    .donation-popup .donation_form .input-section + .input-section {
       margin-top: 30px; }
-    .wrapper_popup .donation_form fieldset {
+    .donation-popup .donation_form__block .input-section + .input-section {
+      margin-top: 30px; }
+    .donation-popup .donation_form fieldset {
       margin-top: 30px;
       margin-inline-start: 0;
       margin-inline-end: 0; }
-    .wrapper_popup .donation_form legend {
+    .donation-popup .donation_form legend {
       font-family: "Roboto" ,sans-serif;
       margin-bottom: 30px;
       color: #828282;
       font-size: 18px;
       font-weight: bold;
       font-style: normal; }
-    .wrapper_popup .donation_form label {
+    .donation-popup .donation_form .input-section {
       position: relative;
       display: block; }
-      .wrapper_popup .donation_form label input {
+      .donation-popup .donation_form .input-section input {
         position: relative;
         height: 56px;
         border: 1px solid #628d90;
         border-radius: 5px;
         width: 100%;
-        padding-left: 26px;
+        padding-left: 8px;
         background: #F9F9F9; }
-        .wrapper_popup .donation_form label input:focus {
-          border: 1px solid #4BD8B5; }
-      .wrapper_popup .donation_form label input:focus + span {
+      .donation-popup .donation_form .input-section input.is-focused {
+        border: 1px solid #4BD8B5; }
+      .donation-popup .donation_form .input-section input.is-focused + .input-section__message {
         color: #4BD8B5;
         top: -6px; }
-      .wrapper_popup .donation_form label span {
+      .donation-popup .donation_form .input-section__message {
         position: absolute;
-        left: 26px;
+        left: 8px;
         top: 20px;
         padding: 0 15px;
         background: #F9F9F9;
@@ -522,7 +525,18 @@ button {
         font-weight: 500;
         font-size: 13px;
         color: #828282; }
-    .wrapper_popup .donation_form__info {
+      .donation-popup .donation_form .input-section__error-message {
+        position: absolute;
+        bottom: -17px;
+        left: 0;
+        font-weight: 400;
+        font-size: 13px; }
+      .donation-popup .donation_form .input-section.is-invalid input {
+        border: 1px solid #f44336; }
+      .donation-popup .donation_form .input-section.is-invalid .input-section__message.input-section__message,
+      .donation-popup .donation_form .input-section.is-invalid .input-section__error-message {
+        color: #f44336; }
+    .donation-popup .donation_form__info {
       margin: 30px 0;
       text-align: center;
       font-family: "Roboto", sans-serif;
@@ -530,7 +544,7 @@ button {
       font-weight: 500;
       font-size: 13px;
       color: #828282; }
-    .wrapper_popup .donation_form__submit {
+    .donation-popup .donation_form__submit {
       display: block;
       font-family: "Roboto", sans-serif;
       font-style: normal;
@@ -542,7 +556,7 @@ button {
       width: 245px;
       height: 55px;
       background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%); }
-  .wrapper_popup__close {
+  .donation-popup__close {
     position: absolute;
     right: 20px;
     top: 20px;
@@ -552,39 +566,42 @@ button {
     background-color: #c7c7c770;
     font-size: 40px; }
 
+.hidden-scroll {
+  overflow: hidden; }
+
 .is-valid {
   color: #4BD8B5; }
 
-.is-invalid {
-  color: red; }
+.is-hidden {
+  visibility: hidden; }
 
 @media screen and (min-width: 640px) {
-  .wrapper_popup__img {
+  .donation-popup__img {
     display: block;
     min-width: 139px;
     height: auto;
     background: url("../assets/popap-decs/popap.png");
     background-size: cover;
     background-repeat: no-repeat; }
-  .wrapper_popup .donation_form {
+  .donation-popup .donation_form {
     margin: 80px 13%; }
-    .wrapper_popup .donation_form__animal_section {
+    .donation-popup .donation_form__animal_section {
       display: block; }
-    .wrapper_popup .donation_form__title {
+    .donation-popup .donation_form__title {
       margin: 24px 0 48px;
       font-size: 24px; }
-    .wrapper_popup .donation_form fieldset {
+    .donation-popup .donation_form fieldset {
       margin-top: 35px; }
-    .wrapper_popup .donation_form label {
+    .donation-popup .donation_form .input-section {
       position: relative;
       display: block; }
-    .wrapper_popup .donation_form__block {
+    .donation-popup .donation_form__block {
       display: block; } }
 
 @media screen and (min-width: 1280px) {
   body {
     overflow: hidden; }
-  .wrapper_popup {
+  .donation-popup {
     position: fixed;
     width: 1200px;
     height: 795px;
@@ -592,25 +609,24 @@ button {
     left: 50%;
     transform: translate(-50%, -50%);
     margin: 0; }
-    .wrapper_popup__img {
-      height: auto;
+    .donation-popup__img {
       min-width: 197px; }
-    .wrapper_popup .donation_form {
-      margin: 80px 139px; }
-      .wrapper_popup .donation_form__title {
+    .donation-popup .donation_form {
+      margin: 77px 139px 40px; }
+      .donation-popup .donation_form__title {
         margin: 20px 0 48px; }
-      .wrapper_popup .donation_form__animal_section {
+      .donation-popup .donation_form__animal_section {
         display: flex; }
-        .wrapper_popup .donation_form__animal_section label + label {
+        .donation-popup .donation_form__animal_section .input-section + .input-section {
           margin-top: 0;
           margin-left: 55px; }
-      .wrapper_popup .donation_form label input {
+      .donation-popup .donation_form .input-section input {
         width: 335px; }
-      .wrapper_popup .donation_form__block {
+      .donation-popup .donation_form__block {
         display: flex; }
-        .wrapper_popup .donation_form__block fieldset {
+        .donation-popup .donation_form__block fieldset {
           margin-top: 40px; }
-        .wrapper_popup .donation_form__block fieldset + fieldset {
+        .donation-popup .donation_form__block fieldset + fieldset {
           margin-left: 55px; }
-      .wrapper_popup .donation_form__info {
+      .donation-popup .donation_form__info {
         margin: 40px 110px; } }
