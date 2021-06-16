@@ -313,7 +313,7 @@
                 <h3 class="donation_form__title">Donate for your animal</h3>
                 <fieldset class="donation_form__animal_section">
                     <label class="input-section">
-                        <input type="text" placeholder=""/>
+                        <input type="text" placeholder="" data-max-length="10" />
                         <span class="input-section__message">Choose an animal</span>
                         <span class="input-section__error-message is-hidden">Invalid value</span>
                     </label>
@@ -332,12 +332,12 @@
                             <span class="input-section__error-message is-hidden">Invalid value</span>
                         </label>
                         <label class="input-section">
-                            <input type="email" placeholder=""/>
+                            <input type="email" placeholder="" />
                             <span class="input-section__message">Email</span>
                             <span class="input-section__error-message is-hidden">Invalid value</span>
                         </label>
                         <label class="input-section">
-                            <input type="tel" placeholder=""/>
+                            <input type="tel" placeholder="" data-max-length="10" />
                             <span class="input-section__message">Phone</span>
                             <span class="input-section__error-message is-hidden">Invalid value</span>
                         </label>
@@ -346,17 +346,17 @@
                     <fieldset>
                         <legend>Checkout</legend>
                         <label class="input-section">
-                            <input type="text" placeholder=""/>
+                            <input type="text" placeholder="" data-max-length="16"/>
                             <span class="input-section__message">Card number</span>
                             <span class="input-section__error-message is-hidden">Invalid value</span>
                         </label>
                         <label class="input-section">
-                            <input type="date"placeholder=""/>
+                            <input type="date"placeholder="" data-max-length="10" />
                             <span class="input-section__message">Expiry date</span>
                             <span class="input-section__error-message is-hidden">Invalid value</span>
                         </label>
                         <label class="input-section">
-                            <input type="text"placeholder=""/>
+                            <input type="text" placeholder="" data-max-length="4" />
                             <span class="input-section__message">CVC</span>
                             <span class="input-section__error-message is-hidden">Invalid value</span>
                         </label>
@@ -371,7 +371,6 @@
         </div>
         <button class="donation-popup__close">×</button>
     </div>
--->
     <script src="script.js"></script>
 </body>
 </html>

@@ -1,16 +1,36 @@
-import * as mdb from 'mdb-ui-kit'; 
+const INPUT_SELECTOR = '.input-section input';
+const FOCUS_OR_NOT_EMPTY_CLASS = 'is-focused';
+const INVALID_CLASS = 'is-invalid';
 
-// Получить элемент контейнера
-var btnContainer = document.getElementsByClassName("header__menu-list");
+const inputs = [...document.querySelectorAll(INPUT_SELECTOR)];
 
-// Сделать все кнопки с class="btn" внутри контейнера
-var btns = btnContainer.getElementsByClassName("header__link");
+console.dir(inputs[0].dataset);
 
-// Выполните цикл по кнопкам и добавьте активный класс к текущей/нажатой кнопке
-for (var i = 0; i < btns.length; i++) {
-  btns[i].addEventListener("click", function() {
-    var current = document.getElementsByClassName("active");
-    current[0].className = current[0].className.replace(" active", "");
-    this.className += " active";
-  });
-}
+const addClass = className => el => el.classList.add(className);
+const removeClass = className => el => el.classList.remove(className);
+
+const isEmpty = v => !v;
+
+const minChars = minInclusive => v => v.length >= minInclusive;
+
+const commonValidations = [isEmpty, minChars(3)];
+
+const inputFocusHandler = e => {
+  addClass(FOCUS_OR_NOT_EMPTY_CLASS)(e.target);
+};
+
+const inputBlurHandler = e => {
+  if (!e.target.value) {
+    removeClass(FOCUS_OR_NOT_EMPTY_CLASS)(e.target);
+  }
+};
+
+const inputInputHandler = e => {
+  console.log(e.target.value);
+};
+
+inputs.forEach(input => {
+  input.addEventListener('focus', inputFocusHandler);
+  input.addEventListener('blur', inputBlurHandler);
+  input.addEventListener('input', inputInputHandler);
+});
