@@ -5,7 +5,7 @@ const INVALID_CLASS = 'is-invalid';
 const HIDDEN_SCROLL = 'hidden-scroll';
 const IS_HIDDEN = 'is-hidden';
 const DONATION_POPUP_BUTTON_OPEN = '.donation-popup-button';
-const DONATION_POPUP_BUTTON_CLOSE = '.donation-popup__close';
+const DONATION_POPUP_BUTTON_CLOSE = '.js-donation-popup-close';
 const DONATION_POPUP = '.donation-popup';
 
 //------------- utils -------------
@@ -34,22 +34,30 @@ const inputInputHandler = e => {
   console.log(e.target.value);
 };
 
-const addOpenPopupListener = () => {
-  const btn = document.querySelector(DONATION_POPUP_BUTTON_OPEN);
-  const popup = document.querySelector(DONATION_POPUP);
+const addOpenPopupListener = (openBtn, popup) => {
 
-  btn.addEventListener('click', () => {
+  openBtn.addEventListener('click', () => {
     removeClass(IS_HIDDEN)(popup);
     addClass(HIDDEN_SCROLL)(document.body);
   });
 };
 
-const addClosePopupListener = () => {
+const addClosePopupListener = (closeBtn, popup) => {
 
+  closeBtn.addEventListener('click', () => {
+    addClass(IS_HIDDEN)(popup);
+    removeClass(HIDDEN_SCROLL)(document.body);
+  });
 };
 
 //------------- main -------------
-addOpenPopupListener();
+const openBtn = document.querySelector(DONATION_POPUP_BUTTON_OPEN);
+const popup = document.querySelector(DONATION_POPUP);
+const closeBtn = document.querySelector(DONATION_POPUP_BUTTON_CLOSE);
+
+addOpenPopupListener(openBtn, popup);
+addClosePopupListener(closeBtn, popup);
+
 const inputs = [...document.querySelectorAll(INPUT_SELECTOR)];
 
 console.dir(inputs[0].dataset);
