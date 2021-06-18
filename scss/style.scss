@@ -684,6 +684,7 @@ button {
         font-weight: 500;
         font-size: 13px;
         color: #828282;
+        transition: all 0.25s;
       }
 
       &__error-message {
@@ -797,10 +798,6 @@ button {
 
 // desktop
 @media screen and (min-width: 1280px) {
-  body {
-   overflow: hidden;
-  }
-
   .donation-popup {
     position: fixed;
     width: 1200px;

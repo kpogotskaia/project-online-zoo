@@ -524,7 +524,8 @@ button {
         font-style: normal;
         font-weight: 500;
         font-size: 13px;
-        color: #828282; }
+        color: #828282;
+        transition: all 0.25s; }
       .donation-popup .donation_form .input-section__error-message {
         position: absolute;
         bottom: -17px;
@@ -599,8 +600,6 @@ button {
       display: block; } }
 
 @media screen and (min-width: 1280px) {
-  body {
-    overflow: hidden; }
   .donation-popup {
     position: fixed;
     width: 1200px;
