@@ -8,7 +8,8 @@
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <script src=" http://code.jquery.com/jquery-1.7.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-    <title>Online Zoo</title>
+   <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+   <title>Online Zoo</title>
 </head>
 <body>
     <header>
@@ -18,23 +19,26 @@
                     <span>zoo</span>
                     <span>online</span>
                 </a>
+
                 <nav class="header__menu">
-                    <ul class="header__menu-list">
-                            <li>
-                                <a href="#" class="header__link active">About</a>
-                            </li>
-                            <li>
-                                <a href="file:///C:/Users/aleks/project-online-zoo/index.html" class="header__link ">Zoos</a>
-                            </li>
-                            <li>
-                                <a href="#" class="header__link">Map</a>
-                            </li>
-                            <li>
-                                <a href="#" class="header__link">Contact Us</a>
-                            </li>
-                            <li>
-                                <a href="#" class="header__link">Design</a>
-                            </li>
+                    <div class="header__menu-burger">
+                        <img src="assets/menu/outline_menu_black_24dp.png" alt=""></div>
+                    <ul class="header__menu-list clearfix">
+                        <li>
+                            <a href="#" class="header__menu-item active">About</a>
+                        </li>
+                        <li>
+                            <a href="file:///C:/Users/aleks/project-online-zoo/index.html" class="header__menu-item">Zoos</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__menu-item">Map</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__menu-item">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#" class="header__menu-item">Design</a>
+                        </li>
                     </ul>
                 </nav>
                 <div class="header__revers">
@@ -45,17 +49,14 @@
     </header>
     <section class="section-one">
         <div class="container">
-            <div class="favorite-animal">
-                <div class="favorite-animal__title">
-                    <h1>Watch your favorite animal online</h1>
-                </div>
+            <h1>Watch your favorite animal online</h1>
 
-                <button class="button">watch online
-                    <div class="button__play-icon">
-                        <span></span>
-                    </div>
-                </button>
-            </div>
+            <button class="button">watch online
+                <div class="button__play-icon">
+                    <span></span>
+                </div>
+            </button>
+
 
             <div class="section-one__sociales">
                     <a href="" class="instagram">
@@ -75,48 +76,50 @@
 
         <div class="section-one__gallery">
             <div class="section-one__gallery-imgs">
-                <div class="img gallery-eagle">
-                    <img src="assets/glery1screen/eagle.png" alt="">
+                <div>
+                    <img class="img" src="assets/glery1screen/eagle.png" alt="">
                 </div>
-                <div class=" img-active gallery-panda">
-                    <img src="assets/glery1screen/panda.png" alt="">
-                    <p> Panda’s name is Bei Bei. He
+                <div class="img-active">
+                    <p class="img-active__pharagraph"> Panda’s name is Bei Bei. He
                         is 2 years old. Bei Bei is
                         from China. He loves bamboos.
                     </p>
-                    <button class="button button-watch">watch online
-                        <div class="button__play-icon">
-                            <span></span>
-                        </div>
-                    </button>
-                    <button class="button button-donate">donate
-                        <div class="button__play-icon">$</div>
-                    </button>
+                    <div class="img-active__btn">
+                        <button class="button">watch online
+                            <div class="button__play-icon">
+                                <span></span>
+                            </div>
+                        </button>
+                        <button class="button button-donate">donate
+                            <div class="button__play-icon">
+                                $
+                            </div>
+                        </button>
+                    </div>
                 </div>
-                <div class="img gallery-monkey">
-                    <img src="assets/glery1screen/monkey.png" alt="">
+                <div>
+                    <img class="img" src="assets/glery1screen/monkey.png" alt="">
                 </div>
-                <div class="img gallery-croc">
-                    <img src="assets/glery1screen/croc.png" alt="">
+                <div>
+                    <img class="img" src="assets/glery1screen/croc.png" alt="">
                 </div>
-                <div class="img gallery-fox">
-                    <img src="assets/glery1screen/fox.png" alt="">
+                <div>
+                    <img class="img" src="assets/glery1screen/fox.png" alt="">
                 </div>
             </div>
             <div class="section-one__gallery-line">
                     <div class="gallery__line-ellipse">
                         <div></div>
                     </div>
+            </div>
+            <div class="section-one__gallery-scroll">
+                <span>02 /</span>
+                <span>08</span>
+                <div class="section-one__gallery-scroll-line">
+                    <div class="gallery__scroll-button"></div>
                 </div>
-
-                    <div class="section-one__gallery-scroll">
-                        <span>02 /</span>
-                        <span>08</span>
-                        <div class="gallery__scroll-line">
-                            <div class="gallery__scroll-button"></div>
-                        </div>
-                    </div>
-                </div>
+            </div>
+        </div>
     </section>
     <section class="section-two">
         <div class="container">
@@ -372,5 +375,6 @@
         <button class="js-donation-popup-close donation-popup__close">×</button>
     </div>
     <script src="script.js"></script>
+    <script src="burger-menu.js"></script>
 </body>
 </html>

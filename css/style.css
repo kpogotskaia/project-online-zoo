@@ -1,19 +1,25 @@
+@charset "UTF-8";
 body {
-  overflow-x: hidden; }
+  overflow-x: hidden;
+  margin: 0; }
 
 * {
   padding: 0;
   border: 0; }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
   -moz-box-sizing: border-box;
   -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
-:focus, :active {
+:focus,
+:active {
   outline: none; }
 
-a:focus, a:active {
+a:focus,
+a:active {
   outline: none; }
 
 button {
@@ -23,19 +29,28 @@ button::-moz-focus-inner {
   padding: 0;
   border: 0; }
 
-a, a:visited {
+a,
+a:visited {
   text-decoration: none; }
 
 a:hover {
   text-decoration: none; }
 
-ul, li {
+ul,
+li {
   list-style: none; }
 
 img {
   vertical-align: top; }
 
-h1, h2, h3, h4, h5, h6, p, span {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span {
   color: #333333;
   font-size: inherit;
   font-weight: 900;
@@ -43,17 +58,7 @@ h1, h2, h3, h4, h5, h6, p, span {
   font-style: normal; }
 
 .container {
-  margin: 0 150px; }
-
-.container-second {
-  margin: 0 360px; }
-
-.section__heading {
-  padding: 100px 0 35px 0;
-  font-size: 48px;
-  line-height: 56px;
-  text-align: center;
-  margin: 0; }
+  margin: 0 10px; }
 
 .header {
   display: flex;
@@ -62,7 +67,7 @@ h1, h2, h3, h4, h5, h6, p, span {
     text-decoration: none;
     display: flex;
     flex-direction: column;
-    padding-top: 30px; }
+    padding: 30px 0; }
     .header__logo span:first-child {
       font-size: 36px;
       font-weight: 900;
@@ -74,35 +79,36 @@ h1, h2, h3, h4, h5, h6, p, span {
       line-height: 21px;
       letter-spacing: 0.08em; }
   .header__menu {
-    margin-top: 41px; }
+    margin-top: 40px; }
+    .header__menu-burger {
+      display: inline-block;
+      /* иконка гамбургер видна */ }
     .header__menu-list {
-      display: flex; }
+      display: none;
+      /* пункты меню скрыты */ }
       .header__menu-list li {
-        margin-left: 83px; }
-        .header__menu-list li .header__link {
+        float: none;
+        /* пункты меню в столбцах */ }
+        .header__menu-list li .header__menu-item {
           font-family: "Roboto", sans-serif;
           color: #333;
           text-decoration: none;
           font-size: 16px;
           font-weight: 500;
-          line-height: 18,75px; }
+          line-height: 18, 75px; }
   .header__revers {
     width: 54px;
     height: 30px;
     background: #f2f2f2;
     border-radius: 190px;
     margin-top: 50px; }
-  .header .header__revers-btn {
-    width: 20px;
-    height: 20px;
-    background: #FEFEFE;
-    box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
-    border-radius: 50%;
-    margin: 4.5px 0 0 5px; }
-
-.active {
-  font-weight: 900;
-  border-bottom: 1px solid #333333; }
+    .header__revers-btn {
+      width: 20px;
+      height: 20px;
+      background: #fefefe;
+      box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+      border-radius: 50%;
+      margin: 4.5px 0 0 5px; }
 
 /* section one - Watch your favorite animal online */
 .section-one {
@@ -110,71 +116,141 @@ h1, h2, h3, h4, h5, h6, p, span {
   height: auto;
   background: linear-gradient(rgba(119, 119, 119, 0.719), rgba(0, 0, 0, 0.541)), url("../assets/glery1screen/wild.jpg");
   background-size: cover; }
-  .section-one .container .favorite-animal {
-    margin-top: 35px; }
-    .section-one .container .favorite-animal__title h1 {
-      padding: 205px 520px 0 210px;
-      font-size: 90px;
-      line-height: 105px;
-      color: #FEFEFE;
+  .section-one .container {
+    margin: 0 10px; }
+    .section-one .container h1 {
+      padding-top: 90px;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 56px;
+      color: #fefefe;
       margin: 0; }
-  .section-one .container .section-one__sociales {
-    margin-top: 180px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; }
-    .section-one .container .section-one__sociales a {
-      padding-bottom: 15px; }
+    .section-one .container .button {
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
+      margin-top: 15px;
+      width: 245px;
+      height: 55px;
+      background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+      border-radius: 3px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: #fefefe; }
+      .section-one .container .button .button__play-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+        border: 1px solid #fefefe;
+        border-radius: 50px; }
+        .section-one .container .button .button__play-icon span {
+          border-radius: 5px;
+          position: relative;
+          color: #fff; }
+        .section-one .container .button .button__play-icon span::after {
+          content: "";
+          position: absolute;
+          bottom: -20px;
+          left: -1px;
+          border: 5px solid transparent;
+          border-left: 5px solid #fff; }
+    .section-one .container .section-one__sociales {
+      display: none; }
   .section-one__gallery {
-    margin: 0 0 115px 840px;
-    border: 1px solid white; }
+    margin: 35px 0 15px 10px; }
     .section-one__gallery-imgs {
       display: flex;
       justify-content: space-between; }
       .section-one__gallery-imgs .img {
+        width: 110px;
+        height: 160px;
+        background-size: cover;
+        margin: 25px 0 0 10px; }
+      .section-one__gallery-imgs .img-active {
         width: 140px;
-        height: 205px;
-        background-size: cover; }
-      .section-one__gallery-imgs .img-active p {
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        color: #FFFFFF;
-        margin: -120px 10px -40px 20px; }
-      .section-one__gallery-imgs .gallery-panda {
-        width: 245px;
-        height: 350px;
-        background-size: cover; }
+        height: 200px;
+        background-image: url(../assets/glery1screen/panda.png);
+        background-size: cover;
+        margin-left: 10px; }
+        .section-one__gallery-imgs .img-active p {
+          margin: 65px 4px 0 8px;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 14px;
+          color: #ffffff; }
+        .section-one__gallery-imgs .img-active__btn {
+          display: flex;
+          flex-direction: column; }
+          .section-one__gallery-imgs .img-active__btn .button {
+            display: flex;
+            flex-direction: row-reverse;
+            margin: 15px 33px 0 0;
+            background: none;
+            color: #4bd8b5;
+            font-weight: 500;
+            line-height: 12px;
+            font-size: 9px;
+            text-transform: uppercase; }
+            .section-one__gallery-imgs .img-active__btn .button .button__play-icon {
+              width: 24px;
+              height: 24px;
+              border: 1px solid #4bd8b5;
+              border-radius: 50%;
+              margin: -6px 3px 0 0; }
+              .section-one__gallery-imgs .img-active__btn .button .button__play-icon span {
+                border-radius: 5px;
+                position: relative;
+                color: #4bd8b5; }
+              .section-one__gallery-imgs .img-active__btn .button .button__play-icon span::after {
+                content: "";
+                position: absolute;
+                bottom: -16px;
+                left: -1px;
+                border: 5px solid transparent;
+                border-left: 5px solid #4bd8b5; }
+          .section-one__gallery-imgs .img-active__btn .button-donate {
+            font-size: 10px;
+            margin: 5px 0 0 0;
+            color: #f2f2f2; }
+            .section-one__gallery-imgs .img-active__btn .button-donate .button__play-icon {
+              width: 24px;
+              height: 24px;
+              padding-top: 5px;
+              font-size: 15px;
+              color: #f2f2f2; }
     .section-one__gallery-line {
-      width: 1083px;
+      margin-top: -100px;
+      width: 100%;
       height: 0px;
-      margin: -170px 0px 0px -90px;
       border: 1px solid #b8b8b8; }
-    .section-one__gallery .gallery__line-ellipse {
-      width: 13px;
-      height: 13px;
-      border: 1px solid #FEFEFE;
-      border-radius: 50%;
-      margin: -6px 0px  0px -10px; }
-      .section-one__gallery .gallery__line-ellipse div {
-        width: 5px;
-        height: 5px;
-        border-radius: 50%;
-        margin: 3px 0px  0px 3px;
-        /* base */
-        background: #f2f2f2; }
+      .section-one__gallery-line .gallery__line-ellipse {
+        margin: -6px 0 0 -8px;
+        width: 13px;
+        height: 13px;
+        border: 1px solid #b8b8b8;
+        border-radius: 50%; }
+        .section-one__gallery-line .gallery__line-ellipse div {
+          width: 5px;
+          height: 5px;
+          border-radius: 50%;
+          margin: 3px 0px 0px 3px;
+          background: #b8b8b8; }
     .section-one__gallery-scroll {
-      width: 245px;
-      height: 50px;
-      margin: 220px 0px 0px 218px; }
+      margin: 120px 32px 0 130px;
+      padding-bottom: 55px; }
       .section-one__gallery-scroll span:first-child {
         font-family: "Roboto", sans-serif;
         text-align: center;
         font-weight: 900;
         font-size: 24px;
         line-height: 28px;
-        color: #FEFEFE;
-        margin-left: 70px; }
+        color: #fefefe;
+        margin-left: 40px; }
       .section-one__gallery-scroll :nth-child(2n) {
         font-family: "Roboto", sans-serif;
         text-align: center;
@@ -182,52 +258,235 @@ h1, h2, h3, h4, h5, h6, p, span {
         font-size: 16px;
         line-height: 28px;
         color: rgba(189, 189, 189, 0.57); }
-    .section-one__gallery .gallery__scroll-line {
-      width: 245px;
-      height: 5px;
-      background: rgba(189, 189, 189, 0.57); }
-    .section-one__gallery .gallery__scroll-button {
-      width: 30px;
-      height: 5px;
-      padding-top: 5px;
-      margin: 0 0px 0px 30px;
-      background: #FEFEFE; }
+      .section-one__gallery-scroll-line {
+        width: 140px;
+        height: 5px;
+        background: rgba(189, 189, 189, 0.57); }
+        .section-one__gallery-scroll-line .gallery__scroll-button {
+          width: 15px;
+          height: 5px;
+          padding-top: 5px;
+          margin: 0 0px 50px 30px;
+          background: #fefefe; }
 
-button {
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: center;
-  width: 245px;
-  height: 55px;
-  margin: 50px 1165px 0px 210px;
-  background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
-  border-radius: 3px;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 18px;
-  line-height: 21px;
-  text-align: center;
-  text-transform: uppercase;
-  color: #FEFEFE; }
-  button .button__play-icon {
-    width: 32px;
-    height: 32px;
-    margin-right: 10px;
-    border: 1px solid #FEFEFE;
-    border-radius: 50px; }
-    button .button__play-icon span {
-      border-radius: 5px;
+.donation-popup {
+  position: fixed;
+  height: 100vh;
+  overflow: auto;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: #f9f9f9;
+  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.19); }
+  .donation-popup__wrapper {
+    display: flex; }
+  .donation-popup__img {
+    display: none; }
+  .donation-popup .donation_form {
+    margin: 80px 20px; }
+    .donation-popup .donation_form__title {
+      margin: 24px 0 44px;
+      text-align: center;
+      font-style: normal;
+      font-weight: bold;
+      font-size: 20px;
+      text-transform: uppercase; }
+    .donation-popup .donation_form__animal_section {
+      display: block; }
+    .donation-popup .donation_form .input-section + .input-section {
+      margin-top: 30px; }
+    .donation-popup .donation_form__block .input-section + .input-section {
+      margin-top: 30px; }
+    .donation-popup .donation_form fieldset {
+      margin-top: 30px;
+      margin-inline-start: 0;
+      margin-inline-end: 0; }
+    .donation-popup .donation_form legend {
+      font-family: "Roboto", sans-serif;
+      margin-bottom: 30px;
+      color: #828282;
+      font-size: 18px;
+      font-weight: bold;
+      font-style: normal; }
+    .donation-popup .donation_form .input-section {
       position: relative;
-      color: #fff; }
-    button .button__play-icon span::after {
-      content: '';
+      display: block; }
+      .donation-popup .donation_form .input-section input {
+        position: relative;
+        height: 56px;
+        border: 1px solid #628d90;
+        border-radius: 5px;
+        width: 100%;
+        padding-left: 8px;
+        background: #f9f9f9; }
+      .donation-popup .donation_form .input-section input.is-focused {
+        border: 1px solid #4bd8b5; }
+      .donation-popup .donation_form .input-section input.is-focused + .input-section__message {
+        color: #4bd8b5;
+        top: -6px; }
+      .donation-popup .donation_form .input-section__message {
+        position: absolute;
+        left: 8px;
+        top: 20px;
+        padding: 0 15px;
+        background: #f9f9f9;
+        font-family: "Poppins", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 13px;
+        color: #828282;
+        transition: all 0.25s; }
+      .donation-popup .donation_form .input-section__error-message {
+        position: absolute;
+        bottom: -17px;
+        left: 0;
+        font-weight: 400;
+        font-size: 13px; }
+      .donation-popup .donation_form .input-section.is-invalid input {
+        border: 1px solid #f44336; }
+      .donation-popup .donation_form .input-section.is-invalid .input-section__message.input-section__message,
+      .donation-popup .donation_form .input-section.is-invalid .input-section__error-message {
+        color: #f44336; }
+    .donation-popup .donation_form__info {
+      margin: 30px 0;
+      text-align: center;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 13px;
+      color: #828282; }
+    .donation-popup .donation_form__submit {
+      display: block;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 18px;
+      border-radius: 5px;
+      margin: 40px auto;
+      color: #f2f2f2;
+      width: 245px;
+      height: 55px;
+      background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%); }
+  .donation-popup__close {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    margin: 0;
+    height: 40px;
+    width: 40px;
+    background-color: #c7c7c770;
+    font-size: 40px; }
+
+.hidden-scroll {
+  overflow: hidden; }
+
+.is-valid {
+  color: #4bd8b5; }
+
+.is-hidden {
+  visibility: hidden; }
+
+@media screen and (min-width: 640px) {
+  .donation-popup__img {
+    display: block;
+    min-width: 139px;
+    height: auto;
+    background: url("../assets/popap-decs/popap.png");
+    background-size: cover;
+    background-repeat: no-repeat; }
+  .donation-popup .donation_form {
+    margin: 80px 13%; }
+    .donation-popup .donation_form__animal_section {
+      display: block; }
+    .donation-popup .donation_form__title {
+      margin: 24px 0 48px;
+      font-size: 24px; }
+    .donation-popup .donation_form fieldset {
+      margin-top: 35px; }
+    .donation-popup .donation_form .input-section {
+      position: relative;
+      display: block; }
+    .donation-popup .donation_form__block {
+      display: block; } }
+
+@media screen and (min-width: 1280px) {
+  .container {
+    margin: 0 150px; }
+  .container-second {
+    margin: 0 360px; }
+  .section__heading {
+    padding: 100px 0 35px 0;
+    font-size: 48px;
+    line-height: 56px;
+    text-align: center;
+    margin: 0; }
+  .header {
+    display: flex;
+    justify-content: space-between; }
+    .header__menu-burger {
+      display: none; }
+    .header__menu-list {
+      display: flex; }
+      .header__menu-list li {
+        float: left;
+        margin-left: 83px; }
+        .header__menu-list li .header__menu-item {
+          display: inline-block; }
+        .header__menu-list li :hover {
+          font-weight: 900;
+          border-bottom: 3px solid #333; }
+  /* section one - Watch your favorite animal online */
+  .section-one .container {
+    margin: 0 150px; }
+    .section-one .container h1 {
+      padding: 205px 520px 0 210px;
+      font-size: 90px;
+      line-height: 104px; }
+    .section-one .container button {
+      margin: 40px 0 0 210px; }
+    .section-one .container .section-one__sociales {
       position: absolute;
-      bottom: -20px;
-      left: -1px;
-      border: 5px solid transparent;
-      border-left: 5px solid #fff; }
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .section-one .container .section-one__sociales a {
+        padding-bottom: 15px; }
+  .section-one__gallery {
+    margin: 0 0 15px 950px;
+    padding-bottom: 50px; }
+    .section-one__gallery-imgs {
+      display: flex;
+      justify-content: space-between; }
+      .section-one__gallery-imgs .img {
+        width: 140px;
+        height: 205px;
+        margin-top: -50px; }
+      .section-one__gallery-imgs .img-active {
+        width: 245px;
+        height: 350px;
+        margin-top: -100px; }
+        .section-one__gallery-imgs .img-active p {
+          margin: 230px 30px 0 25px;
+          font-size: 14px;
+          line-height: 16px; }
+        .section-one__gallery-imgs .img-active__btn {
+          flex-direction: row; }
+          .section-one__gallery-imgs .img-active__btn .button {
+            margin: 15px 0 0 10px;
+            font-size: 11px; }
+            .section-one__gallery-imgs .img-active__btn .button .button__play-icon {
+              margin: 5px 0 0 0; }
+          .section-one__gallery-imgs .img-active__btn .button-donate {
+            font-size: 12px; }
+    .section-one__gallery-line {
+      margin: -200px 0px 0px -60px; }
+    .section-one__gallery-scroll {
+      margin: 250px 0 0 185px; }
+      .section-one__gallery-scroll span:first-child {
+        margin-left: 100px; }
+      .section-one__gallery-scroll-line {
+        width: 245px; } }
 
 /*section two - How it works */
 .section-two {
@@ -240,7 +499,7 @@ button {
     text-align: center;
     font-size: 14px;
     line-height: 16px;
-    color: #4F4F4F; }
+    color: #4f4f4f; }
   .section-two .gallery__scroll-line {
     width: 245px; }
   .section-two .section__gallery-scroll {
@@ -261,7 +520,7 @@ button {
 
 .section-two__benefits {
   height: 413px;
-  background: #F2F2F2;
+  background: #f2f2f2;
   margin-top: 100px;
   display: flex;
   flex-direction: row;
@@ -283,7 +542,7 @@ button {
       font-weight: normal;
       font-size: 14px;
       line-height: 16px;
-      color: #4F4F4F;
+      color: #4f4f4f;
       text-align: center; }
 
 /*section tree - Pets in Zoo*/
@@ -306,7 +565,7 @@ button {
       font-weight: normal;
       font-size: 14px;
       line-height: 16px;
-      color: #FFFFFF; }
+      color: #ffffff; }
   .section-tree__slider .section-tree__slider-eagle {
     width: 278px;
     height: 399px;
@@ -319,38 +578,6 @@ button {
     width: 278px;
     height: 399px;
     background-image: url(../assets/treeScreen/kro.png); }
-
-.button-watch {
-  width: 143px;
-  height: 24px;
-  margin: 55px 0 0 0;
-  background: none;
-  color: #4BD8B5;
-  font-weight: 500;
-  line-height: 14px;
-  font-size: 12px; }
-  .button-watch .button__play-icon {
-    width: 24px;
-    height: 24px;
-    border: 1px solid #4BD8B5; }
-    .button-watch .button__play-icon span {
-      color: #4BD8B5; }
-    .button-watch .button__play-icon span::after {
-      border-left: 5px solid #4BD8B5;
-      bottom: -16px; }
-
-.button-donate {
-  width: 143px;
-  height: 24px;
-  margin: -24px 0 0 120px;
-  background: none;
-  font-weight: 500;
-  line-height: 14px;
-  font-size: 12px; }
-  .button-donate .button__play-icon {
-    width: 24px;
-    height: 24px;
-    padding-top: 3.5px; }
 
 .section-tree .container .gallery__scroll-line {
   width: 245px; }
@@ -369,7 +596,7 @@ button {
 /* Section four - Pay and feed */
 .section-four {
   height: 754px;
-  background: #F2F2F2; }
+  background: #f2f2f2; }
   .section-four .container-second p {
     font-weight: normal;
     font-size: 14px;
@@ -448,7 +675,7 @@ button {
 /*section six - Map*/
 .section-six {
   height: 904px;
-  background: #F2F2F2; }
+  background: #f2f2f2; }
   .section-six .map__vector {
     background-image: url(../assets/Vector.png);
     background: no-repeat; }
@@ -461,171 +688,30 @@ button {
 
 .donation-popup {
   position: fixed;
-  height: 100vh;
-  overflow: auto;
-  width: 100%;
-  top: 0;
-  left: 0;
-  background: #F9F9F9;
-  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.19); }
-  .donation-popup__wrapper {
-    display: flex; }
+  width: 1200px;
+  height: 795px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  margin: 0; }
   .donation-popup__img {
-    display: none; }
+    min-width: 197px; }
   .donation-popup .donation_form {
-    margin: 80px 20px; }
+    margin: 77px 139px 40px; }
     .donation-popup .donation_form__title {
-      margin: 24px 0 44px;
-      text-align: center;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 20px;
-      text-transform: uppercase; }
+      margin: 20px 0 48px; }
     .donation-popup .donation_form__animal_section {
-      display: block; }
-    .donation-popup .donation_form .input-section + .input-section {
-      margin-top: 30px; }
-    .donation-popup .donation_form__block .input-section + .input-section {
-      margin-top: 30px; }
-    .donation-popup .donation_form fieldset {
-      margin-top: 30px;
-      margin-inline-start: 0;
-      margin-inline-end: 0; }
-    .donation-popup .donation_form legend {
-      font-family: "Roboto" ,sans-serif;
-      margin-bottom: 30px;
-      color: #828282;
-      font-size: 18px;
-      font-weight: bold;
-      font-style: normal; }
-    .donation-popup .donation_form .input-section {
-      position: relative;
-      display: block; }
-      .donation-popup .donation_form .input-section input {
-        position: relative;
-        height: 56px;
-        border: 1px solid #628d90;
-        border-radius: 5px;
-        width: 100%;
-        padding-left: 8px;
-        background: #F9F9F9; }
-      .donation-popup .donation_form .input-section input.is-focused {
-        border: 1px solid #4BD8B5; }
-      .donation-popup .donation_form .input-section input.is-focused + .input-section__message {
-        color: #4BD8B5;
-        top: -6px; }
-      .donation-popup .donation_form .input-section__message {
-        position: absolute;
-        left: 8px;
-        top: 20px;
-        padding: 0 15px;
-        background: #F9F9F9;
-        font-family: "Poppins", sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 13px;
-        color: #828282;
-        transition: all 0.25s; }
-      .donation-popup .donation_form .input-section__error-message {
-        position: absolute;
-        bottom: -17px;
-        left: 0;
-        font-weight: 400;
-        font-size: 13px; }
-      .donation-popup .donation_form .input-section.is-invalid input {
-        border: 1px solid #f44336; }
-      .donation-popup .donation_form .input-section.is-invalid .input-section__message.input-section__message,
-      .donation-popup .donation_form .input-section.is-invalid .input-section__error-message {
-        color: #f44336; }
-    .donation-popup .donation_form__info {
-      margin: 30px 0;
-      text-align: center;
-      font-family: "Roboto", sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 13px;
-      color: #828282; }
-    .donation-popup .donation_form__submit {
-      display: block;
-      font-family: "Roboto", sans-serif;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 18px;
-      border-radius: 5px;
-      margin: 40px auto;
-      color: #f2f2f2;
-      width: 245px;
-      height: 55px;
-      background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%); }
-  .donation-popup__close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    margin: 0;
-    height: 40px;
-    width: 40px;
-    background-color: #c7c7c770;
-    font-size: 40px; }
-
-.hidden-scroll {
-  overflow: hidden; }
-
-.is-valid {
-  color: #4BD8B5; }
-
-.is-hidden {
-  visibility: hidden; }
-
-@media screen and (min-width: 640px) {
-  .donation-popup__img {
-    display: block;
-    min-width: 139px;
-    height: auto;
-    background: url("../assets/popap-decs/popap.png");
-    background-size: cover;
-    background-repeat: no-repeat; }
-  .donation-popup .donation_form {
-    margin: 80px 13%; }
-    .donation-popup .donation_form__animal_section {
-      display: block; }
-    .donation-popup .donation_form__title {
-      margin: 24px 0 48px;
-      font-size: 24px; }
-    .donation-popup .donation_form fieldset {
-      margin-top: 35px; }
-    .donation-popup .donation_form .input-section {
-      position: relative;
-      display: block; }
+      display: flex; }
+      .donation-popup .donation_form__animal_section .input-section + .input-section {
+        margin-top: 0;
+        margin-left: 55px; }
+    .donation-popup .donation_form .input-section input {
+      width: 335px; }
     .donation-popup .donation_form__block {
-      display: block; } }
-
-@media screen and (min-width: 1280px) {
-  .donation-popup {
-    position: fixed;
-    width: 1200px;
-    height: 795px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0; }
-    .donation-popup__img {
-      min-width: 197px; }
-    .donation-popup .donation_form {
-      margin: 77px 139px 40px; }
-      .donation-popup .donation_form__title {
-        margin: 20px 0 48px; }
-      .donation-popup .donation_form__animal_section {
-        display: flex; }
-        .donation-popup .donation_form__animal_section .input-section + .input-section {
-          margin-top: 0;
-          margin-left: 55px; }
-      .donation-popup .donation_form .input-section input {
-        width: 335px; }
-      .donation-popup .donation_form__block {
-        display: flex; }
-        .donation-popup .donation_form__block fieldset {
-          margin-top: 40px; }
-        .donation-popup .donation_form__block fieldset + fieldset {
-          margin-left: 55px; }
-      .donation-popup .donation_form__info {
-        margin: 40px 110px; } }
+      display: flex; }
+      .donation-popup .donation_form__block fieldset {
+        margin-top: 40px; }
+      .donation-popup .donation_form__block fieldset + fieldset {
+        margin-left: 55px; }
+    .donation-popup .donation_form__info {
+      margin: 40px 110px; }
