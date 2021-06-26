@@ -227,8 +227,6 @@ $font: "Roboto", sans-serif;
         }
 
         .img-active {
-          width: 140px;
-          height: 200px;
           background-image: url(../assets/glery1screen/panda.png);
           background-size: cover;
           margin-left: 10px;
@@ -358,6 +356,123 @@ $font: "Roboto", sans-serif;
           }
       }
     }
+}
+
+/*section two - How it works */
+
+.section-two {
+
+  &__heading {
+    margin: 50px 0 20px 0;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  &__pharagraph {
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #4f4f4f;
+  }
+
+  &__gallery {
+
+    &-img {
+      margin: 30px 10px 20px 0;
+    }
+  }
+
+  &__scroll {
+    padding-bottom: 0;
+    margin: 20px 30px;
+
+    span:first-child {
+      color: #333333;
+    }
+
+    &-line {
+      width: 245px;
+
+      .gallery__scroll-button {
+        width: 60px;
+        margin: 0;
+        background: #333333;
+      }
+    }
+  }
+
+  .button {
+    margin: 20px 30px 50px 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 245px;
+    height: 55px;
+    background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+    border-radius: 3px;
+    // text
+    font-family: $font;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $white;
+
+      .button__play-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+        border: 1px solid $white;
+        border-radius: 50px;
+
+          span {
+            border-radius: 5px;
+            position: relative;
+            color: #fff;
+          }
+
+          span::after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: -1px;
+            border: 5px solid transparent;
+            border-left: 5px solid #fff;
+          }
+      }
+  }
+
+  &__benefits {
+    background: #f2f2f2;
+    display: block;
+    padding: 50px 0;
+
+    .benefits {
+      margin: 40px 10px;
+
+      &-img {
+        margin: 0 110px;
+      }
+
+      h5 {
+        margin: 15px 70px;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+      }
+
+      p {
+        margin: 0 10px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #4f4f4f;
+        text-align: center;
+      }
+    }
+  }
 }
 
 // style popup
@@ -705,263 +820,243 @@ $font: "Roboto", sans-serif;
     }
     }
   }
-}
 
-/*section two - How it works */
+  /*section two - How it works */
 
-.section-two {
-  height: 1296px;
-  .container {
-    p {
-      width: 790px;
-      height: 80px;
-      margin: 0 412px;
-      font-weight: normal;
-      text-align: center;
-      font-size: 14px;
-      line-height: 16px;
-      color: #4f4f4f;
-    }
-  }
-  .gallery__scroll-line {
-    width: 245px;
-  }
-  .section__gallery-scroll {
-    margin: 30px 0 0 702px;
-    span:first-child {
-      color: #333333;
-    }
-    .gallery__scroll-button {
-      margin: 0;
-      background: #333333;
-    }
-  }
-  button {
-    margin: 30px 0 0 702px;
-  }
-}
-.section-two__gallery {
-  width: 790px;
-  height: 323px;
-  margin: 30px 0 0 412px;
-  border-radius: 5px;
-}
+  .section-two {
 
-.section-two__benefits {
-  height: 413px;
-  background: #f2f2f2;
-  margin-top: 100px;
-  display: flex;
-  flex-direction: row;
-  padding-left: 360px;
-  .benefits {
-    width: 318px;
-    margin: 100px 80px 0 0;
-    img {
-      padding-left: 150px;
-    }
-    h3 {
-      padding-left: 25px;
-      font-weight: 900;
-      font-size: 20px;
-      line-height: 23px;
+    &__heading {
       text-align: center;
     }
-    p {
-      width: 380px;
-      height: 48px;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 16px;
-      color: #4f4f4f;
-      text-align: center;
+
+      &__pharagraph {
+        margin: 0 415px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #4f4f4f;
+      }
+
+      &__gallery {
+
+        &-img {
+        margin: 30px 412px;
+        border-radius: 5px;
+        }
+      }
+
+    &__scroll {
+      margin: 0 690px;
+    }
+
+    .button {
+      margin: 20px 690px 50px 690px;
+    }
+
+    &__benefits {
+      display: flex;
+      padding: 100px 310px;
+
+      .benefits {
+        margin: 0 20px 0 0;
+
+        &-img {
+          margin: 0 190px;
+        }
+
+        h5 {
+          margin: 15px 110px;
+        }
+
+        p {
+        }
+      }
     }
   }
-}
 
-/*section tree - Pets in Zoo*/
+  /*section tree - Pets in Zoo*/
 
-.section-tree {
-  height: 854px;
-}
+  .section-tree {
+    height: 854px;
+  }
 
-.section-tree__slider {
-  width: 1202px;
-  display: flex;
-  justify-content: space-between;
-  margin-left: 220px;
-  .section-tree__slider-panda {
-    width: 278px;
-    height: 399px;
-    background-image: url(../assets/treeScreen/panda.png);
-    p {
-      padding: 255px 0 0 22px;
-      width: 210px;
-      height: 48px;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 16px;
-      color: #ffffff;
+  .section-tree__slider {
+    width: 1202px;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 220px;
+    .section-tree__slider-panda {
+      width: 278px;
+      height: 399px;
+      background-image: url(../assets/treeScreen/panda.png);
+      p {
+        padding: 255px 0 0 22px;
+        width: 210px;
+        height: 48px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #ffffff;
+      }
+    }
+    .section-tree__slider-eagle {
+      width: 278px;
+      height: 399px;
+      background-image: url(../assets/treeScreen/eagle.png);
+    }
+    .section-tree__slider-monkey {
+      width: 278px;
+      height: 399px;
+      background-image: url(../assets/treeScreen/monkey.png);
+    }
+    .section-tree__slider-crocodille {
+      width: 278px;
+      height: 399px;
+      background-image: url(../assets/treeScreen/kro.png);
     }
   }
-  .section-tree__slider-eagle {
-    width: 278px;
-    height: 399px;
-    background-image: url(../assets/treeScreen/eagle.png);
-  }
-  .section-tree__slider-monkey {
-    width: 278px;
-    height: 399px;
-    background-image: url(../assets/treeScreen/monkey.png);
-  }
-  .section-tree__slider-crocodille {
-    width: 278px;
-    height: 399px;
-    background-image: url(../assets/treeScreen/kro.png);
-  }
-}
 
 
-.section-tree {
-  .container {
-    .gallery__scroll-line {
+  .section-tree {
+    .container {
+      .gallery__scroll-line {
+        width: 245px;
+      }
+      .section__gallery-scroll {
+        margin: 60px 0 0 702px;
+        span:first-child {
+          color: #333333;
+        }
+        .gallery__scroll-button {
+          margin: 0;
+          background: #333333;
+        }
+      }
+      .button__choose-favorite {
+        margin: 30px 0 0 702px;
+      }
+    }
+  }
+
+  /* Section four - Pay and feed */
+
+  .section-four {
+    height: 754px;
+    background: #f2f2f2;
+    .container-second {
+      p {
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        text-align: center;
+        margin: 0;
+      }
+    }
+    button {
+      margin: 60px 0 0 480px;
+    }
+  }
+  .section-four__donation {
+    display: flex;
+    justify-content: space-between;
+    .section-four__donation-card {
       width: 245px;
+      height: 245px;
+      border: 2px solid #628d90;
+      border-radius: 50%;
+      margin-top: 92px;
+      img {
+        margin: 70px 0 0 90px;
+      }
+      h5 {
+        position: absolute;
+        width: 135px;
+        height: 46px;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center;
+        margin: 18px 0 0 55px;
+      }
     }
+    .arrow {
+      margin-top: 215px;
+    }
+  }
+
+  /* section five - Testimonials*/
+
+  .section-five {
+    height: 810px;
     .section__gallery-scroll {
-      margin: 60px 0 0 702px;
-      span:first-child {
+      margin: 50px 0 0 480px;
+      span {
         color: #333333;
       }
-      .gallery__scroll-button {
-        margin: 0;
-        background: #333333;
+      .gallery__scroll-line {
+        margin-left: -15px;
+        .gallery__scroll-button {
+          background: #333333;
+        }
       }
     }
-    .button__choose-favorite {
-      margin: 30px 0 0 702px;
+    button {
+      margin: 50px 0 0 465px;
     }
   }
-}
-
-/* Section four - Pay and feed */
-
-.section-four {
-  height: 754px;
-  background: #f2f2f2;
-  .container-second {
-    p {
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 16px;
-      text-align: center;
-      margin: 0;
-    }
-  }
-  button {
-    margin: 60px 0 0 480px;
-  }
-}
-.section-four__donation {
-  display: flex;
-  justify-content: space-between;
-  .section-four__donation-card {
-    width: 245px;
-    height: 245px;
-    border: 2px solid #628d90;
-    border-radius: 50%;
-    margin-top: 92px;
-    img {
-      margin: 70px 0 0 90px;
-    }
-    h5 {
-      position: absolute;
-      width: 135px;
-      height: 46px;
-      font-weight: 900;
-      font-size: 20px;
-      line-height: 23px;
-      text-align: center;
-      margin: 18px 0 0 55px;
-    }
-  }
-  .arrow {
-    margin-top: 215px;
-  }
-}
-
-/* section five - Testimonials*/
-
-.section-five {
-  height: 810px;
-  .section__gallery-scroll {
-    margin: 50px 0 0 480px;
-    span {
-      color: #333333;
-    }
-    .gallery__scroll-line {
-      margin-left: -15px;
-      .gallery__scroll-button {
-        background: #333333;
+  .testimonials {
+    width: 1200px;
+    display: flex;
+    justify-content: space-between;
+    .testimonials__card {
+      padding-top: 47px;
+      width: 585px;
+      height: 310px;
+      box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
+      border-radius: 5px;
+      div {
+        margin-left: 260px;
+        width: 68px;
+        height: 68px;
+        border: 1px solid slategrey;
+        border-radius: 50%;
+      }
+      h3 {
+        text-align: center;
+      }
+      p {
+        width: 470px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        margin-left: 90px;
       }
     }
   }
-  button {
-    margin: 50px 0 0 465px;
+
+  .testimonials__card-user {
+    background-image: url(../assets/users/user1.png);
+    background-size: cover;
   }
-}
-.testimonials {
-  width: 1200px;
-  display: flex;
-  justify-content: space-between;
-  .testimonials__card {
-    padding-top: 47px;
-    width: 585px;
-    height: 310px;
-    box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
-    border-radius: 5px;
-    div {
-      margin-left: 260px;
-      width: 68px;
-      height: 68px;
-      border: 1px solid slategrey;
-      border-radius: 50%;
-    }
-    h3 {
-      text-align: center;
-    }
-    p {
-      width: 470px;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 16px;
-      margin-left: 90px;
+
+  /*section six - Map*/
+
+  .section-six {
+    height: 904px;
+    background: #f2f2f2;
+    .map__vector {
+      background-image: url(../assets/Vector.png);
+      background: no-repeat;
     }
   }
-}
-
-.testimonials__card-user {
-  background-image: url(../assets/users/user1.png);
-  background-size: cover;
-}
-
-/*section six - Map*/
-
-.section-six {
-  height: 904px;
-  background: #f2f2f2;
-  .map__vector {
-    background-image: url(../assets/Vector.png);
-    background: no-repeat;
+  .map {
+    width: 1200px;
+    height: 498px;
+    background-image: url(../assets/map.png);
+    position: relative;
   }
-}
-.map {
-  width: 1200px;
-  height: 498px;
-  background-image: url(../assets/map.png);
-  position: relative;
-}
 
-// donation popup
+  // donation popup
 .donation-popup {
   position: fixed;
   width: 1200px;
@@ -1014,4 +1109,7 @@ $font: "Roboto", sans-serif;
     }
   }
 }
+}
+
+
 
