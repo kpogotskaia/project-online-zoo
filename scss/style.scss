@@ -242,11 +242,11 @@ $font: "Roboto", sans-serif;
             &__btn {
               display: flex;
               flex-direction: column;
+              margin: 5px 33px 5px 8px;
 
               .button {
                 display: flex;
                 flex-direction: row-reverse;
-                margin: 15px 33px 0 0;
                 background: none;
                 color: #4bd8b5;
                 font-weight: 500;
@@ -644,6 +644,143 @@ $font: "Roboto", sans-serif;
 
 // tablet
 @media screen and (min-width: 640px) {
+
+//section-one
+
+  .section-one {
+    .container {
+      margin: 0 20px;
+
+      h1 {
+        padding-top: 100px;
+        font-size: 64px;
+        line-height: 75px;
+      }
+
+      button {
+        margin: 50px 0 ;
+      }
+
+      .section-one__sociales {
+        position: absolute;
+        bottom: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        a {
+          padding-bottom: 15px;
+        }
+      }
+    }
+
+    &__gallery {
+    margin: 0 0 0 100px;
+    padding-bottom: 100px;
+
+      &-imgs {
+        display: flex;
+        justify-content: space-between;
+
+        .img {
+          width: 180px;
+          height: 260px;
+        }
+
+        .img-active {
+
+          p {
+            margin: 230px 30px 0 25px;
+            font-size: 14px;
+            line-height: 16px;
+          }
+
+          &__btn {
+            flex-direction: row;
+            margin: 0 20px;
+
+            .button {
+              margin: 15px 0 0 10px;
+              font-size: 11px;
+
+              .button__play-icon {
+                margin: 5px 0 0 0;
+                }
+            }
+
+            .button-donate {
+              font-size: 12px;
+            }
+          }
+        }
+      }
+
+      &-line {
+        margin: -200px 0px 0px -60px;
+      }
+
+      &-scroll {
+        margin: 250px 0 0 185px;
+
+        span:first-child {
+          margin-left: 100px;
+        }
+
+        &-line {
+          width: 245px;
+        }
+    }
+    }
+  }
+
+  // section-two
+
+  .section-two {
+
+    &__gallery {
+
+      &-img {
+        margin: 30px 10px 20px 0;
+      }
+    }
+
+    &__scroll {
+      padding-bottom: 0;
+      margin: 50px 180px;
+
+      span:first-child {
+        color: #333333;
+      }
+
+      &-line {
+        width: 245px;
+
+        .gallery__scroll-button {
+          width: 80px;
+          margin: 0;
+          background: #333333;
+        }
+      }
+    }
+
+  .button {
+    margin: 20px 180px 50px;
+  }
+
+  &__benefits {
+
+    .benefits {
+      margin: 100px 160px 40px 160px;
+
+      &-img {
+        margin: 0 160px 0 160px;
+      }
+    }
+  }
+}
+
+//donation-popup
+
   .donation-popup {
     &__img {
       display: block;

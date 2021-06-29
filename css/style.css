@@ -183,11 +183,11 @@ span {
           color: #ffffff; }
         .section-one__gallery-imgs .img-active__btn {
           display: flex;
-          flex-direction: column; }
+          flex-direction: column;
+          margin: 5px 33px 5px 8px; }
           .section-one__gallery-imgs .img-active__btn .button {
             display: flex;
             flex-direction: row-reverse;
-            margin: 15px 33px 0 0;
             background: none;
             color: #4bd8b5;
             font-weight: 500;
@@ -468,6 +468,72 @@ span {
   visibility: hidden; }
 
 @media screen and (min-width: 640px) {
+  .section-one .container {
+    margin: 0 20px; }
+    .section-one .container h1 {
+      padding-top: 100px;
+      font-size: 64px;
+      line-height: 75px; }
+    .section-one .container button {
+      margin: 50px 0; }
+    .section-one .container .section-one__sociales {
+      position: absolute;
+      bottom: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between; }
+      .section-one .container .section-one__sociales a {
+        padding-bottom: 15px; }
+  .section-one__gallery {
+    margin: 0 0 0 100px;
+    padding-bottom: 100px; }
+    .section-one__gallery-imgs {
+      display: flex;
+      justify-content: space-between; }
+      .section-one__gallery-imgs .img {
+        width: 180px;
+        height: 260px; }
+      .section-one__gallery-imgs .img-active p {
+        margin: 230px 30px 0 25px;
+        font-size: 14px;
+        line-height: 16px; }
+      .section-one__gallery-imgs .img-active__btn {
+        flex-direction: row;
+        margin: 0 20px; }
+        .section-one__gallery-imgs .img-active__btn .button {
+          margin: 15px 0 0 10px;
+          font-size: 11px; }
+          .section-one__gallery-imgs .img-active__btn .button .button__play-icon {
+            margin: 5px 0 0 0; }
+        .section-one__gallery-imgs .img-active__btn .button-donate {
+          font-size: 12px; }
+    .section-one__gallery-line {
+      margin: -200px 0px 0px -60px; }
+    .section-one__gallery-scroll {
+      margin: 250px 0 0 185px; }
+      .section-one__gallery-scroll span:first-child {
+        margin-left: 100px; }
+      .section-one__gallery-scroll-line {
+        width: 245px; }
+  .section-two__gallery-img {
+    margin: 30px 10px 20px 0; }
+  .section-two__scroll {
+    padding-bottom: 0;
+    margin: 50px 180px; }
+    .section-two__scroll span:first-child {
+      color: #333333; }
+    .section-two__scroll-line {
+      width: 245px; }
+      .section-two__scroll-line .gallery__scroll-button {
+        width: 80px;
+        margin: 0;
+        background: #333333; }
+  .section-two .button {
+    margin: 20px 180px 50px; }
+  .section-two__benefits .benefits {
+    margin: 100px 160px 40px 160px; }
+    .section-two__benefits .benefits-img {
+      margin: 0 160px 0 160px; }
   .donation-popup__img {
     display: block;
     min-width: 139px;
