@@ -350,6 +350,154 @@ span {
       color: #4f4f4f;
       text-align: center; }
 
+/*section tree - Pets in Zoo*/
+.section-three .container {
+  margin: 0 10px; }
+
+.section-three__heading {
+  margin: 100px 0 30px;
+  text-align: center;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  font-family: "Roboto", sans-serif; }
+
+.section-three__left-button, .section-three__right-button {
+  display: none; }
+
+.section-three__slider {
+  margin: 0;
+  display: flex;
+  justify-content: space-between; }
+  .section-three__slider img {
+    width: 210px;
+    height: 300px;
+    margin-right: 10px; }
+  .section-three__slider-active {
+    width: 210px;
+    height: 300px;
+    margin-right: 10px; }
+    .section-three__slider-active p {
+      margin: -120px 10px 0;
+      font-weight: normal;
+      font-style: normal;
+      font-size: 14px;
+      line-height: 16px;
+      color: #ffffff; }
+    .section-three__slider-active__btn {
+      display: flex;
+      margin: 20px 30px 5px 10px; }
+      .section-three__slider-active__btn .button {
+        display: flex;
+        flex-direction: row-reverse;
+        background: none;
+        color: #4bd8b5;
+        font-weight: 500;
+        line-height: 12px;
+        font-size: 9px;
+        text-transform: uppercase; }
+        .section-three__slider-active__btn .button .button__play-icon {
+          width: 24px;
+          height: 24px;
+          border: 1px solid #4bd8b5;
+          border-radius: 50%;
+          margin: -6px 3px 0 0; }
+          .section-three__slider-active__btn .button .button__play-icon span {
+            border-radius: 5px;
+            position: relative;
+            color: #4bd8b5; }
+          .section-three__slider-active__btn .button .button__play-icon span::after {
+            content: "";
+            position: absolute;
+            bottom: -16px;
+            left: -1px;
+            border: 5px solid transparent;
+            border-left: 5px solid #4bd8b5; }
+      .section-three__slider-active__btn .button-donate {
+        font-size: 9px;
+        color: #f2f2f2;
+        margin-left: 10px; }
+        .section-three__slider-active__btn .button-donate .button__play-icon {
+          width: 24px;
+          height: 24px;
+          padding-top: 5px;
+          font-size: 15px;
+          color: #f2f2f2; }
+
+.section-three__scroll {
+  margin: 30px 20px; }
+  .section-three__scroll-line {
+    width: 245px; }
+    .section-three__scroll-line .gallery__scroll-button {
+      width: 40px; }
+
+.section-three__button {
+  margin: 20px 30px 50px 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 245px;
+  height: 55px;
+  background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+  border-radius: 3px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fefefe; }
+  .section-three__button .button__play-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    border: 1px solid #fefefe;
+    border-radius: 50px; }
+    .section-three__button .button__play-icon span {
+      border-radius: 5px;
+      position: relative;
+      color: #fff; }
+    .section-three__button .button__play-icon span::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: -1px;
+      border: 5px solid transparent;
+      border-left: 5px solid #fff; }
+
+/* Section four - Pay and feed */
+.section-four {
+  background: #f2f2f2; }
+  .section-four .container-second {
+    margin: 0 10px; }
+  .section-four__heading {
+    padding-top: 30px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px; }
+  .section-four__pharagraph {
+    display: none; }
+  .section-four__donation {
+    display: block; }
+    .section-four__donation-card {
+      width: 245px;
+      height: 245px;
+      margin: 30px 20px;
+      border: 2px solid #628d90;
+      border-radius: 50%; }
+      .section-four__donation-card img {
+        margin: 70px 90px 0 90px; }
+      .section-four__donation-card h5 {
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 23px;
+        text-align: center;
+        margin: 18px 50px; }
+    .section-four__donation-arrow {
+      transform: rotate(90deg); }
+
 .donation-popup {
   position: fixed;
   height: 100vh;
@@ -534,6 +682,9 @@ span {
     margin: 100px 160px 40px 160px; }
     .section-two__benefits .benefits-img {
       margin: 0 160px 0 160px; }
+  /*section tree - Pets in Zoo*/
+  .section-three__button {
+    margin: 20px 180px 50px; }
   .donation-popup__img {
     display: block;
     min-width: 139px;
@@ -660,82 +811,18 @@ span {
       .section-two__benefits .benefits h5 {
         margin: 15px 110px; }
   /*section tree - Pets in Zoo*/
-  .section-tree {
-    height: 854px; }
-  .section-tree__slider {
-    width: 1202px;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 220px; }
-    .section-tree__slider .section-tree__slider-panda {
-      width: 278px;
-      height: 399px;
-      background-image: url(../assets/treeScreen/panda.png); }
-      .section-tree__slider .section-tree__slider-panda p {
-        padding: 255px 0 0 22px;
-        width: 210px;
-        height: 48px;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        color: #ffffff; }
-    .section-tree__slider .section-tree__slider-eagle {
-      width: 278px;
-      height: 399px;
-      background-image: url(../assets/treeScreen/eagle.png); }
-    .section-tree__slider .section-tree__slider-monkey {
-      width: 278px;
-      height: 399px;
-      background-image: url(../assets/treeScreen/monkey.png); }
-    .section-tree__slider .section-tree__slider-crocodille {
-      width: 278px;
-      height: 399px;
-      background-image: url(../assets/treeScreen/kro.png); }
-  .section-tree .container .gallery__scroll-line {
-    width: 245px; }
-  .section-tree .container .section__gallery-scroll {
-    margin: 60px 0 0 702px; }
-    .section-tree .container .section__gallery-scroll span:first-child {
-      color: #333333; }
-    .section-tree .container .section__gallery-scroll .gallery__scroll-button {
-      margin: 0;
-      background: #333333; }
-  .section-tree .container .button__choose-favorite {
-    margin: 30px 0 0 702px; }
+  .section-three .container {
+    margin: 0 150px; }
+  .section-three__heading {
+    font-size: 48px;
+    line-height: 56px; }
+  .section-three__left-button, .section-three__right-button {
+    display: none; }
+  .section-three__slider {
+    margin: 35px 210px; }
+  .section-three__button {
+    margin: 30px 690px 100px 690px; }
   /* Section four - Pay and feed */
-  .section-four {
-    height: 754px;
-    background: #f2f2f2; }
-    .section-four .container-second p {
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 16px;
-      text-align: center;
-      margin: 0; }
-    .section-four button {
-      margin: 60px 0 0 480px; }
-  .section-four__donation {
-    display: flex;
-    justify-content: space-between; }
-    .section-four__donation .section-four__donation-card {
-      width: 245px;
-      height: 245px;
-      border: 2px solid #628d90;
-      border-radius: 50%;
-      margin-top: 92px; }
-      .section-four__donation .section-four__donation-card img {
-        margin: 70px 0 0 90px; }
-      .section-four__donation .section-four__donation-card h5 {
-        position: absolute;
-        width: 135px;
-        height: 46px;
-        font-weight: 900;
-        font-size: 20px;
-        line-height: 23px;
-        text-align: center;
-        margin: 18px 0 0 55px; }
-    .section-four__donation .arrow {
-      margin-top: 215px; }
   /* section five - Testimonials*/
   .section-five {
     height: 810px; }

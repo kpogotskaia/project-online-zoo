@@ -475,7 +475,215 @@ $font: "Roboto", sans-serif;
   }
 }
 
+/*section tree - Pets in Zoo*/
+
+.section-three {
+  .container {
+    margin: 0 10px;
+  }
+
+  &__heading {
+    margin: 100px 0 30px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    font-family: "Roboto", sans-serif;
+  }
+
+  &__left-button, &__right-button {
+    display: none;
+  }
+
+  &__slider {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+
+    img {
+      width: 210px;
+      height: 300px;
+      margin-right: 10px;
+    }
+
+    &-active {
+      width: 210px;
+      height: 300px;
+      margin-right: 10px;
+
+        p {
+          margin: -120px 10px 0;
+          font-weight: normal;
+          font-style: normal;
+          font-size: 14px;
+          line-height: 16px;
+          color: #ffffff;
+        }
+
+        &__btn {
+          display: flex;
+          margin: 20px 30px 5px 10px;
+
+          .button {
+            display: flex;
+            flex-direction: row-reverse;
+            background: none;
+            color: #4bd8b5;
+            font-weight: 500;
+            line-height: 12px;
+            font-size: 9px;
+            text-transform: uppercase;
+
+            .button__play-icon {
+              width: 24px;
+              height: 24px;
+              border: 1px solid #4bd8b5;
+              border-radius: 50%;
+              margin: -6px 3px 0 0;
+
+                span {
+                  border-radius: 5px;
+                  position: relative;
+                  color: #4bd8b5;
+                }
+
+                span::after {
+                  content: "";
+                  position: absolute;
+                  bottom: -16px;
+                  left: -1px;
+                  border: 5px solid transparent;
+                  border-left: 5px solid #4bd8b5;
+                }
+              }
+            }
+
+            .button-donate {
+              font-size: 9px;
+              color: #f2f2f2;
+              margin-left: 10px;
+
+              .button__play-icon {
+                width: 24px;
+                height: 24px;
+                padding-top: 5px;
+                font-size: 15px;
+                color: #f2f2f2;
+              }
+            }
+        }
+    }
+  }
+
+  &__scroll {
+    margin: 30px 20px;
+
+    &-line {
+      width: 245px;
+
+      .gallery__scroll-button {
+        width: 40px;
+      }
+    }
+  }
+
+  &__button {
+    margin: 20px 30px 50px 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 245px;
+    height: 55px;
+    background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+    border-radius: 3px;
+    // text
+    font-family: $font;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $white;
+
+      .button__play-icon {
+        width: 32px;
+        height: 32px;
+        margin-right: 10px;
+        border: 1px solid $white;
+        border-radius: 50px;
+
+          span {
+            border-radius: 5px;
+            position: relative;
+            color: #fff;
+          }
+
+          span::after {
+            content: "";
+            position: absolute;
+            bottom: -20px;
+            left: -1px;
+            border: 5px solid transparent;
+            border-left: 5px solid #fff;
+          }
+      }
+  }
+}
+
+ /* Section four - Pay and feed */
+
+ .section-four {
+  background: #f2f2f2;
+
+  .container-second {
+    margin: 0 10px;
+  }
+
+  &__heading {
+    padding-top: 30px;
+    text-align: center;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  &__pharagraph {
+     display: none;
+  }
+
+  &__donation {
+    display: block;
+
+      &-card {
+        width: 245px;
+        height: 245px;
+        margin: 30px 20px;
+        border: 2px solid #628d90;
+        border-radius: 50%;
+
+          img {
+            margin: 70px 90px 0 90px;
+          }
+
+          h5 {
+            font-weight: 900;
+            font-size: 18px;
+            line-height: 23px;
+            text-align: center;
+            margin: 18px 50px;
+          }
+      }
+      &-arrow {
+        transform: rotate(90deg);
+      }
+  }
+}
+
+
+
 // style popup
+
 .donation-popup {
   position: fixed;
   height: 100vh;
@@ -779,6 +987,15 @@ $font: "Roboto", sans-serif;
   }
 }
 
+/*section tree - Pets in Zoo*/
+
+.section-three {
+
+  &__button {
+    margin: 20px 180px 50px;
+  }
+}
+
 //donation-popup
 
   .donation-popup {
@@ -1013,113 +1230,33 @@ $font: "Roboto", sans-serif;
 
   /*section tree - Pets in Zoo*/
 
-  .section-tree {
-    height: 854px;
-  }
-
-  .section-tree__slider {
-    width: 1202px;
-    display: flex;
-    justify-content: space-between;
-    margin-left: 220px;
-    .section-tree__slider-panda {
-      width: 278px;
-      height: 399px;
-      background-image: url(../assets/treeScreen/panda.png);
-      p {
-        padding: 255px 0 0 22px;
-        width: 210px;
-        height: 48px;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        color: #ffffff;
-      }
-    }
-    .section-tree__slider-eagle {
-      width: 278px;
-      height: 399px;
-      background-image: url(../assets/treeScreen/eagle.png);
-    }
-    .section-tree__slider-monkey {
-      width: 278px;
-      height: 399px;
-      background-image: url(../assets/treeScreen/monkey.png);
-    }
-    .section-tree__slider-crocodille {
-      width: 278px;
-      height: 399px;
-      background-image: url(../assets/treeScreen/kro.png);
-    }
-  }
-
-
-  .section-tree {
+  .section-three {
     .container {
-      .gallery__scroll-line {
-        width: 245px;
-      }
-      .section__gallery-scroll {
-        margin: 60px 0 0 702px;
-        span:first-child {
-          color: #333333;
-        }
-        .gallery__scroll-button {
-          margin: 0;
-          background: #333333;
-        }
-      }
-      .button__choose-favorite {
-        margin: 30px 0 0 702px;
-      }
+      margin: 0 150px;
+    }
+
+    &__heading {
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    &__left-button, &__right-button {
+      display: none;
+    }
+
+    &__slider {
+      margin: 35px 210px;
+    }
+
+    &__button {
+      margin: 30px 690px 100px 690px;
+
     }
   }
 
   /* Section four - Pay and feed */
 
-  .section-four {
-    height: 754px;
-    background: #f2f2f2;
-    .container-second {
-      p {
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        text-align: center;
-        margin: 0;
-      }
-    }
-    button {
-      margin: 60px 0 0 480px;
-    }
-  }
-  .section-four__donation {
-    display: flex;
-    justify-content: space-between;
-    .section-four__donation-card {
-      width: 245px;
-      height: 245px;
-      border: 2px solid #628d90;
-      border-radius: 50%;
-      margin-top: 92px;
-      img {
-        margin: 70px 0 0 90px;
-      }
-      h5 {
-        position: absolute;
-        width: 135px;
-        height: 46px;
-        font-weight: 900;
-        font-size: 20px;
-        line-height: 23px;
-        text-align: center;
-        margin: 18px 0 0 55px;
-      }
-    }
-    .arrow {
-      margin-top: 215px;
-    }
-  }
+
 
   /* section five - Testimonials*/
 
@@ -1194,58 +1331,58 @@ $font: "Roboto", sans-serif;
   }
 
   // donation popup
-.donation-popup {
-  position: fixed;
-  width: 1200px;
-  height: 795px;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  margin: 0;
+  .donation-popup {
+    position: fixed;
+    width: 1200px;
+    height: 795px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
 
-  &__img {
-    min-width: 197px;
+    &__img {
+      min-width: 197px;
+    }
+
+    .donation_form {
+      margin: 77px 139px 40px;
+
+      &__title {
+        margin: 20px 0 48px;
+      }
+
+      &__animal_section {
+        display: flex;
+
+        .input-section + .input-section {
+          margin-top: 0;
+          margin-left: $horizontal-input-margin-desktop;
+        }
+      }
+
+      .input-section {
+        input {
+          width: 335px;
+        }
+      }
+
+      &__block {
+        display: flex;
+
+        fieldset {
+          margin-top: 40px;
+        }
+
+        fieldset + fieldset {
+          margin-left: $horizontal-input-margin-desktop;
+        }
+      }
+
+      &__info {
+        margin: 40px 110px;
+      }
+    }
   }
-
-  .donation_form {
-    margin: 77px 139px 40px;
-
-    &__title {
-      margin: 20px 0 48px;
-    }
-
-    &__animal_section {
-      display: flex;
-
-      .input-section + .input-section {
-        margin-top: 0;
-        margin-left: $horizontal-input-margin-desktop;
-      }
-    }
-
-    .input-section {
-      input {
-        width: 335px;
-      }
-    }
-
-    &__block {
-      display: flex;
-
-      fieldset {
-        margin-top: 40px;
-      }
-
-      fieldset + fieldset {
-        margin-left: $horizontal-input-margin-desktop;
-      }
-    }
-
-    &__info {
-      margin: 40px 110px;
-    }
-  }
-}
 }
 
 
