@@ -20,10 +20,11 @@
                     <span>online</span>
                 </a>
 
+                <div class="header__burger">
+                    <span></span>
+                </div>
                 <nav class="header__menu">
-                    <div class="header__menu-burger">
-                        <img src="assets/menu/outline_menu_black_24dp.png" alt=""></div>
-                    <ul class="header__menu-list clearfix">
+                    <ul class="header__menu-list">
                         <li>
                             <a href="#" class="header__menu-item active">About</a>
                         </li>
@@ -49,7 +50,7 @@
     </header>
     <section class="section-one">
         <div class="container">
-            <h1>Watch your favorite animal online</h1>
+            <h1 class="section-one__heading">Watch your favorite animal online</h1>
 
             <button class="button">watch online
                 <div class="button__play-icon">
@@ -80,6 +81,7 @@
                     <img class="img" src="assets/glery1screen/eagle.png" alt="">
                 </div>
                 <div class="img-active">
+                    <img class="img-active__img" src="assets/glery1screen/panda.png" alt="">
                     <p class="img-active__pharagraph"> Panda’s name is Bei Bei. He
                         is 2 years old. Bei Bei is
                         from China. He loves bamboos.
@@ -139,6 +141,9 @@
             </p>
             <div class="section-two__gallery">
                <img class="section-two__gallery-img" src="assets/rectangles/deers.png" alt="">
+               <img class="section-two__gallery-img" src="assets/rectangles/monkeys.png" alt="">
+               <img class="section-two__gallery-img" src="assets/rectangles/panda.png" alt="">
+               <img class="section-two__gallery-img" src="assets/rectangles/twomonk.png" alt="">
             </div>
             <div class="section-two__scroll section-one__gallery-scroll">
                 <span>01 /</span>
@@ -220,9 +225,6 @@
                 </div>
             </div>
             <button class="section-three__button button">watch online
-                <div class="button__play-icon">
-                    <span></span>
-                </div>
             </button>
         </div>
     </section>
@@ -241,7 +243,7 @@
                         VISA card</h5>
                 </div>
                 <div class="section-four__donation-arrow">
-                    <img src="assets/donation/Arrow.png" alt="arrow">
+                    <img class="arrow-left" src="assets/donation/Arrow.png" alt="arrow">
                 </div>
                 <div class="section-four__donation-card">
                     <img src="assets/donation/zoo.png" alt="zoo">
@@ -249,49 +251,59 @@
                         to the Zoo</h5>
                 </div>
                 <div class="section-four__donation-arrow">
-                    <img  src="assets/donation/Arrow.png" alt="arrow">
+                    <img class="arrow-right" src="assets/donation/Arrow.png" alt="arrow">
                 </div>
                 <div class="section-four__donation-card">
-                    <img src="assets/donation/panda.png" alt="pands">
+                    <img  src="assets/donation/panda.png" alt="pands">
                     <h5>Panda gets
                         the bamboo</h5>
                 </div>
             </div>
-            <button class="donation-popup-button">donate</button>
+            <button class="section-four__button button">donate
+                <div class="play"></div>
+            </button>
         </div>
     </section>
     <section class="section-five">
-        <div class="section-five__arrow-left"></div>
-            <div class="container-second">
-                <h1 class="section__heading">Testimonials</h1>
-                <div class="testimonials">
-                    <div class="testimonials__card">
-                        <div class="testimonials__card-user"></div>
-                        <h3>Nastya Sidorova</h3>
-                        <p>As a voice for wildlife, we are devastated
-                            by the impact of the 2020 Australian
-                            bushfires on precious species and their
-                            habitat.</p>
+        <div class="container">
+            <div class="section-five__arrow-left"></div>
+                <div class="container-second">
+                    <h1 class="section-five__heading">Testimonials</h1>
+                    <div class="section-five__testimonials">
+                        <div class="section-five__testimonials-card">
+                            <div class="card-user">
+                                <img src="assets/users/usrM.png" alt="">
+                            </div>
+                            <h3 class="name">Vlad Kim</h3>
+                            <p class="pharagraph">As a voice for wildlife, we are devastated
+                                by the impact of the 2020 Australian
+                                bushfires on precious species and their
+                                habitat.</p>
+                        </div>
+                        <div class="section-five__testimonials-card">
+                            <div class="card-user">
+                                <img src="assets/users/users.png" alt="">
+                            </div>
+                            <h3 class="name">Nastya Sidorova</h3>
+                            <p class="pharagraph">As a voice for wildlife, we are devastated
+                                by the impact of the 2020 Australian
+                                bushfires on precious species and their
+                                habitat.</p>
+                        </div>
                     </div>
-                    <div class="testimonials__card">
-                        <div class="testimonials__card-user"></div>
-                        <h3>Vlad Kim</h3>
-                        <p>As a voice for wildlife, we are devastated
-                            by the impact of the 2020 Australian
-                            bushfires on precious species and their
-                            habitat.</p>
+                    <div class="section-two__scroll section-one__gallery-scroll">
+                        <span>02 /</span>
+                        <span>08</span>
+                        <div class="section-two__scroll-line section-one__gallery-scroll-line">
+                            <div class="gallery__scroll-button"></div>
+                        </div>
                     </div>
+                    <button class="section-five__button button">leave feedback
+                        <div class="play"></div>
+                    </button>
                 </div>
-                <div class="section__gallery-scroll">
-                    <span>02 /</span>
-                    <span>08</span>
-                    <div class="gallery__scroll-line">
-                        <div class="gallery__scroll-button"></div>
-                    </div>
-                </div>
-                <button>leave feedback</button>
-            </div>
-        <div class="section-five__arrow-right"></div>
+            <div class="section-five__arrow-right"></div>
+    </div>
     </section>
     <section class="section-six">
         <h3 class="section__heading">Map</h3>
@@ -392,6 +404,7 @@
         </div>
         <button class="js-donation-popup-close donation-popup__close">×</button>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
     <script src="script.js"></script>
     <script src="burger-menu.js"></script>
 </body>

@@ -1,4 +1,3 @@
-@charset "UTF-8";
 body {
   overflow-x: hidden;
   margin: 0; }
@@ -57,71 +56,117 @@ span {
   font-family: "Roboto", sans-serif;
   font-style: normal; }
 
+/* header */
 .container {
   margin: 0 10px; }
-
-.header {
-  display: flex;
-  justify-content: space-between; }
-  .header__logo {
-    text-decoration: none;
+  .container .header {
     display: flex;
-    flex-direction: column;
-    padding: 30px 0; }
-    .header__logo span:first-child {
-      font-size: 36px;
-      font-weight: 900;
-      line-height: 42px; }
-    .header__logo span:nth-child(2) {
-      font-size: 18px;
-      font-weight: 900;
-      font-size: 18px;
-      line-height: 21px;
-      letter-spacing: 0.08em; }
-  .header__menu {
-    margin-top: 40px; }
-    .header__menu-burger {
-      display: inline-block;
-      /* иконка гамбургер видна */ }
-    .header__menu-list {
-      display: none;
-      /* пункты меню скрыты */ }
-      .header__menu-list li {
-        float: none;
-        /* пункты меню в столбцах */ }
-        .header__menu-list li .header__menu-item {
-          font-family: "Roboto", sans-serif;
-          color: #333;
-          text-decoration: none;
-          font-size: 16px;
-          font-weight: 500;
-          line-height: 18, 75px; }
-  .header__revers {
-    width: 54px;
-    height: 30px;
-    background: #f2f2f2;
-    border-radius: 190px;
-    margin-top: 50px; }
-    .header__revers-btn {
-      width: 20px;
-      height: 20px;
-      background: #fefefe;
-      box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
-      border-radius: 50%;
-      margin: 4.5px 0 0 5px; }
+    justify-content: space-between; }
+    .container .header__logo {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 0; }
+      .container .header__logo span:first-child {
+        font-size: 36px;
+        font-weight: 900;
+        line-height: 42px; }
+      .container .header__logo span:nth-child(2) {
+        font-size: 18px;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.08em; }
+    .container .header__burger {
+      position: relative;
+      width: 30px;
+      height: 40px;
+      display: block;
+      margin: 45px 0px; }
+      .container .header__burger span {
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: #333;
+        margin: 0 auto;
+        top: 16px; }
+      .container .header__burger ::after {
+        content: '';
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: #333;
+        margin: 0 auto;
+        bottom: 8px; }
+      .container .header__burger ::before {
+        content: '';
+        height: 3px;
+        width: 100%;
+        position: absolute;
+        background: #333;
+        margin: 0 auto;
+        top: 8px; }
+      .container .header__burger.open-menu {
+        left: 0; }
+      .container .header__burger.open-menu span {
+        opacity: 0;
+        transition: 0.5s; }
+      .container .header__burger.open-menu:after {
+        transform: rotate(-38deg);
+        bottom: 16px;
+        transition: 0.4s; }
+      .container .header__burger.open-menu:before {
+        transform: rotate(38deg);
+        top: 16px;
+        transition: 0.4s; }
+    .container .header__menu {
+      display: block;
+      position: absolute;
+      top: 55px;
+      left: 0;
+      background: #f5f6f6;
+      width: 100%;
+      box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
+      left: -100%;
+      transition: all 0.4s ease; }
+      .container .header__menu-list {
+        display: block; }
+        .container .header__menu-list li {
+          margin: 40px 0px 40px 33px;
+          font-size: 14px; }
+          .container .header__menu-list li .header__menu-item {
+            font-family: "Roboto", sans-serif;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 18, 75px; }
+          .container .header__menu-list li :hover {
+            color: #4bd8b5; }
+    .container .header__revers {
+      width: 54px;
+      height: 30px;
+      background: #f2f2f2;
+      border-radius: 190px;
+      margin-top: 50px; }
+      .container .header__revers-btn {
+        width: 20px;
+        height: 20px;
+        background: #fefefe;
+        box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+        border-radius: 50%;
+        margin: 4.5px 0 0 5px; }
 
 /* section one - Watch your favorite animal online */
 .section-one {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(rgba(119, 119, 119, 0.719), rgba(0, 0, 0, 0.541)), url("../assets/glery1screen/wild.jpg");
   background-size: cover; }
   .section-one .container {
     margin: 0 10px; }
     .section-one .container h1 {
-      padding-top: 90px;
-      font-family: "Roboto", sans-serif;
-      font-style: normal;
+      padding: 90px 0 0 0;
       font-weight: 900;
       font-size: 48px;
       line-height: 56px;
@@ -159,6 +204,8 @@ span {
           left: -1px;
           border: 5px solid transparent;
           border-left: 5px solid #fff; }
+    .section-one .container .button:hover {
+      background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%); }
     .section-one .container .section-one__sociales {
       display: none; }
   .section-one__gallery {
@@ -167,24 +214,28 @@ span {
       display: flex;
       justify-content: space-between; }
       .section-one__gallery-imgs .img {
-        width: 110px;
-        height: 160px;
+        width: 115px;
+        height: 165px;
         background-size: cover;
-        margin: 25px 0 0 10px; }
+        margin: 20px 0 0 10px; }
       .section-one__gallery-imgs .img-active {
-        background-image: url(../assets/glery1screen/panda.png);
-        background-size: cover;
+        position: relative;
         margin-left: 10px; }
+        .section-one__gallery-imgs .img-active__img {
+          width: 145px;
+          height: 205px; }
         .section-one__gallery-imgs .img-active p {
-          margin: 65px 4px 0 8px;
+          position: absolute;
+          left: 8px;
+          top: 70px;
           font-weight: normal;
           font-size: 12px;
           line-height: 14px;
           color: #ffffff; }
         .section-one__gallery-imgs .img-active__btn {
-          display: flex;
-          flex-direction: column;
-          margin: 5px 33px 5px 8px; }
+          position: absolute;
+          top: 150px;
+          left: 8px; }
           .section-one__gallery-imgs .img-active__btn .button {
             display: flex;
             flex-direction: row-reverse;
@@ -213,7 +264,7 @@ span {
                 border-left: 5px solid #4bd8b5; }
           .section-one__gallery-imgs .img-active__btn .button-donate {
             font-size: 10px;
-            margin: 5px 0 0 0;
+            margin: 10px 0;
             color: #f2f2f2; }
             .section-one__gallery-imgs .img-active__btn .button-donate .button__play-icon {
               width: 24px;
@@ -239,7 +290,7 @@ span {
           margin: 3px 0px 0px 3px;
           background: #b8b8b8; }
     .section-one__gallery-scroll {
-      margin: 120px 32px 0 130px;
+      margin: 125px 35px 0 140px;
       padding-bottom: 55px; }
       .section-one__gallery-scroll span:first-child {
         font-family: "Roboto", sans-serif;
@@ -263,8 +314,7 @@ span {
         .section-one__gallery-scroll-line .gallery__scroll-button {
           width: 15px;
           height: 5px;
-          padding-top: 5px;
-          margin: 0 0px 50px 30px;
+          margin: 0 0px 50px 20px;
           background: #fefefe; }
 
 /*section two - How it works */
@@ -280,13 +330,17 @@ span {
   line-height: 16px;
   color: #4f4f4f; }
 
-.section-two__gallery-img {
-  margin: 30px 10px 20px 0; }
+.section-two__gallery {
+  display: flex;
+  overflow: hidden; }
+  .section-two__gallery-img {
+    margin: 30px 10px 20px 0; }
 
 .section-two__scroll {
   padding-bottom: 0;
   margin: 20px 30px; }
   .section-two__scroll span:first-child {
+    margin-left: 90px;
     color: #333333; }
   .section-two__scroll-line {
     width: 245px; }
@@ -327,6 +381,9 @@ span {
       left: -1px;
       border: 5px solid transparent;
       border-left: 5px solid #fff; }
+
+.section-two .button:hover {
+  background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%); }
 
 .section-two__benefits {
   background: #f2f2f2;
@@ -466,7 +523,8 @@ span {
 
 /* Section four - Pay and feed */
 .section-four {
-  background: #f2f2f2; }
+  background: #f2f2f2;
+  padding-bottom: 50px; }
   .section-four .container-second {
     margin: 0 10px; }
   .section-four__heading {
@@ -480,11 +538,12 @@ span {
   .section-four__pharagraph {
     display: none; }
   .section-four__donation {
+    position: relative;
     display: block; }
     .section-four__donation-card {
       width: 245px;
       height: 245px;
-      margin: 30px 20px;
+      margin: 30px 20px 100px 20px;
       border: 2px solid #628d90;
       border-radius: 50%; }
       .section-four__donation-card img {
@@ -496,7 +555,82 @@ span {
         text-align: center;
         margin: 18px 50px; }
     .section-four__donation-arrow {
-      transform: rotate(90deg); }
+      position: absolute;
+      margin: -60px 0 0 110px;
+      display: block;
+      transform: translateX(50px) rotate(90deg) translateY(50px); }
+      .section-four__donation-arrow .arrow-left, .section-four__donation-arrow .arrow-right {
+        width: 50px; }
+  .section-four__button {
+    margin: 20px 30px 50px 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 245px;
+    height: 55px;
+    background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+    border-radius: 3px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fefefe; }
+
+/* section five - Testimonials*/
+.section-five__arrow-left {
+  display: none; }
+
+.section-five__heading {
+  margin: 0;
+  padding-top: 50px;
+  font-style: normal;
+  font-weight: 900;
+  font-size: 36px;
+  line-height: 42px;
+  text-align: center; }
+
+.section-five__testimonials {
+  display: flex;
+  overflow: hidden; }
+  .section-five__testimonials-card {
+    margin: 35px 5px;
+    background: #FEFEFE;
+    box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+    border-radius: 5px; }
+    .section-five__testimonials-card .card-user {
+      margin: 30px 115px;
+      border-radius: 50%; }
+    .section-five__testimonials-card .name {
+      margin: 0 75px 20px 75px;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 16px;
+      line-height: 19px; }
+    .section-five__testimonials-card .pharagraph {
+      margin: 0 10px;
+      padding-bottom: 70px;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      color: #4F4F4F; }
+
+.section-five__button {
+  margin: 20px 30px 50px 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 245px;
+  height: 55px;
+  background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+  border-radius: 3px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fefefe; }
 
 .donation-popup {
   position: fixed;
@@ -633,37 +767,41 @@ span {
       .section-one .container .section-one__sociales a {
         padding-bottom: 15px; }
   .section-one__gallery {
-    margin: 0 0 0 100px;
+    margin: 0 0 0 70px;
     padding-bottom: 100px; }
-    .section-one__gallery-imgs {
-      display: flex;
-      justify-content: space-between; }
-      .section-one__gallery-imgs .img {
-        width: 180px;
-        height: 260px; }
+    .section-one__gallery-imgs .img {
+      margin-left: 30px;
+      width: 180px;
+      height: 260px; }
+    .section-one__gallery-imgs .img-active {
+      margin-left: 30px; }
+      .section-one__gallery-imgs .img-active__img {
+        width: 245px;
+        height: 352px; }
       .section-one__gallery-imgs .img-active p {
-        margin: 230px 30px 0 25px;
+        margin: 0 28px 20px 15px;
+        top: 232px;
         font-size: 14px;
         line-height: 16px; }
       .section-one__gallery-imgs .img-active__btn {
-        flex-direction: row;
-        margin: 0 20px; }
+        display: flex;
+        top: 280px; }
         .section-one__gallery-imgs .img-active__btn .button {
-          margin: 15px 0 0 10px;
+          margin: 20px 5px 0 15px;
           font-size: 11px; }
-          .section-one__gallery-imgs .img-active__btn .button .button__play-icon {
-            margin: 5px 0 0 0; }
         .section-one__gallery-imgs .img-active__btn .button-donate {
           font-size: 12px; }
     .section-one__gallery-line {
-      margin: -200px 0px 0px -60px; }
+      margin: -200px 0px 0px -30px; }
     .section-one__gallery-scroll {
-      margin: 250px 0 0 185px; }
+      margin: 250px 0 0 245px; }
       .section-one__gallery-scroll span:first-child {
         margin-left: 100px; }
       .section-one__gallery-scroll-line {
         width: 245px; }
+  /* section-two How it works */
   .section-two__gallery-img {
+    width: 600px;
     margin: 30px 10px 20px 0; }
   .section-two__scroll {
     padding-bottom: 0;
@@ -679,12 +817,61 @@ span {
   .section-two .button {
     margin: 20px 180px 50px; }
   .section-two__benefits .benefits {
-    margin: 100px 160px 40px 160px; }
+    margin: 100px 120px 40px 120px; }
     .section-two__benefits .benefits-img {
       margin: 0 160px 0 160px; }
   /*section tree - Pets in Zoo*/
   .section-three__button {
     margin: 20px 180px 50px; }
+  /* Section four - Pay and feed */
+  .section-four {
+    padding: 100px 0; }
+    .section-four .container-second {
+      margin: 0 10px; }
+    .section-four__heading {
+      padding: 0;
+      margin: 0; }
+    .section-four__pharagraph {
+      display: block;
+      margin: 15px 10px 50px 10px;
+      text-align: center;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: #828282; }
+    .section-four__donation {
+      margin: 0 175px; }
+    .section-four__button {
+      margin: 50px 195px 0px 195px; }
+    .section-four__button:hover {
+      background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%); }
+  /* section five - Testimonials*/
+  .section-five__heading {
+    font-size: 48px;
+    line-height: 56px; }
+  .section-five__testimonials {
+    display: flex;
+    justify-content: space-between; }
+    .section-five__testimonials-card {
+      margin: 35px 25px 20px 25px; }
+      .section-five__testimonials-card .card-user {
+        margin: 45px 260px 20px 260px;
+        border-radius: 50%; }
+      .section-five__testimonials-card .name {
+        margin: 0 220px 20px 220px;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 19px; }
+      .section-five__testimonials-card .pharagraph {
+        margin: 0 70px;
+        padding-bottom: 70px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #4F4F4F; }
   .donation-popup__img {
     display: block;
     min-width: 139px;
@@ -710,29 +897,27 @@ span {
 @media screen and (min-width: 1280px) {
   .container {
     margin: 0 150px; }
-  .container-second {
-    margin: 0 360px; }
-  .section__heading {
-    padding: 100px 0 35px 0;
-    font-size: 48px;
-    line-height: 56px;
-    text-align: center;
-    margin: 0; }
-  .header {
-    display: flex;
-    justify-content: space-between; }
-    .header__menu-burger {
-      display: none; }
-    .header__menu-list {
-      display: flex; }
-      .header__menu-list li {
-        float: left;
-        margin-left: 83px; }
-        .header__menu-list li .header__menu-item {
-          display: inline-block; }
-        .header__menu-list li :hover {
-          font-weight: 900;
-          border-bottom: 3px solid #333; }
+    .container .header {
+      display: flex;
+      justify-content: space-between; }
+      .container .header__menu {
+        position: absolute;
+        right: 36px;
+        display: block; }
+        .container .header__menu-burger {
+          display: none; }
+        .container .header__menu-list {
+          display: flex;
+          position: relative;
+          z-index: 2; }
+          .container .header__menu-list li {
+            float: left;
+            margin-left: 83px; }
+            .container .header__menu-list li .header__menu-item {
+              display: inline-block; }
+            .container .header__menu-list li :hover {
+              font-weight: 900;
+              border-bottom: 3px solid #333; }
   /* section one - Watch your favorite animal online */
   .section-one .container {
     margin: 0 150px; }
@@ -765,42 +950,47 @@ span {
         height: 350px;
         margin-top: -100px; }
         .section-one__gallery-imgs .img-active p {
-          margin: 230px 30px 0 25px;
+          top: 232px;
+          left: 20px;
           font-size: 14px;
-          line-height: 16px; }
-        .section-one__gallery-imgs .img-active__btn {
-          flex-direction: row; }
-          .section-one__gallery-imgs .img-active__btn .button {
-            margin: 15px 0 0 10px;
-            font-size: 11px; }
-            .section-one__gallery-imgs .img-active__btn .button .button__play-icon {
-              margin: 5px 0 0 0; }
-          .section-one__gallery-imgs .img-active__btn .button-donate {
-            font-size: 12px; }
+          line-height: 16px;
+          font-style: normal;
+          font-weight: normal; }
+        .section-one__gallery-imgs .img-active__btn .button {
+          font-size: 12px; }
+        .section-one__gallery-imgs .img-active__btn .button-donate {
+          font-size: 12px; }
     .section-one__gallery-line {
       margin: -200px 0px 0px -60px; }
     .section-one__gallery-scroll {
-      margin: 250px 0 0 185px; }
+      margin: 250px 0 0 200px; }
       .section-one__gallery-scroll span:first-child {
         margin-left: 100px; }
       .section-one__gallery-scroll-line {
         width: 245px; }
   /*section two - How it works */
+  .section-two .container {
+    margin: 0 150px; }
   .section-two__heading {
-    text-align: center; }
+    margin-top: 100px;
+    text-align: center;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 56px; }
   .section-two__pharagraph {
-    margin: 0 415px;
+    margin: 0 405px;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     color: #4f4f4f; }
   .section-two__gallery-img {
-    margin: 30px 412px;
+    width: 790px;
+    margin: 30px 405px;
     border-radius: 5px; }
   .section-two__scroll {
     margin: 0 690px; }
   .section-two .button {
-    margin: 20px 690px 50px 690px; }
+    margin: 20px 690px 100px 690px; }
   .section-two__benefits {
     display: flex;
     padding: 100px 310px; }
@@ -823,46 +1013,43 @@ span {
   .section-three__button {
     margin: 30px 690px 100px 690px; }
   /* Section four - Pay and feed */
-  /* section five - Testimonials*/
-  .section-five {
-    height: 810px; }
-    .section-five .section__gallery-scroll {
-      margin: 50px 0 0 480px; }
-      .section-five .section__gallery-scroll span {
-        color: #333333; }
-      .section-five .section__gallery-scroll .gallery__scroll-line {
-        margin-left: -15px; }
-        .section-five .section__gallery-scroll .gallery__scroll-line .gallery__scroll-button {
-          background: #333333; }
-    .section-five button {
-      margin: 50px 0 0 465px; }
-  .testimonials {
-    width: 1200px;
+  .section-four__heading {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 48px;
+    line-height: 56px; }
+  .section-four__donation {
     display: flex;
-    justify-content: space-between; }
-    .testimonials .testimonials__card {
-      padding-top: 47px;
-      width: 585px;
-      height: 310px;
-      box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
-      border-radius: 5px; }
-      .testimonials .testimonials__card div {
-        margin-left: 260px;
-        width: 68px;
-        height: 68px;
-        border: 1px solid slategrey;
+    justify-content: space-between;
+    margin: 0 360px; }
+  .section-four-arrow {
+    position: relative;
+    margin: 0px 0 0 110px;
+    display: block;
+    transform: none; }
+    .section-four-arrow .arrow-left, .section-four-arrow .arrow-right {
+      width: 105px; }
+  .section-four__button {
+    margin: 0 820px; }
+  /* section five - Testimonials*/
+  .section-five__heading {
+    font-size: 48px;
+    line-height: 56px;
+    margin: 60px 0 25px 0; }
+  .section-five__testimonials {
+    margin: 0 200px;
+    padding-bottom: 40px; }
+    .section-five__testimonials-card {
+      margin: 35px 0 20px 30px; }
+      .section-five__testimonials-card .card-user {
+        margin: 40px 260px 20px 260px;
         border-radius: 50%; }
-      .testimonials .testimonials__card h3 {
+      .section-five__testimonials-card .name {
         text-align: center; }
-      .testimonials .testimonials__card p {
-        width: 470px;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        margin-left: 90px; }
-  .testimonials__card-user {
-    background-image: url(../assets/users/user1.png);
-    background-size: cover; }
+      .section-five__testimonials-card .pharagraph {
+        text-align: center; }
+  .section-five__button {
+    margin: 30px 690px 100px 690px; }
   /*section six - Map*/
   .section-six {
     height: 904px;

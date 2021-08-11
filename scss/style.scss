@@ -102,11 +102,20 @@ $font: "Roboto", sans-serif;
     }
   }
 
-  &__menu {
-    margin-top: 40px;
+  &__burger {
+    position: relative;
+    width: 30px;
+    height: 40px;
+    display: block;
+    margin: 45px 0px;
 
-    &-burger {
-      display: inline-block; /* иконка гамбургер видна */
+    span {
+      height: 3px;
+      width: 100%;
+      position: absolute;
+      background: #333;
+      margin: 0 auto;
+      top: 16px;
     }
 
     ::after {
@@ -163,19 +172,24 @@ $font: "Roboto", sans-serif;
     transition: all 0.4s ease;
 
     &-list {
-      display: none; /* пункты меню скрыты */
+      display: block;
 
       li {
-        float: none; /* пункты меню в столбцах */
+        margin: 40px 0px 40px 33px;
+        font-size: 14px;
 
-        .header__menu-item {
-          font-family: $font;
-          color: #333;
-          text-decoration: none;
-          font-size: 16px;
-          font-weight: 500;
-          line-height: 18, 75px;
-        }
+          .header__menu-item {
+            font-family: $font;
+            color: #333;
+            text-decoration: none;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 18, 75px;
+          }
+
+          :hover {
+            color: #4bd8b5;
+          }
       }
     }
   }
@@ -197,12 +211,13 @@ $font: "Roboto", sans-serif;
     }
   }
 }
+}
 
 /* section one - Watch your favorite animal online */
 
 .section-one {
-  width: auto;
-  height: auto;
+  width: 100%;
+  height: 100%;
   background: linear-gradient(rgba(119, 119, 119, 0.719), rgba(0, 0, 0, 0.541)), url("../assets/glery1screen/wild.jpg");
   background-size: cover;
 
@@ -210,9 +225,7 @@ $font: "Roboto", sans-serif;
       margin: 0 10px;
 
       h1 {
-        padding-top: 90px;
-        font-family: "Roboto", sans-serif;
-        font-style: normal;
+        padding: 90px 0 0 0;
         font-weight: 900;
         font-size: 48px;
         line-height: 56px;
@@ -260,6 +273,9 @@ $font: "Roboto", sans-serif;
               }
           }
       }
+      .button:hover {
+        background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
+      }
 
       .section-one__sociales {
         display: none;
@@ -274,16 +290,25 @@ $font: "Roboto", sans-serif;
         justify-content: space-between;
 
         .img {
-          width: 110px;
-          height: 160px;
+          width: 115px;
+          height: 165px;
           background-size: cover;
-          margin: 25px 0 0 10px;
+          margin: 20px 0 0 10px;
         }
 
         .img-active {
+          position: relative;
           margin-left: 10px;
 
+          &__img {
+            width: 145px;
+            height: 205px;
+          }
+
             p {
+              position: absolute;
+              left: 8px;
+              top: 70px;
               font-weight: normal;
               font-size: 12px;
               line-height: 14px;
@@ -291,9 +316,9 @@ $font: "Roboto", sans-serif;
             }
 
             &__btn {
-              display: flex;
-              flex-direction: column;
-              margin: 5px 33px 5px 8px;
+              position: absolute;
+              top: 150px;
+              left: 8px;
 
               .button {
                 display: flex;
@@ -331,7 +356,7 @@ $font: "Roboto", sans-serif;
 
                 .button-donate {
                   font-size: 10px;
-                  margin: 5px 0 0 0;
+                  margin: 10px 0;
                   color: #f2f2f2;
 
                   .button__play-icon {
@@ -370,7 +395,7 @@ $font: "Roboto", sans-serif;
       }
 
       &-scroll {
-        margin: 120px 32px 0 130px;
+        margin: 125px 35px 0 140px;
         padding-bottom: 55px;
 
           span:first-child {
@@ -400,8 +425,7 @@ $font: "Roboto", sans-serif;
               .gallery__scroll-button {
                 width: 15px;
                 height: 5px;
-                padding-top: 5px;
-                margin: 0 0px 50px 30px;
+                margin: 0 0px 50px 20px;
                 background: #fefefe;
               }
           }
@@ -428,6 +452,8 @@ $font: "Roboto", sans-serif;
   }
 
   &__gallery {
+    display: flex;
+    overflow: hidden;
 
     &-img {
       margin: 30px 10px 20px 0;
@@ -439,6 +465,7 @@ $font: "Roboto", sans-serif;
     margin: 20px 30px;
 
     span:first-child {
+      margin-left: 90px;
       color: #333333;
     }
 
@@ -492,6 +519,10 @@ $font: "Roboto", sans-serif;
             border-left: 5px solid #fff;
           }
       }
+  }
+
+  .button:hover {
+    background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
   }
 
   &__benefits {
@@ -684,6 +715,7 @@ $font: "Roboto", sans-serif;
 
  .section-four {
   background: #f2f2f2;
+  padding-bottom: 50px;
 
   .container-second {
     margin: 0 10px;
@@ -704,12 +736,13 @@ $font: "Roboto", sans-serif;
   }
 
   &__donation {
+    position: relative;
     display: block;
 
       &-card {
         width: 245px;
         height: 245px;
-        margin: 30px 20px;
+        margin: 30px 20px 100px 20px;
         border: 2px solid #628d90;
         border-radius: 50%;
 
@@ -725,10 +758,110 @@ $font: "Roboto", sans-serif;
             margin: 18px 50px;
           }
       }
+
       &-arrow {
-        transform: rotate(90deg);
+        position: absolute;
+        margin: -60px 0 0 110px;
+        display: block;
+        transform: translateX(50px) rotate(90deg) translateY(50px);
+
+        .arrow-left, .arrow-right {
+
+          width: 50px;
+        }
       }
   }
+    &__button {
+      margin: 20px 30px 50px 30px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
+      width: 245px;
+      height: 55px;
+      background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+      border-radius: 3px;
+      // text
+      font-family: $font;
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: $white;
+    }
+}
+
+ /* section five - Testimonials*/
+
+.section-five {
+
+    &__arrow-left {
+      display: none;
+    }
+
+    &__heading {
+      margin: 0;
+      padding-top: 50px;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 36px;
+      line-height: 42px;
+      text-align: center;
+    }
+
+    &__testimonials {
+      display: flex;
+      overflow: hidden;
+
+      &-card {
+        margin: 35px 5px;
+        background: #FEFEFE;
+        box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+        border-radius: 5px;
+
+
+        .card-user {
+          margin: 30px 115px;
+          border-radius: 50%;
+        }
+
+        .name {
+          margin: 0 75px 20px 75px;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 16px;
+          line-height: 19px;
+        }
+
+        .pharagraph {
+          margin: 0 10px;
+          padding-bottom: 70px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          color: #4F4F4F;
+        }
+      }
+    }
+
+    &__button {
+      margin: 20px 30px 50px 30px;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: center;
+      width: 245px;
+      height: 55px;
+      background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+      border-radius: 3px;
+      // text
+      font-family: $font;
+      font-weight: 700;
+      font-size: 18px;
+      text-transform: uppercase;
+      color: $white;
+    }
+
 }
 
 // style popup
@@ -932,37 +1065,39 @@ $font: "Roboto", sans-serif;
     }
 
     &__gallery {
-    margin: 0 0 0 100px;
+    margin: 0 0 0 70px;
     padding-bottom: 100px;
 
       &-imgs {
-        display: flex;
-        justify-content: space-between;
 
         .img {
+          margin-left: 30px;
           width: 180px;
           height: 260px;
         }
 
         .img-active {
+          margin-left: 30px;
+
+          &__img {
+            width: 245px;
+            height: 352px;
+          }
 
           p {
-            margin: 230px 30px 0 25px;
+            margin: 0 28px 20px 15px;
+            top: 232px;
             font-size: 14px;
             line-height: 16px;
           }
 
           &__btn {
-            flex-direction: row;
-            margin: 0 20px;
+            display: flex;
+            top: 280px;
 
             .button {
-              margin: 15px 0 0 10px;
+              margin: 20px 5px 0 15px;
               font-size: 11px;
-
-              .button__play-icon {
-                margin: 5px 0 0 0;
-                }
             }
 
             .button-donate {
@@ -973,11 +1108,11 @@ $font: "Roboto", sans-serif;
       }
 
       &-line {
-        margin: -200px 0px 0px -60px;
+        margin: -200px 0px 0px -30px;
       }
 
       &-scroll {
-        margin: 250px 0 0 185px;
+        margin: 250px 0 0 245px;
 
         span:first-child {
           margin-left: 100px;
@@ -986,17 +1121,19 @@ $font: "Roboto", sans-serif;
         &-line {
           width: 245px;
         }
-    }
+      }
     }
   }
 
-  // section-two
+  /* section-two How it works */
 
   .section-two {
 
     &__gallery {
 
+
       &-img {
+        width: 600px;
         margin: 30px 10px 20px 0;
       }
     }
@@ -1027,7 +1164,7 @@ $font: "Roboto", sans-serif;
   &__benefits {
 
     .benefits {
-      margin: 100px 160px 40px 160px;
+      margin: 100px 120px 40px 120px;
 
       &-img {
         margin: 0 160px 0 160px;
@@ -1043,6 +1180,89 @@ $font: "Roboto", sans-serif;
   &__button {
     margin: 20px 180px 50px;
   }
+}
+
+/* Section four - Pay and feed */
+
+.section-four {
+  padding: 100px 0;
+
+  .container-second {
+    margin: 0 10px;
+  }
+
+  &__heading {
+    padding: 0;
+    margin: 0;
+  }
+
+  &__pharagraph {
+    display: block;
+    margin: 15px 10px 50px 10px;
+    text-align: center;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    color: #828282;
+
+  }
+
+  &__donation {
+    margin: 0 175px;
+  }
+
+  &__button {
+      margin: 50px 195px 0px 195px;
+  }
+
+  &__button:hover {
+    background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
+  }
+}
+
+ /* section five - Testimonials*/
+
+ .section-five {
+
+  &__heading {
+    font-size: 48px;
+    line-height: 56px;
+  }
+
+  &__testimonials {
+    display: flex;
+    justify-content: space-between;
+
+
+    &-card {
+      margin: 35px 25px 20px 25px;
+
+      .card-user {
+        margin: 45px 260px 20px 260px;
+        border-radius: 50%;
+      }
+
+      .name {
+        margin: 0 220px 20px 220px;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 16px;
+        line-height: 19px;
+      }
+
+      .pharagraph {
+        margin: 0 70px;
+        padding-bottom: 70px;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #4F4F4F;
+      }
+    }
+  }
+
 }
 
 //donation-popup
@@ -1087,34 +1307,27 @@ $font: "Roboto", sans-serif;
 
 // desktop
 @media screen and (min-width: 1280px) {
+
   .container {
     margin: 0 150px;
-  }
-
-  .container-second {
-    margin: 0 360px;
-  }
-
-  .section__heading {
-    padding: 100px 0 35px 0;
-    font-size: 48px;
-    line-height: 56px;
-    text-align: center;
-    margin: 0;
-  }
 
   .header {
     display: flex;
     justify-content: space-between;
 
     &__menu {
+      position: absolute;
+      right: 36px;
+      display: block;
 
       &-burger {
-        display: none; //иконка бургера скрыта
+        display: none;
       }
 
       &-list {
         display: flex;
+        position: relative;
+        z-index: 2;
 
         li {
           float: left;
@@ -1132,6 +1345,7 @@ $font: "Roboto", sans-serif;
       }
     }
   }
+}
 
   /* section one - Watch your favorite animal online */
 
@@ -1182,16 +1396,18 @@ $font: "Roboto", sans-serif;
           margin-top: -100px;
 
           p {
-            margin: 230px 30px 0 25px;
+            top: 232px;
+            left: 20px;
             font-size: 14px;
             line-height: 16px;
+            font-style: normal;
+            font-weight: normal;
           }
 
           &__btn {
 
             .button {
-              font-size: 11px;
-
+              font-size: 12px;
             }
 
             .button-donate {
@@ -1206,7 +1422,7 @@ $font: "Roboto", sans-serif;
       }
 
       &-scroll {
-        margin: 250px 0 0 185px;
+        margin: 250px 0 0 200px;
 
         span:first-child {
           margin-left: 100px;
@@ -1223,12 +1439,19 @@ $font: "Roboto", sans-serif;
 
   .section-two {
 
+  .container {
+    margin: 0 150px;
+  }
     &__heading {
+      margin-top: 100px;
       text-align: center;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 56px;
     }
 
       &__pharagraph {
-        margin: 0 415px;
+        margin: 0 405px;
         font-weight: normal;
         font-size: 14px;
         line-height: 16px;
@@ -1238,7 +1461,8 @@ $font: "Roboto", sans-serif;
       &__gallery {
 
         &-img {
-        margin: 30px 412px;
+          width: 790px;
+        margin: 30px 405px;
         border-radius: 5px;
         }
       }
@@ -1248,7 +1472,7 @@ $font: "Roboto", sans-serif;
     }
 
     .button {
-      margin: 20px 690px 50px 690px;
+      margin: 20px 690px 100px 690px;
     }
 
     &__benefits {
@@ -1264,9 +1488,6 @@ $font: "Roboto", sans-serif;
 
         h5 {
           margin: 15px 110px;
-        }
-
-        p {
         }
       }
     }
@@ -1300,62 +1521,78 @@ $font: "Roboto", sans-serif;
 
   /* Section four - Pay and feed */
 
+.section-four {
+
+    &__heading {
+      font-style: normal;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    &__donation {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 360px;
+    }
+
+    &-arrow {
+      position: relative;
+      margin: 0px 0 0 110px;
+      display: block;
+      transform: none;
+
+      .arrow-left, .arrow-right {
+        width: 105px;
+      }
+    }
+
+    &__button {
+        margin: 0 820px;
+    }
+
+}
 
 
   /* section five - Testimonials*/
 
-  .section-five {
-    height: 810px;
-    .section__gallery-scroll {
-      margin: 50px 0 0 480px;
-      span {
-        color: #333333;
-      }
-      .gallery__scroll-line {
-        margin-left: -15px;
-        .gallery__scroll-button {
-          background: #333333;
-        }
-      }
-    }
-    button {
-      margin: 50px 0 0 465px;
-    }
+ .section-five {
+
+  &__heading {
+    font-size: 48px;
+    line-height: 56px;
+    margin: 60px 0 25px 0;
   }
-  .testimonials {
-    width: 1200px;
-    display: flex;
-    justify-content: space-between;
-    .testimonials__card {
-      padding-top: 47px;
-      width: 585px;
-      height: 310px;
-      box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.1);
-      border-radius: 5px;
-      div {
-        margin-left: 260px;
-        width: 68px;
-        height: 68px;
-        border: 1px solid slategrey;
+
+  &__testimonials {
+    margin: 0 200px;
+    padding-bottom: 40px;
+
+    &-card {
+      margin: 35px 0 20px 30px;
+
+      .card-user {
+        margin: 40px 260px 20px 260px;
         border-radius: 50%;
       }
-      h3 {
+
+      .name {
         text-align: center;
       }
-      p {
-        width: 470px;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        margin-left: 90px;
+
+      .pharagraph {
+        text-align: center;
       }
     }
   }
 
-  .testimonials__card-user {
-    background-image: url(../assets/users/user1.png);
-    background-size: cover;
+  &__button {
+    margin: 30px 690px 100px 690px ;
   }
+
+
+}
+
 
   /*section six - Map*/
 
