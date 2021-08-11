@@ -72,9 +72,10 @@ $font: "Roboto", sans-serif;
 
 // mobil
 
+/* header */
+
 .container {
   margin: 0 10px;
-}
 
 .header {
   display: flex;
@@ -107,6 +108,59 @@ $font: "Roboto", sans-serif;
     &-burger {
       display: inline-block; /* иконка гамбургер видна */
     }
+
+    ::after {
+      content: '';
+      height: 3px;
+      width: 100%;
+      position: absolute;
+      background: #333;
+      margin: 0 auto;
+      bottom: 8px;
+    }
+
+    ::before {
+      content: '';
+      height: 3px;
+      width: 100%;
+      position: absolute;
+      background: #333;
+      margin: 0 auto;
+      top: 8px;
+    }
+
+    &.open-menu {
+      left: 0;
+    }
+
+    &.open-menu span {
+      opacity: 0;
+      transition: 0.5s;
+    }
+
+    &.open-menu:after {
+        transform: rotate(-38deg);
+        bottom: 16px;
+        transition: 0.4s;
+    }
+
+    &.open-menu:before {
+        transform: rotate(38deg);
+        top: 16px;
+        transition: 0.4s;
+    }
+  }
+
+  &__menu {
+    display: block;
+    position: absolute;
+    top: 55px;
+    left: 0;
+    background: rgb(245, 246, 246);
+    width: 100%;
+    box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
+    left: -100%;
+    transition: all 0.4s ease;
 
     &-list {
       display: none; /* пункты меню скрыты */
@@ -227,12 +281,9 @@ $font: "Roboto", sans-serif;
         }
 
         .img-active {
-          background-image: url(../assets/glery1screen/panda.png);
-          background-size: cover;
           margin-left: 10px;
 
             p {
-              margin: 65px 4px 0 8px;
               font-weight: normal;
               font-size: 12px;
               line-height: 14px;
@@ -1137,15 +1188,10 @@ $font: "Roboto", sans-serif;
           }
 
           &__btn {
-            flex-direction: row;
 
             .button {
-              margin: 15px 0 0 10px;
               font-size: 11px;
 
-              .button__play-icon {
-                margin: 5px 0 0 0;
-                }
             }
 
             .button-donate {
