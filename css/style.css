@@ -617,7 +617,7 @@ span {
       color: #4F4F4F; }
 
 .section-five__button {
-  margin: 20px 30px 50px 30px;
+  margin: 20px auto;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -631,6 +631,288 @@ span {
   font-size: 18px;
   text-transform: uppercase;
   color: #fefefe; }
+
+/*section six - Map*/
+.section-six {
+  background: #F2F2F2;
+  padding-bottom: 60px; }
+  .section-six__heading {
+    padding-top: 50px;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #333333; }
+  .section-six__map {
+    margin: 0 10px;
+    background-image: url(../assets/map.png);
+    background-size: cover;
+    position: relative; }
+    .section-six__map-vector {
+      width: 34px;
+      height: 47px;
+      background-image: url(../assets/Vector.png);
+      background-size: cover;
+      position: relative; }
+      .section-six__map-vector .eagle {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        left: 6px;
+        top: 6px; }
+      .section-six__map-vector .crocodille {
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        left: 7px;
+        top: 7px; }
+      .section-six__map-vector .monkey {
+        position: absolute;
+        width: 19px;
+        height: 18.56px;
+        left: 8px;
+        top: 8px; }
+      .section-six__map-vector .panda {
+        position: absolute;
+        width: 19px;
+        height: 18.56px;
+        left: 23.53%;
+        right: 20.59%;
+        top: 12.77%;
+        bottom: 46.81%; }
+    .section-six__map .vector__eagle {
+      position: absolute;
+      left: 8.33%;
+      right: 80.33%;
+      top: 1.37%;
+      bottom: 66.44%; }
+    .section-six__map .vector__croc {
+      position: absolute;
+      left: 17.33%;
+      right: 71.33%;
+      top: 6.85%;
+      bottom: 60.27%; }
+    .section-six__map .vector__monkey {
+      position: absolute;
+      left: 44.67%;
+      right: 44.38%;
+      top: 24.66%;
+      bottom: 43.58%; }
+    .section-six__map .vector__panda {
+      left: 72%;
+      right: 16.67%;
+      top: 5.48%;
+      bottom: 62.33%; }
+  .section-six__tooltip {
+    display: none;
+    margin: 160px 40px 30px 40px;
+    background-color: #FEFEFE;
+    padding-bottom: 30px; }
+    .section-six__tooltip-img {
+      margin: 15px 8px 57px 15px; }
+    .section-six__tooltip h3 {
+      font-size: 14px;
+      line-height: 16px;
+      color: #333333; }
+    .section-six__tooltip p {
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 13px;
+      color: #4f4f4f; }
+  .section-six .button {
+    margin: 30px auto;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 245px;
+    height: 55px;
+    background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+    border-radius: 3px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fefefe; }
+    .section-six .button .button__play-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+      border: 1px solid #fefefe;
+      border-radius: 50px; }
+      .section-six .button .button__play-icon span {
+        border-radius: 5px;
+        position: relative;
+        color: #fff; }
+      .section-six .button .button__play-icon span::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: -1px;
+        border: 5px solid transparent;
+        border-left: 5px solid #fff; }
+  .section-six .button:hover {
+    background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%); }
+
+/* Footer */
+footer {
+  background-color: #333333; }
+  footer .container {
+    margin: 0 10px; }
+    footer .container .footer {
+      position: relative;
+      display: block; }
+      footer .container .footer__logo {
+        text-decoration: none;
+        display: flex;
+        flex-direction: column;
+        padding: 40px 0; }
+        footer .container .footer__logo span:first-child {
+          color: #fef;
+          font-size: 36px;
+          font-weight: 900;
+          line-height: 42px; }
+        footer .container .footer__logo span:nth-child(2) {
+          margin-top: -6px;
+          color: #fefefe;
+          font-size: 18px;
+          font-weight: 900;
+          font-size: 18px;
+          line-height: 21px;
+          letter-spacing: 0.08em; }
+      footer .container .footer__menu-list-item {
+        margin-bottom: 5px; }
+        footer .container .footer__menu-list-item a {
+          font-family: "Roboto", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 19px;
+          color: #FEFEFE; }
+    footer .container .footer__contacts-heading {
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 23px;
+      color: #FEFEFE; }
+    footer .container form .contact-form .input-section {
+      border-bottom: 1px solid #bdbdbd;
+      padding-bottom: 10px; }
+      footer .container form .contact-form .input-section input {
+        width: 100%;
+        background-color: #333333;
+        margin: 0 0 30px 0; }
+        footer .container form .contact-form .input-section input::-webkit-input-placeholder {
+          color: #E0E0E0;
+          font-size: 14px;
+          line-height: 16px; }
+    footer .container form .contact-form .input-message {
+      position: relative;
+      display: block;
+      margin-top: 10px; }
+      footer .container form .contact-form .input-message input {
+        width: 100%;
+        position: relative;
+        height: 115px;
+        border: 1px solid #bdbdbd;
+        border-radius: 5px;
+        padding-left: 8px;
+        background-color: #333333; }
+      footer .container form .contact-form .input-message span {
+        position: absolute;
+        background-color: #333333;
+        left: 6px;
+        top: -8px;
+        padding: 0 10px;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #bdbdbd;
+        transition: all 0.25s; }
+    footer .container form .contact-form .checkbox {
+      color: #bdbdbd;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px; }
+      footer .container form .contact-form .checkbox input {
+        margin-top: 20px;
+        border: 1px solid #bdbdbd;
+        border-radius: 2px;
+        background-color: #333333; }
+    footer .container .send-button {
+      margin: 0 0 0 190px; }
+      footer .container .send-button button {
+        margin-top: 20px;
+        background-color: #333333;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 16px;
+        color: #fefefe;
+        text-transform: uppercase; }
+      footer .container .send-button img {
+        margin: 22px 0 0 20px; }
+    footer .container .contact {
+      padding-top: 20px; }
+      footer .container .contact__heading {
+        margin: 35px 0;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #FEFEFE; }
+      footer .container .contact .address {
+        margin-bottom: 20px;
+        display: block;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FEFEFE; }
+      footer .container .contact .phone {
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #FEFEFE; }
+      footer .container .contact .sociales {
+        margin: 20px 170px 0 0;
+        display: flex;
+        justify-content: space-between; }
+    footer .container .footer-button {
+      margin: 40px 10px 80px 10px;
+      width: 275px;
+      height: 55px;
+      background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+      border-radius: 3px;
+      font-family: "Roboto", sans-serif;
+      font-weight: 500;
+      font-style: normal;
+      line-height: 21px;
+      font-size: 18px;
+      text-transform: uppercase;
+      text-align: center;
+      color: #fefefe; }
+    footer .container .footer-line {
+      border-bottom: 0.5px solid #FEFEFE; }
+    footer .container .signature {
+      margin-top: 30px;
+      padding-bottom: 30px;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+      color: #BDBDBD; }
 
 .donation-popup {
   position: fixed;
@@ -872,6 +1154,9 @@ span {
         font-size: 14px;
         line-height: 16px;
         color: #4F4F4F; }
+  .section-five__button {
+    margin: 50px 180px 0px 180px; }
+  /* Footer */
   .donation-popup__img {
     display: block;
     min-width: 139px;
@@ -1051,17 +1336,7 @@ span {
   .section-five__button {
     margin: 30px 690px 100px 690px; }
   /*section six - Map*/
-  .section-six {
-    height: 904px;
-    background: #f2f2f2; }
-    .section-six .map__vector {
-      background-image: url(../assets/Vector.png);
-      background: no-repeat; }
-  .map {
-    width: 1200px;
-    height: 498px;
-    background-image: url(../assets/map.png);
-    position: relative; }
+  /* Footer */
   .donation-popup {
     position: fixed;
     width: 1200px;
