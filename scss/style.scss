@@ -1225,11 +1225,13 @@ footer {
         }
 
         .sociales {
+          width: 125px;
           margin: 20px 170px 0 0;
           display: flex;
           justify-content: space-between;
         }
       }
+
     .footer-button {
       margin: 40px 10px 80px 10px;
       width: 275px;
@@ -1671,6 +1673,31 @@ footer {
 }
 
 /* Footer */
+footer {
+ position: relative;
+  .input-section {
+
+    input {
+      width: 385px;
+    }
+  }
+
+  .contact {
+
+    .sociales {
+      margin: 20px 450px 0 0;
+      padding-bottom: 75px;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+    .footer-button {
+      position: absolute;
+      right: 0;
+      top: 15px;
+
+    }
+  }
 
 
 
@@ -2007,7 +2034,73 @@ footer {
 
   /* Footer */
 
+  footer {
 
+    .container {
+      margin: 0 150px;
+
+        .footer {
+          display: flex;
+          justify-content: space-between;
+
+          &__logo {
+            padding: 90px 0 0 0;
+          }
+
+          &__menu {
+
+            &-list {
+              margin: 115px 410px 0 0;
+              display: flex;
+
+              &-item {
+                margin-left: 70px;
+                margin-bottom: 5px;
+
+                a {
+                  &:hover {
+                    color: $focus-color;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .footer__contacts {
+          display: flex;
+          justify-content: space-between;
+          margin-right: 490px;
+
+          &-heading {
+            margin: 65px 0 35px 0;
+          }
+        }
+
+        .send-button {
+          margin: 0 0 0 230px;
+        }
+
+        .contact {
+          padding-top: 68px;
+
+          &__heading {
+            margin: 0px 0 35px 0;
+          }
+        }
+
+
+      .footer-button {
+        right: 150px;
+        top: 60px;
+      }
+
+      .footer-line {
+        padding-bottom: 60px;
+        border-bottom: 0.5px solid #FEFEFE;
+      }
+    }
+  }
 
 
   // donation popup
@@ -2064,6 +2157,3 @@ footer {
     }
   }
 }
-
-
-

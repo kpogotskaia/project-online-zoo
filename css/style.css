@@ -885,6 +885,7 @@ footer {
         line-height: 16px;
         color: #FEFEFE; }
       footer .container .contact .sociales {
+        width: 125px;
         margin: 20px 170px 0 0;
         display: flex;
         justify-content: space-between; }
@@ -1157,6 +1158,19 @@ footer {
   .section-five__button {
     margin: 50px 180px 0px 180px; }
   /* Footer */
+  footer {
+    position: relative; }
+    footer .input-section input {
+      width: 385px; }
+    footer .contact .sociales {
+      margin: 20px 450px 0 0;
+      padding-bottom: 75px;
+      display: flex;
+      justify-content: space-between; }
+    footer .footer-button {
+      position: absolute;
+      right: 0;
+      top: 15px; }
   .donation-popup__img {
     display: block;
     min-width: 139px;
@@ -1337,6 +1351,39 @@ footer {
     margin: 30px 690px 100px 690px; }
   /*section six - Map*/
   /* Footer */
+  footer .container {
+    margin: 0 150px; }
+    footer .container .footer {
+      display: flex;
+      justify-content: space-between; }
+      footer .container .footer__logo {
+        padding: 90px 0 0 0; }
+      footer .container .footer__menu-list {
+        margin: 115px 410px 0 0;
+        display: flex; }
+        footer .container .footer__menu-list-item {
+          margin-left: 70px;
+          margin-bottom: 5px; }
+          footer .container .footer__menu-list-item a:hover {
+            color: #4bd8b5; }
+    footer .container .footer__contacts {
+      display: flex;
+      justify-content: space-between;
+      margin-right: 490px; }
+      footer .container .footer__contacts-heading {
+        margin: 65px 0 35px 0; }
+    footer .container .send-button {
+      margin: 0 0 0 230px; }
+    footer .container .contact {
+      padding-top: 68px; }
+      footer .container .contact__heading {
+        margin: 0px 0 35px 0; }
+    footer .container .footer-button {
+      right: 150px;
+      top: 60px; }
+    footer .container .footer-line {
+      padding-bottom: 60px;
+      border-bottom: 0.5px solid #FEFEFE; }
   .donation-popup {
     position: fixed;
     width: 1200px;
