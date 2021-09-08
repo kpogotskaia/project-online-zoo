@@ -326,94 +326,92 @@ span {
           background: #fefefe; }
 
 /*section two - How it works */
-.section-two__heading {
-  margin: 50px 0 20px 0;
-  font-size: 36px;
-  line-height: 42px; }
+.section-two {
+  /*&__gallery {
+    display: flex;
+    overflow: hidden;
 
-.section-two__pharagraph {
-  margin: 0;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 16px;
-  color: #4f4f4f; }
-
-.section-two__gallery {
-  display: flex;
-  overflow: hidden; }
-  .section-two__gallery-img {
-    margin: 30px 10px 20px 0; }
-
-.section-two__scroll {
-  padding-bottom: 0;
-  margin: 20px 30px; }
-  .section-two__scroll span:first-child {
-    margin-left: 90px;
-    color: #333333; }
-  .section-two__scroll-line {
-    width: 245px; }
-    .section-two__scroll-line .gallery__scroll-button {
-      width: 60px;
-      margin: 0;
-      background: #333333; }
-
-.section-two .button {
-  margin: 20px 30px 50px 30px;
-  display: flex;
-  flex-direction: row-reverse;
-  align-items: center;
-  justify-content: center;
-  width: 245px;
-  height: 55px;
-  background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
-  border-radius: 3px;
-  font-family: "Roboto", sans-serif;
-  font-weight: 700;
-  font-size: 18px;
-  text-transform: uppercase;
-  color: #fefefe; }
-  .section-two .button .button__play-icon {
-    width: 32px;
-    height: 32px;
-    margin-right: 10px;
-    border: 1px solid #fefefe;
-    border-radius: 50px; }
-    .section-two .button .button__play-icon span {
-      border-radius: 5px;
-      position: relative;
-      color: #fff; }
-    .section-two .button .button__play-icon span::after {
-      content: "";
-      position: absolute;
-      bottom: -20px;
-      left: -1px;
-      border: 5px solid transparent;
-      border-left: 5px solid #fff; }
-
-.section-two .button:hover {
-  background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%); }
-
-.section-two__benefits {
-  background: #f2f2f2;
-  display: block;
-  padding: 50px 0; }
-  .section-two__benefits .benefits {
-    margin: 40px 10px; }
-    .section-two__benefits .benefits-img {
-      margin: 0 110px; }
-    .section-two__benefits .benefits h5 {
-      margin: 15px 70px;
-      font-weight: 900;
-      font-size: 20px;
-      line-height: 23px;
-      text-align: center; }
-    .section-two__benefits .benefits p {
-      margin: 0 10px;
-      font-weight: normal;
-      font-size: 14px;
-      line-height: 16px;
-      color: #4f4f4f;
-      text-align: center; }
+    &-img {
+      margin: 30px 10px 20px 0;
+    }
+  }*/ }
+  .section-two__heading {
+    margin: 50px 0 20px 0;
+    font-size: 36px;
+    line-height: 42px; }
+  .section-two__pharagraph {
+    margin: 0;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 16px;
+    color: #4f4f4f; }
+  .section-two__scroll {
+    padding-bottom: 0;
+    margin: 20px 30px; }
+    .section-two__scroll span:first-child {
+      margin-left: 90px;
+      color: #333333; }
+    .section-two__scroll-line {
+      width: 245px; }
+      .section-two__scroll-line .gallery__scroll-button {
+        width: 60px;
+        margin: 0;
+        background: #333333; }
+  .section-two .button {
+    margin: 20px 30px 50px 30px;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 245px;
+    height: 55px;
+    background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+    border-radius: 3px;
+    font-family: "Roboto", sans-serif;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: #fefefe; }
+    .section-two .button .button__play-icon {
+      width: 32px;
+      height: 32px;
+      margin-right: 10px;
+      border: 1px solid #fefefe;
+      border-radius: 50px; }
+      .section-two .button .button__play-icon span {
+        border-radius: 5px;
+        position: relative;
+        color: #fff; }
+      .section-two .button .button__play-icon span::after {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: -1px;
+        border: 5px solid transparent;
+        border-left: 5px solid #fff; }
+  .section-two .button:hover {
+    background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%); }
+  .section-two__benefits {
+    background: #f2f2f2;
+    display: block;
+    padding: 50px 0; }
+    .section-two__benefits .benefits {
+      margin: 40px 10px; }
+      .section-two__benefits .benefits-img {
+        margin: 0 110px; }
+      .section-two__benefits .benefits h5 {
+        margin: 15px 70px;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 23px;
+        text-align: center; }
+      .section-two__benefits .benefits p {
+        margin: 0 10px;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #4f4f4f;
+        text-align: center; }
 
 /*section tree - Pets in Zoo*/
 .section-three .container {
@@ -1091,26 +1089,32 @@ footer {
       .section-one__gallery-scroll-line {
         width: 245px; }
   /* section-two How it works */
-  .section-two__gallery-img {
-    width: 600px;
-    margin: 30px 10px 20px 0; }
-  .section-two__scroll {
-    padding-bottom: 0;
-    margin: 50px 180px; }
-    .section-two__scroll span:first-child {
-      color: #333333; }
-    .section-two__scroll-line {
-      width: 245px; }
-      .section-two__scroll-line .gallery__scroll-button {
-        width: 80px;
-        margin: 0;
-        background: #333333; }
-  .section-two .button {
-    margin: 20px 180px 50px; }
-  .section-two__benefits .benefits {
-    margin: 100px 120px 40px 120px; }
-    .section-two__benefits .benefits-img {
-      margin: 0 160px 0 160px; }
+  .section-two {
+    /* &__gallery {
+
+
+      &-img {
+        width: 600px;
+        margin: 30px 10px 20px 0;
+      }
+    }*/ }
+    .section-two__scroll {
+      padding-bottom: 0;
+      margin: 50px 180px; }
+      .section-two__scroll span:first-child {
+        color: #333333; }
+      .section-two__scroll-line {
+        width: 245px; }
+        .section-two__scroll-line .gallery__scroll-button {
+          width: 80px;
+          margin: 0;
+          background: #333333; }
+    .section-two .button {
+      margin: 20px 180px 50px; }
+    .section-two__benefits .benefits {
+      margin: 100px 120px 40px 120px; }
+      .section-two__benefits .benefits-img {
+        margin: 0 160px 0 160px; }
   /*section tree - Pets in Zoo*/
   .section-three__button {
     margin: 20px 180px 50px; }
@@ -1424,10 +1428,51 @@ footer {
     font-size: 14px;
     line-height: 16px;
     color: #4f4f4f; }
-  .section-two__gallery-img {
-    width: 790px;
-    margin: 30px 405px;
-    border-radius: 5px; }
+  .section-two__gallery {
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+    position: relative; }
+    .section-two__gallery-img {
+      -webkit-animation-name: fade;
+      -webkit-animation-duration: 1.5s;
+      animation-name: fade;
+      animation-duration: 1.5s; }
+      .section-two__gallery-img img {
+        object-fit: cover;
+        width: 100%;
+        height: 300px;
+        border: none !important;
+        box-shadow: none !important; }
+  @-webkit-keyframes fade {
+    from {
+      opacity: .4; }
+    to {
+      opacity: 1; } }
+  @keyframes fade {
+    from {
+      opacity: .4; }
+    to {
+      opacity: 1; } }
+    .section-two__gallery .prev, .section-two__gallery .next {
+      cursor: pointer;
+      position: absolute;
+      top: 0;
+      top: 50%;
+      width: auto;
+      margin-top: -22px;
+      padding: 16px;
+      color: white;
+      font-weight: bold;
+      font-size: 18px;
+      transition: 0.6s ease;
+      border-radius: 0 3px 3px 0; }
+    .section-two__gallery .next {
+      right: 0;
+      border-radius: 3px 0 0 3px; }
+    .section-two__gallery .prev:hover,
+    .section-two__gallery .next:hover {
+      background-color: rgba(0, 0, 0, 0.8); }
   .section-two__scroll {
     margin: 0 690px; }
   .section-two .button {

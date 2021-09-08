@@ -466,14 +466,14 @@ $font: "Roboto", sans-serif;
     color: #4f4f4f;
   }
 
-  &__gallery {
+  /*&__gallery {
     display: flex;
     overflow: hidden;
 
     &-img {
       margin: 30px 10px 20px 0;
     }
-  }
+  }*/
 
   &__scroll {
     padding-bottom: 0;
@@ -1546,14 +1546,14 @@ footer {
 
   .section-two {
 
-    &__gallery {
+   /* &__gallery {
 
 
       &-img {
         width: 600px;
         margin: 30px 10px 20px 0;
       }
-    }
+    }*/
 
     &__scroll {
       padding-bottom: 0;
@@ -2089,13 +2089,72 @@ footer {
       }
 
       &__gallery {
+        max-width: 800px;
+        margin: auto;
+        overflow: hidden;
+        position: relative;
 
         &-img {
-          width: 790px;
-        margin: 30px 405px;
-        border-radius: 5px;
+          -webkit-animation-name: fade;
+          -webkit-animation-duration: 1.5s;
+          animation-name: fade;
+          animation-duration: 1.5s;
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 300px;
+            border: none !important;
+            box-shadow: none !important;
+          }
+
         }
+
+        @-webkit-keyframes fade {
+          from {
+              opacity: .4
+          }
+          to {
+              opacity: 1
+          }
+        }
+        @keyframes fade {
+          from {
+              opacity: .4
+          }
+          to {
+              opacity: 1
+          }
+        }
+
+        .prev, .next {
+          cursor: pointer;
+          position: absolute;
+          top: 0;
+          top: 50%;
+          width: auto;
+          margin-top: -22px;
+          padding: 16px;
+          color: white;
+          font-weight: bold;
+          font-size: 18px;
+          transition: 0.6s ease;
+          border-radius: 0 3px 3px 0;
+        }
+
+        .next {
+          right: 0;
+          border-radius: 3px 0 0 3px;
+        }
+
+        .prev:hover,
+        .next:hover {
+          background-color: rgba(0, 0, 0, 0.8);
+        }
+
+
       }
+
 
     &__scroll {
       margin: 0 690px;
