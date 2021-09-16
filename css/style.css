@@ -58,7 +58,8 @@ span {
 
 /* header */
 .container {
-  margin: 0 10px; }
+  margin: 0 10px;
+  box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08); }
   .container .header {
     position: relative;
     display: flex;
@@ -921,6 +922,36 @@ footer {
       line-height: 14px;
       color: #BDBDBD; }
 
+/* Country animal next page*/
+.info-zoo .container {
+  margin: 0 10px; }
+  .info-zoo .container .info-zoo__content {
+    display: flex; }
+    .info-zoo .container .info-zoo__content .left-menu {
+      margin: 65px 20px 0 0; }
+      .info-zoo .container .info-zoo__content .left-menu .arrow-top {
+        margin: 8px 10px; }
+        .info-zoo .container .info-zoo__content .left-menu .arrow-top img {
+          width: 23px;
+          height: 13px; }
+      .info-zoo .container .info-zoo__content .left-menu__animal {
+        margin-bottom: 10px; }
+        .info-zoo .container .info-zoo__content .left-menu__animal img {
+          width: 40px;
+          height: 40px; }
+      .info-zoo .container .info-zoo__content .left-menu .arrow-bottom {
+        margin: 10px 9px; }
+        .info-zoo .container .info-zoo__content .left-menu .arrow-bottom img {
+          width: 23px;
+          height: 13px; }
+    .info-zoo .container .info-zoo__content .content-video {
+      margin: 65px auto; }
+      .info-zoo .container .info-zoo__content .content-video h3 {
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 28px;
+        text-align: center; }
+
 .donation-popup {
   position: fixed;
   height: 100vh;
@@ -1303,6 +1334,7 @@ footer {
       position: absolute;
       right: 0;
       top: 15px; }
+  /* Country animal next page*/
   .donation-popup__img {
     display: block;
     min-width: 139px;
@@ -1571,6 +1603,7 @@ footer {
     footer .container .footer-line {
       padding-bottom: 60px;
       border-bottom: 0.5px solid #FEFEFE; }
+  /* Country animal next page*/
   .donation-popup {
     position: fixed;
     width: 1200px;
