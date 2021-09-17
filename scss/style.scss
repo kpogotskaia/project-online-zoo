@@ -52,7 +52,6 @@ p,
 span {
   color: #333333;
   font-size: inherit;
-  font-weight: 900;
   font-family: "Roboto", sans-serif;
   font-style: normal;
 }
@@ -76,7 +75,6 @@ $font: "Roboto", sans-serif;
 
 .container {
   margin: 0 10px;
-  box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
 
   .header {
     position: relative;
@@ -1284,6 +1282,7 @@ footer {
 
 /* Country animal next page*/
 .info-zoo {
+  box-shadow: 0px 6px 20px rgba(41, 70, 58, 0.08);
 
   .container {
     margin: 0 10px;
@@ -1334,12 +1333,71 @@ footer {
             line-height: 28px;
             text-align: center;
           }
+
+          &__slider {
+            margin: 20px 20px;
+            display: flex;
+
+            div {
+              video {
+                display: none;
+                width: 205px;
+                height: 315px;
+              }
+            }
+          }
+
+          .scroll {
+            width: 11px;
+            height: 11px;
+            border: none;
+            border-radius: 50%;
+            background-color: #49D6DF;
+          }
+
         }
+
+        &-info {
+
+          &__heading {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 16px;
+            margin: 8px 0;
+          }
+
+          &__pharagraph {
+            font-family: $font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            color: #4f4f4f;
+            margin-bottom: 15px;
+          }
+
+          .content-button {
+            width: 185px;
+            height: 55px;
+            background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
+            border-radius: 3px;
+
+            font-style: normal;
+            font-weight: 700;
+            font-size: 18px;
+            line-height: 21px;
+            text-align: center;
+            text-transform: uppercase;
+            color: #FFFFFF;
+            margin-bottom: 60px;
+          }
+        }
+
       }
     }
   }
 }
-
 
 // style popup
 
@@ -1940,6 +1998,97 @@ footer {
   }
 
 /* Country animal next page*/
+.info-zoo {
+
+  .container {
+    margin: 0 10px;
+
+    .info-zoo__content {
+
+      .left-menu {
+
+        .arrow-top {
+
+          img {
+            margin: 0px 24px;
+            width: 23px;
+            height: 13px;
+          }
+        }
+
+        &__animal {
+          margin: 10px;
+
+          img {
+            width: 70px;
+            height: 70px;
+          }
+        }
+
+        .arrow-bottom {
+
+          img {
+            margin: 0 22px 5px;
+            width: 23px;
+            height: 13px;
+          }
+        }
+
+      }
+
+      .content {
+
+        &-video {
+          margin: 60px auto;
+
+          h3 {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 48px;
+            line-height: 56px;
+            text-align: center
+          }
+
+          &__slider {
+            margin: 35px 20px;
+            display: flex;
+
+            div {
+
+              video {
+                display: none;
+                width: 500px;
+                height: 280px;
+              }
+            }
+          }
+
+          .scroll {
+            margin-bottom: 50px;
+          }
+
+        }
+
+        &-info {
+
+          &__heading {
+            color: #333333;
+            font-size: 20px;
+            line-height: 23px;
+            margin: 6px 0;
+          }
+
+          &__pharagraph {
+            font-size: 14px;
+            line-height: 16px;
+            margin-bottom: 30px;
+          }
+
+        }
+      }
+    }
+  }
+}
 
 
 //donation-popup
@@ -2419,7 +2568,114 @@ footer {
   }
 
 /* Country animal next page*/
+.info-zoo {
+  box-shadow: 0px 6px 20px rgba(41, 70, 58, 0.08);
 
+  .container {
+    margin: 0 10px;
+
+    .info-zoo__content {
+      display: flex;
+
+      .left-menu {
+        margin: 65px 20px 0 0;
+
+        .arrow-top {
+          margin: 8px 10px;
+
+          img {
+            width: 23px;
+            height: 13px;
+          }
+        }
+
+        &__animal {
+          margin-bottom: 10px;
+
+          img {
+            width: 40px;
+            height: 40px;
+          }
+        }
+
+        .arrow-bottom {
+          margin: 10px 9px;
+
+          img {
+            width: 23px;
+            height: 13px;
+          }
+        }
+
+      }
+
+      .content {
+        display: flex;
+
+        &-video {
+          margin: 60px auto;
+
+          h3 {
+            margin: 0;
+            font-size: 48px;
+            line-height: 56px;
+          }
+
+          &__slider {
+            margin: 40px 20px;
+            display: flex;
+
+            div {
+              video {
+                display: flex;
+                width: 790px;
+                height: 440px;
+              }
+            }
+          }
+
+          .scroll {
+            width: 11px;
+            height: 11px;
+            border: none;
+            border-radius: 50%;
+            background-color: #49D6DF;
+          }
+
+        }
+
+        &-info {
+          margin: 75px 210px 35px 30px;
+
+
+          &__heading {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 16px;
+            margin: 0 0 6px 0;
+          }
+
+          &__pharagraph {
+            font-family: $font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            color: #4f4f4f;
+            margin-bottom: 13px;
+          }
+
+        }
+
+        &-button {
+          width: 195px;
+          margin-top: 22px;
+        }
+      }
+    }
+  }
+}
 
   // donation popup
   .donation-popup {
