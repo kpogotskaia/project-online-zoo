@@ -1694,17 +1694,17 @@ footer {
         .info-zoo .container .info-zoo__content .left-menu {
           margin: 65px 20px 0 0; }
           .info-zoo .container .info-zoo__content .left-menu .arrow-top {
-            margin: 8px 10px; }
+            margin: 0px 10px 30px 28px; }
             .info-zoo .container .info-zoo__content .left-menu .arrow-top img {
               width: 23px;
               height: 13px; }
           .info-zoo .container .info-zoo__content .left-menu__animal {
             margin-bottom: 10px; }
             .info-zoo .container .info-zoo__content .left-menu__animal img {
-              width: 40px;
-              height: 40px; }
+              width: 108px;
+              height: 108px; }
           .info-zoo .container .info-zoo__content .left-menu .arrow-bottom {
-            margin: 10px 9px; }
+            margin: 30px 30px; }
             .info-zoo .container .info-zoo__content .left-menu .arrow-bottom img {
               width: 23px;
               height: 13px; }
