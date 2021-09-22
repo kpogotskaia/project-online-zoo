@@ -1280,7 +1280,7 @@ footer {
 }
 
 
-/* Country animal next page*/
+/* Zoos next page*/
 .info-zoo {
   box-shadow: 0px 6px 20px rgba(41, 70, 58, 0.08);
 
@@ -1291,7 +1291,7 @@ footer {
       display: flex;
 
       .left-menu {
-        margin: 65px 20px 0 0;
+        margin: 35px 20px 0 0;
 
         .arrow-top {
           margin: 8px 10px;
@@ -1309,6 +1309,15 @@ footer {
             width: 40px;
             height: 40px;
           }
+
+          .active {
+            margin-left: -5px;
+            border-image-outset: 20px;
+            border: 3px solid #49D6DF;
+            border-radius: 50%;
+            width: 55px;
+            height: 55px;
+          }
         }
 
         .arrow-bottom {
@@ -1325,9 +1334,10 @@ footer {
       .content {
 
         &-video {
-          margin: 65px auto;
+          margin-top: 35px;
 
           h3 {
+            margin: 10px 0;
             font-weight: 900;
             font-size: 24px;
             line-height: 28px;
@@ -1335,36 +1345,61 @@ footer {
           }
 
           &__slider {
-            margin: 20px 20px;
+            margin-left: 20px;
+            flex-wrap: wrap;
             display: flex;
 
             div {
-              video {
-                display: none;
+
+              img {
+                border-radius: 3px;
+                margin: 10px 9px 0 0;
+                width: 98px;
+                height: 75px;
+              }
+
+              .active-video {
                 width: 205px;
-                height: 315px;
+                height: 116px;
+              }
+
+              &:nth-child(4) {
+                display: none;
               }
             }
           }
 
-          .scroll {
-            width: 11px;
-            height: 11px;
-            border: none;
-            border-radius: 50%;
-            background-color: #49D6DF;
-          }
+          &__scroll {
+            display: flex;
+            margin: 20px 104px;
 
+            &-button {
+              margin-right: 5px;
+              width: 8px;
+              height: 8px;
+              border: none;
+              border-radius: 50%;
+              background-color: #828282;
+            }
+
+            .active-scroll {
+              margin-top: -2px;
+              width: 11px;
+              height: 11px;
+              background-color: #49D6DF;
+            }
+          }
         }
 
         &-info {
+          padding-top: 10px;
 
           &__heading {
+            margin: 0 0 8px;
             font-style: normal;
             font-weight: 900;
             font-size: 14px;
             line-height: 16px;
-            margin: 8px 0;
           }
 
           &__pharagraph {
@@ -1997,93 +2032,107 @@ footer {
     }
   }
 
-/* Country animal next page*/
+/* Zoos next page*/
 .info-zoo {
 
   .container {
-    margin: 0 10px;
 
     .info-zoo__content {
 
       .left-menu {
+        margin: 60px 20px 0 0;
 
         .arrow-top {
+          margin: 15px 28px 20px;
 
           img {
-            margin: 0px 24px;
             width: 23px;
             height: 13px;
           }
         }
 
         &__animal {
-          margin: 10px;
 
           img {
+            margin-left: 3px;
             width: 70px;
             height: 70px;
+          }
+
+          .active {
+            border-image-outset: 20px;
+            border: 3px solid #49D6DF;
+            border-radius: 50%;
+            width: 90px;
+            height: 90px;
           }
         }
 
         .arrow-bottom {
+          margin: 30px 25px 0px;
 
           img {
-            margin: 0 22px 5px;
             width: 23px;
             height: 13px;
           }
         }
-
       }
 
       .content {
 
         &-video {
-          margin: 60px auto;
+          margin-top: 60px;
 
           h3 {
-            font-style: normal;
+            margin: auto;
             font-weight: 900;
             font-size: 48px;
             line-height: 56px;
-            text-align: center
           }
 
           &__slider {
-            margin: 35px 20px;
-            display: flex;
+            margin: 30px 0;
 
             div {
 
-              video {
-                display: none;
-                width: 500px;
+              img {
+                margin: 10px 15px 0 0;
+                width: 155px;
+                height: 89px;
+              }
+
+              .active-video {
+                width: 497px;
                 height: 280px;
+              }
+
+              &:nth-child(4) {
+                display: block;
               }
             }
           }
 
-          .scroll {
-            margin-bottom: 50px;
+          &__scroll {
+            display: flex;
+            margin: 20px 225px;
           }
-
         }
 
         &-info {
 
           &__heading {
-            color: #333333;
             font-size: 20px;
             line-height: 23px;
-            margin: 6px 0;
           }
 
           &__pharagraph {
             font-size: 14px;
             line-height: 16px;
-            margin-bottom: 30px;
           }
 
+          .content-button {
+            margin-bottom: 80px;
+          }
         }
       }
     }
@@ -2567,21 +2616,18 @@ footer {
     }
   }
 
-/* Country animal next page*/
+/* Zoos - next page*/
 .info-zoo {
-  box-shadow: 0px 6px 20px rgba(41, 70, 58, 0.08);
 
   .container {
-    margin: 0 10px;
 
     .info-zoo__content {
-      display: flex;
 
       .left-menu {
-        margin: 65px 20px 0 0;
+        margin: 65px 50px 0;
 
         .arrow-top {
-          margin: 0px 10px 30px 28px;
+          margin: 0 45px 30px;
 
           img {
             width: 23px;
@@ -2596,10 +2642,16 @@ footer {
             width: 108px;
             height: 108px;
           }
+
+          .active {
+            margin-left: -13px;
+            width: 137px;
+            height: 137px;
+          }
         }
 
         .arrow-bottom {
-          margin: 30px 30px;
+          margin: 30px 43px;
 
           img {
             width: 23px;
@@ -2613,57 +2665,54 @@ footer {
         display: flex;
 
         &-video {
-          margin: 60px auto;
+          margin-top: 55px;
 
           h3 {
-            margin: 0;
+            margin: auto;
+            font-weight: 900;
             font-size: 48px;
             line-height: 56px;
           }
 
           &__slider {
-            margin: 40px 20px;
-            display: flex;
+            margin: 30px 30px 30px 150px;
 
             div {
-              video {
-                display: flex;
+
+              img {
+                margin: 10px 26px 0 0;
+                width: 246px;
+                height: 141px;
+              }
+
+              .active-video {
                 width: 790px;
-                height: 440px;
+                height: 442px;
+              }
+
+              &:nth-child(4) {
+                display: block;
               }
             }
           }
 
-          .scroll {
-            width: 11px;
-            height: 11px;
-            border: none;
-            border-radius: 50%;
-            background-color: #49D6DF;
+          &__scroll {
+            margin: 20px 30px 100px 525px;
           }
-
         }
 
         &-info {
-          margin: 75px 210px 35px 30px;
+          margin: 138px 210px 35px 0;
 
 
           &__heading {
-            font-style: normal;
-            font-weight: 900;
-            font-size: 14px;
-            line-height: 16px;
-            margin: 0 0 6px 0;
+            font-size: 20px;
+            line-height: 23px;
           }
 
           &__pharagraph {
-            font-family: $font;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 14px;
-            color: #4f4f4f;
-            margin-bottom: 13px;
+            font-size: 14px;
+            line-height: 16px;
           }
 
         }
