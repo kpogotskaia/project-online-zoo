@@ -452,43 +452,66 @@ $font: "Roboto", sans-serif;
 .section-two {
 
   &__heading {
+    font-family: $font;
     margin: 50px 0 20px 0;
     font-size: 36px;
     line-height: 42px;
+    font-weight: 900;
   }
 
   &__pharagraph {
-    margin: 0;
+    font-family: $font;
+    margin-bottom: 30px;
+    font-style: normal;
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
     color: #4f4f4f;
   }
 
-  /*&__gallery {
+  &__gallery {
     display: flex;
     overflow: hidden;
 
-    &-img {
-      margin: 30px 10px 20px 0;
-    }
-  }*/
+    div {
 
-  &__scroll {
+      &-img {
+        margin: 30px 10px 20px 0;
+      }
+    }
+  }
+
+  .gallery-scroll {
     padding-bottom: 0;
-    margin: 20px 30px;
+    margin: 23px 30px;
 
     span:first-child {
-      margin-left: 90px;
-      color: #333333;
+      font-family: $font;
+      text-align: center;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 28px;
+      color: #4F4F4F;
+      margin-left: 100px;
     }
 
-    &-line {
-      width: 245px;
+    :nth-child(2n) {
+      font-family: $font;
+      text-align: center;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 28px;
+      color: rgba(189, 189, 189, 0.57);
+    }
 
-      .gallery__scroll-button {
+    &__line {
+      width: 245px;
+      height: 6px;
+      background: rgba(189, 189, 189, 0.57);;
+
+      &-button {
         width: 60px;
-        margin: 0;
+        height: 6px;
         background: #333333;
       }
     }
@@ -545,10 +568,10 @@ $font: "Roboto", sans-serif;
     padding: 50px 0;
 
     .benefits {
-      margin: 40px 10px;
+      margin-bottom: 30px;
 
       &-img {
-        margin: 0 110px;
+        margin: 0 120px;
       }
 
       h5 {
@@ -565,7 +588,6 @@ $font: "Roboto", sans-serif;
         font-size: 14px;
         line-height: 16px;
         color: #4f4f4f;
-        text-align: center;
       }
     }
   }
@@ -579,7 +601,7 @@ $font: "Roboto", sans-serif;
   }
 
   &__heading {
-    margin: 100px 0 30px;
+    margin: 50px 0 30px;
     text-align: center;
     font-weight: 900;
     font-size: 36px;
@@ -605,10 +627,11 @@ $font: "Roboto", sans-serif;
     &-active {
       width: 210px;
       height: 300px;
-      margin-right: 10px;
+      margin-right: 15px;
 
         p {
           margin: -120px 10px 0;
+          font-family: $font;
           font-weight: normal;
           font-style: normal;
           font-size: 14px;
@@ -671,14 +694,38 @@ $font: "Roboto", sans-serif;
     }
   }
 
-  &__scroll {
-    margin: 30px 20px;
+  .gallery-scroll {
+    padding-bottom: 0;
+    margin: 23px 30px;
 
-    &-line {
+    span:first-child {
+      font-family: $font;
+      text-align: center;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 28px;
+      color: #4F4F4F;
+      margin-left: 100px;
+    }
+
+    :nth-child(2n) {
+      font-family: $font;
+      text-align: center;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 28px;
+      color: rgba(189, 189, 189, 0.57);
+    }
+
+    &__line {
       width: 245px;
+      height: 6px;
+      background: rgba(189, 189, 189, 0.57);;
 
-      .gallery__scroll-button {
-        width: 40px;
+      &-button {
+        width: 30px;
+        height: 6px;
+        background: #333333;
       }
     }
   }
@@ -722,6 +769,10 @@ $font: "Roboto", sans-serif;
             border-left: 5px solid #fff;
           }
       }
+
+      &:hover {
+        background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
+      }
   }
 }
 
@@ -729,14 +780,14 @@ $font: "Roboto", sans-serif;
 
  .section-four {
   background: #f2f2f2;
-  padding-bottom: 50px;
+  padding: 50px 0;
 
   .container-second {
     margin: 0 10px;
   }
 
   &__heading {
-    padding-top: 30px;
+    margin: 0;
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-style: normal;
@@ -780,13 +831,13 @@ $font: "Roboto", sans-serif;
         transform: translateX(50px) rotate(90deg) translateY(50px);
 
         .arrow-left, .arrow-right {
-
           width: 50px;
         }
       }
   }
+
     &__button {
-      margin: 20px 30px 50px 30px;
+      margin: -60px 30px 0;
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
@@ -827,6 +878,7 @@ $font: "Roboto", sans-serif;
       overflow: hidden;
 
       &-card {
+        height: auto;
         margin: 35px 5px;
         background: #FEFEFE;
         box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
@@ -839,7 +891,7 @@ $font: "Roboto", sans-serif;
         }
 
         .name {
-          margin: 0 75px 20px 75px;
+          text-align: center;
           font-style: normal;
           font-weight: 900;
           font-size: 16px;
@@ -847,6 +899,7 @@ $font: "Roboto", sans-serif;
         }
 
         .pharagraph {
+          font-family: $font;
           margin: 0 10px;
           padding-bottom: 70px;
           font-style: normal;
@@ -858,8 +911,46 @@ $font: "Roboto", sans-serif;
       }
     }
 
+    .gallery-scroll {
+      padding-bottom: 0;
+      margin: 0 30px;
+
+      span:first-child {
+        font-family: $font;
+        text-align: center;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 28px;
+        color: #4F4F4F;
+        margin-left: 100px;
+      }
+
+      :nth-child(2n) {
+        font-family: $font;
+        text-align: center;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 28px;
+        color: rgba(189, 189, 189, 0.57);
+      }
+
+      &__line {
+        width: 245px;
+        height: 6px;
+        background: rgba(189, 189, 189, 0.57);;
+
+        &-button {
+          margin-left: 30px;
+          width: 30px;
+          height: 6px;
+          background: #333333;
+
+        }
+      }
+    }
+
     &__button {
-      margin: 20px auto;
+      margin: 20px auto 50px;
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
@@ -874,29 +965,38 @@ $font: "Roboto", sans-serif;
       font-size: 18px;
       text-transform: uppercase;
       color: $white;
+
+        &:hover {
+          background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);;
+        }
     }
 
-}
+  }
 
 /*section six - Map*/
 
 .section-six {
   background: #F2F2F2;
-  padding-bottom: 60px;
+  padding: 50px 0;
+  position: relative;
 
   &__heading {
-    padding-top: 50px;
+    margin: 0;
+    font-family: $font;
+    font-style: normal;
+    font-weight: 900;
     font-size: 36px;
     line-height: 42px;
     text-align: center;
     color: #333333;
   }
 
-    &__map {
-      margin: 0 10px;
-      background-image: url(../assets/map.png);
-      background-size: cover;
-      position: relative;
+  &__map {
+    margin: 30px 10px;
+    height: 145px;
+    background: url(../assets/map.png) no-repeat;
+    background-size: contain;
+    position: relative;
 
         &-vector {
           width: 34px;
@@ -973,29 +1073,40 @@ $font: "Roboto", sans-serif;
         }
       }
 
-    &__tooltip {
-        display: none;
-        margin: 160px 40px 30px 40px;
+      &__tooltip {
+        position: absolute;
+        top: 157px;
+        left: 40px;
+        width: 238px;
         background-color: #FEFEFE;
-        padding-bottom: 30px;
+        display: flex;
+        border-radius: 5px;
 
-         &-img {
-            margin: 15px 8px 57px 15px;
-         }
+           &-img {
+             margin: 16px 8px 0 15px;
+             width: 40px;
+             height: 40px;
+           }
 
-         h3 {
-          font-size: 14px;
-          line-height: 16px;
-          color: #333333;
-         }
+           h3 {
+            margin-top: 16px;
+            font-family: $font;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 14px;
+            line-height: 16px;
+            color: #333333;
+           }
 
-         p {
-          font-weight: 500;
-          font-size: 11px;
-          line-height: 13px;
-          color: #4f4f4f;
-         }
-    }
+           p {
+            margin: 5px 24px 5px 0;
+            font-weight: 500;
+            font-size: 11px;
+            line-height: 13px;
+            color: #4f4f4f;
+           }
+      }
+
 
       .button {
         margin: 30px auto;
@@ -2542,7 +2653,6 @@ footer {
 
 
 }
-
 
   /*section six - Map*/
 

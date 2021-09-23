@@ -325,99 +325,118 @@ span {
           background: #fefefe; }
 
 /*section two - How it works */
-.section-two {
-  /*&__gallery {
-    display: flex;
-    overflow: hidden;
+.section-two__heading {
+  font-family: "Roboto", sans-serif;
+  margin: 50px 0 20px 0;
+  font-size: 36px;
+  line-height: 42px;
+  font-weight: 900; }
 
-    &-img {
-      margin: 30px 10px 20px 0;
-    }
-  }*/ }
-  .section-two__heading {
-    margin: 50px 0 20px 0;
-    font-size: 36px;
-    line-height: 42px; }
-  .section-two__pharagraph {
-    margin: 0;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    color: #4f4f4f; }
-  .section-two__scroll {
-    padding-bottom: 0;
-    margin: 20px 30px; }
-    .section-two__scroll span:first-child {
-      margin-left: 90px;
-      color: #333333; }
-    .section-two__scroll-line {
-      width: 245px; }
-      .section-two__scroll-line .gallery__scroll-button {
-        width: 60px;
-        margin: 0;
-        background: #333333; }
-  .section-two .button {
-    margin: 20px 30px 50px 30px;
-    display: flex;
-    flex-direction: row-reverse;
-    align-items: center;
-    justify-content: center;
-    width: 245px;
-    height: 55px;
-    background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
-    border-radius: 3px;
+.section-two__pharagraph {
+  font-family: "Roboto", sans-serif;
+  margin-bottom: 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: #4f4f4f; }
+
+.section-two__gallery {
+  display: flex;
+  overflow: hidden; }
+  .section-two__gallery div-img {
+    margin: 30px 10px 20px 0; }
+
+.section-two .gallery-scroll {
+  padding-bottom: 0;
+  margin: 23px 30px; }
+  .section-two .gallery-scroll span:first-child {
     font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    color: #4F4F4F;
+    margin-left: 100px; }
+  .section-two .gallery-scroll :nth-child(2n) {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
     font-weight: 700;
-    font-size: 18px;
-    text-transform: uppercase;
-    color: #fefefe; }
-    .section-two .button .button__play-icon {
-      width: 32px;
-      height: 32px;
-      margin-right: 10px;
-      border: 1px solid #fefefe;
-      border-radius: 50px; }
-      .section-two .button .button__play-icon span {
-        border-radius: 5px;
-        position: relative;
-        color: #fff; }
-      .section-two .button .button__play-icon span::after {
-        content: "";
-        position: absolute;
-        bottom: -20px;
-        left: -1px;
-        border: 5px solid transparent;
-        border-left: 5px solid #fff; }
-  .section-two .button:hover {
-    background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%); }
-  .section-two__benefits {
-    background: #f2f2f2;
-    display: block;
-    padding: 50px 0; }
-    .section-two__benefits .benefits {
-      margin: 40px 10px; }
-      .section-two__benefits .benefits-img {
-        margin: 0 110px; }
-      .section-two__benefits .benefits h5 {
-        margin: 15px 70px;
-        font-weight: 900;
-        font-size: 20px;
-        line-height: 23px;
-        text-align: center; }
-      .section-two__benefits .benefits p {
-        margin: 0 10px;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        color: #4f4f4f;
-        text-align: center; }
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(189, 189, 189, 0.57); }
+  .section-two .gallery-scroll__line {
+    width: 245px;
+    height: 6px;
+    background: rgba(189, 189, 189, 0.57); }
+    .section-two .gallery-scroll__line-button {
+      width: 60px;
+      height: 6px;
+      background: #333333; }
+
+.section-two .button {
+  margin: 20px 30px 50px 30px;
+  display: flex;
+  flex-direction: row-reverse;
+  align-items: center;
+  justify-content: center;
+  width: 245px;
+  height: 55px;
+  background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+  border-radius: 3px;
+  font-family: "Roboto", sans-serif;
+  font-weight: 700;
+  font-size: 18px;
+  text-transform: uppercase;
+  color: #fefefe; }
+  .section-two .button .button__play-icon {
+    width: 32px;
+    height: 32px;
+    margin-right: 10px;
+    border: 1px solid #fefefe;
+    border-radius: 50px; }
+    .section-two .button .button__play-icon span {
+      border-radius: 5px;
+      position: relative;
+      color: #fff; }
+    .section-two .button .button__play-icon span::after {
+      content: "";
+      position: absolute;
+      bottom: -20px;
+      left: -1px;
+      border: 5px solid transparent;
+      border-left: 5px solid #fff; }
+
+.section-two .button:hover {
+  background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%); }
+
+.section-two__benefits {
+  background: #f2f2f2;
+  display: block;
+  padding: 50px 0; }
+  .section-two__benefits .benefits {
+    margin-bottom: 30px; }
+    .section-two__benefits .benefits-img {
+      margin: 0 120px; }
+    .section-two__benefits .benefits h5 {
+      margin: 15px 70px;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center; }
+    .section-two__benefits .benefits p {
+      margin: 0 10px;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      color: #4f4f4f; }
 
 /*section tree - Pets in Zoo*/
 .section-three .container {
   margin: 0 10px; }
 
 .section-three__heading {
-  margin: 100px 0 30px;
+  margin: 50px 0 30px;
   text-align: center;
   font-weight: 900;
   font-size: 36px;
@@ -438,9 +457,10 @@ span {
   .section-three__slider-active {
     width: 210px;
     height: 300px;
-    margin-right: 10px; }
+    margin-right: 15px; }
     .section-three__slider-active p {
       margin: -120px 10px 0;
+      font-family: "Roboto", sans-serif;
       font-weight: normal;
       font-style: normal;
       font-size: 14px;
@@ -486,12 +506,32 @@ span {
           font-size: 15px;
           color: #f2f2f2; }
 
-.section-three__scroll {
-  margin: 30px 20px; }
-  .section-three__scroll-line {
-    width: 245px; }
-    .section-three__scroll-line .gallery__scroll-button {
-      width: 40px; }
+.section-three .gallery-scroll {
+  padding-bottom: 0;
+  margin: 23px 30px; }
+  .section-three .gallery-scroll span:first-child {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    color: #4F4F4F;
+    margin-left: 100px; }
+  .section-three .gallery-scroll :nth-child(2n) {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(189, 189, 189, 0.57); }
+  .section-three .gallery-scroll__line {
+    width: 245px;
+    height: 6px;
+    background: rgba(189, 189, 189, 0.57); }
+    .section-three .gallery-scroll__line-button {
+      width: 30px;
+      height: 6px;
+      background: #333333; }
 
 .section-three__button {
   margin: 20px 30px 50px 30px;
@@ -525,15 +565,17 @@ span {
       left: -1px;
       border: 5px solid transparent;
       border-left: 5px solid #fff; }
+  .section-three__button:hover {
+    background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%); }
 
 /* Section four - Pay and feed */
 .section-four {
   background: #f2f2f2;
-  padding-bottom: 50px; }
+  padding: 50px 0; }
   .section-four .container-second {
     margin: 0 10px; }
   .section-four__heading {
-    padding-top: 30px;
+    margin: 0;
     text-align: center;
     font-family: "Roboto", sans-serif;
     font-style: normal;
@@ -567,7 +609,7 @@ span {
       .section-four__donation-arrow .arrow-left, .section-four__donation-arrow .arrow-right {
         width: 50px; }
   .section-four__button {
-    margin: 20px 30px 50px 30px;
+    margin: -60px 30px 0;
     display: flex;
     flex-direction: row-reverse;
     align-items: center;
@@ -599,6 +641,7 @@ span {
   display: flex;
   overflow: hidden; }
   .section-five__testimonials-card {
+    height: auto;
     margin: 35px 5px;
     background: #FEFEFE;
     box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
@@ -607,12 +650,13 @@ span {
       margin: 30px 115px;
       border-radius: 50%; }
     .section-five__testimonials-card .name {
-      margin: 0 75px 20px 75px;
+      text-align: center;
       font-style: normal;
       font-weight: 900;
       font-size: 16px;
       line-height: 19px; }
     .section-five__testimonials-card .pharagraph {
+      font-family: "Roboto", sans-serif;
       margin: 0 10px;
       padding-bottom: 70px;
       font-style: normal;
@@ -621,8 +665,36 @@ span {
       line-height: 16px;
       color: #4F4F4F; }
 
+.section-five .gallery-scroll {
+  padding-bottom: 0;
+  margin: 0 30px; }
+  .section-five .gallery-scroll span:first-child {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: 900;
+    font-size: 24px;
+    line-height: 28px;
+    color: #4F4F4F;
+    margin-left: 100px; }
+  .section-five .gallery-scroll :nth-child(2n) {
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 28px;
+    color: rgba(189, 189, 189, 0.57); }
+  .section-five .gallery-scroll__line {
+    width: 245px;
+    height: 6px;
+    background: rgba(189, 189, 189, 0.57); }
+    .section-five .gallery-scroll__line-button {
+      margin-left: 30px;
+      width: 30px;
+      height: 6px;
+      background: #333333; }
+
 .section-five__button {
-  margin: 20px auto;
+  margin: 20px auto 50px;
   display: flex;
   flex-direction: row-reverse;
   align-items: center;
@@ -636,21 +708,28 @@ span {
   font-size: 18px;
   text-transform: uppercase;
   color: #fefefe; }
+  .section-five__button:hover {
+    background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%); }
 
 /*section six - Map*/
 .section-six {
   background: #F2F2F2;
-  padding-bottom: 60px; }
+  padding: 50px 0;
+  position: relative; }
   .section-six__heading {
-    padding-top: 50px;
+    margin: 0;
+    font-family: "Roboto", sans-serif;
+    font-style: normal;
+    font-weight: 900;
     font-size: 36px;
     line-height: 42px;
     text-align: center;
     color: #333333; }
   .section-six__map {
-    margin: 0 10px;
-    background-image: url(../assets/map.png);
-    background-size: cover;
+    margin: 30px 10px;
+    height: 145px;
+    background: url(../assets/map.png) no-repeat;
+    background-size: contain;
     position: relative; }
     .section-six__map-vector {
       width: 34px;
@@ -708,17 +787,27 @@ span {
       top: 5.48%;
       bottom: 62.33%; }
   .section-six__tooltip {
-    display: none;
-    margin: 160px 40px 30px 40px;
+    position: absolute;
+    top: 157px;
+    left: 40px;
+    width: 238px;
     background-color: #FEFEFE;
-    padding-bottom: 30px; }
+    display: flex;
+    border-radius: 5px; }
     .section-six__tooltip-img {
-      margin: 15px 8px 57px 15px; }
+      margin: 16px 8px 0 15px;
+      width: 40px;
+      height: 40px; }
     .section-six__tooltip h3 {
+      margin-top: 16px;
+      font-family: "Roboto", sans-serif;
+      font-style: normal;
+      font-weight: 900;
       font-size: 14px;
       line-height: 16px;
       color: #333333; }
     .section-six__tooltip p {
+      margin: 5px 24px 5px 0;
       font-weight: 500;
       font-size: 11px;
       line-height: 13px;
