@@ -1275,35 +1275,35 @@ footer {
       .section-one__gallery-scroll-line {
         width: 245px; }
   /* section-two How it works */
-  .section-two {
-    /* &__gallery {
-
-
-      &-img {
-        width: 600px;
-        margin: 30px 10px 20px 0;
-      }
-    }*/ }
-    .section-two__scroll {
-      padding-bottom: 0;
-      margin: 50px 180px; }
-      .section-two__scroll span:first-child {
-        color: #333333; }
-      .section-two__scroll-line {
-        width: 245px; }
-        .section-two__scroll-line .gallery__scroll-button {
-          width: 80px;
-          margin: 0;
-          background: #333333; }
-    .section-two .button {
-      margin: 20px 180px 50px; }
-    .section-two__benefits .benefits {
-      margin: 100px 120px 40px 120px; }
-      .section-two__benefits .benefits-img {
-        margin: 0 160px 0 160px; }
-  /*section tree - Pets in Zoo*/
-  .section-three__button {
+  .section-two__gallery div-img {
+    margin: 30px 10px 20px 0; }
+  .section-two .gallery-scroll {
+    padding-bottom: 0;
+    margin: 30px 180px; }
+    .section-two .gallery-scroll span:first-child {
+      color: #333333; }
+    .section-two .gallery-scroll-line {
+      width: 245px; }
+      .section-two .gallery-scroll-line .gallery__scroll-button {
+        width: 80px;
+        margin: 0;
+        background: #333333; }
+  .section-two .button {
     margin: 20px 180px 50px; }
+  .section-two__benefits {
+    padding: 100px 0 80px; }
+    .section-two__benefits .benefits-img {
+      margin: 0 280px; }
+    .section-two__benefits .benefits h5 {
+      text-align: center; }
+    .section-two__benefits .benefits p {
+      margin: 0 180px; }
+  /*section tree - Pets in Zoo*/
+  .section-three .gallery-scroll {
+    padding-bottom: 0;
+    margin: 23px 179px; }
+  .section-three__button {
+    margin: 20px 180px 100px; }
   /* Section four - Pay and feed */
   .section-four {
     padding: 100px 0; }
@@ -1328,78 +1328,75 @@ footer {
     .section-four__button:hover {
       background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%); }
   /* section five - Testimonials*/
-  .section-five__heading {
-    font-size: 48px;
-    line-height: 56px; }
-  .section-five__testimonials {
-    display: flex;
-    justify-content: space-between; }
-    .section-five__testimonials-card {
-      margin: 35px 25px 20px 25px; }
-      .section-five__testimonials-card .card-user {
-        margin: 45px 260px 20px 260px;
-        border-radius: 50%; }
-      .section-five__testimonials-card .name {
-        margin: 0 220px 20px 220px;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 16px;
-        line-height: 19px; }
-      .section-five__testimonials-card .pharagraph {
-        margin: 0 70px;
-        padding-bottom: 70px;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        color: #4F4F4F; }
-  .section-five__button {
-    margin: 50px 180px 0px 180px; }
+  .section-five {
+    padding-bottom: 100px; }
+    .section-five__heading {
+      font-size: 48px;
+      line-height: 56px; }
+    .section-five__testimonials {
+      display: flex;
+      justify-content: space-between; }
+      .section-five__testimonials-card {
+        margin: 35px 25px 20px 25px; }
+        .section-five__testimonials-card .card-user {
+          margin: 45px 260px 20px 260px;
+          border-radius: 50%; }
+        .section-five__testimonials-card .name {
+          margin: 0 220px 20px 220px;
+          font-style: normal;
+          font-weight: 900;
+          font-size: 16px;
+          line-height: 19px; }
+        .section-five__testimonials-card .pharagraph {
+          margin: 0 70px;
+          padding-bottom: 70px;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          color: #4F4F4F; }
+    .section-five .gallery-scroll {
+      padding-bottom: 0;
+      margin: 32px 179px; }
+    .section-five__button {
+      margin: 0 180px; }
   /*section six - Map*/
   .section-six {
-    background: #F2F2F2;
-    padding-bottom: 60px; }
-    .section-six__heading {
-      padding-top: 50px;
-      font-size: 36px;
-      line-height: 42px;
-      text-align: center;
-      color: #333333; }
+    padding: 100px 0; }
     .section-six__map {
-      margin: 0 10px;
-      background-image: url(../assets/map.png);
+      width: 598px;
+      height: 290px;
+      margin: 50px 10px;
+      background: url(../assets/map.png) no-repeat;
       background-size: cover;
       position: relative; }
       .section-six__map-vector {
-        width: 34px;
-        height: 47px;
-        background-image: url(../assets/Vector.png);
-        background-size: cover;
-        position: relative; }
+        width: 66px;
+        height: 93px; }
         .section-six__map-vector .eagle {
           position: absolute;
-          width: 22px;
-          height: 22px;
-          left: 6px;
-          top: 6px; }
+          width: 43px;
+          height: 43px;
+          left: 12px;
+          top: 12px; }
         .section-six__map-vector .crocodille {
           position: absolute;
-          width: 21px;
-          height: 21px;
-          left: 7px;
-          top: 7px; }
+          width: 43px;
+          height: 43px;
+          left: 12px;
+          top: 11px; }
         .section-six__map-vector .monkey {
           position: absolute;
-          width: 19px;
-          height: 18.56px;
-          left: 8px;
-          top: 8px; }
+          width: 43px;
+          height: 43px;
+          left: 12px;
+          top: 11px; }
         .section-six__map-vector .panda {
           position: absolute;
-          width: 19px;
-          height: 18.56px;
-          left: 23.53%;
-          right: 20.59%;
+          width: 43px;
+          height: 42px;
+          left: 23.03%;
+          right: 20.89%;
           top: 12.77%;
           bottom: 46.81%; }
       .section-six__map .vector__eagle {
@@ -1426,55 +1423,24 @@ footer {
         top: 5.48%;
         bottom: 62.33%; }
     .section-six__tooltip {
-      display: none;
-      margin: 160px 40px 30px 40px;
-      background-color: #FEFEFE;
-      padding-bottom: 30px; }
+      top: 270px;
+      left: 100px;
+      width: 436px;
+      padding-bottom: 44px; }
       .section-six__tooltip-img {
-        margin: 15px 8px 57px 15px; }
+        margin: 40px 20px 0;
+        width: 65px;
+        height: 65px; }
       .section-six__tooltip h3 {
-        font-size: 14px;
-        line-height: 16px;
-        color: #333333; }
+        margin-top: 40px;
+        font-size: 21px;
+        line-height: 16px; }
       .section-six__tooltip p {
-        font-weight: 500;
-        font-size: 11px;
-        line-height: 13px;
-        color: #4f4f4f; }
+        margin: 5px 24px 5px 0;
+        font-size: 14px;
+        line-height: 16px; }
     .section-six .button {
-      margin: 30px auto;
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      justify-content: center;
-      width: 245px;
-      height: 55px;
-      background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
-      border-radius: 3px;
-      font-family: "Roboto", sans-serif;
-      font-weight: 700;
-      font-size: 18px;
-      text-transform: uppercase;
-      color: #fefefe; }
-      .section-six .button .button__play-icon {
-        width: 32px;
-        height: 32px;
-        margin-right: 10px;
-        border: 1px solid #fefefe;
-        border-radius: 50px; }
-        .section-six .button .button__play-icon span {
-          border-radius: 5px;
-          position: relative;
-          color: #fff; }
-        .section-six .button .button__play-icon span::after {
-          content: "";
-          position: absolute;
-          bottom: -20px;
-          left: -1px;
-          border: 5px solid transparent;
-          border-left: 5px solid #fff; }
-    .section-six .button:hover {
-      background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%); }
+      margin: 35px auto 0; }
   /* Footer */
   footer {
     position: relative; }

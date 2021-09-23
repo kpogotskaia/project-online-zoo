@@ -1810,18 +1810,19 @@ footer {
 
   .section-two {
 
-   /* &__gallery {
+    &__gallery {
 
+      div {
 
-      &-img {
-        width: 600px;
-        margin: 30px 10px 20px 0;
+        &-img {
+          margin: 30px 10px 20px 0;
+        }
       }
-    }*/
+    }
 
-    &__scroll {
+    .gallery-scroll {
       padding-bottom: 0;
-      margin: 50px 180px;
+      margin: 30px 180px;
 
       span:first-child {
         color: #333333;
@@ -1843,12 +1844,20 @@ footer {
   }
 
   &__benefits {
+    padding: 100px 0 80px;
 
     .benefits {
-      margin: 100px 120px 40px 120px;
 
       &-img {
-        margin: 0 160px 0 160px;
+        margin: 0 280px;
+      }
+
+      h5 {
+        text-align: center;
+      }
+
+      p {
+        margin: 0 180px;
       }
     }
   }
@@ -1858,10 +1867,16 @@ footer {
 
 .section-three {
 
-  &__button {
-    margin: 20px 180px 50px;
+  .gallery-scroll {
+    padding-bottom: 0;
+    margin: 23px 179px;
+
   }
-}
+
+  &__button {
+    margin: 20px 180px 100px;
+  }
+  }
 
 /* Section four - Pay and feed */
 
@@ -1905,6 +1920,7 @@ footer {
  /* section five - Testimonials*/
 
  .section-five {
+   padding-bottom: 100px;
 
   &__heading {
     font-size: 48px;
@@ -1944,8 +1960,14 @@ footer {
     }
   }
 
+  .gallery-scroll {
+    padding-bottom: 0;
+    margin: 32px 179px;
+
+  }
+
   &__button {
-    margin: 50px 180px 0px 180px;
+    margin: 0 180px;
   }
 
 }
@@ -1953,62 +1975,51 @@ footer {
 /*section six - Map*/
 
 .section-six {
-  background: #F2F2F2;
+  padding: 100px 0;
 
-  padding-bottom: 60px;
-
-  &__heading {
-    padding-top: 50px;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    color: #333333;
-  }
-
-    &__map {
-      margin: 0 10px;
-      background-image: url(../assets/map.png);
-      background-size: cover;
-      position: relative;
+  &__map {
+    width: 598px;
+    height: 290px;
+    margin: 50px 10px;
+    background: url(../assets/map.png) no-repeat;
+    background-size: cover;
+    position: relative;
 
         &-vector {
-          width: 34px;
-          height: 47px;
-          background-image: url(../assets/Vector.png);
-          background-size: cover;
-          position: relative;
+          width: 66px;
+          height: 93px;
 
           .eagle {
             position: absolute;
-            width: 22px;
-            height: 22px;
-            left: 6px;
-            top: 6px;
+            width: 43px;
+            height: 43px;
+            left: 12px;
+            top: 12px;
 
           }
 
           .crocodille {
             position: absolute;
-            width: 21px;
-            height: 21px;
-            left: 7px;
-            top: 7px;
+            width: 43px;
+            height: 43px;
+            left: 12px;
+            top: 11px;
           }
 
           .monkey {
             position: absolute;
-            width: 19px;
-            height: 18.56px;
-            left: 8px;
-            top: 8px;
+            width: 43px;
+            height: 43px;
+            left: 12px;
+            top: 11px;
           }
 
           .panda {
             position: absolute;
-            width: 19px;
-            height: 18.56px;
-            left: 23.53%;
-            right: 20.59%;
+            width: 43px;
+            height: 42px;
+            left: 23.03%;
+            right: 20.89%;
             top: 12.77%;
             bottom: 46.81%;
           }
@@ -2046,73 +2057,34 @@ footer {
         }
       }
 
-    &__tooltip {
-        display: none;
-        margin: 160px 40px 30px 40px;
-        background-color: #FEFEFE;
-        padding-bottom: 30px;
+      &__tooltip {
+        top: 270px;
+        left: 100px;
+        width: 436px;
+        padding-bottom: 44px;
 
-         &-img {
-            margin: 15px 8px 57px 15px;
-         }
+           &-img {
+             margin: 40px 20px 0;
+             width: 65px;
+             height: 65px;
+           }
 
-         h3 {
-          font-size: 14px;
-          line-height: 16px;
-          color: #333333;
-         }
+           h3 {
+            margin-top: 40px;
+            font-size: 21px;
+            line-height: 16px;
+           }
 
-         p {
-          font-weight: 500;
-          font-size: 11px;
-          line-height: 13px;
-          color: #4f4f4f;
-         }
-    }
-
-      .button {
-        margin: 30px auto;
-        display: flex;
-        flex-direction: row-reverse;
-        align-items: center;
-        justify-content: center;
-        width: 245px;
-        height: 55px;
-        background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
-        border-radius: 3px;
-        // text
-        font-family: $font;
-        font-weight: 700;
-        font-size: 18px;
-        text-transform: uppercase;
-        color: $white;
-
-          .button__play-icon {
-            width: 32px;
-            height: 32px;
-            margin-right: 10px;
-            border: 1px solid $white;
-            border-radius: 50px;
-
-              span {
-                border-radius: 5px;
-                position: relative;
-                color: #fff;
-              }
-
-              span::after {
-                content: "";
-                position: absolute;
-                bottom: -20px;
-                left: -1px;
-                border: 5px solid transparent;
-                border-left: 5px solid #fff;
-              }
-          }
+           p {
+            margin: 5px 24px 5px 0;
+            font-size: 14px;
+            line-height: 16px;
+           }
       }
 
-      .button:hover {
-        background: linear-gradient(106.89deg, #4BD8B5 -14.32%, #49D6DF 100.68%);
+
+      .button {
+        margin: 35px auto 0 ;
       }
 }
 
