@@ -1621,17 +1621,10 @@ footer {
   .section-two .container {
     margin: 0 150px; }
   .section-two__heading {
-    margin-top: 100px;
     text-align: center;
-    font-weight: 900;
-    font-size: 48px;
-    line-height: 56px; }
+    margin-top: 100px; }
   .section-two__pharagraph {
-    margin: 0 405px;
-    font-weight: normal;
-    font-size: 14px;
-    line-height: 16px;
-    color: #4f4f4f; }
+    margin: 30px 405px; }
   .section-two__gallery {
     max-width: 800px;
     margin: auto;
@@ -1677,19 +1670,30 @@ footer {
     .section-two__gallery .prev:hover,
     .section-two__gallery .next:hover {
       background-color: rgba(0, 0, 0, 0.8); }
-  .section-two__scroll {
-    margin: 0 690px; }
+  .section-two .gallery-scroll {
+    padding-bottom: 0;
+    margin: 30px 678px; }
+    .section-two .gallery-scroll span:first-child {
+      color: #333333; }
+    .section-two .gallery-scroll-line {
+      width: 245px; }
+      .section-two .gallery-scroll-line .gallery__scroll-button {
+        width: 80px;
+        margin: 0;
+        background: #333333; }
   .section-two .button {
-    margin: 20px 690px 100px 690px; }
+    margin: 0 auto 100px; }
   .section-two__benefits {
     display: flex;
-    padding: 100px 310px; }
+    padding: 100px 340px; }
     .section-two__benefits .benefits {
-      margin: 0 20px 0 0; }
+      margin: 0px 30px; }
       .section-two__benefits .benefits-img {
-        margin: 0 190px; }
+        margin: 0 110px; }
       .section-two__benefits .benefits h5 {
-        margin: 15px 110px; }
+        margin: 15px 0; }
+      .section-two__benefits .benefits p {
+        margin: 0; }
   /*section tree - Pets in Zoo*/
   .section-three .container {
     margin: 0 150px; }
@@ -1697,9 +1701,33 @@ footer {
     font-size: 48px;
     line-height: 56px; }
   .section-three__left-button, .section-three__right-button {
+    width: 18px;
+    height: 30px;
     display: none; }
   .section-three__slider {
-    margin: 35px 210px; }
+    margin: 35px 220px; }
+    .section-three__slider-active {
+      width: 278px;
+      margin: 0; }
+      .section-three__slider-active p {
+        margin: -135px 5px 0 22px; }
+      .section-three__slider-active__btn {
+        display: flex;
+        margin: 20px -25px 5px 20px; }
+        .section-three__slider-active__btn .button {
+          line-height: 14px;
+          font-size: 12px; }
+        .section-three__slider-active__btn .button-donate {
+          font-size: 12px;
+          margin-left: 10px; }
+          .section-three__slider-active__btn .button-donate .button__play-icon {
+            padding-top: 5px; }
+    .section-three__slider .img img {
+      margin: 0;
+      width: 278px;
+      height: 400px; }
+  .section-three .gallery-scroll {
+    margin: 30px 690px; }
   .section-three__button {
     margin: 30px 690px 100px 690px; }
   /* Section four - Pay and feed */
@@ -1712,35 +1740,144 @@ footer {
     display: flex;
     justify-content: space-between;
     margin: 0 360px; }
-  .section-four-arrow {
-    position: relative;
-    margin: 0px 0 0 110px;
-    display: block;
-    transform: none; }
-    .section-four-arrow .arrow-left, .section-four-arrow .arrow-right {
-      width: 105px; }
+    .section-four__donation-arrow {
+      position: relative;
+      margin: 140px 40px;
+      display: block;
+      transform: none; }
+      .section-four__donation-arrow .arrow-left, .section-four__donation-arrow .arrow-right {
+        width: 105px; }
   .section-four__button {
     margin: 0 820px; }
   /* section five - Testimonials*/
-  .section-five__heading {
-    font-size: 48px;
-    line-height: 56px;
-    margin: 60px 0 25px 0; }
-  .section-five__testimonials {
-    margin: 0 200px;
-    padding-bottom: 40px; }
-    .section-five__testimonials-card {
-      margin: 35px 0 20px 30px; }
-      .section-five__testimonials-card .card-user {
-        margin: 40px 260px 20px 260px;
-        border-radius: 50%; }
-      .section-five__testimonials-card .name {
-        text-align: center; }
-      .section-five__testimonials-card .pharagraph {
-        text-align: center; }
-  .section-five__button {
-    margin: 30px 690px 100px 690px; }
+  .section-five .container .container-second {
+    margin: 0 160px; }
+    .section-five .container .container-second__heading {
+      font-size: 48px;
+      line-height: 56px;
+      margin-top: 60px; }
+    .section-five .container .container-second__testimonials {
+      margin-bottom: 50px; }
+      .section-five .container .container-second__testimonials-card {
+        margin: 35px 0 0 30px; }
+        .section-five .container .container-second__testimonials-card .card-user {
+          margin: 50px 276px 20px;
+          border-radius: 50%; }
+        .section-five .container .container-second__testimonials-card .name {
+          text-align: center;
+          font-size: 20px;
+          line-height: 23px; }
+        .section-five .container .container-second__testimonials-card .pharagraph {
+          font-size: 14px;
+          line-height: 16px;
+          max-width: 17px 72px;
+          padding-bottom: 106px; }
+    .section-five .container .container-second .gallery-scroll {
+      margin: 30px 500px;
+      position: relative; }
+      .section-five .container .container-second .gallery-scroll span:first-child {
+        position: absolute;
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        font-weight: 900;
+        font-size: 24px;
+        line-height: 28px;
+        color: #4F4F4F; }
+      .section-five .container .container-second .gallery-scroll :nth-child(2n) {
+        font-family: "Roboto", sans-serif;
+        text-align: center;
+        font-weight: 700;
+        font-size: 16px;
+        line-height: 28px;
+        color: rgba(189, 189, 189, 0.57);
+        margin-left: 140px; }
+    .section-five .container .container-second button {
+      margin: 0 500px; }
   /*section six - Map*/
+  .section-six {
+    padding: 100px 0;
+    position: relative; }
+    .section-six__map {
+      width: 1198px;
+      height: 497px;
+      margin: 60px 360px 35px;
+      background: url(../assets/map.png) no-repeat;
+      background-size: cover;
+      position: relative; }
+      .section-six__map-vector {
+        width: 66px;
+        height: 93px;
+        background-image: url(../assets/Vector.png);
+        background-size: cover;
+        position: relative; }
+        .section-six__map-vector .eagle {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 11.99px;
+          top: 13.85px; }
+        .section-six__map-vector .crocodille {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 7px;
+          top: 7px; }
+        .section-six__map-vector .monkey {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 12px;
+          top: 10px; }
+        .section-six__map-vector .panda {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 23.53%;
+          right: 20.59%;
+          top: 12.77%;
+          bottom: 46.81%; }
+      .section-six__map .vector__eagle {
+        left: 14.58%;
+        right: 14.58%;
+        top: 15%;
+        bottom: 0%; }
+      .section-six__map .vector__croc {
+        position: absolute;
+        left: 20.33%;
+        top: 21.85%; }
+      .section-six__map .vector__monkey {
+        position: absolute;
+        left: 47.67%;
+        top: 37.66%; }
+      .section-six__map .vector__panda {
+        left: 73%;
+        top: 15.48%; }
+    .section-six__tooltip {
+      position: absolute;
+      top: 157px;
+      left: 40px;
+      width: 238px;
+      background-color: #FEFEFE;
+      display: flex;
+      border-radius: 5px; }
+      .section-six__tooltip-img {
+        margin: 16px 8px 0 15px;
+        width: 40px;
+        height: 40px; }
+      .section-six__tooltip h3 {
+        margin-top: 16px;
+        font-family: "Roboto", sans-serif;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 14px;
+        line-height: 16px;
+        color: #333333; }
+      .section-six__tooltip p {
+        margin: 5px 24px 5px 0;
+        font-weight: 500;
+        font-size: 11px;
+        line-height: 13px;
+        color: #4f4f4f; }
   /* Footer */
   footer .container {
     margin: 0 150px; }

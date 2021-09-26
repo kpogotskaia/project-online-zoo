@@ -2417,19 +2417,12 @@ footer {
     margin: 0 150px;
   }
     &__heading {
-      margin-top: 100px;
       text-align: center;
-      font-weight: 900;
-      font-size: 48px;
-      line-height: 56px;
+      margin-top: 100px;
     }
 
       &__pharagraph {
-        margin: 0 405px;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        color: #4f4f4f;
+        margin: 30px 405px;
       }
 
       &__gallery {
@@ -2500,27 +2493,46 @@ footer {
       }
 
 
-    &__scroll {
-      margin: 0 690px;
-    }
+      .gallery-scroll {
+        padding-bottom: 0;
+        margin: 30px 678px;
+
+        span:first-child {
+          color: #333333;
+        }
+
+        &-line {
+          width: 245px;
+
+          .gallery__scroll-button {
+            width: 80px;
+            margin: 0;
+            background: #333333;
+          }
+        }
+      }
 
     .button {
-      margin: 20px 690px 100px 690px;
+      margin: 0 auto 100px;
     }
 
     &__benefits {
       display: flex;
-      padding: 100px 310px;
+      padding: 100px 340px;
 
       .benefits {
-        margin: 0 20px 0 0;
+        margin: 0px 30px;
 
         &-img {
-          margin: 0 190px;
+          margin: 0 110px;
         }
 
         h5 {
-          margin: 15px 110px;
+         margin: 15px 0;
+        }
+
+        p {
+          margin: 0;
         }
       }
     }
@@ -2539,11 +2551,54 @@ footer {
     }
 
     &__left-button, &__right-button {
+      width: 18px;
+      height: 30px;
       display: none;
     }
 
     &__slider {
-      margin: 35px 210px;
+      margin: 35px 220px;
+
+      &-active {
+        width: 278px;
+        margin: 0;
+
+        p {
+          margin: -135px 5px 0 22px;
+        }
+
+        &__btn {
+          display: flex;
+          margin: 20px -25px 5px 20px;
+
+          .button {
+            line-height: 14px;
+            font-size: 12px;
+          }
+
+          .button-donate {
+              font-size: 12px;
+              margin-left: 10px;
+
+            .button__play-icon {
+                padding-top: 5px;
+            }
+          }
+        }
+      }
+
+      .img {
+
+        img {
+          margin: 0;
+          width: 278px;
+          height: 400px;
+        }
+      }
+    }
+
+    .gallery-scroll {
+      margin: 30px 690px;
     }
 
     &__button {
@@ -2567,18 +2622,19 @@ footer {
       display: flex;
       justify-content: space-between;
       margin: 0 360px;
-    }
 
-    &-arrow {
-      position: relative;
-      margin: 0px 0 0 110px;
-      display: block;
-      transform: none;
+      &-arrow {
+        position: relative;
+        margin: 140px 40px;
+        display: block;
+        transform: none;
 
-      .arrow-left, .arrow-right {
-        width: 105px;
+        .arrow-left, .arrow-right {
+          width: 105px;
+        }
       }
     }
+
 
     &__button {
         margin: 0 820px;
@@ -2586,47 +2642,203 @@ footer {
 
 }
 
-
   /* section five - Testimonials*/
 
  .section-five {
 
-  &__heading {
-    font-size: 48px;
-    line-height: 56px;
-    margin: 60px 0 25px 0;
-  }
+  .container {
 
-  &__testimonials {
-    margin: 0 200px;
-    padding-bottom: 40px;
+    .section-five__arrow-left, .section-five__arrow-right {
 
-    &-card {
-      margin: 35px 0 20px 30px;
+    }
 
-      .card-user {
-        margin: 40px 260px 20px 260px;
-        border-radius: 50%;
+    .container-second {
+      margin: 0 160px;
+
+      &__heading {
+        font-size: 48px;
+        line-height: 56px;
+        margin-top: 60px;
       }
 
-      .name {
-        text-align: center;
+      &__testimonials {
+        margin-bottom: 50px;
+
+        &-card {
+          margin: 35px 0 0 30px;
+
+          .card-user {
+            margin: 50px 276px 20px;
+            border-radius: 50%;
+          }
+
+          .name {
+            text-align: center;
+            font-size: 20px;
+            line-height: 23px;
+          }
+
+          .pharagraph {
+            font-size: 14px;
+            line-height: 16px;
+            max-width: 17px 72px;
+            padding-bottom: 106px;
+          }
+        }
       }
 
-      .pharagraph {
-        text-align: center;
+      .gallery-scroll {
+        margin: 30px 500px;
+        position: relative;
+
+        span:first-child {
+          position: absolute;
+          font-family: $font;
+          text-align: center;
+          font-weight: 900;
+          font-size: 24px;
+          line-height: 28px;
+          color: #4F4F4F;
+        }
+
+        :nth-child(2n) {
+          font-family: $font;
+          text-align: center;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 28px;
+          color: rgba(189, 189, 189, 0.57);
+          margin-left: 140px;
+        }
+      }
+
+      button {
+        margin: 0 500px;
       }
     }
   }
-
-  &__button {
-    margin: 30px 690px 100px 690px ;
-  }
-
-
 }
 
   /*section six - Map*/
+
+  .section-six {
+    padding: 100px 0;
+    position: relative;
+
+    &__map {
+      width: 1198px;
+      height: 497px;
+      margin: 60px 360px 35px;
+
+      background: url(../assets/map.png) no-repeat;
+      background-size: cover;
+      position: relative;
+
+          &-vector {
+            width: 66px;
+            height: 93px;
+            background-image: url(../assets/Vector.png);
+            background-size: cover;
+            position: relative;
+
+            .eagle {
+              position: absolute;
+              width: 43px;
+              height: 43px;
+              left: 11.99px;
+              top: 13.85px;
+
+            }
+
+            .crocodille {
+              position: absolute;
+              width: 43px;
+              height: 43px;
+              left: 7px;
+              top: 7px;
+            }
+
+            .monkey {
+              position: absolute;
+              width: 43px;
+              height: 43px;
+              left: 12px;
+              top: 10px;
+            }
+
+            .panda {
+              position: absolute;
+              width: 43px;
+              height: 43px;
+              left: 23.53%;
+              right: 20.59%;
+              top: 12.77%;
+              bottom: 46.81%;
+            }
+          }
+
+          .vector__eagle {
+            left: 14.58%;
+            right: 14.58%;
+            top: 15%;
+            bottom: 0%;
+          }
+
+          .vector__croc {
+            position: absolute;
+            left: 20.33%;
+            top: 21.85%;
+          }
+
+          .vector__monkey {
+            position: absolute;
+            left: 47.67%;
+            top: 37.66%;
+          }
+
+          .vector__panda {
+            left: 73%;
+            top: 15.48%;
+          }
+        }
+
+        &__tooltip {
+          position: absolute;
+          top: 157px;
+          left: 40px;
+          width: 238px;
+          background-color: #FEFEFE;
+          display: flex;
+          border-radius: 5px;
+
+             &-img {
+               margin: 16px 8px 0 15px;
+               width: 40px;
+               height: 40px;
+             }
+
+             h3 {
+              margin-top: 16px;
+              font-family: $font;
+              font-style: normal;
+              font-weight: 900;
+              font-size: 14px;
+              line-height: 16px;
+              color: #333333;
+             }
+
+             p {
+              margin: 5px 24px 5px 0;
+              font-weight: 500;
+              font-size: 11px;
+              line-height: 13px;
+              color: #4f4f4f;
+             }
+        }
+
+
+
+  }
 
   /* Footer */
 
