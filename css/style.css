@@ -2226,24 +2226,90 @@ header {
     margin: 0 150px; }
     .choose-section .container h1 {
       margin-top: 60px;
-      font-family: "Roboto", sans-serif;
-      font-style: normal;
-      font-weight: 900;
       font-size: 48px;
-      line-height: 56px;
-      text-align: center; }
+      line-height: 56px; }
     .choose-section .container p {
-      margin: 20px 410px 55px;
-      font-family: "Roboto", sans-serif;
-      font-style: normal;
-      font-weight: normal;
+      margin: 20px 410px 70px;
       font-size: 14px;
-      line-height: 16px;
-      color: #4F4F4F; }
-    .choose-section .container .choose-gallery {
+      line-height: 16px; }
+    .choose-section .container .gallery .choose-gallery {
       margin: 0 210px;
+      width: 1200px;
       display: flex;
       justify-content: space-between; }
+      .choose-section .container .gallery .choose-gallery div {
+        width: 18px;
+        height: 30px;
+        margin-top: 40px; }
+        .choose-section .container .gallery .choose-gallery div .left-arrow {
+          margin-left: 10px; }
+        .choose-section .container .gallery .choose-gallery div .right-arrow {
+          margin-left: -15px; }
+      .choose-section .container .gallery .choose-gallery__img {
+        width: 108px;
+        height: 108px; }
+      .choose-section .container .gallery .choose-gallery .eagle, .choose-section .container .gallery .choose-gallery .tiger, .choose-section .container .gallery .choose-gallery .elephant, .choose-section .container .gallery .choose-gallery .lew, .choose-section .container .gallery .choose-gallery .zebra {
+        display: block; }
+      .choose-section .container .gallery .choose-gallery .active {
+        margin-top: -15px;
+        width: 137px;
+        height: 137px; }
+    .choose-section .container .gallery__scroll {
+      display: block;
+      padding-bottom: 0;
+      margin: 55px 670px; }
+    .choose-section .container .map {
+      margin: 30px 250px 45px;
+      width: 1200px;
+      height: 500px; }
+      .choose-section .container .map-vector {
+        width: 66px;
+        height: 93px; }
+        .choose-section .container .map-vector .eagle {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 11px;
+          top: 11px; }
+        .choose-section .container .map-vector .crocodille {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 11px;
+          top: 11px; }
+        .choose-section .container .map-vector .monkey {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 12px;
+          top: 10px; }
+        .choose-section .container .map-vector .panda {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 17.53%;
+          top: 11.77%; }
+      .choose-section .container .map .active-vector {
+        width: 66px;
+        height: 93px; }
+      .choose-section .container .map .vector__eagle {
+        left: 14.58%;
+        right: 14.58%;
+        top: 15%;
+        bottom: 0%; }
+      .choose-section .container .map .vector__croc {
+        position: absolute;
+        left: 20.33%;
+        top: 21.85%; }
+      .choose-section .container .map .vector__monkey {
+        position: absolute;
+        left: 47.67%;
+        top: 37.66%; }
+      .choose-section .container .map .vector__panda {
+        left: 73%;
+        top: 15.48%; }
+    .choose-section .container .button {
+      margin: 0 685px 100px; }
   .donation-popup {
     position: fixed;
     width: 1200px;
