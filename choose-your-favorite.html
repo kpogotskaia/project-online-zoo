@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choose your favorite</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <script src=" http://code.jquery.com/jquery-1.7.js"></script>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;1,500&family=Roboto:ital,wght@0,400;0,500;0,700;0,900;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="header">
+                <a href="#" class="header__logo">
+                    <span>zoo</span>
+                    <span>online</span>
+                </a>
+
+                <span class="header__menu-icon closed" id="menuBtn"></span>
+
+                <nav class="header__menu-container closed" id="menuContainer">
+                    <ul>
+                        <li>
+                            <a href="#">About</a>
+                        </li>
+                        <li>
+                            <a href="/countryZoo.html" class="header__menu-item">Zoos</a>
+                        </li>
+                        <li>
+                            <a href="#">Map</a>
+                        </li>
+                        <li>
+                            <a href="#">Contact Us</a>
+                        </li>
+                        <li>
+                            <a href="#">Design</a>
+                        </li>
+                    </ul>
+                </nav>
+                <div class="header__revers">
+                    <div class="header__revers-btn"></div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <section class="choose-section">
+        <div class="container">
+            <h1>Choose your favorite</h1>
+            <p>As a voice for wildlife, we are devastated
+                by the impact of the 2020 Australian bushfires
+                on precious species and their habitat, and we
+                are determined to assist in all aspects, including
+                viding veterinary support and raising much-needed
+                emergency funds. Zoo Online saves wildlife and
+                inspires everyone to make conservation a priority
+                in their lives. Animals have the right to a pain-free
+                and happy life. They have equal claim to the resources
+                of this planet, and deserve a life of dignity and
+                compassion.As a voice for wildlife, we are devastated
+                by the impact of the 2020 Australian bushfires on
+                precious species and their habitat.</p>
+
+            <div class="gallery">
+                <div class="choose-gallery">
+                    <div><img class="left-arrow" src="assets/leftArr.png" alt="left-arrow"></div>
+                    <img class="choose-gallery__img monkey" src="assets/choose-gallery/monkey.png" alt="monkey">
+                    <img class="choose-gallery__img panda active" src="assets/choose-gallery/panda.png" alt="panda">
+                    <img class="choose-gallery__img crocodille" src="assets/choose-gallery/croc.png" alt="crocodille">
+                    <img class="choose-gallery__img eagle" src="assets/choose-gallery/eagle.png" alt="eagle">
+                    <img class="choose-gallery__img tiger" src="assets/choose-gallery/tiger.png" alt="tiger">
+                    <img class="choose-gallery__img elephant" src="assets/choose-gallery/eleph.png" alt="elephant">
+                    <img class="choose-gallery__img lew" src="assets/choose-gallery/lew.png" alt="lew">
+                    <img class="choose-gallery__img zebra" src="assets/choose-gallery/zebra.png" alt="zebra">
+                    <div><img class="right-arrow" src="assets/rightArr.png" alt="right-arrow"></div>
+                </div>
+
+                <div class="gallery__scroll">
+                    <span>02/</span>
+                    <span>08</span>
+                    <div class="gallery__scroll-line">
+                        <div class="gallery__scroll-line-button"></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="map">
+                <div class="map-vector vector__eagle">
+                    <img class="eagle" src="assets/vector/eagle.png" alt="">
+                </div>
+                <div class="map-vector vector__croc">
+                    <img class="crocodille" src="assets/vector/croc.png" alt="">
+                </div>
+                <div class="map-vector vector__monkey">
+                    <img class="monkey" src="assets/vector/monkey.png" alt="">
+                </div>
+                <div class="map-vector vector__panda active-vector">
+                    <img class="panda" src="assets/vector/panda.png" alt="">
+                </div>
+            </div>
+
+            <button class="button">watch online
+                <div class="button__play-icon">
+                    <span></span>
+                </div>
+            </button>
+        </div>
+    </section>
+    <footer>
+        <div class="container">
+            <div class="footer">
+                <a href="#" class="footer__logo">
+                    <span>zoo</span>
+                    <span>online</span>
+                </a>
+                <nav class="footer__menu">
+                    <ul class="footer__menu-list">
+                        <li class="footer__menu-list-item">
+                            <a href="#">About</a>
+                        </li>
+                        <li class="footer__menu-list-item">
+                            <a href="#">Zoos</a>
+                        </li>
+                        <li class="footer__menu-list-item">
+                            <a href="#" class="">Map</a>
+                        </li>
+                        <li class="footer__menu-list-item">
+                            <a href="#" class="">Design</a>
+                        </li>
+                    </ul>
+                </nav>
+            </div>
+
+            <div class="footer__contacts">
+                <div class="form">
+                    <h4 class="footer__contacts-heading">Contact us</h4>
+                    <form action="#">
+                        <fieldset class="contact-form">
+                            <label class="input-section">
+                                <input type="text" placeholder="Name" />
+                            </label>
+                            <label class="input-section">
+                                <input type="email" placeholder="Email" />
+                            </label>
+                            <label class="input-message">
+                                <input type="text" placeholder="" />
+                                <span class="">Please enter your message</span>
+                            </label>
+                            <label class="checkbox">
+                                <input type="checkbox" name="checkbox" value="value">
+                                I agree to the processing of Personal Data
+                            </label>
+                        </fieldset>
+
+                        <a class="send-button">
+                            <button>send</button>
+                            <img src="assets/Arrow4.png" alt="">
+                        </a>
+                    </form>
+                </div>
+                <div class="contact">
+                    <h6 class="contact__heading">zoo online centre</h6>
+                    <span class="address">
+                        132, Address District, Street<br>
+                        Open Daily 10:00 am - 5:00 pm
+                    </span>
+                    <span class="phone">
+                        T(702) 163-3433<br>
+                        zoo.online@gmail.com
+                    </span>
+                    <div class="sociales">
+                        <a href="#"><img src="assets/sociales/instagram.png" alt="instagram"></a>
+                        <a href="#"><img src="assets/sociales/twitter.png" alt="twitter"></a>
+                        <a href="#"><img src="assets/sociales/vk.png" alt="vk"></a>
+                        <a href="#"><img src="assets/sociales/youtube.png" alt="youtube"></a>
+                    </div>
+                </div>
+            </div>
+            <button class="footer-button">donate for volonteers</button>
+            <div class="footer-line"></div>
+            <div class="signature">@Krystsina Pogotskaia</div>
+        </div>
+    </footer>
+
+</body>
+</html>
