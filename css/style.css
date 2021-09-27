@@ -1887,7 +1887,8 @@ header {
   .section-two__pharagraph {
     margin: 30px 405px; }
   .section-two__gallery {
-    max-width: 800px;
+    max-width: 790px;
+    height: 323px;
     margin: auto;
     overflow: hidden;
     position: relative; }
@@ -1927,7 +1928,7 @@ header {
       transition: 0.6s ease;
       border-radius: 0 3px 3px 0; }
     .section-two__gallery .next {
-      right: 0;
+      right: 57px;
       border-radius: 3px 0 0 3px; }
     .section-two__gallery .prev:hover,
     .section-two__gallery .next:hover {

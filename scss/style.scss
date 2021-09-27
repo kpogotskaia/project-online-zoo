@@ -2764,7 +2764,8 @@ header {
     }
 
     &__gallery {
-      max-width: 800px;
+      max-width: 790px;
+      height: 323px;
       margin: auto;
       overflow: hidden;
       position: relative;
@@ -2818,7 +2819,7 @@ header {
       }
 
       .next {
-        right: 0;
+        right: 57px;
         border-radius: 3px 0 0 3px;
       }
 
