@@ -1924,6 +1924,9 @@ header {
         margin-left: 100px; }
       .section-one__gallery-scroll-line {
         width: 245px; }
+        .section-one__gallery-scroll-line .gallery__scroll-button {
+          margin-left: 30px;
+          width: 30px; }
   /*section two - How it works */
   .section-two .container {
     margin: 0 150px; }
