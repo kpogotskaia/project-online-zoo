@@ -1,237 +1,9 @@
-body {
-  overflow-x: hidden;
-  margin: 0;
-}
-* {
-  padding: 0;
-  border: 0;
-}
-*,
-*:before,
-*:after {
-  -moz-box-sizing: border-box;
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box;
-}
-:focus,
-:active {
-  outline: none;
-}
-a:focus,
-a:active {
-  outline: none;
-}
-button {
-  cursor: pointer;
-}
-button::-moz-focus-inner {
-  padding: 0;
-  border: 0;
-}
-a,
-a:visited {
-  text-decoration: none;
-}
-a:hover {
-  text-decoration: none;
-}
-ul,
-li {
-  list-style: none;
-}
-img {
-  vertical-align: top;
-}
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-span {
-  color: #333333;
-  font-size: inherit;
-  font-family: "Roboto", sans-serif;
-  font-style: normal;
-}
-
-//<variables>
-$max-width-conteiner: 1625px;
-$input-vertical-distance: 30px;
-$min-width: 320;
-$input-padding: 8px;
-$horizontal-input-margin: 30px;
-$horizontal-input-margin-desktop: 55px;
-$white: #fefefe;
-$error-color: #f44336;
-$focus-color: #4bd8b5;
-$font: "Roboto", sans-serif;
-
-// mobil
-
-/* header */
-
-.container {
-  margin: 0 10px;
-
-  .header {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
-
-    &__logo {
-      text-decoration: none;
-      display: flex;
-      flex-direction: column;
-      padding: 30px 0;
-
-      span:first-child {
-        font-size: 36px;
-        font-weight: 900;
-        line-height: 42px;
-      }
-
-      span:nth-child(2) {
-        font-size: 18px;
-        font-weight: 900;
-        font-size: 18px;
-        line-height: 21px;
-        letter-spacing: 0.08em;
-      }
-    }
-
-    &__menu-icon {
-      display: block;
-      font-size: 0;
-      background: none;
-      border: none;
-      width: 30px;
-      height: 25px;
-      position: relative;
-      cursor: pointer;
-      top: 53px;
-    }
-
-    &__menu-icon,
-    &__menu-icon::before,
-    &__menu-icon::after {
-      border-top: 3px solid #000;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
-    }
-
-    &__menu-icon::before,
-    &__menu-icon::after {
-      position: absolute;
-      content: "";
-      display: block;
-      left: 0px;
-      right: 0;
-    }
-
-    &__menu-icon:before {
-      top: 7px;
-    }
-
-    &__menu-icon:after {
-      top: 17px;
-    }
-
-    &__menu-icon.opened {
-      border-top-color: transparent;
-    }
-
-    &__menu-icon.opened:after {
-      width: 20px;
-      height: 20px;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      transform: rotate(45deg);
-      top: 60px;
-      left: -47px;
-    }
-
-    &__menu-icon.opened:before {
-      width: 20px;
-      height: 20px;
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      top: 60px;
-      left: -35px;
-    }
-
-    /*styles for menu container*/
-    &__menu-container {
-      padding-top: 110px;
-      width: 100%;
-
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-
-        li {
-          border-bottom: #4f4f4f 1px solid;
-
-          a {
-            display: block;
-            padding: 10px 0;
-            color: #4f4f4f;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 19px;
-            background: rgb(226, 226, 226);
-            text-decoration: none;
-            text-align: center;
-            font-family: sans-serif, arial;
-
-            &:hover {
-              color: #f2f2f2;
-              font-weight: 700;
-              background: #628d90;
-            }
-          }
-        }
-      }
-    }
-
-    &__menu-container.closed {
-      display: none;
-    }
-
-    &__menu-container.opened {
-      display: block;
-    }
-
-    &__revers {
-      width: 54px;
-      height: 30px;
-      background: #f2f2f2;
-      border-radius: 190px;
-      margin-top: 50px;
-
-      &-btn {
-        width: 20px;
-        height: 20px;
-        background: $white;
-        box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
-        border-radius: 50%;
-        margin: 4.5px 0 0 5px;
-      }
-    }
-  }
-}
-
-/* section one - Watch your favorite animal online */
+@import './variables';
 
 .section-one {
   width: 100%;
   height: 100%;
-  background: linear-gradient(rgba(119, 119, 119, 0.719), rgba(0, 0, 0, 0.541)), url("../assets/glery1screen/wild.jpg");
+  background: linear-gradient(rgba(119, 119, 119, 0.719), rgba(0, 0, 0, 0.541)), url("./assets/glery1screen/wild.jpg");
   background-size: cover;
 
   .container {
@@ -1044,14 +816,14 @@ $font: "Roboto", sans-serif;
   &__map {
     margin: 30px 10px;
     height: 145px;
-    background: url(../assets/map.png) no-repeat;
+    background: url('./assets/map.png') no-repeat;
     background-size: contain;
     position: relative;
 
     &-vector {
       width: 34px;
       height: 47px;
-      background-image: url(../assets/Vector.png);
+      background-image: url('./assets/Vector.png');
       background-size: cover;
       position: relative;
 
@@ -1199,235 +971,6 @@ $font: "Roboto", sans-serif;
 
   .button:hover {
     background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
-  }
-}
-
-/* Footer */
-
-footer {
-  background-color: #333333;
-
-  .container {
-    margin: 0 10px;
-
-    .footer {
-      position: relative;
-      display: block;
-
-      &__logo {
-        text-decoration: none;
-        display: flex;
-        flex-direction: column;
-        padding: 40px 0;
-
-        span:first-child {
-          color: #fef;
-          font-size: 36px;
-          font-weight: 900;
-          line-height: 42px;
-        }
-
-        span:nth-child(2) {
-          margin-top: -6px;
-          color: #fefefe;
-          font-size: 18px;
-          font-weight: 900;
-          font-size: 18px;
-          line-height: 21px;
-          letter-spacing: 0.08em;
-        }
-      }
-
-      &__menu {
-        &-list {
-          &-item {
-            margin-bottom: 5px;
-
-            a {
-              font-family: $font;
-              font-style: normal;
-              font-weight: 400;
-              font-size: 16px;
-              line-height: 19px;
-              color: #fefefe;
-            }
-          }
-        }
-      }
-    }
-
-    .footer__contacts {
-      &-heading {
-        font-family: $font;
-        font-style: normal;
-        font-weight: 900;
-        font-size: 20px;
-        line-height: 23px;
-        color: #fefefe;
-      }
-    }
-
-    form {
-      .contact-form {
-        .input-section {
-          border-bottom: 1px solid #bdbdbd;
-          padding-bottom: 10px;
-
-          input {
-            width: 100%;
-            background-color: #333333;
-            margin: 0 0 30px 0;
-
-            &::-webkit-input-placeholder {
-              color: #e0e0e0;
-              font-size: 14px;
-              line-height: 16px;
-            }
-          }
-        }
-
-        .input-message {
-          position: relative;
-          display: block;
-          margin-top: 10px;
-
-          input {
-            width: 100%;
-            position: relative;
-            height: 115px;
-            border: 1px solid #bdbdbd;
-            border-radius: 5px;
-            padding-left: 8px;
-            background-color: #333333;
-          }
-
-          span {
-            position: absolute;
-            background-color: #333333;
-            left: 6px;
-            top: -8px;
-            padding: 0 10px;
-            font-family: $font;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 14px;
-            color: #bdbdbd;
-            transition: all 0.25s;
-          }
-        }
-
-        .checkbox {
-          color: #bdbdbd;
-          font-family: $font;
-          font-style: normal;
-          font-weight: normal;
-          font-size: 12px;
-          line-height: 14px;
-
-          input {
-            margin-top: 20px;
-            border: 1px solid #bdbdbd;
-            border-radius: 2px;
-            background-color: #333333;
-          }
-        }
-      }
-    }
-
-    .send-button {
-      margin: 0 0 0 190px;
-
-      button {
-        margin-top: 20px;
-        background-color: #333333;
-        font-family: $font;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 14px;
-        line-height: 16px;
-        color: #fefefe;
-        text-transform: uppercase;
-      }
-
-      img {
-        margin: 22px 0 0 20px;
-      }
-    }
-
-    .contact {
-      padding-top: 20px;
-
-      &__heading {
-        margin: 35px 0;
-        font-family: $font;
-        font-style: normal;
-        font-weight: bold;
-        font-size: 14px;
-        line-height: 16px;
-        text-transform: uppercase;
-        color: #fefefe;
-      }
-
-      .address {
-        margin-bottom: 20px;
-        display: block;
-        font-family: $font;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        color: #fefefe;
-      }
-
-      .phone {
-        font-family: $font;
-        font-style: normal;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        color: #fefefe;
-      }
-
-      .sociales {
-        width: 125px;
-        margin: 20px 170px 0 0;
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-
-    .footer-button {
-      margin: 40px 10px 80px 10px;
-      width: 275px;
-      height: 55px;
-      background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
-      border-radius: 3px;
-      // text
-      font-family: $font;
-      font-weight: 500;
-      font-style: normal;
-      line-height: 21px;
-      font-size: 18px;
-      text-transform: uppercase;
-      text-align: center;
-      color: $white;
-    }
-
-    .footer-line {
-      border-bottom: 0.5px solid #fefefe;
-    }
-
-    .signature {
-      margin-top: 30px;
-      padding-bottom: 30px;
-      font-family: $font;
-      font-style: normal;
-      font-weight: normal;
-      font-size: 12px;
-      line-height: 14px;
-      color: #bdbdbd;
-    }
   }
 }
 
@@ -1581,12 +1124,6 @@ footer {
   }
 }
 
-/* page choose your favorite */
-header {
-  background: #FFFFFF;
-  box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
-}
-
 .choose-section {
 
   .container {
@@ -1693,14 +1230,14 @@ header {
     .map {
       margin: 35px 10px 0;
       height: 145px;
-      background: url(../assets/map.png) no-repeat;
+      background: url('./assets/map.png') no-repeat;
       background-size: contain;
       position: relative;
 
       &-vector {
         width: 34px;
         height: 47px;
-        background-image: url(../assets/Vector.png);
+        background-image: url('./assets/Vector.png');
         background-size: cover;
         position: relative;
 
@@ -1742,7 +1279,7 @@ header {
       .active-vector {
         width: 34px;
         height: 47px;
-        background-image: url(../assets/choose-gallery/Vector.png);
+        background-image: url('./assets/choose-gallery/Vector.png');
         background-size: cover;
         position: relative;
       }
@@ -1823,162 +1360,6 @@ header {
     .button:hover {
       background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
     }
-  }
-}
-
-// style popup
-
-.donation-popup {
-  position: fixed;
-  height: 100vh;
-  overflow: auto;
-  width: 100%;
-  top: 0;
-  left: 0;
-
-  background: #f9f9f9;
-  box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.19);
-
-  &__wrapper {
-    display: flex;
-  }
-
-  &__img {
-    display: none;
-  }
-
-  .donation_form {
-    margin: 80px 20px;
-
-    &__title {
-      margin: 24px 0 44px;
-      text-align: center;
-      font-style: normal;
-      font-weight: bold;
-      font-size: 20px;
-      text-transform: uppercase;
-    }
-
-    &__animal_section {
-      display: block;
-    }
-
-    .input-section + .input-section {
-      margin-top: $input-vertical-distance;
-    }
-
-    &__block {
-      .input-section + .input-section {
-        margin-top: $input-vertical-distance;
-      }
-    }
-
-    fieldset {
-      margin-top: 30px;
-      margin-inline-start: 0;
-      margin-inline-end: 0;
-    }
-
-    legend {
-      font-family: "Roboto", sans-serif;
-      margin-bottom: 30px;
-      color: #828282;
-      font-size: 18px;
-      font-weight: bold;
-      font-style: normal;
-    }
-
-    .input-section {
-      position: relative;
-      display: block;
-
-      & input {
-        position: relative;
-        height: 56px;
-        border: 1px solid #628d90;
-        border-radius: 5px;
-        width: 100%;
-        padding-left: $input-padding;
-        background: #f9f9f9;
-      }
-
-      & input.is-focused {
-        border: 1px solid $focus-color;
-      }
-
-      & input.is-focused + .input-section__message {
-        color: $focus-color;
-        top: -6px;
-      }
-
-      &__message {
-        position: absolute;
-        left: $input-padding;
-        top: 20px;
-        padding: 0 15px;
-        background: #f9f9f9;
-        font-family: "Poppins", sans-serif;
-        font-style: normal;
-        font-weight: 500;
-        font-size: 13px;
-        color: #828282;
-        transition: all 0.25s;
-      }
-
-      &__error-message {
-        position: absolute;
-        bottom: -17px;
-        left: 0;
-        font-weight: 400;
-        font-size: 13px;
-      }
-
-      &.is-invalid {
-        & input {
-          border: 1px solid $error-color;
-        }
-
-        & .input-section__message.input-section__message,
-        & .input-section__error-message {
-          color: $error-color;
-        }
-      }
-    }
-
-    &__info {
-      margin: 30px 0;
-      text-align: center;
-      font-family: "Roboto", sans-serif;
-      font-style: normal;
-      font-weight: 500;
-      font-size: 13px;
-      color: #828282;
-    }
-
-    &__submit {
-      display: block;
-      font-family: "Roboto", sans-serif;
-      font-style: normal;
-      font-weight: 900;
-      font-size: 18px;
-      border-radius: 5px;
-      margin: 40px auto;
-      color: #f2f2f2;
-      width: 245px;
-      height: 55px;
-      background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
-    }
-  }
-
-  &__close {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-    margin: 0;
-    height: 40px;
-    width: 40px;
-    background-color: #c7c7c770;
-    font-size: 40px;
   }
 }
 
@@ -2250,7 +1631,7 @@ header {
       width: 598px;
       height: 290px;
       margin: 50px 10px;
-      background: url(../assets/map.png) no-repeat;
+      background: url('./assets/map.png') no-repeat;
       background-size: cover;
       position: relative;
 
@@ -2352,30 +1733,6 @@ header {
 
     .button {
       margin: 35px auto 0;
-    }
-  }
-
-  /* Footer */
-  footer {
-    position: relative;
-    .input-section {
-      input {
-        width: 380px;
-      }
-    }
-
-    .contact {
-      .sociales {
-        margin: 20px 450px 0 0;
-        padding-bottom: 75px;
-        display: flex;
-        justify-content: space-between;
-      }
-    }
-    .footer-button {
-      position: absolute;
-      right: 0;
-      top: 15px;
     }
   }
 
@@ -2617,104 +1974,10 @@ header {
       }
     }
   }
-
-  //donation-popup
-
-  .donation-popup {
-    &__img {
-      display: block;
-      min-width: 139px;
-      height: auto;
-      background: url("../assets/popap-decs/popap.png");
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
-
-    .donation_form {
-      margin: 80px 13%;
-
-      &__animal_section {
-        display: block;
-      }
-
-      &__title {
-        margin: 24px 0 48px;
-        font-size: 24px;
-      }
-
-      fieldset {
-        margin-top: 35px;
-      }
-
-      .input-section {
-        position: relative;
-        display: block;
-      }
-
-      &__block {
-        display: block;
-      }
-    }
-  }
 }
 
 // desktop
 @media screen and (min-width: 1280px) {
-  .container {
-    margin: 0 150px;
-
-    .header {
-      display: flex;
-      justify-content: space-between;
-
-      &__menu-icon {
-        display: none;
-      }
-
-      &__menu-container {
-        padding-top: 45px;
-        width: 100%;
-
-        ul {
-          margin: 0 450px;
-          display: flex;
-          justify-content: space-between;
-          list-style: none;
-          padding: 0;
-
-          li {
-            border-bottom: none;
-
-            a {
-              display: block;
-              padding: 10px 0;
-              color: #4f4f4f;
-              font-style: normal;
-              font-weight: 500;
-              font-size: 16px;
-              line-height: 19px;
-              background: none;
-              text-decoration: none;
-              text-align: center;
-              font-family: sans-serif, arial;
-
-              &:hover {
-                border-bottom: 2px solid #333333;
-                color: #333333;
-                font-weight: 700;
-                background: none;
-              }
-            }
-          }
-        }
-      }
-
-      &__menu-container.closed {
-        display: block;
-      }
-    }
-  }
-
   /* section one - Watch your favorite animal online */
 
   .section-one {
@@ -2972,81 +2235,6 @@ header {
     }
   }
 
-  /* section five - Testimonials*/
-
-  .section-five {
-    .container {
-      .section-five__arrow-left,
-      .section-five__arrow-right {
-      }
-
-      .container-second {
-        margin: 0 160px;
-
-        &__heading {
-          font-size: 48px;
-          line-height: 56px;
-          margin-top: 60px;
-        }
-
-        &__testimonials {
-          margin-bottom: 50px;
-
-          &-card {
-            margin: 35px 0 0 30px;
-
-            .card-user {
-              margin: 50px 276px 20px;
-              border-radius: 50%;
-            }
-
-            .name {
-              text-align: center;
-              font-size: 20px;
-              line-height: 23px;
-            }
-
-            .pharagraph {
-              font-size: 14px;
-              line-height: 16px;
-              max-width: 17px 72px;
-              padding-bottom: 106px;
-            }
-          }
-        }
-
-        .gallery-scroll {
-          margin: 30px 500px;
-          position: relative;
-
-          span:first-child {
-            position: absolute;
-            font-family: $font;
-            text-align: center;
-            font-weight: 900;
-            font-size: 24px;
-            line-height: 28px;
-            color: #4f4f4f;
-          }
-
-          :nth-child(2n) {
-            font-family: $font;
-            text-align: center;
-            font-weight: 700;
-            font-size: 16px;
-            line-height: 28px;
-            color: rgba(189, 189, 189, 0.57);
-            margin-left: 140px;
-          }
-        }
-
-        button {
-          margin: 0 500px;
-        }
-      }
-    }
-  }
-
   /*section six - Map*/
 
   .section-six {
@@ -3058,14 +2246,14 @@ header {
       height: 497px;
       margin: 60px 360px 35px;
 
-      background: url(../assets/map.png) no-repeat;
+      background: url('./assets/map.png') no-repeat;
       background-size: cover;
       position: relative;
 
       &-vector {
         width: 66px;
         height: 93px;
-        background-image: url(../assets/Vector.png);
+        background-image: url('./assets/Vector.png');
         background-size: cover;
         position: relative;
 
@@ -3151,73 +2339,6 @@ header {
         margin: 7px 55px 5px 0;
         font-size: 14px;
         line-height: 16px;
-      }
-    }
-  }
-
-  /* Footer */
-
-  footer {
-    .container {
-      margin: 0 150px;
-
-      .footer {
-        display: flex;
-        justify-content: space-between;
-
-        &__logo {
-          padding: 90px 0 0 0;
-        }
-
-        &__menu {
-          &-list {
-            margin: 115px 410px 0 0;
-            display: flex;
-
-            &-item {
-              margin-left: 70px;
-              margin-bottom: 5px;
-
-              a {
-                &:hover {
-                  color: $focus-color;
-                }
-              }
-            }
-          }
-        }
-      }
-
-      .footer__contacts {
-        display: flex;
-        justify-content: space-between;
-        margin-right: 490px;
-
-        &-heading {
-          margin: 65px 0 35px 0;
-        }
-      }
-
-      .send-button {
-        margin: 0 0 0 230px;
-      }
-
-      .contact {
-        padding-top: 68px;
-
-        &__heading {
-          margin: 0px 0 35px 0;
-        }
-      }
-
-      .footer-button {
-        right: 150px;
-        top: 60px;
-      }
-
-      .footer-line {
-        padding-bottom: 60px;
-        border-bottom: 0.5px solid #fefefe;
       }
     }
   }
@@ -3326,7 +2447,6 @@ header {
   }
 
   /* page choose your favorite */
-
   .choose-section {
 
     .container {
@@ -3463,62 +2583,6 @@ header {
 
       .button {
         margin: 0 685px 100px;
-      }
-    }
-  }
-
-
-
-  // donation popup
-  .donation-popup {
-    position: fixed;
-    width: 1200px;
-    height: 795px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    margin: 0;
-
-    &__img {
-      min-width: 197px;
-    }
-
-    .donation_form {
-      margin: 77px 139px 40px;
-
-      &__title {
-        margin: 20px 0 48px;
-      }
-
-      &__animal_section {
-        display: flex;
-
-        .input-section + .input-section {
-          margin-top: 0;
-          margin-left: $horizontal-input-margin-desktop;
-        }
-      }
-
-      .input-section {
-        input {
-          width: 335px;
-        }
-      }
-
-      &__block {
-        display: flex;
-
-        fieldset {
-          margin-top: 40px;
-        }
-
-        fieldset + fieldset {
-          margin-left: $horizontal-input-margin-desktop;
-        }
-      }
-
-      &__info {
-        margin: 40px 110px;
       }
     }
   }

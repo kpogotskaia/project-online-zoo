@@ -1,28 +1,39 @@
 {
-  "name": "project-online-zoo",
-  "version": "1.0.0",
-  "description": "https://kpogotskaia.github.io/project-online-zoo/",
-  "main": "script.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "scss": "node-sass --watch scss -o css"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/kpogotskaia/project-online-zoo.git"
-  },
-  "author": "Krystina Pogotskaia",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/kpogotskaia/project-online-zoo/issues"
-  },
-  "homepage": "https://github.com/kpogotskaia/project-online-zoo#readme",
+  "name": "my-app",
+  "version": "0.1.0",
+  "private": true,
   "dependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-preset-react-app": "^3.1.2",
-    "mdb-ui-kit": "^3.5.1",
-    "node-sass": "^5.0.0"
+    "@testing-library/jest-dom": "^5.14.1",
+    "@testing-library/react": "^11.2.7",
+    "@testing-library/user-event": "^12.8.3",
+    "node-sass": "^6.0.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-scripts": "4.0.3",
+    "web-vitals": "^1.1.2"
   },
-  "devDependencies": {},
-  "keywords": []
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "eslintConfig": {
+    "extends": [
+      "react-app",
+      "react-app/jest"
+    ]
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  }
 }
