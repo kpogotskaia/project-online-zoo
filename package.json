@@ -18,7 +18,11 @@
   },
   "homepage": "https://github.com/kpogotskaia/project-online-zoo#readme",
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-react-app": "^3.1.2",
     "mdb-ui-kit": "^3.5.1",
     "node-sass": "^5.0.0"
-  }
+  },
+  "devDependencies": {},
+  "keywords": []
 }
