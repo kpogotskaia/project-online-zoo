@@ -1,0 +1,217 @@
+@import './variables';
+
+header {
+  background: #FFFFFF;
+  box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
+}
+
+.container {
+  margin: 0 10px;
+
+  .header {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+
+    &__logo {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      padding: 30px 0;
+
+      span:first-child {
+        font-size: 36px;
+        font-weight: 900;
+        line-height: 42px;
+      }
+
+      span:nth-child(2) {
+        font-size: 18px;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.08em;
+      }
+    }
+
+    &__menu-icon {
+      display: block;
+      font-size: 0;
+      background: none;
+      border: none;
+      width: 30px;
+      height: 25px;
+      position: relative;
+      cursor: pointer;
+      top: 53px;
+    }
+
+    &__menu-icon,
+    &__menu-icon::before,
+    &__menu-icon::after {
+      border-top: 3px solid #000;
+      -webkit-transition: all 0.3s;
+      -moz-transition: all 0.3s;
+      transition: all 0.3s;
+    }
+
+    &__menu-icon::before,
+    &__menu-icon::after {
+      position: absolute;
+      content: "";
+      display: block;
+      left: 0px;
+      right: 0;
+    }
+
+    &__menu-icon:before {
+      top: 7px;
+    }
+
+    &__menu-icon:after {
+      top: 17px;
+    }
+
+    &__menu-icon.opened {
+      border-top-color: transparent;
+    }
+
+    &__menu-icon.opened:after {
+      width: 20px;
+      height: 20px;
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      transform: rotate(45deg);
+      top: 60px;
+      left: -47px;
+    }
+
+    &__menu-icon.opened:before {
+      width: 20px;
+      height: 20px;
+      -webkit-transform: rotate(-45deg);
+      -moz-transform: rotate(-45deg);
+      transform: rotate(-45deg);
+      top: 60px;
+      left: -35px;
+    }
+
+    /*styles for menu container*/
+    &__menu-container {
+      padding-top: 110px;
+      width: 100%;
+
+      ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+
+        li {
+          border-bottom: #4f4f4f 1px solid;
+
+          a {
+            display: block;
+            padding: 10px 0;
+            color: #4f4f4f;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 19px;
+            background: rgb(226, 226, 226);
+            text-decoration: none;
+            text-align: center;
+            font-family: sans-serif, arial;
+
+            &:hover {
+              color: #f2f2f2;
+              font-weight: 700;
+              background: #628d90;
+            }
+          }
+        }
+      }
+    }
+
+    &__menu-container.closed {
+      display: none;
+    }
+
+    &__menu-container.opened {
+      display: block;
+    }
+
+    &__revers {
+      width: 54px;
+      height: 30px;
+      background: #f2f2f2;
+      border-radius: 190px;
+      margin-top: 50px;
+
+      &-btn {
+        width: 20px;
+        height: 20px;
+        background: $white;
+        box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+        border-radius: 50%;
+        margin: 4.5px 0 0 5px;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .container {
+    margin: 0 150px;
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+
+      &__menu-icon {
+        display: none;
+      }
+
+      &__menu-container {
+        padding-top: 45px;
+        width: 100%;
+
+        ul {
+          margin: 0 450px;
+          display: flex;
+          justify-content: space-between;
+          list-style: none;
+          padding: 0;
+
+          li {
+            border-bottom: none;
+
+            a {
+              display: block;
+              padding: 10px 0;
+              color: #4f4f4f;
+              font-style: normal;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 19px;
+              background: none;
+              text-decoration: none;
+              text-align: center;
+              font-family: sans-serif, arial;
+
+              &:hover {
+                border-bottom: 2px solid #333333;
+                color: #333333;
+                font-weight: 700;
+                background: none;
+              }
+            }
+          }
+        }
+      }
+
+      &__menu-container.closed {
+        display: block;
+      }
+    }
+  }
+}

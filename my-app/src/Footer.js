@@ -1,9 +1,4 @@
 import './Footer.scss';
-import YoutubeIcon from './assets/sociales/youtube.png';
-import InstagramIcon from './assets/sociales/instagram.png';
-import TwitterIcon from './assets/sociales/twitter.png';
-import VKIcon from './assets/sociales/vk.png';
-import ArrowImg from './assets/Arrow4.png';
 
 export const Footer = () => {
   return (
@@ -55,7 +50,7 @@ export const Footer = () => {
 
               <a className="send-button">
                 <button>send</button>
-                <img src={ArrowImg} alt="arrow" />
+                <img src="assets/Arrow4.png" alt="" />
               </a>
             </form>
           </div>
@@ -70,10 +65,10 @@ export const Footer = () => {
               zoo.online@gmail.com
             </span>
             <div className="sociales">
-              <a href="#"><img src={InstagramIcon} alt="instagram" /></a>
-              <a href="#"><img src={TwitterIcon} alt="twitter" /></a>
-              <a href="#"><img src={VKIcon} alt="vk" /></a>
-              <a href="#"><img src={YoutubeIcon} alt="youtube" /></a>
+              <a href="#"><img src="assets/sociales/instagram.png" alt="instagram" /></a>
+              <a href="#"><img src="assets/sociales/twitter.png" alt="twitter" /></a>
+              <a href="#"><img src="assets/sociales/vk.png" alt="vk" /></a>
+              <a href="#"><img src="assets/sociales/youtube.png" alt="youtube" /></a>
             </div>
           </div>
         </div>
