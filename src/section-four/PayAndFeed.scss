@@ -1,0 +1,151 @@
+@import '../variables';
+
+
+.section-four {
+  background: #F2F2F2;
+  padding: 50px 0;
+
+  .container-second {
+    margin: 0 10px;
+  }
+
+  &__heading {
+    margin: 0;
+    text-align: center;
+    font-family: $font;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+  }
+
+  &__pharagraph {
+    display: none;
+  }
+
+  &__donation {
+    position: relative;
+    display: block;
+
+    &-card {
+      width: 245px;
+      height: 245px;
+      margin: 30px 20px 100px 20px;
+      border: 2px solid #628d90;
+      border-radius: 50%;
+
+      img {
+        margin: 70px 90px 0 90px;
+      }
+
+      h5 {
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 23px;
+        text-align: center;
+        margin: 18px 50px;
+      }
+    }
+
+    &-arrow {
+      position: absolute;
+      margin: -60px 0 0 110px;
+      display: block;
+      transform: translateX(50px) rotate(90deg) translateY(50px);
+
+      .arrow-left,
+      .arrow-right {
+        width: 50px;
+      }
+    }
+  }
+
+  &__button {
+    margin: -60px 30px 0;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    width: 245px;
+    height: 55px;
+    background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
+    border-radius: 3px;
+    // text
+    font-family: $font;
+    font-weight: 700;
+    font-size: 18px;
+    text-transform: uppercase;
+    color: $white;
+  }
+}
+
+//tablet
+@media screen and (min-width: 640px) {
+  .section-four {
+    padding: 100px 0;
+
+    .container-second {
+      margin: 0 10px;
+    }
+
+    &__heading {
+      padding: 0;
+      margin: 0;
+    }
+
+    &__pharagraph {
+      display: block;
+      margin: 15px 10px 50px 10px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 16px;
+      color: $light-gray;
+    }
+
+    &__donation {
+      margin: 0 175px;
+    }
+
+    &__button {
+      margin: 50px 195px 0px 195px;
+    }
+
+    &__button:hover {
+      background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
+    }
+  }
+}
+
+//desktop
+@media screen and (min-width: 1280px) {
+
+  .section-four {
+    &__heading {
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 56px;
+    }
+
+    &__donation {
+      display: flex;
+      justify-content: space-between;
+      margin: 0 360px;
+
+      &-arrow {
+        position: relative;
+        margin: 140px 40px;
+        display: block;
+        transform: none;
+
+        .arrow-left,
+        .arrow-right {
+          width: 105px;
+        }
+      }
+    }
+
+    &__button {
+      margin: 0 820px;
+    }
+  }
+}

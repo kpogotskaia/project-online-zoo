@@ -16,7 +16,7 @@
     font-weight: normal;
     font-size: 14px;
     line-height: 16px;
-    color: #4f4f4f;
+    color: $gray;
   }
 
   &__gallery {
@@ -67,7 +67,7 @@
       width: auto;
       margin-top: -22px;
       padding: 16px;
-      color: white;
+      color: $white;
       font-weight: bold;
       font-size: 18px;
       transition: 0.6s ease;
@@ -95,7 +95,7 @@
       font-weight: 900;
       font-size: 24px;
       line-height: 28px;
-      color: #4f4f4f;
+      color: $gray;
       margin-left: 100px;
     }
 
@@ -116,13 +116,13 @@
       &-button {
         width: 60px;
         height: 6px;
-        background: #333333;
+        background: $darkgray;
       }
     }
   }
 
   &__benefits {
-    background: #f2f2f2;
+    background: #F2F2F2;
     display: block;
     padding: 50px 0;
 
@@ -146,7 +146,124 @@
         font-weight: normal;
         font-size: 14px;
         line-height: 16px;
-        color: #4f4f4f;
+        color: $gray;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .section-two {
+    &__gallery {
+      max-width: 630px;
+
+      .next {
+        right: 0;
+      }
+    }
+
+    .gallery-scroll {
+      padding-bottom: 0;
+      margin: 30px 180px;
+
+      span:first-child {
+        color: $darkgray;
+      }
+
+      &-line {
+        width: 245px;
+
+        .gallery__scroll-button {
+          width: 80px;
+          margin: 0;
+          background: $darkgray;
+        }
+      }
+    }
+
+    .button {
+      margin: 20px 180px 50px;
+    }
+
+    &__benefits {
+      padding: 100px 0 80px;
+
+      .benefits {
+        &-img {
+          margin: 0 280px;
+        }
+
+        h5 {
+          text-align: center;
+        }
+
+        p {
+          margin: 0 180px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section-two {
+    .container {
+      margin: 0 150px;
+    }
+    &__heading {
+      text-align: center;
+      margin-top: 100px;
+    }
+
+    &__pharagraph {
+      margin: 30px 405px;
+    }
+
+    &__gallery {
+      max-width: 790px;
+    }
+
+    .gallery-scroll {
+      padding-bottom: 0;
+      margin: 30px 678px;
+
+      span:first-child {
+        color: $darkgray;
+      }
+
+      &-line {
+        width: 245px;
+
+        .gallery__scroll-button {
+          width: 80px;
+          margin: 0;
+          background: $darkgray;
+        }
+      }
+    }
+
+    .button {
+      margin: 0 auto 100px;
+    }
+
+    &__benefits {
+      display: flex;
+      padding: 100px 340px;
+
+      .benefits {
+        margin: 0px 30px;
+
+        &-img {
+          margin: 0 110px;
+        }
+
+        h5 {
+          margin: 15px 0;
+        }
+
+        p {
+          margin: 0;
+        }
       }
     }
   }

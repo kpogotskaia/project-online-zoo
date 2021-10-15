@@ -1,0 +1,355 @@
+@import '../variables';
+
+.section-six {
+  background: $white;
+  padding: 50px 0;
+  position: relative;
+
+  &__heading {
+    margin: 0;
+    font-family: $font;
+    font-style: normal;
+    font-weight: 900;
+    font-size: 36px;
+    line-height: 42px;
+    text-align: center;
+    color: #333333;
+  }
+
+  &__map {
+    margin: 30px 10px;
+    height: 145px;
+    background: url('../assets/map.png') no-repeat;
+    background-size: contain;
+    position: relative;
+
+    &-vector {
+      width: 34px;
+      height: 47px;
+      background-image: url('../assets/Vector.png');
+      background-size: cover;
+      position: relative;
+
+      .eagle {
+        position: absolute;
+        width: 22px;
+        height: 22px;
+        left: 6px;
+        top: 6px;
+      }
+
+      .crocodille {
+        position: absolute;
+        width: 21px;
+        height: 21px;
+        left: 7px;
+        top: 7px;
+      }
+
+      .monkey {
+        position: absolute;
+        width: 19px;
+        height: 18.56px;
+        left: 8px;
+        top: 8px;
+      }
+
+      .panda {
+        position: absolute;
+        width: 19px;
+        height: 18.56px;
+        left: 23.53%;
+        right: 20.59%;
+        top: 12.77%;
+        bottom: 46.81%;
+      }
+    }
+
+    .vector__eagle {
+      position: absolute;
+      left: 8.33%;
+      right: 80.33%;
+      top: 1.37%;
+      bottom: 66.44%;
+    }
+
+    .vector__croc {
+      position: absolute;
+      left: 17.33%;
+      right: 71.33%;
+      top: 6.85%;
+      bottom: 60.27%;
+    }
+
+    .vector__monkey {
+      position: absolute;
+      left: 44.67%;
+      right: 44.38%;
+      top: 24.66%;
+      bottom: 43.58%;
+    }
+
+    .vector__panda {
+      left: 72%;
+      right: 16.67%;
+      top: 5.48%;
+      bottom: 62.33%;
+    }
+  }
+
+  &__tooltip {
+    position: absolute;
+    top: 157px;
+    left: 40px;
+    width: 238px;
+    background-color: $white;
+    display: flex;
+    border-radius: 5px;
+
+    &-img {
+      margin: 16px 8px 0 15px;
+      width: 40px;
+      height: 40px;
+    }
+
+    h3 {
+      margin-top: 16px;
+      font-family: $font;
+      font-style: normal;
+      font-weight: 900;
+      font-size: 14px;
+      line-height: 16px;
+      color: #333333;
+    }
+
+    p {
+      margin: 5px 24px 5px 0;
+      font-weight: 500;
+      font-size: 11px;
+      line-height: 13px;
+      color: #4f4f4f;
+    }
+  }
+}
+
+@media screen and (min-width: 640px) {
+  .section-six {
+    padding: 100px 0;
+
+    &__map {
+      width: 598px;
+      height: 290px;
+      margin: 50px 10px;
+      background: url('../assets/map.png') no-repeat;
+      background-size: cover;
+      position: relative;
+
+      &-vector {
+        width: 66px;
+        height: 93px;
+
+        .eagle {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 12px;
+          top: 12px;
+        }
+
+        .crocodille {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 12px;
+          top: 11px;
+        }
+
+        .monkey {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 12px;
+          top: 11px;
+        }
+
+        .panda {
+          position: absolute;
+          width: 43px;
+          height: 42px;
+          left: 23.03%;
+          right: 20.89%;
+          top: 12.77%;
+          bottom: 46.81%;
+        }
+      }
+
+      .vector__eagle {
+        position: absolute;
+        left: 8.33%;
+        right: 80.33%;
+        top: 1.37%;
+        bottom: 66.44%;
+      }
+
+      .vector__croc {
+        position: absolute;
+        left: 17.33%;
+        right: 71.33%;
+        top: 6.85%;
+        bottom: 60.27%;
+      }
+
+      .vector__monkey {
+        position: absolute;
+        left: 44.67%;
+        right: 44.38%;
+        top: 24.66%;
+        bottom: 43.58%;
+      }
+
+      .vector__panda {
+        left: 72%;
+        right: 16.67%;
+        top: 5.48%;
+        bottom: 62.33%;
+      }
+    }
+
+    &__tooltip {
+      top: 270px;
+      left: 100px;
+      width: 436px;
+      padding-bottom: 44px;
+
+      &-img {
+        margin: 40px 20px 0;
+        width: 65px;
+        height: 65px;
+      }
+
+      h3 {
+        margin-top: 40px;
+        font-size: 21px;
+        line-height: 16px;
+      }
+
+      p {
+        margin: 5px 24px 5px 0;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+
+    .button {
+      margin: 35px auto 0;
+    }
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section-six {
+    padding: 100px 0;
+    position: relative;
+
+    &__map {
+      width: 1198px;
+      height: 497px;
+      margin: 60px 360px 35px;
+
+      background: url('../assets/map.png') no-repeat;
+      background-size: cover;
+      position: relative;
+
+      &-vector {
+        width: 66px;
+        height: 93px;
+        background-image: url('../assets/Vector.png');
+        background-size: cover;
+        position: relative;
+
+        .eagle {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 11.99px;
+          top: 13.85px;
+        }
+
+        .crocodille {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 7px;
+          top: 7px;
+        }
+
+        .monkey {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 12px;
+          top: 10px;
+        }
+
+        .panda {
+          position: absolute;
+          width: 43px;
+          height: 43px;
+          left: 23.53%;
+          right: 20.59%;
+          top: 12.77%;
+          bottom: 46.81%;
+        }
+      }
+
+      .vector__eagle {
+        left: 14.58%;
+        right: 14.58%;
+        top: 15%;
+        bottom: 0%;
+      }
+
+      .vector__croc {
+        position: absolute;
+        left: 20.33%;
+        top: 21.85%;
+      }
+
+      .vector__monkey {
+        position: absolute;
+        left: 47.67%;
+        top: 37.66%;
+      }
+
+      .vector__panda {
+        left: 73%;
+        top: 15.48%;
+      }
+    }
+
+    &__tooltip {
+      position: absolute;
+      top: 350px;
+      left: 130px;
+      width: 436px;
+
+      &-img {
+        margin: 40px 20px 0 44px;
+        width: 65px;
+        height: 65px;
+      }
+
+      h3 {
+        margin-top: 40px;
+        font-size: 18px;
+        line-height: 21px;
+      }
+
+      p {
+        margin: 7px 55px 5px 0;
+        font-size: 14px;
+        line-height: 16px;
+      }
+    }
+  }
+}

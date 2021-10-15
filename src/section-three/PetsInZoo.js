@@ -59,7 +59,7 @@ export const PetsInZoo = () => {
         </div>
         <button className="section-three__button button">
             chosee your favorite
-          </button>
+        </button>
       </div>
     </section>
   );

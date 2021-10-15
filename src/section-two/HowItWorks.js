@@ -1,6 +1,7 @@
 import './HowItWorks.scss';
 
 import { Button } from '../button/Button';
+import { Paginator } from '../paginator/Paginator';
 
 import MonkeysImg from '../assets/rectangles/monkeys.png';
 import DeersImg from '../assets/rectangles/deers.png';
@@ -76,13 +77,7 @@ export const HowItWorks = () => {
 
         </div>
 
-        <div className="gallery-scroll">
-            <span>01/</span>
-            <span>04</span>
-            <div className="gallery-scroll__line">
-                <div className="gallery-scroll__line-button"></div>
-            </div>
-        </div>
+        <Paginator />
 
         <Button />
 
