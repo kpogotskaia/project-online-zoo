@@ -5,12 +5,14 @@
   height: 100%;
   background: linear-gradient(rgba(119, 119, 119, 0.719), rgba(0, 0, 0, 0.541)), url("../assets/glery1screen/wild.jpg");
   background-size: cover;
+  position: relative;
 
   .container {
     margin: 0 10px;
 
-    h1 {
-      padding: 90px 0 0 0;
+    .section-one__heading {
+      font-family: $font;
+      padding-top: 90px;
       font-weight: 900;
       font-size: 48px;
       line-height: 56px;
@@ -21,177 +23,177 @@
     .section-one__sociales {
       display: none;
     }
-  }
 
-  &__gallery {
-    margin: 35px 0 15px 10px;
+    .section-one__gallery {
+      margin: 35px 0 15px;
 
-    &-imgs {
-      display: flex;
-      justify-content: space-between;
+      &-imgs {
+        display: flex;
+        justify-content: space-between;
 
-      .img {
-        width: 115px;
-        height: 165px;
-        background-size: cover;
-        margin: 20px 0 0 10px;
-      }
-
-      .img-active {
-        position: relative;
-        margin-left: 10px;
-
-        &__img {
-          width: 145px;
-          height: 205px;
+        .img {
+          width: 115px;
+          height: 165px;
+          margin: 15px 0 0 10px;
         }
 
-        p {
-          position: absolute;
-          left: 8px;
-          top: 70px;
-          font-weight: normal;
-          font-size: 12px;
-          line-height: 14px;
-          color: $white;
-        }
+        .img-active {
+          position: relative;
+          margin-left: 10px;
 
-        &__btn {
-          position: absolute;
-          top: 150px;
-          left: 8px;
-
-          .button {
-            display: flex;
-            flex-direction: row-reverse;
-            background: none;
-            color: $turquoise;
-            font-weight: 500;
-            line-height: 12px;
-            font-size: 9px;
-            text-transform: uppercase;
-
-            .button__play-icon {
-              width: 24px;
-              height: 24px;
-              border: 1px solid $turquoise;
-              border-radius: 50%;
-              margin: -6px 3px 0 0;
-
-              span {
-                border-radius: 5px;
-                position: relative;
-                color: $turquoise;
-              }
-
-              span::after {
-                content: "";
-                position: absolute;
-                bottom: -16px;
-                left: -1px;
-                border: 5px solid transparent;
-                border-left: 5px solid $turquoise;
-              }
-            }
+          &__img {
+            width: 145px;
+            height: 205px;
           }
 
-          .button-donate {
-            font-size: 10px;
-            margin: 10px 0;
+          p {
+            position: absolute;
+            left: 8px;
+            top: 65px;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
             color: $white;
+          }
 
-            .button__play-icon {
-              width: 24px;
-              height: 24px;
-              padding-top: 5px;
-              font-size: 15px;
+          &__btn {
+            position: absolute;
+            top: 150px;
+            left: 8px;
+
+            .button-active {
+              display: flex;
+              flex-direction: row-reverse;
+              background: none;
               color: $white;
+              font-weight: 500;
+              line-height: 12px;
+              font-size: 10px;
+              text-transform: uppercase;
+
+              .button__play-icon {
+                width: 24px;
+                height: 24px;
+                border: 1px solid $white;
+                border-radius: 50%;
+                margin: -7px 3px 0 0;
+
+                span {
+                  border-radius: 5px;
+                  position: relative;
+                  color: $white;
+                }
+
+                span::after {
+                  content: "";
+                  position: absolute;
+                  bottom: -16px;
+                  left: -1px;
+                  border: 5px solid transparent;
+                  border-left: 5px solid $white;
+                }
+              }
+            }
+
+            .button-donate {
+              font-size: 10px;
+              margin: 13px 0;
+              color: $white;
+
+              .button__play-icon {
+                width: 24px;
+                height: 24px;
+                padding-top: 5px;
+                font-size: 15px;
+                color: $white;
+              }
             }
           }
         }
-      }
-    }
-
-    &-line {
-      margin-top: -100px;
-      width: 100%;
-      height: 0px;
-      border: 1px solid $light-gray;
-
-      .gallery__line-ellipse {
-        margin: -6px 0 0 -8px;
-        width: 13px;
-        height: 13px;
-        border: 1px solid $light-gray;
-        border-radius: 50%;
-
-        div {
-          width: 5px;
-          height: 5px;
-          border-radius: 50%;
-          margin: 3px 0px 0px 3px;
-          background: $light-gray;
-        }
-      }
-    }
-
-    &-scroll {
-      margin: 125px 35px 0 140px;
-      padding-bottom: 55px;
-
-      span:first-child {
-        font-family: $font;
-        text-align: center;
-        font-weight: 900;
-        font-size: 24px;
-        line-height: 28px;
-        color: $white;
-        margin-left: 40px;
-      }
-
-      :nth-child(2n) {
-        font-family: $font;
-        text-align: center;
-        font-weight: 700;
-        font-size: 16px;
-        line-height: 28px;
-        color: rgba(189, 189, 189, 0.57);
       }
 
       &-line {
-        width: 140px;
-        height: 5px;
-        background: rgba(189, 189, 189, 0.57);
+        margin-top: -100px;
+        width: 100%;
+        height: 0px;
+        border: 1px solid $light-gray;
 
-        .gallery__scroll-button {
-          width: 15px;
+        .gallery__line-ellipse {
+          margin: -6px 0 0 -8px;
+          width: 13px;
+          height: 13px;
+          border: 1px solid $light-gray;
+          border-radius: 50%;
+
+          div {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            margin: 3px 0px 0px 3px;
+            background: $light-gray;
+          }
+        }
+      }
+
+      &-scroll {
+        margin: 125px 35px 0 140px;
+        padding-bottom: 55px;
+
+        span:first-child {
+          font-family: $font;
+          text-align: center;
+          font-weight: 900;
+          font-size: 24px;
+          line-height: 28px;
+          color: $white;
+          margin-left: 40px;
+        }
+
+        :nth-child(2n) {
+          font-family: $font;
+          text-align: center;
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 28px;
+          color: rgba(189, 189, 189, 0.57);
+        }
+
+        &-line {
+          width: 140px;
           height: 5px;
-          margin: 0 0px 50px 20px;
-          background: $white;
+          background: rgba(189, 189, 189, 0.57);
+
+          .gallery__scroll-button {
+            width: 15px;
+            height: 5px;
+            margin: 0 0px 50px 20px;
+            background: $white;
+          }
         }
       }
     }
   }
 }
 
+
 @media screen and (min-width: 640px) {
   .section-one {
     .container {
       margin: 0 20px;
 
-      h1 {
-        padding-top: 100px;
+      .section-one__heading {
+        padding-top: 125px;
         font-size: 64px;
         line-height: 75px;
       }
 
       button {
-        margin: 50px 0;
+        margin: 30px 0;
       }
 
       .section-one__sociales {
         position: absolute;
-        bottom: 0;
+        bottom: 60px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -200,66 +202,69 @@
           padding-bottom: 15px;
         }
       }
-    }
 
-    &__gallery {
-      margin: 0 0 0 70px;
-      padding-bottom: 100px;
+      .section-one__gallery {
+        margin: 50px 0 0 70px;
+        padding-bottom: 30px;
 
-      &-imgs {
-        .img {
-          margin-left: 30px;
-          width: 180px;
-          height: 260px;
-        }
+        &-imgs {
 
-        .img-active {
-          margin-left: 30px;
-
-          &__img {
-            width: 245px;
-            height: 352px;
+          .img {
+            margin: 40px 0 0 30px;
+            width: 180px;
+            height: 260px;
           }
 
-          p {
-            margin: 0 28px 20px 15px;
-            top: 232px;
-            font-size: 14px;
-            line-height: 16px;
-          }
+          .img-active {
+            margin-left: 30px;
 
-          &__btn {
-            display: flex;
-            top: 280px;
-
-            .button {
-              margin: 20px 5px 0 15px;
-              font-size: 11px;
+            &__img {
+              width: 245px;
+              height: 352px;
             }
 
-            .button-donate {
-              font-size: 12px;
+            p {
+              margin: 0 31px 20px 15px;
+              top: 232px;
+              font-size: 14px;
+              line-height: 16px;
+            }
+
+            &__btn {
+              display: flex;
+              top: 280px;
+
+              .button-active {
+                margin: 20px 17px;
+                font-size: 12px;
+              }
+
+              .button-donate {
+                font-size: 12px;
+                margin-left: -10px;
+              }
             }
           }
-        }
-      }
-
-      &-line {
-        margin: -200px 0px 0px -30px;
-      }
-
-      &-scroll {
-        margin: 250px 0 0 245px;
-
-        span:first-child {
-          margin-left: 100px;
         }
 
         &-line {
-          width: 245px;
+          margin: -200px 0px 0px -16px;
+        }
+
+        &-scroll {
+          margin: 250px 0 0 245px;
+
+          span:first-child {
+            margin-left: 100px;
+          }
+
+          &-line {
+            width: 245px;
+          }
         }
       }
     }
+
   }
 }
 
@@ -268,19 +273,19 @@
     .container {
       margin: 0 150px;
 
-      h1 {
-        padding: 205px 520px 0 210px;
+      .section-one__heading {
+        padding: 205px 200px 50px 210px;
         font-size: 90px;
         line-height: 104px;
       }
 
       button {
-        margin: 40px 0 0 210px;
+        margin: 0 210px;
       }
 
       .section-one__sociales {
         position: absolute;
-        bottom: 0;
+        bottom: 100px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
@@ -289,63 +294,68 @@
           padding-bottom: 15px;
         }
       }
-    }
 
-    &__gallery {
-      margin: 0 0 15px 950px;
-      padding-bottom: 50px;
+      .section-one__gallery {
+        margin: 0 0 15px 850px;
+        padding-bottom: 50px;
 
-      &-imgs {
-        display: flex;
-        justify-content: space-between;
+        &-imgs {
+          display: flex;
+          justify-content: space-between;
 
-        .img {
-          width: 140px;
-          height: 205px;
-          margin-top: -50px;
-        }
-
-        .img-active {
-          width: 245px;
-          height: 350px;
-          margin-top: -100px;
-
-          p {
-            top: 232px;
-            left: 20px;
-            font-size: 14px;
-            line-height: 16px;
+          .img {
+            width: 140px;
+            height: 205px;
+            margin-top: -35px;
           }
 
-          &__btn {
-            .button {
-              font-size: 12px;
+          .img-active {
+            width: 245px;
+            height: 350px;
+            margin-top: -100px;
+
+            p {
+              top: 232px;
+              left: 20px;
+              font-size: 14px;
+              line-height: 16px;
+              margin: 0 29px 20px 5px;
             }
 
-            .button-donate {
-              font-size: 12px;
+            &__btn {
+
+              .button-active {
+                margin: 20px 17px;
+                font-size: 12px;
+              }
+
+              .button-donate {
+                font-size: 12px;
+                margin-left: -10px;
+              }
             }
           }
-        }
-      }
-
-      &-line {
-        margin: -200px 0px 0px -60px;
-      }
-
-      &-scroll {
-        margin: 250px 0 0 200px;
-
-        span:first-child {
-          margin-left: 100px;
         }
 
         &-line {
-          width: 245px;
+          width: 1080px;
+          margin: -200px 0px 0px -60px;
+        }
 
-          .gallery__scroll-button {
-            margin-left: 30px;
-            width: 30px;
+        &-scroll {
+          margin: 250px 0 0 200px;
+
+          span:first-child {
+            margin-left: 100px;
+          }
+
+          &-line {
+            width: 245px;
+
+            .gallery__scroll-button {
+              margin-left: 30px;
+              width: 30px;
+            }
           }
         }
       }
