@@ -83,6 +83,7 @@ export const HowItWorks = () => {
 
     </div>
     <div className="section-two__benefits">
+      <div className="container">
         <div className="benefits">
             <img className="benefits-img" src={CardsProblemImg} alt="inspires" />
             <h5 className="benefits-heading">What inspires us?</h5>
@@ -104,6 +105,7 @@ export const HowItWorks = () => {
                 They have equal claim to the resources of this planet,
                 eserve a life of dignity and compassion.</p>
         </div>
+      </div>
     </div>
 </section>
   );

@@ -1,7 +1,6 @@
 @import '../variables.scss';
 
 .gallery-scroll {
-  padding-bottom: 0;
   margin: 30px auto;
 
   span:first-child {
@@ -31,7 +30,7 @@
     background: rgba(189, 189, 189, 0.57);
 
     &-button {
-      width: 60px;
+      width: 50px;
       height: 6px;
       background: $darkgray;
     }

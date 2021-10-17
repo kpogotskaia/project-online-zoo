@@ -3,7 +3,8 @@
 .section-two {
   &__heading {
     font-family: $font;
-    margin: 50px 0 20px 0;
+    padding-top: 40px;
+    margin: 0 auto;
     font-size: 36px;
     line-height: 42px;
     font-weight: 900;
@@ -21,7 +22,7 @@
 
   &__gallery {
     max-width: 300px;
-    height: 323px;
+    height: 300px;
     margin: auto;
     overflow: hidden;
     position: relative;
@@ -86,39 +87,11 @@
   }
 
   .gallery-scroll {
-    padding-bottom: 0;
-    margin: 23px 30px;
+    margin: 28px;
+  }
 
-    span:first-child {
-      font-family: $font;
-      text-align: center;
-      font-weight: 900;
-      font-size: 24px;
-      line-height: 28px;
-      color: $gray;
-      margin-left: 100px;
-    }
-
-    :nth-child(2n) {
-      font-family: $font;
-      text-align: center;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 28px;
-      color: rgba(189, 189, 189, 0.57);
-    }
-
-    &__line {
-      width: 245px;
-      height: 6px;
-      background: rgba(189, 189, 189, 0.57);
-
-      &-button {
-        width: 60px;
-        height: 6px;
-        background: $darkgray;
-      }
-    }
+  .button {
+    margin: 0 auto 50px;
   }
 
   &__benefits {
@@ -126,27 +99,30 @@
     display: block;
     padding: 50px 0;
 
-    .benefits {
-      margin-bottom: 30px;
+    .container {
 
-      &-img {
-        margin: 0 120px;
-      }
+      .benefits {
+        margin-bottom: 30px;
 
-      h5 {
-        margin: 15px 70px;
-        font-weight: 900;
-        font-size: 20px;
-        line-height: 23px;
-        text-align: center;
-      }
+        &-img {
+          margin: 0 115px;
+          width: 77px;
+        }
 
-      p {
-        margin: 0 10px;
-        font-weight: normal;
-        font-size: 14px;
-        line-height: 16px;
-        color: $gray;
+        h5 {
+          margin: 15px auto;
+          font-weight: 900;
+          font-size: 20px;
+          line-height: 23px;
+          text-align: center;
+        }
+
+        p {
+          font-weight: normal;
+          font-size: 14px;
+          line-height: 16px;
+          color: $gray;
+        }
       }
     }
   }
@@ -163,42 +139,22 @@
     }
 
     .gallery-scroll {
-      padding-bottom: 0;
-      margin: 30px 180px;
-
-      span:first-child {
-        color: $darkgray;
-      }
-
-      &-line {
-        width: 245px;
-
-        .gallery__scroll-button {
-          width: 80px;
-          margin: 0;
-          background: $darkgray;
-        }
-      }
-    }
-
-    .button {
-      margin: 20px 180px 50px;
+      margin: 30px 188px;
     }
 
     &__benefits {
       padding: 100px 0 80px;
 
-      .benefits {
-        &-img {
-          margin: 0 280px;
-        }
+      .container {
 
-        h5 {
-          text-align: center;
-        }
+        .benefits {
+          &-img {
+            margin: 0 270px;
+          }
 
-        p {
-          margin: 0 180px;
+          p {
+            margin: 0 170px;
+          }
         }
       }
     }
@@ -213,6 +169,7 @@
     &__heading {
       text-align: center;
       margin-top: 100px;
+      padding: 0;
     }
 
     &__pharagraph {
@@ -224,22 +181,7 @@
     }
 
     .gallery-scroll {
-      padding-bottom: 0;
       margin: 30px 678px;
-
-      span:first-child {
-        color: $darkgray;
-      }
-
-      &-line {
-        width: 245px;
-
-        .gallery__scroll-button {
-          width: 80px;
-          margin: 0;
-          background: $darkgray;
-        }
-      }
     }
 
     .button {
@@ -247,22 +189,25 @@
     }
 
     &__benefits {
-      display: flex;
-      padding: 100px 340px;
+      padding: 100px 210px;
 
-      .benefits {
-        margin: 0px 30px;
+      .container {
+        display: flex;
 
-        &-img {
-          margin: 0 110px;
-        }
+        .benefits {
+          margin: 0px 30px;
 
-        h5 {
-          margin: 15px 0;
-        }
+          &-img {
+            margin: 0 110px;
+          }
 
-        p {
-          margin: 0;
+          h5 {
+            margin: 15px auto;
+          }
+
+          p {
+            margin: 0;
+          }
         }
       }
     }
