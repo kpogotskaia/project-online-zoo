@@ -36,80 +36,6 @@
           height: 165px;
           margin: 15px 0 0 10px;
         }
-
-        .img-active {
-          position: relative;
-          margin-left: 10px;
-
-          &__img {
-            width: 145px;
-            height: 205px;
-          }
-
-          p {
-            position: absolute;
-            left: 8px;
-            top: 65px;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 14px;
-            color: $white;
-          }
-
-          &__btn {
-            position: absolute;
-            top: 150px;
-            left: 8px;
-
-            .button-active {
-              display: flex;
-              flex-direction: row-reverse;
-              background: none;
-              color: $white;
-              font-weight: 500;
-              line-height: 12px;
-              font-size: 10px;
-              text-transform: uppercase;
-
-              .button__play-icon {
-                width: 24px;
-                height: 24px;
-                border: 1px solid $white;
-                border-radius: 50%;
-                margin: -7px 3px 0 0;
-
-                span {
-                  border-radius: 5px;
-                  position: relative;
-                  color: $white;
-                }
-
-                span::after {
-                  content: "";
-                  position: absolute;
-                  bottom: -16px;
-                  left: -1px;
-                  border: 5px solid transparent;
-                  border-left: 5px solid $white;
-                }
-              }
-            }
-
-            .button-donate {
-              font-size: 10px;
-              margin: 13px 0;
-              color: $white;
-
-              .button__play-icon {
-                width: 24px;
-                height: 24px;
-                padding-top: 5px;
-                font-size: 15px;
-                color: $white;
-              }
-            }
-          }
-        }
       }
 
       &-line {
@@ -214,37 +140,6 @@
             width: 180px;
             height: 260px;
           }
-
-          .img-active {
-            margin-left: 30px;
-
-            &__img {
-              width: 245px;
-              height: 352px;
-            }
-
-            p {
-              margin: 0 31px 20px 15px;
-              top: 232px;
-              font-size: 14px;
-              line-height: 16px;
-            }
-
-            &__btn {
-              display: flex;
-              top: 280px;
-
-              .button-active {
-                margin: 20px 17px;
-                font-size: 12px;
-              }
-
-              .button-donate {
-                font-size: 12px;
-                margin-left: -10px;
-              }
-            }
-          }
         }
 
         &-line {
@@ -307,33 +202,6 @@
             width: 140px;
             height: 205px;
             margin-top: -35px;
-          }
-
-          .img-active {
-            width: 245px;
-            height: 350px;
-            margin-top: -100px;
-
-            p {
-              top: 232px;
-              left: 20px;
-              font-size: 14px;
-              line-height: 16px;
-              margin: 0 29px 20px 5px;
-            }
-
-            &__btn {
-
-              .button-active {
-                margin: 20px 17px;
-                font-size: 12px;
-              }
-
-              .button-donate {
-                font-size: 12px;
-                margin-left: -10px;
-              }
-            }
           }
         }
 
