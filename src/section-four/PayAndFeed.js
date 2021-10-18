@@ -11,7 +11,7 @@ import AnimalImg from '../assets/donation/panda.png';
 export const PayAndFeed = () => {
   return (
     <section className="section-four">
-    <div className="container-second">
+    <div className="container">
         <h3 className="section-four__heading">Pay and feed</h3>
         <p className="section-four__pharagraph">
             The opportunity to easily and naturally
