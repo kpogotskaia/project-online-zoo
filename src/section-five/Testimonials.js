@@ -8,9 +8,8 @@ import UserGImg from'../assets/users/users.png';
 export const Testimonials = () => {
   return (
     <section className="section-five">
+      <div className="section-five__arrow-left"></div>
         <div className="container">
-            <div className="section-five__arrow-left"></div>
-            <div className="container-second">
                 <h1 className="section-five__heading">Testimonials</h1>
                 <div className="section-five__testimonials">
                     <div className="section-five__testimonials-card">
@@ -45,8 +44,7 @@ export const Testimonials = () => {
                     <div className="play"></div>
                 </button>
             </div>
-            <div className="section-five__arrow-right"></div>
-        </div>
+      <div className="section-five__arrow-right"></div>
     </section>
   );
 };
