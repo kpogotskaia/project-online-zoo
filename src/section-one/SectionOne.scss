@@ -1,0 +1,157 @@
+@import '../variables.scss';
+
+.section-one {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(119, 119, 119, 0.719), rgba(0, 0, 0, 0.541)), url("../assets/glery1screen/wild.jpg");
+  background-size: cover;
+  position: relative;
+
+  .container {
+    margin: 0 10px;
+
+    .section-one__heading {
+      font-family: $font;
+      padding-top: 90px;
+      font-weight: 900;
+      font-size: 48px;
+      line-height: 56px;
+      color: $white;
+      margin: 0;
+    }
+
+    .section-one__sociales {
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (min-width: 640px) {
+  .section-one {
+    .container {
+      margin: 0 20px;
+
+      .section-one__heading {
+        padding-top: 125px;
+        font-size: 64px;
+        line-height: 75px;
+      }
+
+      button {
+        margin: 30px 0;
+      }
+
+      .section-one__sociales {
+        position: absolute;
+        bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        a {
+          padding-bottom: 15px;
+        }
+      }
+
+      .section-one__gallery {
+        margin: 50px 0 0 70px;
+        padding-bottom: 30px;
+
+        &-imgs {
+
+          .img {
+            margin: 40px 0 0 30px;
+            width: 180px;
+            height: 260px;
+          }
+        }
+
+        &-line {
+          margin: -200px 0px 0px -16px;
+        }
+
+        &-scroll {
+          margin: 250px 0 0 245px;
+
+          span:first-child {
+            margin-left: 100px;
+          }
+
+          &-line {
+            width: 245px;
+          }
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .section-one {
+    .container {
+      margin: 0 150px;
+
+      .section-one__heading {
+        padding: 205px 200px 50px 210px;
+        font-size: 90px;
+        line-height: 104px;
+      }
+
+      button {
+        margin: 0 210px;
+      }
+
+      .section-one__sociales {
+        position: absolute;
+        bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        a {
+          padding-bottom: 15px;
+        }
+      }
+
+      .section-one__gallery {
+        margin: 0 0 15px 850px;
+        padding-bottom: 50px;
+
+        &-imgs {
+          display: flex;
+          justify-content: space-between;
+
+          .img {
+            width: 140px;
+            height: 205px;
+            margin-top: -35px;
+          }
+        }
+
+        &-line {
+          width: 1080px;
+          margin: -200px 0px 0px -60px;
+        }
+
+        &-scroll {
+          margin: 250px 0 0 200px;
+
+          span:first-child {
+            margin-left: 100px;
+          }
+
+          &-line {
+            width: 245px;
+
+            .gallery__scroll-button {
+              margin-left: 30px;
+              width: 30px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
