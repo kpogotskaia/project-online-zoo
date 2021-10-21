@@ -11,6 +11,33 @@ import CardsProblemImg from '../assets/cards/problem-solving.png';
 import CardsAchivementImg from '../assets/cards/achievement.png';
 import CardsLoveImg from '../assets/cards/love.png';
 
+const BENEFITS = [
+  {
+    imgUrl: CardsProblemImg,
+    alt: 'inspires',
+    heading: `What inspires us?`,
+    pharagraph: `As a voice for wildlife, we are devastated
+    by the impact of the 2020 Australian bushfires on precious
+    species and their habitat, and we are determined
+    to assist in all aspects.`
+  },
+  {
+    imgUrl: CardsAchivementImg,
+    alt: 'mission',
+    heading: `Our mission`,
+    pharagraph: `Zoo Online saves wildlife and inspires
+    everyone to make conservation a priority in their lives.`
+  },
+  {
+    imgUrl: CardsLoveImg,
+    alt: 'believ',
+    heading: `What we believe in?`,
+    pharagraph: `Animals have the right to a pain-free and happy
+    life. They have equal claim to the resources of this planet,
+    eserve a life of dignity and compassion.`
+  }
+];
+
 var slideIndex = 1;
 
 function showSlides(n) {
@@ -41,72 +68,58 @@ function minusSlide() {
 export const HowItWorks = () => {
   return (
     <section className="section-two">
-    <div className="container">
-        <h3 className="section-two__heading">How it works?</h3>
-        <p className="section-two__pharagraph">
-            As a voice for wildlife, we are devastated by the impact
-            of the 2020 Australian bushfires on precious species and
-            their habitat, and we are determined to assist in all
-            aspects, including providing veterinary support and
-            raising much-needed emergency funds. Zoo Online saves
-            wildlife and inspires everyone to make conservation
-            a priority in their lives. Animals have the right
-            to a pain-free and happy life. They have equal
-            claim to the resources of this planet, and deserve
-            a life of dignity and compassion.As a voice for wildlife,
-            we are devastated by the impact of the 2020 Australian
-            bushfires on precious species and their habitat.
-        </p>
-
-        <div className="section-two__gallery">
-            <div className="section-two__gallery-img">
-                <img src={DeersImg} alt="" />
-            </div>
-            <div className="section-two__gallery-img">
-                <img src={MonkeysImg} alt="smallMonkey" />
-            </div>
-            <div className="section-two__gallery-img">
-                <img src={PandasImg} alt="pandas" />
-            </div>
-            <div className="section-two__gallery-img">
-                <img src={TwoMonkeysImg} alt="" />
-            </div>
-
-            <a className="prev" onClick={minusSlide}>&#10094;</a>
-            <a className="next" onClick={plusSlide}>&#10095;</a>
-
-        </div>
-
-        <Paginator />
-
-        <Button />
-
-    </div>
-    <div className="section-two__benefits">
       <div className="container">
-        <div className="benefits">
-            <img className="benefits-img" src={CardsProblemImg} alt="inspires" />
-            <h5 className="benefits-heading">What inspires us?</h5>
-            <p>As a voice for wildlife, we are devastated by
-                the impact of the 2020 Australian bushfires on
-                precious species and their habitat, and we are
-                determined to assist in all aspects.</p>
-        </div>
-        <div className="benefits">
-            <img className="benefits-img" src={CardsAchivementImg} alt="mission" />
-            <h5 className="benefits-heading">Our mission</h5>
-            <p>Zoo Online saves wildlife and inspires everyone to make
-                conservation a priority in their lives. </p>
-        </div>
-        <div className="benefits">
-            <img className="benefits-img" src={CardsLoveImg} alt="believ" />
-            <h5 className="benefits-heading">What we believe in?</h5>
-            <p>Animals have the right to a pain-free and happy life.
-                They have equal claim to the resources of this planet,
-                eserve a life of dignity and compassion.</p>
+          <h3 className="section-two__heading">How it works?</h3>
+          <p className="section-two__pharagraph">
+              As a voice for wildlife, we are devastated by the impact
+              of the 2020 Australian bushfires on precious species and
+              their habitat, and we are determined to assist in all
+              aspects, including providing veterinary support and
+              raising much-needed emergency funds. Zoo Online saves
+              wildlife and inspires everyone to make conservation
+              a priority in their lives. Animals have the right
+              to a pain-free and happy life. They have equal
+              claim to the resources of this planet, and deserve
+              a life of dignity and compassion.As a voice for wildlife,
+              we are devastated by the impact of the 2020 Australian
+              bushfires on precious species and their habitat.
+          </p>
+
+          <div className="section-two__gallery">
+              <div className="section-two__gallery-img">
+                  <img src={DeersImg} alt="" />
+              </div>
+              <div className="section-two__gallery-img">
+                  <img src={MonkeysImg} alt="smallMonkey" />
+              </div>
+              <div className="section-two__gallery-img">
+                  <img src={PandasImg} alt="pandas" />
+              </div>
+              <div className="section-two__gallery-img">
+                  <img src={TwoMonkeysImg} alt="" />
+              </div>
+
+              <a className="prev" onClick={minusSlide}>&#10094;</a>
+              <a className="next" onClick={plusSlide}>&#10095;</a>
+
+          </div>
+
+          <Paginator />
+
+          <Button />
+
+      </div>
+      <div className="section-two__benefits">
+        <div className="container">
+          <div className="benefits">
+            {BENEFITS.map(benefits => ( [
+              <img className='benefits-img' src={benefits.imgUrl} alt={benefits.alt} />,
+              <h5  className='benefits-heading'> {benefits.heading} </h5>,
+              <p>{benefits.pharagraph}</p>]
+            ))}
+          </div>
         </div>
       </div>
-    </div>
-</section>
+    </section>
   );
 };
