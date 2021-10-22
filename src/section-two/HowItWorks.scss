@@ -96,17 +96,16 @@
 
   &__benefits {
     background: #F2F2F2;
-    display: block;
     padding: 50px 0;
 
     .container {
 
-      .benefits {
-        margin-bottom: 30px;
+      .benefits-block {
 
-        &-img {
-          margin: 0 115px;
-          width: 77px;
+        margin: 0 auto 30px;
+
+        &__img {
+          margin: 0 110px;
         }
 
         h5 {
@@ -118,12 +117,15 @@
         }
 
         p {
+          text-align: center;
+          margin: 0 auto;
           font-weight: normal;
           font-size: 14px;
           line-height: 16px;
           color: $gray;
         }
       }
+
     }
   }
 }
@@ -143,18 +145,13 @@
     }
 
     &__benefits {
-      padding: 100px 0 80px;
+      padding: 100px 0 100px;
 
       .container {
 
-        .benefits {
-          &-img {
-            margin: 0 270px;
-          }
+        .benefits-block {
 
-          p {
-            margin: 0 170px;
-          }
+          margin: 0 165px 50px;
         }
       }
     }
@@ -166,6 +163,7 @@
     .container {
       margin: 0 150px;
     }
+    
     &__heading {
       text-align: center;
       margin-top: 100px;
@@ -189,24 +187,16 @@
     }
 
     &__benefits {
-      padding: 100px 210px;
 
       .container {
+        margin: 0 360px;
         display: flex;
 
-        .benefits {
-          margin: 0px 30px;
+        .benefits-block {
+          margin: 0 auto 0;
 
-          &-img {
-            margin: 0 110px;
-          }
-
-          h5 {
-            margin: 15px auto;
-          }
-
-          p {
-            margin: 0;
+          &__img {
+            margin: 0 170px;
           }
         }
       }

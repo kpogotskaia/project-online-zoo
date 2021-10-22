@@ -111,15 +111,15 @@ export const HowItWorks = () => {
       </div>
       <div className="section-two__benefits">
         <div className="container">
-          <div className="benefits">
-            {BENEFITS.map(benefits => ( [
-              <img className='benefits-img' src={benefits.imgUrl} alt={benefits.alt} />,
-              <h5  className='benefits-heading'> {benefits.heading} </h5>,
-              <p>{benefits.pharagraph}</p>]
+            {BENEFITS.map(benefits => (
+              <div className='benefits-block'>
+              <img className='benefits-block__img' src={benefits.imgUrl} alt={benefits.alt} />
+              <h5  className='benefits-block__heading'> {benefits.heading} </h5>
+              <p>{benefits.pharagraph}</p>
+              </div>
             ))}
           </div>
         </div>
-      </div>
     </section>
   );
 };
