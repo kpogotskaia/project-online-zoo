@@ -1,14 +1,15 @@
 @import '../variables';
 
-.section-five {
+.testimonialses {
   &__arrow-left {
     display: none;
+
   }
 
   .container {
     margin: 0 10px;
 
-    .section-five__heading {
+    .testimonialses__heading {
       margin: 0;
       padding-top: 50px;
       font-style: normal;
@@ -18,13 +19,13 @@
       text-align: center;
     }
 
-    .section-five__testimonials {
+    .testimonialses__block {
       display: flex;
       overflow: hidden;
 
-      &-card {
+      &-info {
         height: auto;
-        margin: 35px 5px;
+        margin: 35px 5px 15px;
         background: $white;
         box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
         border-radius: 5px;
@@ -54,32 +55,23 @@
         }
       }
     }
-
-    .gallery-scroll {
-      margin: 0 30px;
-    }
-
-    &__button {
-      margin: 20px auto 50px;
-    }
   }
 }
 
 @media screen and (min-width: 640px) {
-  .section-five {
-    padding-bottom: 100px;
+  .testimonialses {
+    padding-bottom: 50px;
 
     .container {
-      margin: 0 10px;
-      .section-five__heading {
+      .testimonialses__heading {
         font-size: 48px;
         line-height: 56px;
       }
 
-      .section-five__testimonials {
+      .testimonialses__block {
         justify-content: space-between;
 
-        &-card {
+        &-info {
           margin: 35px 15px 20px;
 
           .card-user {
@@ -115,15 +107,16 @@
 }
 
 @media screen and (min-width: 1280px) {
-  .section-five {
+  .testimonialses {
+    padding: 50px 0;
 
     .container {
       margin: 0 150px;
 
-      .section-five__testimonials {
+      .testimonialses__block {
         margin: 0 210px;
 
-        &-card {
+        &-info {
           margin: 35px 10px 20px;
         }
       }

@@ -4,7 +4,7 @@ import { SectionOne } from './section-one/SectionOne';
 import { HowItWorks } from './how-it-works/HowItWorks';
 import { PetsInZoo } from './section-three/PetsInZoo';
 import { PayAndFeed } from './section-four/PayAndFeed';
-import { Testimonials } from './section-five/Testimonials';
+import { Testimonials } from './testimonials/Testimonials';
 import { Map } from './section-six/Map';
 
 
