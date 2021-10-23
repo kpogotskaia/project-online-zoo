@@ -1,7 +1,7 @@
 import { Header } from './Header';
 import { Footer } from './Footer';
 import { SectionOne } from './section-one/SectionOne';
-import { HowItWorks } from './section-two/HowItWorks';
+import { HowItWorks } from './how-it-works/HowItWorks';
 import { PetsInZoo } from './section-three/PetsInZoo';
 import { PayAndFeed } from './section-four/PayAndFeed';
 import { Testimonials } from './section-five/Testimonials';

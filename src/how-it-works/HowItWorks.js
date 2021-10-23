@@ -42,7 +42,7 @@ var slideIndex = 1;
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("section-two__gallery-img");
+  var slides = document.getElementsByClassName("operation__gallery-img");
 
   if (n > slides.length) {
     slideIndex = 1
@@ -67,10 +67,10 @@ function minusSlide() {
 
 export const HowItWorks = () => {
   return (
-    <section className={classes['section-two']}>
+    <section className={classes['operation']}>
       <div className={classes['container']}>
-          <h3 className={classes['section-two__heading']}>How it works?</h3>
-          <p className={classes['section-two__pharagraph']}>
+          <h3 className={classes['operation__heading']}>How it works?</h3>
+          <p className={classes['operation__pharagraph']}>
               As a voice for wildlife, we are devastated by the impact
               of the 2020 Australian bushfires on precious species and
               their habitat, and we are determined to assist in all
@@ -85,17 +85,17 @@ export const HowItWorks = () => {
               bushfires on precious species and their habitat.
           </p>
 
-          <div className={classes['section-two__gallery']}>
-              <div className={classes['section-two__gallery-img']}>
+          <div className={classes['operation__gallery']}>
+              <div className={classes['operation__gallery-img']}>
                   <img src={DeersImg} alt="deer" />
               </div>
-              <div className={classes['section-two__gallery-img']}>
+              <div className={classes['operation__gallery-img']}>
                   <img src={MonkeysImg} alt="smallMonkey" />
               </div>
-              <div className={classes['section-two__gallery-img']}>
+              <div className={classes['operation__gallery-img']}>
                   <img src={PandasImg} alt="pandas" />
               </div>
-              <div className={classes['section-two__gallery-img']}>
+              <div className={classes['operation__gallery-img']}>
                   <img src={TwoMonkeysImg} alt="monkey" />
               </div>
 
@@ -109,7 +109,7 @@ export const HowItWorks = () => {
           <Button />
 
       </div>
-      <div className={classes['section-two__benefits']}>
+      <div className={classes['operation__benefits']}>
         <div className={classes['container']}>
             {BENEFITS.map(benefits => (
               <div className={classes['benefits-block']}>
