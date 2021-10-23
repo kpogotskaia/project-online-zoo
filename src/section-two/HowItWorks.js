@@ -1,4 +1,4 @@
-import './HowItWorks.scss';
+import classes from './HowItWorks.module.scss';
 
 import { Button } from '../button/Button';
 import { Paginator } from '../paginator/Paginator';
@@ -67,10 +67,10 @@ function minusSlide() {
 
 export const HowItWorks = () => {
   return (
-    <section className="section-two">
-      <div className="container">
-          <h3 className="section-two__heading">How it works?</h3>
-          <p className="section-two__pharagraph">
+    <section className={classes['section-two']}>
+      <div className={classes['container']}>
+          <h3 className={classes['section-two__heading']}>How it works?</h3>
+          <p className={classes['section-two__pharagraph']}>
               As a voice for wildlife, we are devastated by the impact
               of the 2020 Australian bushfires on precious species and
               their habitat, and we are determined to assist in all
@@ -85,22 +85,22 @@ export const HowItWorks = () => {
               bushfires on precious species and their habitat.
           </p>
 
-          <div className="section-two__gallery">
-              <div className="section-two__gallery-img">
-                  <img src={DeersImg} alt="" />
+          <div className={classes['section-two__gallery']}>
+              <div className={classes['section-two__gallery-img']}>
+                  <img src={DeersImg} alt="deer" />
               </div>
-              <div className="section-two__gallery-img">
+              <div className={classes['section-two__gallery-img']}>
                   <img src={MonkeysImg} alt="smallMonkey" />
               </div>
-              <div className="section-two__gallery-img">
+              <div className={classes['section-two__gallery-img']}>
                   <img src={PandasImg} alt="pandas" />
               </div>
-              <div className="section-two__gallery-img">
-                  <img src={TwoMonkeysImg} alt="" />
+              <div className={classes['section-two__gallery-img']}>
+                  <img src={TwoMonkeysImg} alt="monkey" />
               </div>
 
-              <a className="prev" onClick={minusSlide}>&#10094;</a>
-              <a className="next" onClick={plusSlide}>&#10095;</a>
+              <a className={classes['prev']} onClick={minusSlide}>&#10094;</a>
+              <a className={classes['next']} onClick={plusSlide}>&#10095;</a>
 
           </div>
 
@@ -109,12 +109,12 @@ export const HowItWorks = () => {
           <Button />
 
       </div>
-      <div className="section-two__benefits">
-        <div className="container">
+      <div className={classes['section-two__benefits']}>
+        <div className={classes['container']}>
             {BENEFITS.map(benefits => (
-              <div className='benefits-block'>
-              <img className='benefits-block__img' src={benefits.imgUrl} alt={benefits.alt} />
-              <h5  className='benefits-block__heading'> {benefits.heading} </h5>
+              <div className={classes['benefits-block']}>
+              <img className={classes['benefits-block__img']} src={benefits.imgUrl} alt={benefits.alt} />
+              <h5  className={classes['benefits-block__heading']}> {benefits.heading} </h5>
               <p>{benefits.pharagraph}</p>
               </div>
             ))}

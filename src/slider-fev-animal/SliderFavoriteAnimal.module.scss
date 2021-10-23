@@ -2,10 +2,12 @@
 
 .slider {
   position: absolute;
-  left: 15%;
+  left: 7%;
+  top: 50%;
   bottom: 0;
 
   &-slides {
+    top: 30%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -81,8 +83,8 @@
 
   &__line {
     position: absolute;
-    top: 40%;
-    left: -10vw;
+    top: 32%;
+    left: -4vw;
     right: -10vw;
     height: 0;
     border: 1px solid $light-gray;
@@ -105,22 +107,38 @@
   }
 
   .gallery-scroll {
-    margin: 120px 0 0 135px;
-    padding-bottom: 50px;
+    width: 140px;
+    margin: 15px 25px 0 128px;
 
     span:first-child {
+      font-family: $font;
+      text-align: center;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 28px;
       color: $white;
       margin-left: 50px;
+      padding-bottom: 14px;
+    }
+
+    :nth-child(2n) {
+      font-family: $font;
+      text-align: center;
+      font-weight: 700;
+      font-size: 16px;
+      line-height: 28px;
+      color: rgba(189, 189, 189, 0.57);
+      padding-bottom: 14px;
     }
 
     &__line {
-      width: 140px;
+      width: 100%;
+      background: rgba(189, 189, 189, 0.57);
 
       &-button {
-        width: 17px;
-        height: 8px;
+        width: 35px;
+        height: 6px;
         background: $white;
-        margin: -5px 0 0 17px;
       }
     }
   }
@@ -128,11 +146,13 @@
 
 @media screen and (min-width: 640px) {
   .slider {
-    left: 50%;
+    top: 43%;
+    left: 18%;
 
     &__slide {
       width: 180px;
       height: 260px;
+      margin: 0 2vw;
 
       &--active {
         width: 245px;
@@ -153,24 +173,17 @@
       }
     }
 
+    &__line {
+      left: -10vw;
+    }
+
     .gallery-scroll {
-      margin: 230px 0 0 240px;
+      width: 245px;
+      margin: 25px 0 0 220px;
       padding-bottom: 50px;
 
       span:first-child {
-        color: $white;
         margin-left: 90px;
-      }
-
-      &__line {
-        width: 245px;
-
-        &-button {
-          width: 40px;
-          height: 8px;
-          background: $white;
-          margin-left: 40px;
-        }
       }
     }
   }
@@ -178,6 +191,8 @@
 
 @media screen and (min-width: 1280px) {
   .slider {
+    left: 51%;
+
     &-slides {
       display: flex;
       justify-content: space-between;
@@ -186,6 +201,7 @@
     &__slide {
       width: 140px;
       height: 205px;
+      margin: 0 1vw;
 
       &--active {
         width: 245px;
@@ -202,9 +218,12 @@
       }
     }
 
+    &__line {
+      left: -5vw;
+    }
+
     .gallery-scroll {
-      margin: 230px 0 0 200px;
-      padding-bottom: 50px;
+      margin: 25px 0 0 200px;
 
       span:first-child {
         color: $white;
@@ -212,7 +231,6 @@
       }
 
       &__line {
-        width: 245px;
 
         &-button {
           width: 40px;

@@ -1,5 +1,3 @@
-import { Paginator } from '../paginator/Paginator';
-
 import PandaImg from '../assets/glery1screen/panda.png';
 import EagleImg from '../assets/glery1screen/eagle.png';
 import MonkeyImg from '../assets/glery1screen/monkey.png';
@@ -89,7 +87,13 @@ export const SliderFavoriteAnimal = () => {
         )}
       </div>
 
-      <Paginator />
+      <div className={classes['gallery-scroll']}>
+      <span>01/</span>
+      <span>04</span>
+      <div className={classes['gallery-scroll__line']}>
+        <div className={classes['gallery-scroll__line-button']}></div>
+      </div>
+    </div>
     </div>
   );
 };

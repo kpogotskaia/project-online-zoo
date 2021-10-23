@@ -1,4 +1,4 @@
-import './PayAndFeed.scss';
+import classes from './PayAndFeed.module.scss';
 
 import { Button } from '../button/Button';
 
@@ -7,41 +7,50 @@ import CardImg from '../assets/donation/cardpng.png';
 import ZooImg from '../assets/donation/zoo.png';
 import AnimalImg from '../assets/donation/panda.png';
 
+const DONATION = [
+  {
+    imgUrl: CardImg,
+    alt: 'card',
+    heading: `You pay with a
+    VISA card`
+  },
+  {
+    imgUrl: ZooImg,
+    alt: 'zoo',
+    heading: `Payment goes to the Zoo`
+  },
+  {
+    imgUrl: AnimalImg,
+    alt: 'pands',
+    heading: `Panda gets the bamboo`
+  }
+];
 
 export const PayAndFeed = () => {
   return (
-    <section className="section-four">
-    <div className="container">
-        <h3 className="section-four__heading">Pay and feed</h3>
-        <p className="section-four__pharagraph">
+    <section className={classes['section-four']}>
+    <div className={classes['container']}>
+        <h3 className={classes['section-four__heading']}>Pay and feed</h3>
+        <p className={classes['section-four__pharagraph']}>
             The opportunity to easily and naturally
             (but as often as possible) donate to the
             needs of animals that you like.
         </p>
-        <div className="section-four__donation">
-            <div className="section-four__donation-card">
-                <img src={CardImg} alt="card" />
-                <h5>You pay with a
-                    VISA card</h5>
-            </div>
-            <div className="section-four__donation-arrow">
-                <img className="arrow-left" src={DonationArrowImg} alt="arrow" />
-            </div>
-            <div className="section-four__donation-card">
-                <img src={ZooImg} alt="zoo" />
-                <h5>Payment goes to the Zoo</h5>
-            </div>
-            <div className="section-four__donation-arrow">
-                <img className="arrow-right" src={DonationArrowImg} alt="arrow" />
-            </div>
-            <div className="section-four__donation-card">
-                <img src={AnimalImg} alt="pands" />
-                <h5>Panda gets the bamboo</h5>
-            </div>
+        <div className={classes['section-four__donation']}>
+          {DONATION.map(donation => ( [
+            <div className={classes['section-four__donation-card']}>
+                <img src={donation.imgUrl} alt={donation.alt} />
+                <h5>{donation.heading}</h5>
+            </div>,
+            <div className={classes['section-four__donation-arrow']}>
+                <img className={classes['arrow-left']} src={DonationArrowImg} alt="arrow" />
+            </div> ]
+          ))}
         </div>
-        <button className="section-four__button button">
+
+        <button className={classes['section-four__button button']}>
           donate
-          <div className="play"></div>
+          <div className={classes['play']}></div>
         </button>
     </div>
 </section>

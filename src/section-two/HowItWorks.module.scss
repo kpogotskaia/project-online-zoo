@@ -1,6 +1,10 @@
 @import '../variables';
 
 .section-two {
+
+  .container {
+    margin: 0 10px;
+  }
   &__heading {
     font-family: $font;
     padding-top: 40px;
@@ -86,10 +90,6 @@
     }
   }
 
-  .gallery-scroll {
-    margin: 28px;
-  }
-
   .button {
     margin: 0 auto 50px;
   }
@@ -140,10 +140,6 @@
       }
     }
 
-    .gallery-scroll {
-      margin: 30px 188px;
-    }
-
     &__benefits {
       padding: 100px 0 100px;
 
@@ -163,7 +159,7 @@
     .container {
       margin: 0 150px;
     }
-    
+
     &__heading {
       text-align: center;
       margin-top: 100px;
@@ -176,10 +172,6 @@
 
     &__gallery {
       max-width: 790px;
-    }
-
-    .gallery-scroll {
-      margin: 30px 678px;
     }
 
     .button {
