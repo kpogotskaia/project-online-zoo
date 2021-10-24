@@ -3,6 +3,7 @@ import classes from './HowItWorks.module.scss';
 import { Button } from '../button/Button';
 import { Paginator } from '../paginator/Paginator';
 
+import buttonIcon from '../assets/buttonIcon.png'
 import MonkeysImg from '../assets/rectangles/monkeys.png';
 import DeersImg from '../assets/rectangles/deers.png';
 import PandasImg from '../assets/rectangles/panda.png';
@@ -106,7 +107,7 @@ export const HowItWorks = () => {
 
           <Paginator />
 
-          <Button />
+          <Button name='watch online' icon={buttonIcon}/>
 
       </div>
       <div className={classes['operation__benefits']}>

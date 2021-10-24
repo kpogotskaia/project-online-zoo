@@ -25,6 +25,13 @@ const TESTIMONIALS = [
 }
 ]
 
+const buttonIcon = {
+  imgUrl: <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="16" cy="16" r="15.5" stroke="white"/>
+  <path d="M21 16L13.5 20.3301V11.6699L21 16Z" fill="white"/>
+  </svg>
+}
+
 export const Testimonials = () => {
   return (
     <section className={classes['testimonialses']}>
@@ -44,8 +51,8 @@ export const Testimonials = () => {
             ))}
           </div>
 
-<Paginator />
-<Button />
+    <Paginator />
+    <Button name='leave feedback' />
         </div>
       <div className={classes['testimonialses__arrow-right']}></div>
     </section>

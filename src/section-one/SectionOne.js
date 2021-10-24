@@ -9,6 +9,8 @@ import YoutubeIcon from '../assets/sociales/youtube.png';
 import InstagramIcon from '../assets/sociales/instagram.png';
 import TwitterIcon from '../assets/sociales/twitter.png';
 import VkIcon from '../assets/sociales/vk.png';
+import buttonIcon from '../assets/buttonIcon.png'
+
 
 const SOCIAL_ICONS = [
   {
@@ -41,7 +43,7 @@ export const SectionOne = () => {
           Watch your favorite animal online
         </h1>
 
-        <Button />
+        <Button name='watch online' icon={buttonIcon} />
 
         <div className="section-one__sociales">
           {SOCIAL_ICONS.map(data => (

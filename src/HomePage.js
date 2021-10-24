@@ -2,10 +2,10 @@ import { Header } from './Header';
 import { Footer } from './Footer';
 import { SectionOne } from './section-one/SectionOne';
 import { HowItWorks } from './how-it-works/HowItWorks';
-import { PetsInZoo } from './section-three/PetsInZoo';
-import { PayAndFeed } from './section-four/PayAndFeed';
+import { PetsInZoo } from './pets-in-zoo/PetsInZoo';
+import { PayAndFeed } from './pay-and-feed/PayAndFeed';
 import { Testimonials } from './testimonials/Testimonials';
-import { Map } from './section-six/Map';
+import { Map } from './map/Map';
 
 
 import './HomePage.scss';

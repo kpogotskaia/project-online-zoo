@@ -48,10 +48,7 @@ export const PayAndFeed = () => {
           ))}
         </div>
 
-        <button className={classes['section-four__button button']}>
-          donate
-          <div className={classes['play']}></div>
-        </button>
+        <Button name='donate'/>
     </div>
 </section>
   );

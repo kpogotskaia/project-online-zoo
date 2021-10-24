@@ -7,30 +7,31 @@ import VectorCrocImg from '../assets/vector/croc.png';
 import VectorMonkeyImg from '../assets/vector/monkey.png';
 import VectorPandaImg from '../assets/vector/panda.png';
 import TooltipEagleImg from '../assets/vector/eagleTooltip.png';
+import buttonIcon from '../assets/buttonIcon.png'
 import '../assets/map.png';
 
 
 export const Map = () => {
   return (
-    <section className="section-six">
-    <h3 className="section-six__heading">Map</h3>
-    <div className="section-six__map">
-        <div className="section-six__map-vector vector__eagle">
+    <section className="map">
+    <h3 className="map__heading">Map</h3>
+    <div className="map__block">
+        <div className="map__block-vector vector__eagle">
             <img className="eagle" src={VectorEagleImg} alt="" />
         </div>
-        <div className="section-six__map-vector vector__croc">
+        <div className="map__block-vector vector__croc">
             <img className="crocodille" src={VectorCrocImg} alt="" />
         </div>
-        <div className="section-six__map-vector vector__monkey">
+        <div className="map__block-vector vector__monkey">
             <img className="monkey" src={VectorMonkeyImg} alt="" />
         </div>
-        <div className="section-six__map-vector vector__panda">
+        <div className="map__block-vector vector__panda">
             <img className="panda" src={VectorPandaImg} alt="" />
         </div>
     </div>
 
-    <div className="section-six__tooltip">
-        <img className="section-six__tooltip-img" src={TooltipEagleImg} alt="" />
+    <div className="map__tooltip">
+        <img className="map__tooltip-img" src={TooltipEagleImg} alt="" />
         <div>
             <h3>West End Bald Eagle</h3>
             <p><b>Region:</b> an an island near Los Angeles</p>
@@ -38,7 +39,7 @@ export const Map = () => {
         </div>
     </div>
 
-    <Button />
+    <Button name='watch online' icon={buttonIcon}/>
 
 </section>
   );

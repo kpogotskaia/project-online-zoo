@@ -89,9 +89,8 @@ export const PetsInZoo = () => {
                 <div className="gallery-scroll__line-button"></div>
             </div>
         </div>
-        <button className="section-three__button button">
-            chosee your favorite
-        </button>
+
+        <Button name='choose your favorite' />
       </div>
     </section>
   );
