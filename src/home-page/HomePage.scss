@@ -1,4 +1,4 @@
-@import './variables';
+@import '../variables';
 
 body {
   height: 100%;
@@ -260,14 +260,14 @@ body {
     .map {
       margin: 35px 10px 0;
       height: 145px;
-      background: url('./assets/map.png') no-repeat;
+      background: url('../assets/map.png') no-repeat;
       background-size: contain;
       position: relative;
 
       &-vector {
         width: 34px;
         height: 47px;
-        background-image: url('./assets/Vector.png');
+        background-image: url('../assets/Vector.png');
         background-size: cover;
         position: relative;
 
@@ -309,7 +309,7 @@ body {
       .active-vector {
         width: 34px;
         height: 47px;
-        background-image: url('./assets/choose-gallery/Vector.png');
+        background-image: url('../assets/choose-gallery/Vector.png');
         background-size: cover;
         position: relative;
       }

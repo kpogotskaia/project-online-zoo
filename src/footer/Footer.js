@@ -1,9 +1,9 @@
 import './Footer.scss';
-import YoutubeIcon from './assets/sociales/youtube.png';
-import InstagramIcon from './assets/sociales/instagram.png';
-import TwitterIcon from './assets/sociales/twitter.png';
-import VKIcon from './assets/sociales/vk.png';
-import ArrowImg from './assets/Arrow4.png';
+import YoutubeIcon from '../assets/sociales/youtube.png';
+import InstagramIcon from '../assets/sociales/instagram.png';
+import TwitterIcon from '../assets/sociales/twitter.png';
+import VKIcon from '../assets/sociales/vk.png';
+import ArrowImg from '../assets/Arrow4.png';
 
 export const Footer = () => {
   return (
