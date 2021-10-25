@@ -3,8 +3,17 @@ import EagleImg from '../assets/glery1screen/eagle.png';
 import MonkeyImg from '../assets/glery1screen/monkey.png';
 import CrocImg from '../assets/glery1screen/croc.png';
 import FoxImg from '../assets/glery1screen/fox.png';
+import ElephImg from '../assets/glery1screen/eleph.png';
+import CatImg from '../assets/glery1screen/cat.png';
+import AnmImg from '../assets/glery1screen/anm.png';
 
 import classes from './SliderFavoriteAnimal.module.scss';
+import { Paginator } from '../paginator/Paginator';
+
+const THEME = {
+  LIGHT: 'LIGHT',
+  DARK: 'DARK'
+}
 
 const ANIMALS = [
   {
@@ -38,6 +47,24 @@ const ANIMALS = [
   {
     imgUrl: FoxImg,
     alt: 'fox',
+    desc: '',
+    isActive: false,
+  },
+  {
+    imgUrl: ElephImg,
+    alt: 'elephant',
+    desc: '',
+    isActive: false,
+  },
+  {
+    imgUrl: CatImg,
+    alt: 'cat',
+    desc: '',
+    isActive: false,
+  },
+  {
+    imgUrl: AnmImg,
+    alt: 'anm',
     desc: '',
     isActive: false,
   }
@@ -87,13 +114,7 @@ export const SliderFavoriteAnimal = () => {
         )}
       </div>
 
-      <div className={classes['gallery-scroll']}>
-      <span>01/</span>
-      <span>04</span>
-      <div className={classes['gallery-scroll__line']}>
-        <div className={classes['gallery-scroll__line-button']}></div>
-      </div>
-    </div>
+      <Paginator num='02/08' color={THEME.light}/>
     </div>
   );
 };

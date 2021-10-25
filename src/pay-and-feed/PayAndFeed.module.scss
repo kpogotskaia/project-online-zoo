@@ -1,7 +1,7 @@
 @import '../variables';
 
 
-.section-four {
+.charity {
   background: #F2F2F2;
   padding: 50px 0;
 
@@ -68,8 +68,8 @@
 
 //tablet
 @media screen and (min-width: 640px) {
-  .section-four {
-    padding: 100px 0;
+  .charity {
+    padding: 100px 0 50px;
 
     &__heading {
       padding: 0;
@@ -103,7 +103,9 @@
 //desktop
 @media screen and (min-width: 1280px) {
 
-  .section-four {
+  .charity {
+    padding: 100px 0 1px;
+
     &__heading {
       font-size: 48px;
       line-height: 56px;
@@ -114,9 +116,13 @@
       justify-content: space-between;
       margin: 0 360px;
 
+      &-card {
+        margin: 30px 25px 50px;
+      }
+
       &-arrow {
         position: relative;
-        margin: 140px 30px;
+        margin: 140px 20px;
         display: block;
         transform: none;
 
@@ -128,7 +134,7 @@
     }
 
     .button {
-      margin: 0 auto;
+      margin: 0;
     }
   }
 }

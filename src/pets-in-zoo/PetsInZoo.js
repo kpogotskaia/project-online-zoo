@@ -1,14 +1,21 @@
 import './PetsInZoo.scss';
 
 import { Button } from '../button/Button';
+import { Paginator } from '../paginator/Paginator';
 
 import ThreeSliderPandaImg from '../assets/treeScreen/panda.png';
 import ThreeSliderEagleImg from '../assets/treeScreen/eagle.png';
 import ThreeSliderMonkeyImg from '../assets/treeScreen/monkey.png';
 import ThreeSliderCrocImg from '../assets/treeScreen/kro.png';
-import { ActiveIMG } from '../active-IMG/ActiveIMG';
-//import ArrowRightImg from'../assets/arrRight.png';
-//import ArrowLeftImg from '../assets/arrLeft.png';
+import ThreeSliderFoxImg from '../assets/treeScreen/fox.png';
+import ThreeSliderElephImg from '../assets/treeScreen/eleph.png';
+import ThreeSliderCatImg from '../assets/treeScreen/cat.png';
+import ThreeSliderAnmImg from '../assets/treeScreen/anm.png';
+
+const ARROW = {
+  arrowLeft: '<',
+  arrowRight: '>'
+}
 
 const PETS_IN_ZOO = [
   {
@@ -38,12 +45,38 @@ const PETS_IN_ZOO = [
     alt: 'croc',
     desc: '',
     isActive: false
-  }
+  },
+  {
+    imgUrl: ThreeSliderFoxImg,
+    alt: 'eagle',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderElephImg,
+    alt: 'monkey',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderCatImg,
+    alt: 'croc',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderAnmImg,
+    alt: 'croc',
+    desc: '',
+    isActive: false
+  },
+
 ]
 
 export const PetsInZoo = () => {
   return (
     <section className="section-three">
+      <div className='arrow arrow-left'>{ARROW.arrowLeft}</div>
       <div className="container">
         <h3 className="section-three__heading">Pets in Zoo</h3>
 
@@ -82,16 +115,11 @@ export const PetsInZoo = () => {
         ))}
         </div>
 
-        <div className="gallery-scroll">
-            <span>01/</span>
-            <span>08</span>
-            <div className="gallery-scroll__line">
-                <div className="gallery-scroll__line-button"></div>
-            </div>
-        </div>
+       <Paginator />
 
         <Button name='choose your favorite' />
       </div>
+      <div className='arrow arrow-right'>{ARROW.arrowRight}</div>
     </section>
   );
 };

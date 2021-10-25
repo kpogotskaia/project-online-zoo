@@ -6,6 +6,11 @@ import { Paginator} from '../paginator/Paginator';
 import UserMImg from '../assets/users/usrM.png';
 import UserGImg from'../assets/users/users.png';
 
+const ARR = {
+  arrowLeft: '<',
+  arrowRight: '>'
+}
+
 const TESTIMONIALS = [
 {  imgUrl: UserMImg,
   alt: 'profile Img',
@@ -25,17 +30,10 @@ const TESTIMONIALS = [
 }
 ]
 
-const buttonIcon = {
-  imgUrl: <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="16" cy="16" r="15.5" stroke="white"/>
-  <path d="M21 16L13.5 20.3301V11.6699L21 16Z" fill="white"/>
-  </svg>
-}
-
 export const Testimonials = () => {
   return (
     <section className={classes['testimonialses']}>
-      <div className={classes['testimonialses__arrow-left']}></div>
+      <div className={classes['arrow arrow-left']}>{ARR.arrowLeft}</div>
         <div className={classes['container']}>
           <h1 className={classes['testimonialses__heading']}>Testimonials</h1>
 
@@ -51,10 +49,10 @@ export const Testimonials = () => {
             ))}
           </div>
 
-    <Paginator />
-    <Button name='leave feedback' />
+          <Paginator />
+          <Button name='leave feedback' />
         </div>
-      <div className={classes['testimonialses__arrow-right']}></div>
+      <div className={classes['arrow arrow-right']}>{ARR.arrowRight}</div>
     </section>
   );
 };

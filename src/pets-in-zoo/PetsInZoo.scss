@@ -175,6 +175,7 @@
 
 @media screen and (min-width: 1280px) {
   .section-three {
+    position: relative;
     .container {
       margin: 0 150px;
     }
@@ -186,6 +187,7 @@
 
     .slider {
       margin: 35px 210px;
+      overflow: hidden;
 
       &-img {
         width: 278px;
@@ -213,12 +215,22 @@
       }
     }
 
-    .gallery-scroll {
-      margin: 30px 678px;
+    .arrow {
+      font-family: 'Poppins', sans-serif;
+      font-size: 40px;
+      font-weight: 500;
     }
 
-    .button {
-      margin: 30px auto 100px;
+    .arrow-left {
+      position: absolute;
+      top: 35%;
+      left: 16%;
+    }
+
+    .arrow-right {
+      position: absolute;
+      top: 36%;
+      right: 17%;
     }
   }
 }

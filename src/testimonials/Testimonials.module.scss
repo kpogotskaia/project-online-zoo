@@ -1,10 +1,6 @@
 @import '../variables';
 
 .testimonialses {
-  &__arrow-left {
-    display: none;
-
-  }
 
   .container {
     margin: 0 10px;
@@ -94,21 +90,14 @@
           }
         }
       }
-
-      .gallery-scroll {
-        margin: 32px 189px;
-      }
-
-      &__button {
-        margin: 0 auto;
-      }
     }
   }
 }
 
 @media screen and (min-width: 1280px) {
   .testimonialses {
-    padding: 50px 0;
+    position: relative;
+    padding-bottom: 0;
 
     .container {
       margin: 0 150px;
@@ -120,10 +109,24 @@
           margin: 35px 10px 20px;
         }
       }
+    }
 
-      .gallery-scroll {
-        margin: 32px 678px;
-      }
+    .arrow {
+      font-family: 'Poppins', sans-serif;
+      font-size: 40px;
+      font-weight: 500;
+    }
+
+    .arrow-left {
+      position: absolute;
+      top: 35%;
+      left: 6%;
+    }
+
+    .arrow-right {
+      position: absolute;
+      top: 36%;
+      right: 17%;
     }
   }
 }

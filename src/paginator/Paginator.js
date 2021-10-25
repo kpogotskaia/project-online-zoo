@@ -1,12 +1,11 @@
 import './Paginator.scss';
 
-export const Paginator = () => {
+export const Paginator = (props) => {
   return (
     <div className="gallery-scroll">
-      <span>01/</span>
-      <span>04</span>
+      <span>{props.num}</span>
       <div className="gallery-scroll__line">
-        <div className="gallery-scroll__line-button"></div>
+        <div className="gallery-scroll__line-button">{props.color}</div>
       </div>
     </div>
   );
