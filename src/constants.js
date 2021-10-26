@@ -68,7 +68,6 @@ export const ANIMALS = [
     imgUrl: EagleImg,
     alt: 'eagle',
     desc: '',
-    isActive: false,
   },
   {
     imgUrl: PandaImg,
@@ -78,43 +77,36 @@ export const ANIMALS = [
       is 2 years old. Bei Bei is
       from China. He loves bamboos.
     `,
-    isActive: true,
   },
   {
     imgUrl: MonkeyImg,
     alt: 'monkey',
     desc: '',
-    isActive: false,
   },
   {
     imgUrl: CrocImg,
     alt: 'croc',
     desc: '',
-    isActive: false,
   },
   {
     imgUrl: FoxImg,
     alt: 'fox',
     desc: '',
-    isActive: false,
   },
   {
     imgUrl: ElephImg,
     alt: 'elephant',
     desc: '',
-    isActive: false,
   },
   {
     imgUrl: CatImg,
     alt: 'cat',
     desc: '',
-    isActive: false,
   },
   {
     imgUrl: AnmImg,
     alt: 'anm',
     desc: '',
-    isActive: false,
   }
 ];
 

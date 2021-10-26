@@ -14,12 +14,15 @@
   }
 
   &__slide {
+    $slide: &;
+
     position: relative;
     width: 115px;
     height: 165px;
     flex-shrink: 0;
     margin: 0 1vw;
     background-size: cover;
+    cursor: pointer;
 
     &--active {
       display: flex;
@@ -28,9 +31,18 @@
       padding: 10px;
       width: 145px;
       height: 205px;
+
+      #{$slide}-info {
+        display:block;
+      }
+
+      #{$slide}-btns {
+        display: flex;
+      }
     }
 
     &-info {
+      display: none;
       font-weight: normal;
       font-size: 12px;
       line-height: 14px;
@@ -38,7 +50,7 @@
     }
 
     &-btns {
-      display: flex;
+      display: none;
       flex-direction: column;
       justify-content: space-around;
     }
@@ -105,43 +117,6 @@
       }
     }
   }
-
-  .gallery-scroll {
-    width: 140px;
-    margin: 15px 25px 0 128px;
-
-    span:first-child {
-      font-family: $font;
-      text-align: center;
-      font-weight: 900;
-      font-size: 24px;
-      line-height: 28px;
-      color: $white;
-      margin-left: 50px;
-      padding-bottom: 14px;
-    }
-
-    :nth-child(2n) {
-      font-family: $font;
-      text-align: center;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 28px;
-      color: rgba(189, 189, 189, 0.57);
-      padding-bottom: 14px;
-    }
-
-    &__line {
-      width: 100%;
-      background: rgba(189, 189, 189, 0.57);
-
-      &-button {
-        width: 35px;
-        height: 6px;
-        background: $white;
-      }
-    }
-  }
 }
 
 @media screen and (min-width: 640px) {
@@ -175,16 +150,6 @@
 
     &__line {
       left: -10vw;
-    }
-
-    .gallery-scroll {
-      width: 245px;
-      margin: 25px 0 0 220px;
-      padding-bottom: 50px;
-
-      span:first-child {
-        margin-left: 90px;
-      }
     }
   }
 }
@@ -220,25 +185,6 @@
 
     &__line {
       left: -5vw;
-    }
-
-    .gallery-scroll {
-      margin: 25px 0 0 200px;
-
-      span:first-child {
-        color: $white;
-        margin-left: 90px;
-      }
-
-      &__line {
-
-        &-button {
-          width: 40px;
-          height: 8px;
-          background: $white;
-          margin-left: 40px;
-        }
-      }
     }
   }
 }

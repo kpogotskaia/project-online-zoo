@@ -9,7 +9,7 @@ export const Paginator = (props) => {
   return (
     <div className="paginator">
       <span>
-        {props.num}
+        {props.selected}/{props.amount}
       </span>
       <div className="paginator__line">
         <div className="paginator__line-button">
