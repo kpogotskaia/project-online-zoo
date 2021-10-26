@@ -1,13 +1,21 @@
 import './Paginator.scss';
 
+export const THEME = {
+  LIGHT: 'LIGHT',
+  DARK: 'DARK'
+};
+
 export const Paginator = (props) => {
   return (
-    <div className="gallery-scroll">
-      <span>{props.num}</span>
-      <div className="gallery-scroll__line">
-        <div className="gallery-scroll__line-button">{props.color}</div>
+    <div className="paginator">
+      <span>
+        {props.selected}/{props.amount}
+      </span>
+      <div className="paginator__line">
+        <div className="paginator__line-button">
+          {props.theme}
+        </div>
       </div>
     </div>
   );
 };
-
