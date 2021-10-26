@@ -8,36 +8,7 @@ import MonkeysImg from '../assets/rectangles/monkeys.png';
 import DeersImg from '../assets/rectangles/deers.png';
 import PandasImg from '../assets/rectangles/panda.png';
 import TwoMonkeysImg from '../assets/rectangles/twomonk.png';
-import CardsProblemImg from '../assets/cards/problem-solving.png';
-import CardsAchivementImg from '../assets/cards/achievement.png';
-import CardsLoveImg from '../assets/cards/love.png';
-
-const BENEFITS = [
-  {
-    imgUrl: CardsProblemImg,
-    alt: 'inspires',
-    heading: `What inspires us?`,
-    pharagraph: `As a voice for wildlife, we are devastated
-    by the impact of the 2020 Australian bushfires on precious
-    species and their habitat, and we are determined
-    to assist in all aspects.`
-  },
-  {
-    imgUrl: CardsAchivementImg,
-    alt: 'mission',
-    heading: `Our mission`,
-    pharagraph: `Zoo Online saves wildlife and inspires
-    everyone to make conservation a priority in their lives.`
-  },
-  {
-    imgUrl: CardsLoveImg,
-    alt: 'believ',
-    heading: `What we believe in?`,
-    pharagraph: `Animals have the right to a pain-free and happy
-    life. They have equal claim to the resources of this planet,
-    eserve a life of dignity and compassion.`
-  }
-];
+import { BENEFITS } from '../constants';
 
 var slideIndex = 1;
 
@@ -112,11 +83,11 @@ export const HowItWorks = () => {
       </div>
       <div className={classes['operation__benefits']}>
         <div className={classes['container']}>
-            {BENEFITS.map(benefits => (
-              <div className={classes['benefits-block']}>
-              <img className={classes['benefits-block__img']} src={benefits.imgUrl} alt={benefits.alt} />
-              <h5  className={classes['benefits-block__heading']}> {benefits.heading} </h5>
-              <p>{benefits.pharagraph}</p>
+            {BENEFITS.map((benefits, i) => (
+              <div key={i} className={classes['benefits-block']}>
+                <img className={classes['benefits-block__img']} src={benefits.imgUrl} alt={benefits.alt} />
+                <h5  className={classes['benefits-block__heading']}> {benefits.heading} </h5>
+                <p>{benefits.pharagraph}</p>
               </div>
             ))}
           </div>

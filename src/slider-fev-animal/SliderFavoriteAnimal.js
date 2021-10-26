@@ -1,74 +1,7 @@
-import PandaImg from '../assets/glery1screen/panda.png';
-import EagleImg from '../assets/glery1screen/eagle.png';
-import MonkeyImg from '../assets/glery1screen/monkey.png';
-import CrocImg from '../assets/glery1screen/croc.png';
-import FoxImg from '../assets/glery1screen/fox.png';
-import ElephImg from '../assets/glery1screen/eleph.png';
-import CatImg from '../assets/glery1screen/cat.png';
-import AnmImg from '../assets/glery1screen/anm.png';
+import { Paginator, THEME } from '../paginator/Paginator';
+import { ANIMALS } from '../constants';
 
 import classes from './SliderFavoriteAnimal.module.scss';
-import { Paginator } from '../paginator/Paginator';
-
-const THEME = {
-  LIGHT: 'LIGHT',
-  DARK: 'DARK'
-}
-
-const ANIMALS = [
-  {
-    imgUrl: EagleImg,
-    alt: 'eagle',
-    desc: '',
-    isActive: false,
-  },
-  {
-    imgUrl: PandaImg,
-    alt: 'panda',
-    desc: `
-      Panda’s name is Bei Bei. He
-      is 2 years old. Bei Bei is
-      from China. He loves bamboos.
-    `,
-    isActive: true,
-  },
-  {
-    imgUrl: MonkeyImg,
-    alt: 'monkey',
-    desc: '',
-    isActive: false,
-  },
-  {
-    imgUrl: CrocImg,
-    alt: 'croc',
-    desc: '',
-    isActive: false,
-  },
-  {
-    imgUrl: FoxImg,
-    alt: 'fox',
-    desc: '',
-    isActive: false,
-  },
-  {
-    imgUrl: ElephImg,
-    alt: 'elephant',
-    desc: '',
-    isActive: false,
-  },
-  {
-    imgUrl: CatImg,
-    alt: 'cat',
-    desc: '',
-    isActive: false,
-  },
-  {
-    imgUrl: AnmImg,
-    alt: 'anm',
-    desc: '',
-    isActive: false,
-  }
-];
 
 export const SliderFavoriteAnimal = () => {
   return (
@@ -114,7 +47,7 @@ export const SliderFavoriteAnimal = () => {
         )}
       </div>
 
-      <Paginator num='02/08' color={THEME.light}/>
+      <Paginator num='02/08' theme={THEME.LIGHT}/>
     </div>
   );
 };
