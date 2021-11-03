@@ -1,6 +1,6 @@
 import { useState } from 'react';
-import { Paginator, THEME } from '../paginator/Paginator';
-import { ANIMALS } from '../constants';
+import { Paginator, THEME } from '../../paginator/Paginator';
+import { ANIMALS } from '../../constants';
 
 import classes from './SliderFavoriteAnimal.module.scss';
 

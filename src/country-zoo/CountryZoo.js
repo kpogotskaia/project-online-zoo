@@ -33,16 +33,16 @@ export const CountryZoo = () => [
             <h3>The Beijing Zoo</h3>
             <div className="content-video__slider">
               <div>
-                <img className="active-video" src="assets/Zoos-video/Rectangle 19.png" />
+                <img className="active-video" src="../assets/Zoos-video/Rectangle19.png" alt=''/>
               </div>
               <div>
-                <img src="assets/Zoos-video/small-video.png" />
+                <img src="../assets/Zoos-video/small-video.png" alt=''/>
               </div>
               <div>
-                <img src="assets/Zoos-video/small-video.png" />
+                <img src="../assets/Zoos-video/small-video.png" alt=''/>
               </div>
               <div>
-                <img src="assets/Zoos-video/small-video.png" />
+                <img src="../assets/Zoos-video/small-video.png" alt=''/>
               </div>
 
             </div>

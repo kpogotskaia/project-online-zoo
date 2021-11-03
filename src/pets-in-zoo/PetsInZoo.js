@@ -1,13 +1,77 @@
+import './PetsInZoo.scss';
+
 import { Button } from '../button/Button';
-import { ANIMALS } from '../constants';
 import { Paginator } from '../paginator/Paginator';
 
-import './PetsInZoo.scss';
+import ThreeSliderPandaImg from '../assets/treeScreen/panda.png';
+import ThreeSliderEagleImg from '../assets/treeScreen/eagle.png';
+import ThreeSliderMonkeyImg from '../assets/treeScreen/monkey.png';
+import ThreeSliderCrocImg from '../assets/treeScreen/kro.png';
+import ThreeSliderFoxImg from '../assets/treeScreen/fox.png';
+import ThreeSliderElephImg from '../assets/treeScreen/eleph.png';
+import ThreeSliderCatImg from '../assets/treeScreen/cat.png';
+import ThreeSliderAnmImg from '../assets/treeScreen/anm.png';
 
 const ARROW = {
   arrowLeft: '<',
   arrowRight: '>'
-};
+}
+
+const PETS_IN_ZOO = [
+  {
+    imgUrl: ThreeSliderPandaImg,
+    alt: 'panda',
+    desc: `
+    Panda’s name is Bei Bei. He
+    is 2 years old. Bei Bei is
+    from China. He loves bamboos.
+  `,
+    isActive: true
+  },
+  {
+    imgUrl: ThreeSliderEagleImg,
+    alt: 'eagle',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderMonkeyImg,
+    alt: 'monkey',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderCrocImg,
+    alt: 'croc',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderFoxImg,
+    alt: 'eagle',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderElephImg,
+    alt: 'monkey',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderCatImg,
+    alt: 'croc',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderAnmImg,
+    alt: 'croc',
+    desc: '',
+    isActive: false
+  },
+
+]
 
 export const PetsInZoo = () => {
   return (
@@ -17,7 +81,7 @@ export const PetsInZoo = () => {
         <h3 className="section-three__heading">Pets in Zoo</h3>
 
         <div className="slider">
-        {ANIMALS.map(imgAnimals => (
+        {PETS_IN_ZOO.map(imgAnimals => (
           <div
             key={imgAnimals.alt}
             className={`

@@ -67,41 +67,54 @@ export const ANIMALS = [
   {
     imgUrl: EagleImg,
     alt: 'eagle',
-    desc: '',
+    desc: `Eagle’s name is King. He
+    is 2 years old. Ging is
+    from USA. He loves meat.`,
   },
   {
     imgUrl: PandaImg,
     alt: 'panda',
     desc: `
-      Panda’s name is Bei Bei. He
-      is 2 years old. Bei Bei is
-      from China. He loves bamboos.
+      Panda’s name is Bei Bei. She
+      is 5 years old. Bei Bei is
+      from Kongo. He loves bananas.
     `,
   },
   {
     imgUrl: MonkeyImg,
     alt: 'monkey',
-    desc: '',
+    desc: ` Monkey’s name is Lu-Lu. She
+    is 5 years old. Lu-Lu is
+    from Kongo. He loves bananas.`,
   },
   {
     imgUrl: CrocImg,
     alt: 'croc',
-    desc: '',
+    desc: `Croco
+    dile’s name is Gena. She
+    is 1 years old. Gena is
+    from Florida, USA. She loves testy food.`,
   },
   {
     imgUrl: FoxImg,
     alt: 'fox',
-    desc: '',
+    desc: ` Fex’s name is Mila. She
+    is 3 years old. Mila is
+    from Belarus. She loves chicken.`,
   },
   {
     imgUrl: ElephImg,
     alt: 'elephant',
-    desc: '',
+    desc: ` Elephant’s name is Barney. He
+    is 5 years old. Barney is
+    from Kongo. He loves bananas.`,
   },
   {
     imgUrl: CatImg,
     alt: 'cat',
-    desc: '',
+    desc: ` Leopard’s name is Maysis. He
+    is 8 years old. Barney is
+    from Kongo. He loves beef.`,
   },
   {
     imgUrl: AnmImg,

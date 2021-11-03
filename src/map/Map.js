@@ -17,21 +17,21 @@ export const Map = () => {
     <h3 className="map__heading">Map</h3>
     <div className="map__block">
         <div className="map__block-vector vector__eagle">
-            <img className="eagle" src={VectorEagleImg} alt="" />
+            <img className="eagle" src={VectorEagleImg} alt="eagle" />
         </div>
         <div className="map__block-vector vector__croc">
-            <img className="crocodille" src={VectorCrocImg} alt="" />
+            <img className="crocodille" src={VectorCrocImg} alt="croc" />
         </div>
         <div className="map__block-vector vector__monkey">
-            <img className="monkey" src={VectorMonkeyImg} alt="" />
+            <img className="monkey" src={VectorMonkeyImg} alt="monkey" />
         </div>
         <div className="map__block-vector vector__panda">
-            <img className="panda" src={VectorPandaImg} alt="" />
+            <img className="panda" src={VectorPandaImg} alt="panda" />
         </div>
     </div>
 
     <div className="map__tooltip">
-        <img className="map__tooltip-img" src={TooltipEagleImg} alt="" />
+        <img className="map__tooltip-img" src={TooltipEagleImg} alt="eagleImg" />
         <div>
             <h3>West End Bald Eagle</h3>
             <p><b>Region:</b> an an island near Los Angeles</p>
