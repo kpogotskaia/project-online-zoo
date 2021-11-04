@@ -1,8 +1,9 @@
-import classes from './HowItWorks.module.scss';
-import MonkeysImg from '../assets/rectangles/monkeys.png';
-import DeersImg from '../assets/rectangles/deers.png';
-import PandasImg from '../assets/rectangles/panda.png';
-import TwoMonkeysImg from '../assets/rectangles/twomonk.png';
+import MonkeysImg from '../../assets/rectangles/monkeys.png';
+import DeersImg from '../../assets/rectangles/deers.png';
+import PandasImg from '../../assets/rectangles/panda.png';
+import TwoMonkeysImg from '../../assets/rectangles/twomonk.png';
+
+import classes from './styles.module.scss';
 
 var slideIndex = 1;
 
@@ -31,7 +32,7 @@ function minusSlide() {
   showSlides(slideIndex -= 1);
 }
 
-export const HowItWorks = () => {
+export const HowItWorksSlider = () => {
   return (
     <div className={classes['operation__gallery']}>
       <div className={classes['operation__gallery-img']}>
