@@ -2,7 +2,7 @@ import classes from './HowItWorks.module.scss';
 
 import { Button } from '../button/Button';
 import { Paginator } from '../paginator/Paginator';
-
+import { HowItWorksSlider } from '../sliders/HowItWorksSlider';
 import buttonIcon from '../assets/buttonIcon.png'
 import { BENEFITS } from '../constants';
 
@@ -26,7 +26,7 @@ export const HowItWorks = () => {
             bushfires on precious species and their habitat.
         </p>
 
-        <HowItWorks />
+        <HowItWorksSlider />
         <Paginator />
         <Button name='watch online' icon={buttonIcon}/>
       </div>
