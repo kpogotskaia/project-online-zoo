@@ -1,56 +1,52 @@
-import MonkeysImg from '../../assets/rectangles/monkeys.png';
-import DeersImg from '../../assets/rectangles/deers.png';
-import PandasImg from '../../assets/rectangles/panda.png';
-import TwoMonkeysImg from '../../assets/rectangles/twomonk.png';
+import { Paginator, THEME} from '../../paginator/Paginator';
+import { IMG } from '../../constants';
 
-import classes from './styles.module.scss';
+import React, {useState, useEffect} from "react";
 
-var slideIndex = 1;
-
-function showSlides(n) {
-  var i;
-  var slides = document.getElementsByClassName("operation__gallery-img");
-
-  if (n > slides.length) {
-    slideIndex = 1
-  }
-  if (n < 1) {
-      slideIndex = slides.length
-  }
-  for (i = 0; i < slides.length; i++) {
-      slides[i].style.display = "none";
-  }
-
-  slides[slideIndex - 1].style.display = "block";
-}
-
-function plusSlide() {
-  showSlides(slideIndex += 1);
-}
-
-function minusSlide() {
-  showSlides(slideIndex -= 1);
-}
+import './styles.scss';
 
 export const HowItWorksSlider = () => {
-  return (
-    <div className={classes['operation__gallery']}>
-      <div className={classes['operation__gallery-img']}>
-          <img src={DeersImg} alt="deer" />
-      </div>
-      <div className={classes['operation__gallery-img']}>
-          <img src={MonkeysImg} alt="smallMonkey" />
-      </div>
-      <div className={classes['operation__gallery-img']}>
-          <img src={PandasImg} alt="pandas" />
-      </div>
-      <div className={classes['operation__gallery-img']}>
-          <img src={TwoMonkeysImg} alt="monkey" />
-      </div>
 
-      <a className={classes['prev']} onClick={minusSlide}>&#10094;</a>
-      <a className={classes['next']} onClick={plusSlide}>&#10095;</a>
-    </div>
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setActiveIndex((current) => {
+          const res = current === IMG.length - 1 ? 0 : current + 1;
+          return res;
+      })
+    }, 5000);
+
+    return () => clearInterval()
+  }, [])
+
+  // calculate prev index
+  const prevImgIndex = activeIndex ? activeIndex - 1 : IMG.length - 1;
+  // calculate next index
+  const nextImgIndex = activeIndex === IMG.length - 1 ? 0 : activeIndex + 1;
+
+  return (
+    [
+      <div className="slider">
+        <div className="slider-img slider-img-prev"
+            key={prevImgIndex}>
+            {IMG[prevImgIndex]}
+        </div>
+        <div className="slider-img"
+            key={activeIndex}>
+            {IMG[activeIndex]}
+        </div>
+        <div className="slider-img slider-img-next"
+            key={nextImgIndex}>
+            {IMG[nextImgIndex]}
+        </div>
+      </div>,
+      <Paginator
+        amount={IMG.length}
+        selected={activeIndex + 1}
+        theme={THEME.DARK}
+      />
+    ]
   );
 };
 

@@ -5,18 +5,10 @@
   .container {
     margin: 0 10px;
   }
-  &__heading {
-    font-family: $font;
-    padding-top: 40px;
-    margin: 0 auto;
-    font-size: 36px;
-    line-height: 42px;
-    font-weight: 900;
-  }
 
   &__pharagraph {
     font-family: $font;
-    margin-bottom: 30px;
+    margin: 0 auto 30px;
     font-style: normal;
     font-weight: normal;
     font-size: 14px;
@@ -63,7 +55,7 @@
 
 @media screen and (min-width: 640px) {
   .operation {
-    
+
     &__benefits {
       padding: 100px 0;
       margin: 30px 0;
@@ -83,12 +75,6 @@
   .operation {
     .container {
       margin: 0 150px;
-    }
-
-    &__heading {
-      text-align: center;
-      margin-top: 100px;
-      padding: 0;
     }
 
     &__pharagraph {

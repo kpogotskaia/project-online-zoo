@@ -1,20 +1,9 @@
 @import '../variables';
 
 .map {
-  background: #F2F2F2;;
-  padding: 50px 0;
+  background: #F2F2F2;
+  padding: 1px 0;
   position: relative;
-
-  &__heading {
-    margin: 0;
-    font-family: $font;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 36px;
-    line-height: 42px;
-    text-align: center;
-    color: #333333;
-  }
 
   &__block {
     margin: 30px 10px;
@@ -134,7 +123,6 @@
 
 @media screen and (min-width: 640px) {
   .map {
-    padding: 100px 0;
 
     &__block {
       width: 598px;
@@ -248,7 +236,6 @@
 
 @media screen and (min-width: 1280px) {
   .map {
-    padding: 100px 0;
     position: relative;
 
     &__block {

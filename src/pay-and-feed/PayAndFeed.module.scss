@@ -2,21 +2,11 @@
 
 
 .charity {
+  padding: 1px 0 1px;
   background: #F2F2F2;
-  padding: 50px 0;
 
   .container {
     margin: 0 10px;
-  }
-
-  &__heading {
-    margin: 0 auto;
-    text-align: center;
-    font-family: $font;
-    font-style: normal;
-    font-weight: 900;
-    font-size: 36px;
-    line-height: 42px;
   }
 
   &__pharagraph {
@@ -69,12 +59,7 @@
 //tablet
 @media screen and (min-width: 640px) {
   .charity {
-    padding: 100px 0 50px;
-
-    &__heading {
-      padding: 0;
-      margin: 0;
-    }
+    padding: 1px 0 1px;
 
     &__pharagraph {
       display: block;
@@ -104,12 +89,7 @@
 @media screen and (min-width: 1280px) {
 
   .charity {
-    padding: 100px 0 1px;
-
-    &__heading {
-      font-size: 48px;
-      line-height: 56px;
-    }
+    padding: 1px 0 1px;
 
     &__donation {
       display: flex;

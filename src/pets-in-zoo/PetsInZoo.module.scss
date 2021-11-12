@@ -1,6 +1,7 @@
 @import '../variables';
 
-.testimonialses {
+.section-three {
+  overflow: hidden;
 
   .container {
     margin: 0 10px;
@@ -9,18 +10,36 @@
   .arrow-left, .arrow-right {
     display: none;
   }
+
+  .gallery-scroll {
+    margin: 23px 30px;
+  }
+
+  &__button {
+    margin: 20px auto 50px;
+  }
 }
 
 @media screen and (min-width: 640px) {
-  .testimonialses {
-    padding-bottom: 50px;
+  .section-three {
+    .container {
+      margin: 0 20px;
+
+    }
+
+    .gallery-scroll {
+      margin: 23px 187px;
+    }
+
+    &__button {
+      margin: 20px auto 100px;
+    }
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .testimonialses {
+  .section-three {
     position: relative;
-    padding-bottom: 0;
 
     .container {
       margin: 0 150px;
@@ -47,4 +66,3 @@
     }
   }
 }
-

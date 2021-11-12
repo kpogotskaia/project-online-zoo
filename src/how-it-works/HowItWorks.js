@@ -1,16 +1,16 @@
 import classes from './HowItWorks.module.scss';
 
 import { Button } from '../button/Button';
-import { Paginator } from '../paginator/Paginator';
 import { HowItWorksSlider } from '../sliders/HowItWorksSlider';
 import buttonIcon from '../assets/buttonIcon.png'
 import { BENEFITS } from '../constants';
+import { Heading } from '../block-heading/BlockHeading';
 
 export const HowItWorks = () => {
   return (
     <section className={classes['operation']}>
       <div className={classes['container']}>
-        <h3 className={classes['operation__heading']}>How it works?</h3>
+        <Heading name='How it Works?'/>
         <p className={classes['operation__pharagraph']}>
             As a voice for wildlife, we are devastated by the impact
             of the 2020 Australian bushfires on precious species and
@@ -27,7 +27,6 @@ export const HowItWorks = () => {
         </p>
 
         <HowItWorksSlider />
-        <Paginator />
         <Button name='watch online' icon={buttonIcon}/>
       </div>
 

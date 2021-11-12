@@ -18,6 +18,79 @@ import TwitterIcon from './assets/sociales/twitter.png';
 import VkIcon from './assets/sociales/vk.png';
 import UserMImg from './assets/users/usrM.png';
 import UserGImg from'./assets/users/users.png';
+import ThreeSliderPandaImg from './assets/treeScreen/panda.png';
+import ThreeSliderEagleImg from './assets/treeScreen/eagle.png';
+import ThreeSliderMonkeyImg from './assets/treeScreen/monkey.png';
+import ThreeSliderCrocImg from './assets/treeScreen/kro.png';
+import ThreeSliderFoxImg from './assets/treeScreen/fox.png';
+import ThreeSliderElephImg from './assets/treeScreen/eleph.png';
+import ThreeSliderCatImg from './assets/treeScreen/cat.png';
+import ThreeSliderAnmImg from './assets/treeScreen/anm.png';
+import MonkeysImg from './assets/rectangles/monkeys.png';
+import DeersImg from './assets/rectangles/deers.png';
+import PandasImg from './assets/rectangles/panda.png';
+import TwoMonkeysImg from './assets/rectangles/twomonk.png';
+
+export const ARROW = {
+  arrowLeft: '<',
+  arrowRight: '>'
+}
+
+export const PETS_IN_ZOO = [
+  {
+    imgUrl: ThreeSliderPandaImg,
+    alt: 'panda',
+    desc: `
+    Panda’s name is Bei Bei. He
+    is 2 years old. Bei Bei is
+    from China. He loves bamboos.
+  `,
+    isActive: true
+  },
+  {
+    imgUrl: ThreeSliderEagleImg,
+    alt: 'eagle',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderMonkeyImg,
+    alt: 'monkey',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderCrocImg,
+    alt: 'croc',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderFoxImg,
+    alt: 'eagle',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderElephImg,
+    alt: 'monkey',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderCatImg,
+    alt: 'croc',
+    desc: '',
+    isActive: false
+  },
+  {
+    imgUrl: ThreeSliderAnmImg,
+    alt: 'croc',
+    desc: '',
+    isActive: false
+  },
+
+]
 
 export const TESTIMONIALS = [
   {
@@ -33,6 +106,24 @@ export const TESTIMONIALS = [
     imgUrl: UserGImg,
     alt: 'profile Img',
     heading: 'Nastya Sidorova',
+    desc: `As a voice for wildlife, we are devastated
+    by the impact of the 2020 Australian
+    bushfires on precious species and their
+    habitat.`
+  },
+  {
+    imgUrl: UserMImg,
+    alt: 'profile Img',
+    heading: 'Vally Kurtin',
+    desc: `As a voice for wildlife, we are devastated
+    by the impact of the 2020 Australian
+    bushfires on precious species and their
+    habitat.`
+  },
+  {
+    imgUrl: UserGImg,
+    alt: 'profile Img',
+    heading: 'Olga Smirnova',
     desc: `As a voice for wildlife, we are devastated
     by the impact of the 2020 Australian
     bushfires on precious species and their
@@ -63,12 +154,19 @@ export const SOCIAL_ICONS = [
   }
 ];
 
+export const IMG = [
+  <img key={MonkeysImg} src={MonkeysImg} />,
+  <img key={DeersImg} src={DeersImg} />,
+  <img key={PandasImg} src={PandasImg} />,
+  <img key={TwoMonkeysImg} src={TwoMonkeysImg} />
+]
+
 export const ANIMALS = [
   {
     imgUrl: EagleImg,
     alt: 'eagle',
     desc: `Eagle’s name is King. He
-    is 2 years old. Ging is
+    is 2 years old. King is
     from USA. He loves meat.`,
   },
   {
@@ -90,8 +188,7 @@ export const ANIMALS = [
   {
     imgUrl: CrocImg,
     alt: 'croc',
-    desc: `Croco
-    dile’s name is Gena. She
+    desc: `Crocodile’s name is Gena. She
     is 1 years old. Gena is
     from Florida, USA. She loves testy food.`,
   },
@@ -119,7 +216,9 @@ export const ANIMALS = [
   {
     imgUrl: AnmImg,
     alt: 'anm',
-    desc: '',
+    desc: ` Leopard’s name is Maysis. He
+    is 8 years old. Barney is
+    from Kongo. He loves beef.`,
   }
 ];
 

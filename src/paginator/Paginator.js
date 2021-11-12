@@ -1,15 +1,15 @@
 import './Paginator.scss';
 
 export const THEME = {
-  LIGHT: 'LIGHT',
-  DARK: 'DARK'
+  LIGHT: 'L',
+  DARK: 'D'
 };
 
 export const Paginator = (props) => {
   return (
     <div className="paginator">
       <span>
-        {props.selected}/{props.amount}
+        {props.selected}/<span className="amount-style">{props.amount}</span>
       </span>
       <div className="paginator__line">
         <div className="paginator__line-button">

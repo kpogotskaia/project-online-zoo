@@ -9,12 +9,13 @@ import VectorPandaImg from '../assets/vector/panda.png';
 import TooltipEagleImg from '../assets/vector/eagleTooltip.png';
 import buttonIcon from '../assets/buttonIcon.png'
 import '../assets/map.png';
+import { Heading } from '../block-heading/BlockHeading';
 
 
 export const Map = () => {
   return (
     <section className="map">
-    <h3 className="map__heading">Map</h3>
+    <Heading name='Map' />
     <div className="map__block">
         <div className="map__block-vector vector__eagle">
             <img className="eagle" src={VectorEagleImg} alt="eagle" />

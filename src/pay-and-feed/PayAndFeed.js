@@ -2,14 +2,15 @@ import { Button } from '../button/Button';
 import { DONATION_STEPS } from '../constants';
 import DonationArrowImg from '../assets/donation/Arrow.png';
 import classes from './PayAndFeed.module.scss';
+import { Heading } from '../block-heading/BlockHeading';
 
 export const PayAndFeed = () => {
   return (
     <section className={classes['charity']}>
     <div className={classes['container']}>
-        <h3 className={classes['charity__heading']}>
-          Pay and feed
-        </h3>
+
+        <Heading name='Pay and Feed'/>
+        
         <p className={classes['charity__pharagraph']}>
           The opportunity to easily and naturally
           (but as often as possible) donate to the

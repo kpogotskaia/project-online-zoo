@@ -1,8 +1,6 @@
 import './Footer.scss';
-import YoutubeIcon from '../assets/sociales/youtube.png';
-import InstagramIcon from '../assets/sociales/instagram.png';
-import TwitterIcon from '../assets/sociales/twitter.png';
-import VKIcon from '../assets/sociales/vk.png';
+import { SOCIAL_ICONS } from '../constants';
+import { Button } from '../button/Button';
 import ArrowImg from '../assets/Arrow4.png';
 
 export const Footer = () => {
@@ -69,15 +67,18 @@ export const Footer = () => {
               T(702) 163-3433<br/>
               zoo.online@gmail.com
             </span>
+
             <div className="sociales">
-              <a href="#"><img src={InstagramIcon} alt="instagram" /></a>
-              <a href="#"><img src={TwitterIcon} alt="twitter" /></a>
-              <a href="#"><img src={VKIcon} alt="vk" /></a>
-              <a href="#"><img src={YoutubeIcon} alt="youtube" /></a>
+              {SOCIAL_ICONS.map(data => (
+                <a key={data.description} href={data.link}>
+                  <img src={data.imgUrl} alt={data.description} />
+                </a>
+              ))}
             </div>
+
           </div>
         </div>
-        <button className="footer-button">donate for volonteers</button>
+        <Button  name='donate for volonteers' className="footer-button"/>
         <div className="footer-line"></div>
         <div className="signature">@Krystsina Pogotskaia</div>
       </div>
