@@ -31,6 +31,51 @@ import DeersImg from './assets/rectangles/deers.png';
 import PandasImg from './assets/rectangles/panda.png';
 import TwoMonkeysImg from './assets/rectangles/twomonk.png';
 
+import LeftMenuPanda from './assets/left-menu/panda.png';
+import LeftMenuEagle from './assets/left-menu/eagle.png';
+import LeftMenuCroc from './assets/left-menu/croc.png';
+import LeftMenuMonkey from './assets/left-menu/monkey.png';
+import LeftMenuEleph from './assets/left-menu/panda.png';
+import LeftMenu from './assets/left-menu/panda.png';
+import LeftMenuAnim from './assets/left-menu/panda.png';
+import LeftMenuCat from './assets/left-menu/panda.png';
+
+
+export const LEFT_MENU_ANIMAL = [
+  {
+    imgUrl: LeftMenuPanda,
+    alt: 'panda'
+  },
+  {
+    imgUrl: LeftMenuEagle,
+    alt: 'eagle'
+  },
+  {
+    imgUrl: LeftMenuCroc,
+    alt: 'croc'
+  },
+  {
+    imgUrl: LeftMenuMonkey,
+    alt: 'monkey'
+  },
+  {
+    imgUrl: LeftMenuEleph,
+    alt: 'eleph'
+  },
+  {
+    imgUrl: LeftMenuCat,
+    alt: 'cat'
+  },
+  {
+    imgUrl: LeftMenuAnim,
+    alt: 'eleph'
+  },
+  {
+    imgUrl: LeftMenu,
+    alt: 'tiger'
+  }
+]
+
 export const ARROW = {
   arrowLeft: '<',
   arrowRight: '>'

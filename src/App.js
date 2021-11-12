@@ -4,4 +4,4 @@ import { ChooseFavorite } from './choose-favorite/ChooseFavorite';
 
 import './App.scss';
 
-export const App = () => <HomePage />;
+export const App = () => <CountryZoo />;

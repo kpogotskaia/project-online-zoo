@@ -1,5 +1,6 @@
 import { Header } from '../header/Header';
 import { Footer } from '../footer/Footer';
+import { LEFT_MENU_ANIMAL } from '../constants';
 
 import './CountryZoo.scss';
 
@@ -12,18 +13,11 @@ export const CountryZoo = () => [
           <div className="arrow-top">
             <img src="assets/left-menu/VectorTop.png" alt="" />
           </div>
-          <div className="left-menu__animal">
-            <img className="left-menu__animal-panda active" src="assets/left-menu/panda.png" alt="panda" />
+          {LEFT_MENU_ANIMAL.map((animals, i) => (
+            <div className="left-menu__animal">
+            <img className="left-menu__animal-panda active" src={animals.imgUrl} alt={animals.alt} />
           </div>
-          <div className="left-menu__animal">
-            <img className="left-menu__animal-eagle" src="assets/left-menu/eagle.png" alt="panda" />
-          </div>
-          <div className="left-menu__animal">
-            <img className="left-menu__animal-croc" src="assets/left-menu/croc.png" alt="panda" />
-          </div>
-          <div className="left-menu__animal">
-            <img className="left-menu__animal-monkey" src="assets/left-menu/monkey.png" alt="panda" />
-          </div>
+          ))}
           <div className="arrow-bottom">
             <img src="assets/left-menu/Vectorbottom.png" alt="" />
           </div>
