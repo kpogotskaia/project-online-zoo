@@ -1,51 +1,22 @@
 import { Header } from '../header/Header';
 import { Footer } from '../footer/Footer';
-import { LEFT_MENU_ANIMAL } from '../constants';
+import { COUNTRY_ZOO_VODEO } from '../constants';
+
 
 import './CountryZoo.scss';
+import { CountryZooLeftAside } from '../sliders/country-zoo-aside/CountryZooLeftAside';
+import { CountryZooVideo } from '../sliders/country-zoo-video/CountryZooVideo';
 
 export const CountryZoo = () => [
   <Header key="0" />,
   <section className="info-zoo">
     <div className="container">
       <div className="info-zoo__content">
-        <aside className="left-menu">
-          <div className="arrow-top">
-            <img src="assets/left-menu/VectorTop.png" alt="" />
-          </div>
-          {LEFT_MENU_ANIMAL.map((animals, i) => (
-            <div className="left-menu__animal">
-            <img className="left-menu__animal-panda active" src={animals.imgUrl} alt={animals.alt} />
-          </div>
-          ))}
-          <div className="arrow-bottom">
-            <img src="assets/left-menu/Vectorbottom.png" alt="" />
-          </div>
-        </aside>
-        <div className="content">
-          <div className="content-video">
-            <h3>The Beijing Zoo</h3>
-            <div className="content-video__slider">
-              <div>
-                <img className="active-video" src="../assets/Zoos-video/Rectangle19.png" alt=''/>
-              </div>
-              <div>
-                <img src="../assets/Zoos-video/small-video.png" alt=''/>
-              </div>
-              <div>
-                <img src="../assets/Zoos-video/small-video.png" alt=''/>
-              </div>
-              <div>
-                <img src="../assets/Zoos-video/small-video.png" alt=''/>
-              </div>
+        <CountryZooLeftAside />
 
-            </div>
-            <div className="content-video__scroll">
-              <div className="content-video__scroll-button active-scroll"></div>
-              <div className="content-video__scroll-button"></div>
-              <div className="content-video__scroll-button"></div>
-            </div>
-          </div>
+        <div className="content">
+          <CountryZooVideo />
+
           <div className="content-info">
             <h5 className="content-info__heading">Population:</h5>
             <p className="content-info__pharagraph">About 1,590 individuals</p>

@@ -35,11 +35,44 @@ import LeftMenuPanda from './assets/left-menu/panda.png';
 import LeftMenuEagle from './assets/left-menu/eagle.png';
 import LeftMenuCroc from './assets/left-menu/croc.png';
 import LeftMenuMonkey from './assets/left-menu/monkey.png';
-import LeftMenuEleph from './assets/left-menu/panda.png';
-import LeftMenu from './assets/left-menu/panda.png';
-import LeftMenuAnim from './assets/left-menu/panda.png';
-import LeftMenuCat from './assets/left-menu/panda.png';
+import LeftMenuEleph from './assets/left-menu/eleph.png';
+import LeftMenuTiger from './assets/left-menu/tiger.png';
+import LeftMenuLeo from './assets/left-menu/leo.png';
+import LeftMenuZebra from './assets/left-menu/zebra.png';
+import LeftMenuArrowTop from './assets/left-menu/VectorTop.png';
+import LeftMenuArrowBottom from './assets/left-menu/Vectorbottom.png';
+import CountryZooVideo from './assets/Zoos-video/small-video.png';
 
+export const LEFT_MENU_ARROW = {
+    LeftMenuArrowTop: LeftMenuArrowTop,
+    LeftMenuArrowBottom: LeftMenuArrowBottom,
+    alt: 'arrow'
+}
+
+export const COUNTRY_ZOO_VODEO = [
+  {
+    videoUrl: CountryZooVideo,
+    alt: 'animal video'
+  },
+  {
+    videoUrl: CountryZooVideo,
+    alt: 'animal video'
+  },
+  {
+    videoUrl: CountryZooVideo,
+    alt: 'animal video'
+  },
+  {
+    videoUrl: CountryZooVideo,
+    alt: 'animal video'
+  },
+]
+
+export const COUNTRY_ZOO_VODEO_SCROLL = [
+  {},
+  {},
+  {}
+]
 
 export const LEFT_MENU_ANIMAL = [
   {
@@ -63,15 +96,15 @@ export const LEFT_MENU_ANIMAL = [
     alt: 'eleph'
   },
   {
-    imgUrl: LeftMenuCat,
-    alt: 'cat'
+    imgUrl: LeftMenuLeo,
+    alt: 'leo'
   },
   {
-    imgUrl: LeftMenuAnim,
-    alt: 'eleph'
+    imgUrl: LeftMenuZebra,
+    alt: 'zebra'
   },
   {
-    imgUrl: LeftMenu,
+    imgUrl: LeftMenuTiger,
     alt: 'tiger'
   }
 ]
