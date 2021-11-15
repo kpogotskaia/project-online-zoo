@@ -12,12 +12,12 @@ export const HowItWorksSlider = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setActiveIndex((current) => {
-          const res = current === IMG.length - 1 ? 0 : current + 1;
-          return res;
+        const res = current === IMG.length - 1 ? 0 : current + 1;
+        return res;
       })
     }, 5000);
 
-    return () => clearInterval()
+    return () => clearInterval(interval);
   }, [])
 
   // calculate prev index
@@ -27,21 +27,19 @@ export const HowItWorksSlider = () => {
 
   return (
     [
-      <div className="slider">
-        <div className="slider-img slider-img-prev"
-            key={prevImgIndex}>
-            {IMG[prevImgIndex]}
+      <div key="slider" className="slider">
+        <div className="slider-img slider-img-prev">
+          <img src={IMG[prevImgIndex]} alt="prev" />
         </div>
-        <div className="slider-img"
-            key={activeIndex}>
+        <div className="slider-img">
             {IMG[activeIndex]}
         </div>
-        <div className="slider-img slider-img-next"
-            key={nextImgIndex}>
-            {IMG[nextImgIndex]}
+        <div className="slider-img slider-img-next">
+          <img src={IMG[nextImgIndex]} alt="next" />
         </div>
       </div>,
       <Paginator
+        key="paginator"
         amount={IMG.length}
         selected={activeIndex + 1}
         theme={THEME.DARK}

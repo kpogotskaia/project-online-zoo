@@ -8,9 +8,11 @@ export const CountryZooLeftAside = () => {
 
       <div className='left-menu__imgs'>
         {LEFT_MENU_ANIMAL.map((animals, i) => (
-          <div className={`
-            ${'left-menu__animal'}
-            ${i === 0 ? 'left-menu__animal-active' : ''}
+          <div
+            key={i}
+            className={`
+              ${'left-menu__animal'}
+              ${i === 0 ? 'left-menu__animal-active' : ''}
             `}
           >
             <img className="left-menu__animal" src={animals.imgUrl} alt={animals.alt} />

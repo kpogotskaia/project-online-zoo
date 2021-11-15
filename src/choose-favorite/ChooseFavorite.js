@@ -1,11 +1,11 @@
-import { Header } from '../header/Header';
+import { Header } from '../components/Header';
 import { Footer } from '../footer/Footer';
 
 import './ChooseFavorite.scss';
 
 export const ChooseFavorite = () => ([
   <Header key="0" />,
-  <section className="choose-section">
+  <section key="1" className="choose-section">
     <div className="container">
       <h1>Choose your favorite</h1>
       <p>
@@ -69,5 +69,5 @@ export const ChooseFavorite = () => ([
       </button>
     </div>
   </section>,
-  <Footer key="1" />
+  <Footer key="2" />
 ]);

@@ -233,11 +233,11 @@ export const SOCIAL_ICONS = [
 ];
 
 export const IMG = [
-  <img key={MonkeysImg} src={MonkeysImg} />,
-  <img key={DeersImg} src={DeersImg} />,
-  <img key={PandasImg} src={PandasImg} />,
-  <img key={TwoMonkeysImg} src={TwoMonkeysImg} />
-]
+  MonkeysImg,
+  DeersImg,
+  PandasImg,
+  TwoMonkeysImg
+];
 
 export const ANIMALS = [
   {

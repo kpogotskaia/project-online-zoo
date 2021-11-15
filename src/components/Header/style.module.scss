@@ -1,4 +1,5 @@
-@import '../variables';
+@import '../../variables';
+@import '../../mixins';
 
 header {
   background: #FFFFFF;
@@ -13,7 +14,7 @@ header {
     display: flex;
     justify-content: space-between;
 
-    &__logo {
+    &Logo {
       text-decoration: none;
       display: flex;
       flex-direction: column;
@@ -34,7 +35,7 @@ header {
       }
     }
 
-    &__menu-icon {
+    &MenuIcon {
       display: block;
       font-size: 0;
       background: none;
@@ -46,17 +47,17 @@ header {
       top: 53px;
     }
 
-    &__menu-icon,
-    &__menu-icon::before,
-    &__menu-icon::after {
+    &MenuIcon,
+    &MenuIcon::before,
+    &MenuIcon::after {
       border-top: 3px solid #000;
       -webkit-transition: all 0.3s;
       -moz-transition: all 0.3s;
       transition: all 0.3s;
     }
 
-    &__menu-icon::before,
-    &__menu-icon::after {
+    &MenuIcon::before,
+    &MenuIcon::after {
       position: absolute;
       content: "";
       display: block;
@@ -64,19 +65,19 @@ header {
       right: 0;
     }
 
-    &__menu-icon:before {
+    &MenuIcon:before {
       top: 7px;
     }
 
-    &__menu-icon:after {
+    &MenuIcon:after {
       top: 17px;
     }
 
-    &__menu-icon.opened {
+    &MenuIcon.opened {
       border-top-color: transparent;
     }
 
-    &__menu-icon.opened:after {
+    &MenuIcon.opened:after {
       width: 20px;
       height: 20px;
       -webkit-transform: rotate(45deg);
@@ -86,7 +87,7 @@ header {
       left: -47px;
     }
 
-    &__menu-icon.opened:before {
+    &MenuIcon.opened:before {
       width: 20px;
       height: 20px;
       -webkit-transform: rotate(-45deg);
@@ -97,7 +98,7 @@ header {
     }
 
     /*styles for menu container*/
-    &__menu-container {
+    &MenuContainer {
       padding-top: 110px;
       width: 100%;
 
@@ -105,49 +106,25 @@ header {
         list-style: none;
         padding: 0;
         margin: 0;
-
-        li {
-          border-bottom: #4f4f4f 1px solid;
-
-          a {
-            display: block;
-            padding: 10px 0;
-            color: #4f4f4f;
-            font-style: normal;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 19px;
-            background: rgb(226, 226, 226);
-            text-decoration: none;
-            text-align: center;
-            font-family: sans-serif, arial;
-
-            &:hover {
-              color: #f2f2f2;
-              font-weight: 700;
-              background: #628d90;
-            }
-          }
-        }
       }
     }
 
-    &__menu-container.closed {
+    &MenuContainer.closed {
       display: none;
     }
 
-    &__menu-container.opened {
+    &MenuContainer.opened {
       display: block;
     }
 
-    &__revers {
+    &Revers {
       width: 54px;
       height: 30px;
       background: #f2f2f2;
       border-radius: 190px;
       margin-top: 50px;
 
-      &-btn {
+      &Btn {
         width: 20px;
         height: 20px;
         background: $white;
@@ -157,21 +134,19 @@ header {
       }
     }
   }
-}
 
-@media screen and (min-width: 1280px) {
-  .container {
+  @include media-desktop {
     margin: 0 150px;
 
     .header {
       display: flex;
       justify-content: space-between;
 
-      &__menu-icon {
+      &MenuIcon {
         display: none;
       }
 
-      &__menu-container {
+      &MenuContainer {
         padding-top: 45px;
         width: 100%;
 
@@ -181,35 +156,10 @@ header {
           justify-content: space-between;
           list-style: none;
           padding: 0;
-
-          li {
-            border-bottom: none;
-
-            a {
-              display: block;
-              padding: 10px 0;
-              color: #4f4f4f;
-              font-style: normal;
-              font-weight: 500;
-              font-size: 16px;
-              line-height: 19px;
-              background: none;
-              text-decoration: none;
-              text-align: center;
-              font-family: sans-serif, arial;
-
-              &:hover {
-                border-bottom: 2px solid #333333;
-                color: #333333;
-                font-weight: 700;
-                background: none;
-              }
-            }
-          }
         }
       }
 
-      &__menu-container.closed {
+      &MenuContainer.closed {
         display: block;
       }
     }

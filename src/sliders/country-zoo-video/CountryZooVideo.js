@@ -8,10 +8,12 @@ export const CountryZooVideo = () => {
     <Heading name='The Beijing Zoo' />
     <div className="content-video__slider">
       {COUNTRY_ZOO_VODEO.map((video, i) => (
-      <div className={`
-      ${'video'}
-      ${i === 0 ? 'active-video' : ''}
-      `}
+      <div
+        key={i}
+        className={`
+          ${'video'}
+          ${i === 0 ? 'active-video' : ''}
+        `}
       >
         <img className="video" src={video.videoUrl} alt={video.alt}/>
       </div>
@@ -21,10 +23,11 @@ export const CountryZooVideo = () => {
     <div className="content-video__scroll">
       {COUNTRY_ZOO_VODEO_SCROLL.map((scroll, i) => (
         <div
-        className={`
-        ${'content-video__scroll-button'}
-        ${i === 0 ? 'active-scroll' : ''}
-        `}
+          key={i}
+          className={`
+            ${'content-video__scroll-button'}
+            ${i === 0 ? 'active-scroll' : ''}
+          `}
         >
         </div>
       ))}

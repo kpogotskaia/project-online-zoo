@@ -1,4 +1,4 @@
-import { Header } from '../header/Header';
+import { Header } from '../components/Header';
 import { Footer } from '../footer/Footer';
 import { SectionOne } from '../section-one/SectionOne';
 import { HowItWorks } from '../how-it-works/HowItWorks';

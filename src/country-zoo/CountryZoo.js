@@ -1,4 +1,4 @@
-import { Header } from '../header/Header';
+import { Header } from '../components/Header';
 import { Footer } from '../footer/Footer';
 import { COUNTRY_ZOO_VODEO } from '../constants';
 
@@ -9,7 +9,7 @@ import { CountryZooVideo } from '../sliders/country-zoo-video/CountryZooVideo';
 
 export const CountryZoo = () => [
   <Header key="0" />,
-  <section className="info-zoo">
+  <section key="1" className="info-zoo">
     <div className="container">
       <div className="info-zoo__content">
         <CountryZooLeftAside />
@@ -39,5 +39,5 @@ export const CountryZoo = () => [
       </div>
     </div>
   </section>,
-  <Footer key="1" />
+  <Footer key="2" />
 ];

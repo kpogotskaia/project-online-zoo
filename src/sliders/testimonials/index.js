@@ -9,7 +9,7 @@ export const TestimonialsSlider = () => {
   const [slides, setSlides] = useState(TESTIMONIALS);
 
   return (
-    [
+    <>
       <div className={classes['testimonialses__block']}>
         {TESTIMONIALS.map((testimonials, i) => (
           <div key={i} className={classes['testimonialses__block-info']}>
@@ -21,13 +21,13 @@ export const TestimonialsSlider = () => {
             <p className={classes['pharagraph']}>{testimonials.desc}</p>
           </div>
         ))}
-      </div>,
+      </div>
       <Paginator
         amount={TESTIMONIALS.length}
         selected={activeIndex + 1}
         theme={THEME.DARK}
       />
-    ]
+    </>
   );
 };
 
