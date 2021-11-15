@@ -1,6 +1,6 @@
 import classes from './PetsInZoo.module.scss';
 
-import { Button } from '../button/Button';
+import { Button } from '../Button';
 import { PetsInZooSlider } from '../sliders/pets-in-zoo/index';
 import { ARROW } from '../constants';
 import { Heading } from '../block-heading/BlockHeading';

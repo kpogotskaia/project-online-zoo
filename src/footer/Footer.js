@@ -1,6 +1,6 @@
 import './Footer.scss';
 import { SOCIAL_ICONS } from '../constants';
-import { Button } from '../button/Button';
+import { Button } from '../Button';
 import ArrowImg from '../assets/Arrow4.png';
 
 export const Footer = () => {

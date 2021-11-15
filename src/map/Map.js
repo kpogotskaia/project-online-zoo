@@ -1,6 +1,6 @@
 import './Map.scss';
 
-import { Button } from '../button/Button';
+import { Button } from '../Button';
 
 import VectorEagleImg from '../assets/vector/eagle.png';
 import VectorCrocImg from '../assets/vector/croc.png';

@@ -1,4 +1,4 @@
-import { Button } from '../button/Button';
+import { Button } from '../Button';
 import { DONATION_STEPS } from '../constants';
 import DonationArrowImg from '../assets/donation/Arrow.png';
 import classes from './PayAndFeed.module.scss';
@@ -10,7 +10,7 @@ export const PayAndFeed = () => {
     <div className={classes['container']}>
 
         <Heading name='Pay and Feed'/>
-        
+
         <p className={classes['charity__pharagraph']}>
           The opportunity to easily and naturally
           (but as often as possible) donate to the

@@ -5,7 +5,6 @@
   flex-direction: row-reverse;
   align-items: center;
   justify-content: center;
-  margin: 25px auto 50px;
   width: 245px;
   height: 55px;
   background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
@@ -24,17 +23,4 @@
 
 .button:hover {
   background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
-}
-
-
-@media screen and (min-width: 640px) {
-  .button {
-    margin: 50px auto;
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .button {
-    margin: 40px auto 100px;
-  }
 }

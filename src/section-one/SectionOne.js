@@ -1,4 +1,4 @@
-import { Button } from '../button/Button';
+import { Button } from '../Button';
 import { SliderFavoriteAnimal } from '../sliders/slider-one/SliderFavoriteAnimal';
 import { SOCIAL_ICONS } from '../constants';
 import '../assets/glery1screen/wild.jpg';

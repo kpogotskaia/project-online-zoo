@@ -135,7 +135,7 @@ header {
     }
   }
 
-  @include media-desktop {
+  @include media-from-desktop-min {
     margin: 0 150px;
 
     .header {

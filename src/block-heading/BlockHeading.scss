@@ -1,11 +1,11 @@
 @import '../variables';
 
 .heading {
+  padding: 0;
+  margin: 0;
   text-align: center;
   font-family: $font;
-  padding: 50px 0 30px;
   font-style: normal;
-  margin: 0 auto;
   font-size: 36px;
   line-height: 42px;
   font-weight: 900;
@@ -13,16 +13,7 @@
 
 @media screen and (min-width: 640px) {
   .heading {
-    padding: 100px 0 30px;
     font-size: 48px;
     line-height: 56px;
   }
 }
-
-@media screen and (min-width: 1280px) {
-  .heading {
-    margin-top: 100px;
-    padding: 0;
-  }
-}
-

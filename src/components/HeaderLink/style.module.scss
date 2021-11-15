@@ -21,7 +21,7 @@
     background: #628d90;
   }
 
-  @include media-desktop {
+  @include media-from-desktop-min {
     background: none;
     border-bottom: none;
 

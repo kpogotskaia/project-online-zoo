@@ -12,9 +12,7 @@ export const Paginator = (props) => {
         {props.selected}/<span className="amount-style">{props.amount}</span>
       </span>
       <div className="paginator__line">
-        <div className="paginator__line-button">
-          {props.theme}
-        </div>
+        <div className="paginator__line-button"></div>
       </div>
     </div>
   );

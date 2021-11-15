@@ -1,6 +1,6 @@
 import classes from './HowItWorks.module.scss';
 
-import { Button } from '../button/Button';
+import { Button } from '../Button';
 import { HowItWorksSlider } from '../sliders/HowItWorksSlider';
 import buttonIcon from '../assets/buttonIcon.png'
 import { BENEFITS } from '../constants';
