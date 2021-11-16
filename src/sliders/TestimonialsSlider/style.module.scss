@@ -66,11 +66,18 @@
       width: calc(50% - 10px);
     }
 
-    .card-user {
-      pointer-events: none;
-      margin: 30px 115px;
-      border-radius: 50%;
-    }
+      img {
+        width: 70px;
+        height: 70px;
+        display: block;
+        pointer-events: none;
+        margin: 50px auto;
+        border-radius: 50%;
+
+        @include media-from-tablet {
+          margin: 50px auto 20px;
+        }
+      }
 
     .name {
       text-align: center;
@@ -81,14 +88,18 @@
     }
 
     .pharagraph {
+      text-align: center;
       font-family: $font;
-      margin: 0 10px;
-      padding-bottom: 70px;
+      margin: 20px 10px 110px;
       font-style: normal;
       font-weight: normal;
       font-size: 14px;
       line-height: 16px;
       color: $gray;
+
+      @include media-from-tablet {
+        margin: 20px 50px 110px;
+      }
     }
   }
 
