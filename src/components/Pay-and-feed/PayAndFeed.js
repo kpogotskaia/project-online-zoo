@@ -1,8 +1,8 @@
-import { Button } from '../Button';
-import { DONATION_STEPS } from '../constants';
-import DonationArrowImg from '../assets/donation/Arrow.png';
+import { Button } from '../../components/Button';
+import { DONATION_STEPS } from '../../constants';
+import DonationArrowImg from '../../assets/donation/Arrow.png';
 import classes from './PayAndFeed.module.scss';
-import { Heading } from '../block-heading/BlockHeading';
+import { Heading } from '../Block-heading/BlockHeading';
 
 export const PayAndFeed = () => {
   return (

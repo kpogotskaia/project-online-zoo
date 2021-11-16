@@ -1,7 +1,7 @@
 import { useState } from 'react';
 
 import { TESTIMONIALS } from '../../constants';
-import { Paginator, THEME } from '../../paginator/Paginator';
+import { Paginator, THEME } from '../../components/Paginator/Paginator';
 import { ARROW } from '../../constants';
 
 import styles from './style.module.scss'

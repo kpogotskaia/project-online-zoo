@@ -1,5 +1,5 @@
 import { Header } from '../components/Header';
-import { Footer } from '../footer/Footer';
+import { Footer } from '../components/Footer/Footer';
 import { COUNTRY_ZOO_VODEO } from '../constants';
 
 

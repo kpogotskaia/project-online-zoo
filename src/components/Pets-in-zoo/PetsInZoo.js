@@ -1,9 +1,9 @@
 import classes from './PetsInZoo.module.scss';
 
-import { Button } from '../Button';
-import { PetsInZooSlider } from '../sliders/pets-in-zoo/index';
-import { ARROW } from '../constants';
-import { Heading } from '../block-heading/BlockHeading';
+import { Button } from '../../components/Button';
+import { PetsInZooSlider } from '../../sliders/pets-in-zoo/index';
+import { ARROW } from '../../constants';
+import { Heading } from '../Block-heading/BlockHeading';
 
 
 export const PetsInZoo = () => {

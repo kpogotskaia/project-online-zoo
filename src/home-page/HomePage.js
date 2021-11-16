@@ -1,11 +1,11 @@
 import { Header } from '../components/Header';
-import { Footer } from '../footer/Footer';
-import { SectionOne } from '../section-one/SectionOne';
-import { HowItWorks } from '../how-it-works/HowItWorks';
-import { PetsInZoo } from '../pets-in-zoo/PetsInZoo';
-import { PayAndFeed } from '../pay-and-feed/PayAndFeed';
+import { Footer } from '../components/Footer/Footer';
+import { SectionOne } from '../components/Section-one/SectionOne';
+import { HowItWorks } from '../components/How-it-works/HowItWorks';
+import { PetsInZoo } from '../components/Pets-in-zoo/PetsInZoo';
+import { PayAndFeed } from '../components/Pay-and-feed/PayAndFeed';
 import { Testimonials } from '../components/Testimonials';
-import { Map } from '../map/Map';
+import { Map } from '../components/Map/Map';
 
 
 import './HomePage.scss';

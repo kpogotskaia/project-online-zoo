@@ -1,6 +1,6 @@
 import { COUNTRY_ZOO_VODEO, COUNTRY_ZOO_VODEO_SCROLL } from '../../constants';
 import './CountryZooVideo.scss';
-import { Heading } from '../../block-heading/BlockHeading';
+import { Heading } from '../../components/Block-heading/BlockHeading';
 
 export const CountryZooVideo = () => {
   return (

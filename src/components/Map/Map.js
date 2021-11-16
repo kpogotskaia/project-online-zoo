@@ -1,15 +1,15 @@
 import './Map.scss';
 
-import { Button } from '../Button';
+import { Button } from '../../components/Button';
 
-import VectorEagleImg from '../assets/vector/eagle.png';
-import VectorCrocImg from '../assets/vector/croc.png';
-import VectorMonkeyImg from '../assets/vector/monkey.png';
-import VectorPandaImg from '../assets/vector/panda.png';
-import TooltipEagleImg from '../assets/vector/eagleTooltip.png';
-import buttonIcon from '../assets/buttonIcon.png'
-import '../assets/map.png';
-import { Heading } from '../block-heading/BlockHeading';
+import VectorEagleImg from '../../assets/vector/eagle.png';
+import VectorCrocImg from '../../assets/vector/croc.png';
+import VectorMonkeyImg from '../../assets/vector/monkey.png';
+import VectorPandaImg from '../../assets/vector/panda.png';
+import TooltipEagleImg from '../../assets/vector/eagleTooltip.png';
+import buttonIcon from '../../assets/buttonIcon.png'
+import '../../assets/map.png';
+import { Heading } from '../Block-heading/BlockHeading';
 
 
 export const Map = () => {

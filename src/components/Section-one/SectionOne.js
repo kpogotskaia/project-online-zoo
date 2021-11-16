@@ -1,8 +1,8 @@
 import { Button } from '../Button';
-import { SliderFavoriteAnimal } from '../sliders/slider-one/SliderFavoriteAnimal';
-import { SOCIAL_ICONS } from '../constants';
-import '../assets/glery1screen/wild.jpg';
-import buttonIcon from '../assets/buttonIcon.png'
+import { SliderFavoriteAnimal } from '../../sliders/slider-one/SliderFavoriteAnimal';
+import { SOCIAL_ICONS } from '../../constants';
+import '../../assets/glery1screen/wild.jpg';
+import buttonIcon from '../../assets/buttonIcon.png'
 import './SectionOne.scss';
 
 export const SectionOne = () => {

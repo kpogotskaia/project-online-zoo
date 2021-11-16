@@ -1,4 +1,4 @@
-import { Paginator, THEME} from '../../paginator/Paginator';
+import { Paginator, THEME} from '../../components/Paginator/Paginator';
 import { IMG } from '../../constants';
 
 import React, {useState, useEffect} from "react";

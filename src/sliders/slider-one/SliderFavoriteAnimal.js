@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Paginator, THEME } from '../../paginator/Paginator';
+import { Paginator, THEME } from '../../components/Paginator/Paginator';
 import { ANIMALS } from '../../constants';
 import { ActiveBtnSlider } from '../active-btn-slider';
 
