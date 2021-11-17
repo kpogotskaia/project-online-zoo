@@ -3,7 +3,7 @@ import { IMG } from '../../constants';
 
 import React, {useState, useEffect} from "react";
 
-import './styles.scss';
+import styles from './style.module.scss';
 
 export const HowItWorksSlider = () => {
 
@@ -26,25 +26,19 @@ export const HowItWorksSlider = () => {
   const nextImgIndex = activeIndex === IMG.length - 1 ? 0 : activeIndex + 1;
 
   return (
-    [
-      <div key="slider" className="slider">
-        <div className="slider-img slider-img-prev">
+      <div className={styles.howItWorksSlider}>
+        <div className={styles.slider}>
           <img src={IMG[prevImgIndex]} alt="prev" />
-        </div>
-        <div className="slider-img">
-            {IMG[activeIndex]}
-        </div>
-        <div className="slider-img slider-img-next">
+          {IMG[activeIndex]}
           <img src={IMG[nextImgIndex]} alt="next" />
         </div>
-      </div>,
-      <Paginator
-        key="paginator"
-        amount={IMG.length}
-        selected={activeIndex + 1}
-        theme={THEME.DARK}
-      />
-    ]
+
+        <Paginator
+          amount={IMG.length}
+          selected={activeIndex + 1}
+          theme={THEME.DARK}
+        />
+      </div>
   );
 };
 

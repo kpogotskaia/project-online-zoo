@@ -4,7 +4,7 @@ import { TESTIMONIALS } from '../../constants';
 import { Paginator, THEME } from '../../components/Paginator/Paginator';
 import { ARROW } from '../../constants';
 
-import styles from './style.module.scss'
+import styles from './style.module.scss';
 
 export const TestimonialsSlider = () => {
 
