@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import { ANIMALS } from '../../constants';
 import { Paginator, THEME } from '../../components/Paginator/Paginator';

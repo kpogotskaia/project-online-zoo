@@ -1,0 +1,244 @@
+@import '../../variables';
+@import '../../mixins';
+
+.map {
+  margin: 35px 10px 0;
+  height: 145px;
+  background: url('../../assets/map.png') no-repeat;
+  background-size: contain;
+  position: relative;
+
+  .mapVector {
+    width: 34px;
+    height: 47px;
+    background-image: url('../../assets/Vector.png');
+    background-size: cover;
+    position: relative;
+
+    .eagle {
+      position: absolute;
+      width: 22px;
+      height: 22px;
+      left: 6px;
+      top: 6px;
+    }
+
+    .crocodille {
+      position: absolute;
+      width: 21px;
+      height: 21px;
+      left: 7px;
+      top: 7px;
+    }
+
+    .monkey {
+      position: absolute;
+      width: 19px;
+      height: 18.56px;
+      left: 8px;
+      top: 8px;
+    }
+
+    .panda {
+      position: absolute;
+      width: 19px;
+      height: 18.56px;
+      left: 23.53%;
+      right: 20.59%;
+      top: 12.77%;
+      bottom: 46.81%;
+    }
+  }
+
+  .active-vector {
+    width: 34px;
+    height: 47px;
+    background-image: url('../../assets/choose-gallery/Vector.png');
+    background-size: cover;
+    position: relative;
+  }
+
+  .vector__eagle {
+    position: absolute;
+    left: 8.33%;
+    right: 80.33%;
+    top: 1.37%;
+    bottom: 66.44%;
+  }
+
+  .vector__croc {
+    position: absolute;
+    left: 17.33%;
+    right: 71.33%;
+    top: 6.85%;
+    bottom: 60.27%;
+  }
+
+  .vector__monkey {
+    position: absolute;
+    left: 44.67%;
+    right: 44.38%;
+    top: 24.66%;
+    bottom: 43.58%;
+  }
+
+  .vector__panda {
+    left: 72%;
+    right: 16.67%;
+    top: 5.48%;
+    bottom: 62.33%;
+  }
+}
+
+@media screen and (min-width: 640px) {
+
+  /* page choose your favorite */
+
+  .map {
+    margin: 35px 10px 0;
+    width: 598px;
+    height: 290px;
+
+    .mapVector {
+      width: 66px;
+      height: 93px;
+
+      .eagle {
+        position: absolute;
+        width: 43px;
+        height: 43px;
+        left: 11px;
+        top: 10px;
+      }
+
+      .crocodille {
+        position: absolute;
+        width: 43px;
+        height: 43px;
+        left: 12px;
+        top: 11px;
+      }
+
+      .monkey {
+        position: absolute;
+        width: 43px;
+        height: 43px;
+        left: 12px;
+        top: 10px;
+      }
+
+      .panda {
+        position: absolute;
+        width: 43px;
+        height: 43px;
+        left: 23.53%;
+        right: 20.59%;
+        top: 12.77%;
+        bottom: 46.81%;
+      }
+    }
+
+    .active-vector {
+      width: 66px;
+      height: 93px;
+    }
+
+    .vector__eagle {
+      left: 7.33%;
+      top: -2.63%;
+    }
+
+    .vector__croc {
+      top: 1.85%;
+    }
+
+    .vector__monkey {
+      top: 16.66%;
+    }
+
+    .vector__panda {
+      left: 71%;
+      top: 0.48%;
+    }
+  }
+}
+
+// desktop
+@media screen and (min-width: 1280px) {
+
+  .map {
+    margin: 30px 250px 45px;
+    width: 1200px;
+    height: 500px;
+
+    .mapVector {
+      width: 66px;
+      height: 93px;
+
+      .eagle {
+        position: absolute;
+        width: 43px;
+        height: 43px;
+        left: 11px;
+        top: 11px;
+      }
+
+      .crocodille {
+        position: absolute;
+        width: 43px;
+        height: 43px;
+        left: 11px;
+        top: 11px;
+      }
+
+      .monkey {
+        position: absolute;
+        width: 43px;
+        height: 43px;
+        left: 12px;
+        top: 10px;
+      }
+
+      .panda {
+        position: absolute;
+        width: 43px;
+        height: 43px;
+        left: 17.53%;
+        top: 11.77%;
+      }
+    }
+
+    .active-vector {
+      width: 66px;
+      height: 93px;
+    }
+
+    .vector__eagle {
+      left: 14.58%;
+      right: 14.58%;
+      top: 15%;
+      bottom: 0%;
+    }
+
+    .vector__croc {
+      position: absolute;
+      left: 20.33%;
+      top: 21.85%;
+    }
+
+    .vector__monkey {
+      position: absolute;
+      left: 47.67%;
+      top: 37.66%;
+    }
+
+    .vector__panda {
+      left: 73%;
+      top: 15.48%;
+    }
+  }
+
+  .button {
+    margin: 0 685px 100px;
+  }
+}

@@ -43,6 +43,65 @@ import LeftMenuArrowTop from './assets/left-menu/VectorTop.png';
 import LeftMenuArrowBottom from './assets/left-menu/Vectorbottom.png';
 import CountryZooVideo from './assets/Zoos-video/small-video.png';
 
+import MapPagePanda from './assets/left-menu/panda.png';
+import MapPageEagle from './assets/left-menu/eagle.png';
+import MapPageCroc from './assets/left-menu/croc.png';
+import MapPageMonkey from './assets/left-menu/monkey.png';
+
+export const MAP_PAGE_BLOCK = [
+  {
+    imgUrl: MapPagePanda,
+    alt: 'panda'
+  },
+  {
+    imgUrl: MapPageEagle,
+    alt: 'eagle'
+  },
+  {
+    imgUrl: MapPageCroc,
+    alt: 'croc'
+  },
+  {
+    imgUrl: MapPageMonkey,
+    alt: 'monkey'
+  }
+]
+
+export const MAP_PAGE_GALLERY = [
+  {
+    imgUrl: LeftMenuPanda,
+    alt: 'panda'
+  },
+  {
+    imgUrl: LeftMenuEagle,
+    alt: 'eagle'
+  },
+  {
+    imgUrl: LeftMenuCroc,
+    alt: 'croc'
+  },
+  {
+    imgUrl: LeftMenuMonkey,
+    alt: 'monkey'
+  },
+  {
+    imgUrl: LeftMenuEleph,
+    alt: 'eleph'
+  },
+  {
+    imgUrl: LeftMenuLeo,
+    alt: 'leo'
+  },
+  {
+    imgUrl: LeftMenuZebra,
+    alt: 'zebra'
+  },
+  {
+    imgUrl: LeftMenuTiger,
+    alt: 'tiger'
+  }
+]
+
 export const LEFT_MENU_ARROW = {
     LeftMenuArrowTop: LeftMenuArrowTop,
     LeftMenuArrowBottom: LeftMenuArrowBottom,

@@ -1,7 +1,5 @@
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer/Footer';
-import { COUNTRY_ZOO_VODEO } from '../constants';
-
 
 import './CountryZoo.scss';
 import { CountryZooLeftAside } from '../sliders/country-zoo-aside/CountryZooLeftAside';

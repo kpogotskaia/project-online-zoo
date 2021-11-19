@@ -1,14 +1,20 @@
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer/Footer';
+import { Heading } from '../components/Block-heading/BlockHeading';
+import { MapPageGallery } from '../sliders/map-page';
+import { SectionWrapper } from '../components/SectionWrapper/index';
 
-import './ChooseFavorite.scss';
+import buttonIcon from './../assets/buttonIcon.png'
+
+import styles from './ChooseFavorite.module.scss';
+import { Button } from '../components/Button';
+import { MapPageBlock } from '../components/Map-page-block';
 
 export const ChooseFavorite = () => ([
   <Header key="0" />,
-  <section key="1" className="choose-section">
-    <div className="container">
-      <h1>Choose your favorite</h1>
-      <p>
+  <SectionWrapper key="1" className={styles.ChooseFavorite}>
+      <Heading name='Choose your favorite'/>
+      <p className={styles.pharagraphSection}>
         As a voice for wildlife, we are devastated
         by the impact of the 2020 Australian bushfires
         on precious species and their habitat, and we
@@ -23,51 +29,11 @@ export const ChooseFavorite = () => ([
         by the impact of the 2020 Australian bushfires on
         precious species and their habitat.
       </p>
-      <div className="gallery">
-        <div className="choose-gallery">
-          <div><img className="left-arrow" src="assets/leftArr.png" alt="left-arrow" /></div>
-          <img className="choose-gallery__img monkey" src="assets/choose-gallery/monkey.png" alt="monkey" />
-          <img className="choose-gallery__img panda active" src="assets/choose-gallery/panda.png" alt="panda" />
-          <img className="choose-gallery__img crocodille" src="assets/choose-gallery/croc.png" alt="crocodille" />
-          <img className="choose-gallery__img eagle" src="assets/choose-gallery/eagle.png" alt="eagle" />
-          <img className="choose-gallery__img tiger" src="assets/choose-gallery/tiger.png" alt="tiger" />
-          <img className="choose-gallery__img elephant" src="assets/choose-gallery/eleph.png" alt="elephant" />
-          <img className="choose-gallery__img lew" src="assets/choose-gallery/lew.png" alt="lew" />
-          <img className="choose-gallery__img zebra" src="assets/choose-gallery/zebra.png" alt="zebra" />
-          <div><img className="right-arrow" src="assets/rightArr.png" alt="right-arrow" /></div>
-        </div>
 
-        <div className="gallery__scroll">
-          <span>02/</span>
-          <span>08</span>
-          <div className="gallery__scroll-line">
-            <div className="gallery__scroll-line-button"></div>
-          </div>
-        </div>
-      </div>
+      <MapPageGallery />
+      <MapPageBlock />
+      <Button name='watch online' icon={buttonIcon}/>
 
-      <div className="map">
-        <div className="map-vector vector__eagle">
-          <img className="eagle" src="assets/vector/eagle.png" alt="" />
-        </div>
-        <div className="map-vector vector__croc">
-          <img className="crocodille" src="assets/vector/croc.png" alt="" />
-        </div>
-        <div className="map-vector vector__monkey">
-          <img className="monkey" src="assets/vector/monkey.png" alt="" />
-        </div>
-        <div className="map-vector vector__panda active-vector">
-          <img className="panda" src="assets/vector/panda.png" alt="" />
-        </div>
-      </div>
-
-      <button className="button">
-        watch online
-        <div className="button__play-icon">
-          <span></span>
-        </div>
-      </button>
-    </div>
-  </section>,
+  </SectionWrapper>,
   <Footer key="2" />
 ]);
