@@ -1,12 +1,11 @@
 import { Paginator, THEME} from '../../components/Paginator/Paginator';
-import React, {useState, useEffect} from "react";
+import React, {useState} from "react";
 import style from './style.module.scss';
 import { MAP_PAGE_GALLERY } from '../../constants';
 
 export const MapPageGallery = () => {
 
   const [selectedSlideIndex, setSelectedSlideIndex] = useState(1);
-  const [slides, setSlides] = useState(MAP_PAGE_GALLERY);
 
   return (
     <div className={style.gallery}>

@@ -4,164 +4,179 @@
 header {
   background: #FFFFFF;
   box-shadow: 0px 4px 8px rgba(44, 101, 77, 0.08);
+  padding: 25px 10px;
+
+  @include media-from-desktop-min {
+    padding: 25px 150px;
+  }
 }
 
-.container {
-  margin: 0 10px;
+.headerBlock {
+  position: fixed;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+}
 
-  .header {
-    position: relative;
-    display: flex;
-    justify-content: space-between;
+.headerLogo {
+  padding: -25px -10px;
 
-    &Logo {
-      text-decoration: none;
+  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+
+  span:first-child {
+    font-size: 36px;
+    font-weight: 900;
+    line-height: 42px;
+  }
+
+  span:nth-child(2) {
+    font-size: 18px;
+    font-weight: 900;
+    font-size: 18px;
+    line-height: 21px;
+    letter-spacing: 0.08em;
+  }
+}
+
+.headerMenuIcon {
+  position: absolute;
+  top: 25px;
+  right: 0;
+  display: block;
+  width: 40px;
+  height: 30px;
+  font-size: 0;
+  background: none;
+  border: none;
+  cursor: pointer;
+
+  @include media-from-desktop-min {
+    display: none;
+  }
+}
+
+.headerMenuIcon,
+.headerMenuIcon::before,
+.headerMenuIcon::after {
+  border-top: 3px solid #000;
+  -webkit-transition: all 0.3s;
+  -moz-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.headerMenuIcon::before,
+.headerMenuIcon::after {
+  position: absolute;
+  content: "";
+  display: block;
+  left: 0px;
+  right: 0;
+}
+
+.headerMenuIcon:before {
+  top: 7px;
+}
+
+.headerMenuIcon:after {
+  top: 17px;
+}
+
+.headerMenuIcon.opened {
+  border-top-color: transparent;
+}
+
+.headerMenuIcon.opened:after {
+  width: 40px;
+  height: 40px;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  transform: rotate(45deg);
+  top: 5px;
+  left: -10px;
+}
+
+.headerMenuIcon.opened:before {
+  width: 40px;
+  height: 40px;
+  -webkit-transform: rotate(-45deg);
+  -moz-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  top: 5px;
+  left: 15px;
+}
+
+.headerMenuContainer {
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 97px;
+  left: 0;
+  z-index: 100;
+  position: fixed;
+
+  ul {
+    height: 100%;
+    list-style: none;
+
+    @include media-from-desktop-min {
       display: flex;
-      flex-direction: column;
-      padding: 30px 0;
-
-      span:first-child {
-        font-size: 36px;
-        font-weight: 900;
-        line-height: 42px;
-      }
-
-      span:nth-child(2) {
-        font-size: 18px;
-        font-weight: 900;
-        font-size: 18px;
-        line-height: 21px;
-        letter-spacing: 0.08em;
-      }
+      width: 45%;
+      margin-left: 180px;
+      justify-content: space-between;
     }
 
-    &MenuIcon {
-      display: block;
-      font-size: 0;
-      background: none;
-      border: none;
-      width: 30px;
-      height: 25px;
-      position: relative;
-      cursor: pointer;
-      top: 53px;
-    }
-
-    &MenuIcon,
-    &MenuIcon::before,
-    &MenuIcon::after {
-      border-top: 3px solid #000;
-      -webkit-transition: all 0.3s;
-      -moz-transition: all 0.3s;
-      transition: all 0.3s;
-    }
-
-    &MenuIcon::before,
-    &MenuIcon::after {
-      position: absolute;
-      content: "";
-      display: block;
-      left: 0px;
-      right: 0;
-    }
-
-    &MenuIcon:before {
-      top: 7px;
-    }
-
-    &MenuIcon:after {
-      top: 17px;
-    }
-
-    &MenuIcon.opened {
-      border-top-color: transparent;
-    }
-
-    &MenuIcon.opened:after {
-      width: 20px;
-      height: 20px;
-      -webkit-transform: rotate(45deg);
-      -moz-transform: rotate(45deg);
-      transform: rotate(45deg);
-      top: 60px;
-      left: -47px;
-    }
-
-    &MenuIcon.opened:before {
-      width: 20px;
-      height: 20px;
-      -webkit-transform: rotate(-45deg);
-      -moz-transform: rotate(-45deg);
-      transform: rotate(-45deg);
-      top: 60px;
-      left: -35px;
-    }
-
-    /*styles for menu container*/
-    &MenuContainer {
-      padding-top: 110px;
-      width: 100%;
-
-      ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-      }
-    }
-
-    &MenuContainer.closed {
-      display: none;
-    }
-
-    &MenuContainer.opened {
-      display: block;
-    }
-
-    &Revers {
-      width: 54px;
-      height: 30px;
-      background: #f2f2f2;
-      border-radius: 190px;
-      margin-top: 50px;
-
-      &Btn {
-        width: 20px;
-        height: 20px;
-        background: $white;
-        box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
-        border-radius: 50%;
-        margin: 4.5px 0 0 5px;
-      }
+    @include media-from-desktop {
+      display: flex;
+      width: 45%;
+      margin-left: 380px;
+      justify-content: space-between;
     }
   }
 
   @include media-from-desktop-min {
-    margin: 0 150px;
+    display: block;
+    top: 25px;
+    left: auto;
+  }
+}
 
-    .header {
-      display: flex;
-      justify-content: space-between;
+.headerMenuContainer.closed {
+  display: none;
 
-      &MenuIcon {
-        display: none;
-      }
+  @include media-from-desktop-min {
+    display: block;
+  }
+}
 
-      &MenuContainer {
-        padding-top: 45px;
-        width: 100%;
+.headerMenuContainer.opened {
+  display: block;
+}
 
-        ul {
-          margin: 0 450px;
-          display: flex;
-          justify-content: space-between;
-          list-style: none;
-          padding: 0;
-        }
-      }
+.revers {
+  position: absolute;
+  top: 23px;
+  right: 110px;
+  width: 54px;
+  height: 30px;
+  background: #f2f2f2;
+  border-radius: 190px;
 
-      &MenuContainer.closed {
-        display: block;
-      }
-    }
+  .reversBtn {
+    width: 20px;
+    height: 20px;
+    background: $white;
+    box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
+    border-radius: 50%;
+    margin: 4.5px 0 0 5px;
+  }
+
+  @include media-from-tablet {
+    right: 280px;
+  }
+
+  @include media-from-desktop-min {
+    right: 0;
   }
 }

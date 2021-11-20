@@ -48,6 +48,29 @@ import MapPageEagle from './assets/left-menu/eagle.png';
 import MapPageCroc from './assets/left-menu/croc.png';
 import MapPageMonkey from './assets/left-menu/monkey.png';
 
+export const ROUTES = [
+  {
+    link: '/about',
+    label: 'About'
+  },
+  {
+    link: '/zoos',
+    label: 'Zoos'
+  },
+  {
+    link: '/map',
+    label: 'Map'
+  },
+  {
+    link: '/contact',
+    label: 'Contact Us'
+  },
+  {
+    link: '/design',
+    label: 'Design'
+  },
+];
+
 export const MAP_PAGE_BLOCK = [
   {
     imgUrl: MapPagePanda,
