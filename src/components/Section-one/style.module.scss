@@ -1,0 +1,88 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.mainSection {
+  height: 669px;
+  background: linear-gradient(rgba(119, 119, 119, 0.719), rgba(0, 0, 0, 0.541)), url("../../assets/glery1screen/wild.jpg");
+  background-size: cover;
+  position: relative;
+  overflow: hidden;
+
+  .container {
+    padding: 90px 10px 50px;
+
+    @include media-from-tablet {
+      padding: 120px 20px 50px;
+    }
+
+    .mainSectionHeading {
+      font-family: $font;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 46px;
+      line-height: 56px;
+      color: $white;
+      margin: 0 0 20px;
+
+      @include media-from-tablet {
+        font-size: 64px;
+        line-height: 75px;
+      }
+    
+      @include media-from-desktop-min {
+        right: 0;
+      }
+    }
+
+    .mainSectionSociales {
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (min-width: 640px) {
+  .mainSection {
+    height: 940px;
+
+      .mainSectionSociales {
+        position: absolute;
+        bottom: 60px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        a {
+          padding-bottom: 15px;
+        }
+      }    
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .mainSection {
+    height: 940px;
+
+    .container {
+      margin: 0 150px;
+
+      .mainSectionHeading {
+        padding: 205px 200px 50px 210px;
+        font-size: 90px;
+        line-height: 104px;
+      }
+
+      .mainSectionSociales {
+        position: absolute;
+        bottom: 100px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        a {
+          padding-bottom: 15px;
+        }
+      }
+    }
+  }
+}

@@ -115,7 +115,7 @@ header {
   z-index: 100;
 
   ul {
-    height: 100%;
+    height: auto;
     list-style: none;
 
     @include media-from-desktop-min {
@@ -130,10 +130,12 @@ header {
       width: 45%;
       margin-left: 380px;
       justify-content: space-between;
+
     }
   }
 
   @include media-from-desktop-min {
+    height: auto;
     display: block;
     top: 25px;
     left: auto;
