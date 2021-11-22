@@ -1,0 +1,19 @@
+name: Deploy gh-pages
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+    - name: Use Node.js 14.17.6
+      uses: actions/setup-node@v2
+      with:
+        node-version: 14.17.6
+        cache: 'npm'
+    - run: npm ci
+    - run: npm run build
+    - run: npm run deploy
