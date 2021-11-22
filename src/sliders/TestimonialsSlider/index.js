@@ -8,7 +8,7 @@ import styles from './style.module.scss';
 
 export const TestimonialsSlider = () => {
 
-  const [activeIndex, setActiveIndex] = useState(0);
+  const [activeIndex] = useState(0);
 
   return (
     <div className={styles.testimonialsSlider}>

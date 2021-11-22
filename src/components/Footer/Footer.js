@@ -1,6 +1,10 @@
-import './Footer.scss';
-import { SOCIAL_ICONS } from '../../constants';
+import { Link } from 'react-router-dom';
+
 import { Button } from '../Button';
+import { SOCIAL_ICONS } from '../../constants';
+import { ROUTES } from '../../navigation';
+
+import './Footer.scss';
 import ArrowImg from '../../assets/Arrow4.png';
 
 export const Footer = () => {
@@ -8,24 +12,19 @@ export const Footer = () => {
     <footer>
       <div className="container">
         <div className="footer">
-          <a href="#" className="footer__logo">
+          <Link to="/" className="footer__logo">
             <span>zoo</span>
             <span>online</span>
-          </a>
+          </Link>
           <nav className="footer__menu">
             <ul className="footer__menu-list">
-              <li className="footer__menu-list-item">
-                <a href="#">About</a>
-              </li>
-              <li className="footer__menu-list-item">
-                <a href="#">Zoos</a>
-              </li>
-              <li className="footer__menu-list-item">
-                <a href="#" className="">Map</a>
-              </li>
-              <li className="footer__menu-list-item">
-                <a href="#" className="">Design</a>
-              </li>
+              {ROUTES.map(route => (
+                <li key={route.label} className="footer__menu-list-item">
+                  <Link to={route.link}>
+                    {route.label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </nav>
         </div>
@@ -51,7 +50,7 @@ export const Footer = () => {
                 </label>
               </fieldset>
 
-              <a className="send-button">
+              <a href="mailto: abc@example.com" className="send-button">
                 <button>send</button>
                 <img src={ArrowImg} alt="arrow" />
               </a>

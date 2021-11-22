@@ -20,7 +20,7 @@
   &--active {
     display: flex;
     flex-direction: column;
-    justify-content: end;
+    justify-content: flex-end;
     padding: 10px;
     width: 210px;
     height: 300px;
@@ -58,8 +58,7 @@
     font-weight: 500;
     font-size: 10px;
     text-transform: uppercase;
-}
-
+  }
 }
 
 

@@ -7,7 +7,7 @@ import classes from './SliderFavoriteAnimal.module.scss';
 
 export const SliderFavoriteAnimal = () => {
 
-  const [selectedSlideIndex, setSelectedSlideIndex] = useState(1);
+  const [selectedSlideIndex] = useState(1);
 
   return (
     <div className={classes['slider']}>

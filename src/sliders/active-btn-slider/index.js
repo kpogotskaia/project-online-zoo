@@ -29,7 +29,7 @@ export const ActiveBtnSlider = () => {
           key={animal.alt}
           className={`
             ${classes['slider__slide']}
-            ${i === 1 ? classes['slider__slide--active'] : ''}
+            ${i === selectedSlideIndex ? classes['slider__slide--active'] : ''}
           `}
           style={{backgroundImage: `url('${animal.imgUrl}'`}}
           onClick={() => {

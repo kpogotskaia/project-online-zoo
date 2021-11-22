@@ -18,15 +18,13 @@ export const PayAndFeed = () => {
       </p>
 
       <div className={styles.blockDonation}>
-        {DONATION_STEPS.map((donation, i) => (
-          [
-          <div key={i} className={styles.charityCard}>
+        {DONATION_STEPS.map((donation, i) => [
+          <div key={`${i}0`} className={styles.charityCard}>
             <img src={donation.imgUrl} alt={donation.alt} />
             <h5>{donation.heading}</h5>
           </div>,
-          <img className={styles.donationArrow} src={DonationArrowImg} alt="arrow" />
-          ]
-        ))}
+          <img key={`${i}1`} className={styles.donationArrow} src={DonationArrowImg} alt="arrow" />
+        ])}
       </div>
 
       <Button name='donate'/>

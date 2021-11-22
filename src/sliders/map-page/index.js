@@ -5,7 +5,7 @@ import { MAP_PAGE_GALLERY } from '../../constants';
 
 export const MapPageGallery = () => {
 
-  const [selectedSlideIndex, setSelectedSlideIndex] = useState(1);
+  const [selectedSlideIndex] = useState(1);
 
   return (
     <div className={style.gallery}>
