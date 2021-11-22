@@ -2,7 +2,7 @@ import classNames from 'classnames';
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { HeaderLink } from '../HeaderLink';
-import { ROUTES } from '../../constants';
+import { ROUTES } from '../../navigation';
 import styles from './style.module.scss';
 
 export const Header = () => {
