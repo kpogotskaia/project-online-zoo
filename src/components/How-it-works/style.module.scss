@@ -1,0 +1,87 @@
+@import '../../variables';
+@import '../../mixins';
+
+.howItWorksPharagraph {
+  display: block;
+  font-family: $font;
+  margin: 20px auto 30px;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 16px;
+  color: $gray;
+
+  @include media-from-tablet {
+    margin: 30px auto;
+  }
+
+  @include media-from-desktop-min {
+    margin: 30px auto 15px;
+    padding: 0 80px;
+  }
+
+  @include media-from-desktop {
+    margin: 30px auto;
+    padding: 0 410px;
+  }
+}
+
+.benefits {
+  background: #F2F2F2;
+  margin: 50px -10px;
+  padding: 50px 0 50px;
+
+  .benefitsCard {
+    margin: 50px 10px;
+
+    @include media-from-tablet {
+      margin: 0px 160px 50px;
+    }
+
+    @include media-from-desktop-min {
+      margin: 0px 10px 50px;
+    }
+
+    @include media-from-desktop {
+      margin: 100px 15px 50px;
+    }
+
+    .benefitsBlockImg {
+      display: block;
+      margin: 0 auto;
+    }
+
+    .benefitsBlockHeading {
+      margin: 15px auto;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+    }
+
+    .benefitsBlockPharagraph {
+      text-align: center;
+      margin: 0 auto;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      color: $gray;
+    }
+  }
+
+  @include media-from-tablet {
+    margin: 70px -20px;
+  }
+
+  @include media-from-desktop-min {
+    margin: 70px -150px;
+    padding: 100px 150px 50px;
+    display: flex;
+  }
+
+  @include media-from-desktop {
+    margin: 100px -150px;
+    padding: 0 360px 50px;
+  }
+}
+

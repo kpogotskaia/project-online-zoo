@@ -1,0 +1,16 @@
+@import '../../mixins.scss';
+
+.sectionWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 10px;
+
+  @include media-from-tablet {
+    padding: 100px 20px;
+  }
+
+  @include media-from-desktop-min {
+    padding: 100px 150px;
+  }
+}
