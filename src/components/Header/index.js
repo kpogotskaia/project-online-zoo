@@ -13,7 +13,7 @@ export const Header = () => {
   return (
     <header>
       <div className={styles.headerBlock}>
-        <Link to="/" className={styles.headerLogo}>
+        <Link to="/" className={classNames(styles.headerLogo, openedClassName)}>
           <span>zoo</span>
           <span>online</span>
         </Link>
@@ -30,7 +30,7 @@ export const Header = () => {
             )}
           </ul>
         </nav>
-        <div className={styles.revers}>
+        <div className={classNames(styles.revers, openedClassName)}>
           <div className={styles.reversBtn}></div>
         </div>
       </div>
