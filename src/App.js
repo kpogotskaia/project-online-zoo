@@ -1,8 +1,8 @@
 import { Routes, Route, Navigate } from 'react-router-dom';
 
-import { HomePage } from './home-page/HomePage';
-import { CountryZoo } from './zoos-page/CountryZoo';
-import { ChooseFavorite } from './map-page/ChooseFavorite';
+import { HomePage } from './homePage/HomePage';
+import { CountryZoo } from './zoosPage/index';
+import { ChooseFavorite } from './mapPage/index';
 import { getPath } from './navigation';
 import { APP_PREFIX, APP_ROUTES } from './navigation';
 

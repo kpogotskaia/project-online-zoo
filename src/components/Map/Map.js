@@ -9,7 +9,7 @@ import VectorPandaImg from '../../assets/vector/panda.png';
 import TooltipEagleImg from '../../assets/vector/eagleTooltip.png';
 import buttonIcon from '../../assets/buttonIcon.png'
 import '../../assets/map.png';
-import { Heading } from '../Block-heading/BlockHeading';
+import { Heading } from '../BlockHeading/BlockHeading';
 
 
 export const Map = () => {

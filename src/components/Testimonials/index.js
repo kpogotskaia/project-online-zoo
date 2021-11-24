@@ -1,7 +1,7 @@
 import { SectionWrapper } from '../SectionWrapper';
 import { Button } from '../Button';
-import { TestimonialsSlider } from '../../sliders/TestimonialsSlider';
-import { Heading } from '../Block-heading/BlockHeading';
+import { TestimonialsSlider } from '../sliders/TestimonialsSlider';
+import { Heading } from '../BlockHeading/BlockHeading';
 
 import styles from './style.module.scss';
 
