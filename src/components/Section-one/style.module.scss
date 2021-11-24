@@ -8,11 +8,28 @@
   position: relative;
   overflow: hidden;
 
+  @include media-from-tablet {
+    height: 950px;
+  }
+
+  @include media-from-desktop-min {
+
+  }
+
   .container {
-    padding: 90px 10px 50px;
+    padding: 50px 10px 0;
 
     @include media-from-tablet {
-      padding: 120px 20px 50px;
+      padding: 90px 20px 0;
+    }
+
+    @include media-from-desktop-min {
+      padding: 90px 150px 0px;
+      margin-right: 125px;
+    }
+
+    @include media-from-desktop {
+      padding: 90px 360px 0px;
     }
 
     .mainSectionHeading {
@@ -22,66 +39,42 @@
       font-size: 46px;
       line-height: 56px;
       color: $white;
-      margin: 0 0 20px;
+      margin-bottom: 20px;
 
       @include media-from-tablet {
         font-size: 64px;
         line-height: 75px;
       }
-    
+
       @include media-from-desktop-min {
         right: 0;
+      }
+
+      @include media-from-desktop {
+        font-style: normal;
+        font-weight: 900;
+        font-size: 89px;
+        line-height: 104px;
       }
     }
 
     .mainSectionSociales {
       display: none;
-    }
-  }
-}
 
-
-@media screen and (min-width: 640px) {
-  .mainSection {
-    height: 940px;
-
-      .mainSectionSociales {
-        position: absolute;
-        bottom: 60px;
+      @include media-from-tablet {
+        bottom: 80px;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        position: absolute;
 
         a {
           padding-bottom: 15px;
         }
-      }    
-  }
-}
-
-@media screen and (min-width: 1280px) {
-  .mainSection {
-    height: 940px;
-
-    .container {
-      margin: 0 150px;
-
-      .mainSectionHeading {
-        padding: 205px 200px 50px 210px;
-        font-size: 90px;
-        line-height: 104px;
       }
 
-      .mainSectionSociales {
-        position: absolute;
-        bottom: 100px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        a {
-          padding-bottom: 15px;
-        }
+      @include media-from-desktop {
+        left: 150px;
       }
     }
   }

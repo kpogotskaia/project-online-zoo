@@ -1,10 +1,99 @@
 @import '../../variables.scss';
+@import '../../mixins.scss';
 
 .slider {
   position: absolute;
   left: 7%;
-  top: 50%;
+  top: 55%;
   bottom: 0;
+
+  &-slides {
+    top: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 15px;
+  }
+
+  &__slide {
+    $slide: &;
+
+    position: relative;
+    width: 115px;
+    height: 165px;
+    flex-shrink: 0;
+    margin: 0 1vw;
+    background-size: cover;
+    cursor: pointer;
+
+    &--active {
+      display: flex;
+      flex-direction: column;
+      justify-content: end;
+      padding: 10px;
+      width: 145px;
+      height: 205px;
+
+      #{$slide}-info {
+        display:block;
+      }
+
+      #{$slide}-btns {
+        display: flex;
+      }
+    }
+
+    &-info {
+      display: none;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 14px;
+      color: $white;
+    }
+
+    &-btns {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      margin: 3px 5px;
+      background: none;
+      color: $white;
+      font-weight: 500;
+      font-size: 10px;
+      text-transform: uppercase;
+
+      svg {
+        margin-right: 3px;
+
+        circle {
+          stroke: $white;
+        }
+
+        path {
+          fill: $white;
+        }
+      }
+
+      &:hover {
+        color: $focus-color;
+
+        svg {
+          circle {
+            stroke: $focus-color;
+          }
+
+          path {
+            fill: $focus-color;
+          }
+        }
+      }
+    }
+  }
 
   &__line {
     position: absolute;
@@ -13,6 +102,14 @@
     right: -10vw;
     height: 0;
     border: 1px solid $light-gray;
+
+    @include media-from-tablet {
+      left: -10vw;
+    }
+
+    @include media-from-desktop-min {
+      left: -5vw;
+    }
 
     &-ellipse {
       margin: -6px 0 0 -8px;
@@ -30,29 +127,67 @@
       }
     }
   }
+
+  @include media-from-tablet {
+    top: 43%;
+    left: 18%;
+  }
+
+  @include media-from-desktop-min {
+    left: 51%;
+  }
 }
 
 @media screen and (min-width: 640px) {
-  .slider {
-    top: 43%;
-    left: 18%;
+  .slider__slide {
+    width: 180px;
+    height: 260px;
+    margin: 0 2vw;
 
-    &__line {
-      left: -10vw;
+    &--active {
+      width: 245px;
+      height: 352px;
+    }
+
+    &-info {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &-btns {
+      flex-direction: row;
+    }
+
+    &-btn {
+      font-size: 12px;
     }
   }
 }
 
 @media screen and (min-width: 1280px) {
-  .slider {
-    left: 51%;
+  .slider-slides {
+    display: flex;
+    justify-content: space-between;
+  }
 
-    &__line {
-      left: -5vw;
+  .slider__slide {
+    width: 140px;
+    height: 205px;
+    margin: 0 1vw;
+
+    &--active {
+      width: 245px;
+      height: 350px;
     }
 
-  }
-  .paginator {
-    margin: 30px 200px;
+    &-info {
+      font-size: 14px;
+      line-height: 16px;
+    }
+
+    &-btn {
+      font-size: 12px;
+    }
   }
 }
+
