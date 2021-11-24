@@ -1,17 +1,17 @@
 {
   "files": {
-    "main.css": "/project-online-zoo/static/css/main.fbb389de.chunk.css",
-    "main.js": "/project-online-zoo/static/js/main.c3657145.chunk.js",
-    "main.js.map": "/project-online-zoo/static/js/main.c3657145.chunk.js.map",
-    "runtime-main.js": "/project-online-zoo/static/js/runtime-main.6e265cc9.js",
-    "runtime-main.js.map": "/project-online-zoo/static/js/runtime-main.6e265cc9.js.map",
-    "static/js/2.6b73a12a.chunk.js": "/project-online-zoo/static/js/2.6b73a12a.chunk.js",
-    "static/js/2.6b73a12a.chunk.js.map": "/project-online-zoo/static/js/2.6b73a12a.chunk.js.map",
-    "static/js/3.cd063cb8.chunk.js": "/project-online-zoo/static/js/3.cd063cb8.chunk.js",
-    "static/js/3.cd063cb8.chunk.js.map": "/project-online-zoo/static/js/3.cd063cb8.chunk.js.map",
+    "main.css": "/project-online-zoo/static/css/main.f6dd2f61.chunk.css",
+    "main.js": "/project-online-zoo/static/js/main.831c6279.chunk.js",
+    "main.js.map": "/project-online-zoo/static/js/main.831c6279.chunk.js.map",
+    "runtime-main.js": "/project-online-zoo/static/js/runtime-main.5d38d90e.js",
+    "runtime-main.js.map": "/project-online-zoo/static/js/runtime-main.5d38d90e.js.map",
+    "static/js/2.293c3d57.chunk.js": "/project-online-zoo/static/js/2.293c3d57.chunk.js",
+    "static/js/2.293c3d57.chunk.js.map": "/project-online-zoo/static/js/2.293c3d57.chunk.js.map",
+    "static/js/3.c855c6be.chunk.js": "/project-online-zoo/static/js/3.c855c6be.chunk.js",
+    "static/js/3.c855c6be.chunk.js.map": "/project-online-zoo/static/js/3.c855c6be.chunk.js.map",
     "index.html": "/project-online-zoo/index.html",
-    "static/css/main.fbb389de.chunk.css.map": "/project-online-zoo/static/css/main.fbb389de.chunk.css.map",
-    "static/js/2.6b73a12a.chunk.js.LICENSE.txt": "/project-online-zoo/static/js/2.6b73a12a.chunk.js.LICENSE.txt",
+    "static/css/main.f6dd2f61.chunk.css.map": "/project-online-zoo/static/css/main.f6dd2f61.chunk.css.map",
+    "static/js/2.293c3d57.chunk.js.LICENSE.txt": "/project-online-zoo/static/js/2.293c3d57.chunk.js.LICENSE.txt",
     "static/media/anm.afce69bd.png": "/project-online-zoo/static/media/anm.afce69bd.png",
     "static/media/cat.583fc01b.png": "/project-online-zoo/static/media/cat.583fc01b.png",
     "static/media/croc.b524878a.png": "/project-online-zoo/static/media/croc.b524878a.png",
@@ -40,9 +40,9 @@
     "static/media/zebra.7e3af7f6.png": "/project-online-zoo/static/media/zebra.7e3af7f6.png"
   },
   "entrypoints": [
-    "static/js/runtime-main.6e265cc9.js",
-    "static/js/2.6b73a12a.chunk.js",
-    "static/css/main.fbb389de.chunk.css",
-    "static/js/main.c3657145.chunk.js"
+    "static/js/runtime-main.5d38d90e.js",
+    "static/js/2.293c3d57.chunk.js",
+    "static/css/main.f6dd2f61.chunk.css",
+    "static/js/main.831c6279.chunk.js"
   ]
 }
