@@ -25,9 +25,7 @@ export const SliderFavoriteAnimal = () => {
   const [slides, setSlides] = useState(ANIMALS);
 
   return (
-    <div
-      className={classes['slider']}
-    >
+    <div className={classes['slider']}>
       <div className={classes['slider__line']}>
         <div className={classes['slider__line-ellipse']}>
           <div></div>

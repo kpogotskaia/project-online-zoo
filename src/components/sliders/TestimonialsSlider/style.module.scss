@@ -2,6 +2,7 @@
 @import '../../../mixins';
 
 .testimonialsSlider {
+  position: relative;
   align-self: start;
   width: calc(100% + 20px);
   margin: 0 -10px;
@@ -17,25 +18,39 @@
     margin: 0 -150px;
   }
 
-/*   .arrowLeft {
-    position: relative;
-    top: 36%;
-    left: 17%;
-    display: block;
-    font-family: 'Poppins', sans-serif;
+  .arrowLeft, .arrowRight {
+    display: none;
+    color: $gray;
     font-size: 40px;
-    font-weight: 500;
+    font-weight: 900;
+
+    @include media-from-desktop-min {
+      display: block;
+      position: absolute;
+    }
+  }
+
+  .arrowLeft {
+    @include media-from-desktop-min {
+      left: 8%;
+      top: 35%;
+    }
+
+    @include media-from-desktop {
+      left: 15%;
+    }
   }
 
   .arrowRight {
-    position: relative;
-    top: 36%;
-    right: 16%;
-    display: block;
-    font-family: 'Poppins', sans-serif;
-    font-size: 40px;
-    font-weight: 500;
-  } */
+    @include media-from-desktop-min {
+      right: 8%;
+      top: 37%;
+    }
+
+    @include media-from-desktop {
+      right: 15%;
+    }
+  }
 
   .slides {
     display: flex;
@@ -52,6 +67,10 @@
       margin: 36px 10.8% 40px;
       padding: 20px;
       overflow: hidden;
+    }
+
+    @include media-from-desktop {
+      margin: 36px 17.8% 40px;
     }
   }
 
@@ -119,5 +138,12 @@
     @include media-from-desktop-min {
       margin-left: 40px;
     }
+  }
+
+  .paginatorSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
   }
 }

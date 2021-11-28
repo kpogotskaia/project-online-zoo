@@ -6,6 +6,7 @@
 
   .container {
     padding: 0 10px;
+    position: relative;
 
     @include media-from-tablet {
       padding: 0 20px;
@@ -17,32 +18,6 @@
 
     @include media-from-desktop {
       padding: 0 360px;
-    }
-  }
-
-  .arrowLeft, .arrowRight {
-    display: none;
-
-    @include media-from-desktop-min {
-      .arrowLeft {
-        position: absolute;
-        top: 36%;
-        left: 17%;
-        display: block;
-        font-family: 'Poppins', sans-serif;
-        font-size: 40px;
-        font-weight: 500;
-      }
-
-      .arrowRight {
-        position: absolute;
-        top: 36%;
-        right: 16%;
-        display: block;
-        font-family: 'Poppins', sans-serif;
-        font-size: 40px;
-        font-weight: 500;
-      }
     }
   }
 

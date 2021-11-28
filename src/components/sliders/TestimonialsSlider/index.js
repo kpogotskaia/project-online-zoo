@@ -25,11 +25,13 @@ export const TestimonialsSlider = () => {
         ))}
       </div>
 
-      <Paginator
-        amount={TESTIMONIALS.length}
-        selected={activeIndex + 1}
-        theme={THEME.DARK}
-      />
+      <div className={styles.paginatorSection}>
+        <Paginator
+          amount={TESTIMONIALS.length}
+          selected={activeIndex + 1}
+          theme={THEME.DARK}
+        />
+      </div>
     </div>
   );
 };
