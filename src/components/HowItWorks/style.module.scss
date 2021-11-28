@@ -28,22 +28,21 @@
 
 .benefits {
   background: #F2F2F2;
-  margin: 50px -10px;
-  padding: 50px 0 50px;
+  margin: 50px -10px 0;
 
   .benefitsCard {
     margin: 50px 10px;
 
     @include media-from-tablet {
-      margin: 0px 160px 50px;
+      margin: 100px 160px;
     }
 
     @include media-from-desktop-min {
-      margin: 0px 10px 50px;
+      margin: 100px 10px;
     }
 
     @include media-from-desktop {
-      margin: 100px 15px 50px;
+      margin: 100px 15px;
     }
 
     .benefitsBlockImg {
@@ -70,18 +69,17 @@
   }
 
   @include media-from-tablet {
-    margin: 70px -20px;
   }
 
   @include media-from-desktop-min {
-    margin: 70px -150px;
-    padding: 100px 150px 50px;
     display: flex;
+    margin: 100px -150px 0;
+    padding: 0 150px;
   }
 
   @include media-from-desktop {
-    margin: 100px -150px;
-    padding: 0 360px 50px;
+    padding: 0 360px;
+    margin: 100px -150px 0;
   }
 }
 

@@ -8,26 +8,28 @@ import styles from './style.module.scss';
 
 export const PayAndFeed = () => {
   return (
-    <SectionWrapper className={styles.payAndFeed}>
-      <Heading name='Pay and Feed'/>
+    <div className={styles.payAndFeed}>
+      <SectionWrapper>
+          <Heading name='Pay and Feed'/>
 
-      <p className={styles.charityPharagraph}>
-        The opportunity to easily and naturally
-        (but as often as possible) donate to the
-        needs of animals that you like.
-      </p>
+          <p className={styles.charityPharagraph}>
+            The opportunity to easily and naturally
+            (but as often as possible) donate to the
+            needs of animals that you like.
+          </p>
 
-      <div className={styles.blockDonation}>
-        {DONATION_STEPS.map((donation, i) => [
-          <div key={`${i}0`} className={styles.charityCard}>
-            <img src={donation.imgUrl} alt={donation.alt} />
-            <h5>{donation.heading}</h5>
-          </div>,
-          <img key={`${i}1`} className={styles.donationArrow} src={DonationArrowImg} alt="arrow" />
-        ])}
-      </div>
+          <div className={styles.blockDonation}>
+            {DONATION_STEPS.map((donation, i) => [
+              <div key={`${i}0`} className={styles.charityCard}>
+                <img src={donation.imgUrl} alt={donation.alt} />
+                <h5>{donation.heading}</h5>
+              </div>,
+              <img key={`${i}1`} className={styles.donationArrow} src={DonationArrowImg} alt="arrow" />
+            ])}
+          </div>
 
-      <Button name='donate'/>
-    </SectionWrapper>
+          <Button name='donate'/>
+      </SectionWrapper>
+    </div>
   );
 };

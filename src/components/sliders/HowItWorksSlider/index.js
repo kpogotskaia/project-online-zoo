@@ -33,11 +33,13 @@ export const HowItWorksSlider = () => {
           <img src={IMG[nextImgIndex]} alt="next" />
         </div>
 
+        <div className={styles.paginatorSection}>
         <Paginator
           amount={IMG.length}
           selected={activeIndex + 1}
           theme={THEME.DARK}
         />
+        </div>
       </div>
   );
 };

@@ -9,6 +9,7 @@
     overflow: hidden;
     position: relative;
     border-radius: 5px;
+    margin-bottom: 30px;
 
     img {
       object-fit: cover;
@@ -32,3 +33,9 @@
   }
 }
 
+.paginatorSection {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}

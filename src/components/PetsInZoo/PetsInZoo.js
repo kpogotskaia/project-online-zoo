@@ -1,22 +1,20 @@
-import classes from './PetsInZoo.module.scss';
+import styles from './style.module.scss';
 
 import { Button } from '../Button';
 import { PetsInZooSlider } from '../sliders/petsInZoo/index';
-import { ARROW } from '../../constants';
 import { Heading } from '../BlockHeading/BlockHeading';
 
 
 export const PetsInZoo = () => {
   return (
-    <section className={classes['section-three']}>
-      <div className={classes['arrow-left']}>{ARROW.arrowLeft}</div>
-      <div className={classes['container']}>
+    <section className={styles.PetsInZoo}>
+
+      <div className={styles.container}>
         <Heading name='Pets in Zoo'/>
         <PetsInZooSlider />
         <Button name='choose your favorite' />
-
       </div>
-      <div className={classes['arrow-right']}>{ARROW.arrowRight}</div>
+      
     </section>
   );
 };
