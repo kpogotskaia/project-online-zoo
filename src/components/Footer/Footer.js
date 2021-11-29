@@ -42,11 +42,11 @@ export const Footer = () => {
                 </label>
                 <label className="input-message">
                   <input type="text" placeholder="" />
-                  <span className="">Please enter your message</span>
+                    <span className="">Please enter your message</span>
                 </label>
                 <label className="checkbox">
                   <input type="checkbox" name="checkbox" value="value" />
-                  I agree to the processing of Personal Data
+                    I agree to the processing of Personal Data
                 </label>
               </fieldset>
 
