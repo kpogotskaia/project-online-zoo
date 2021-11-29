@@ -74,11 +74,13 @@ export const SliderFavoriteAnimal = () => {
         )}
       </div>
 
-      <Paginator className={classes['paginatorSlider']}
-        amount={ANIMALS.length}
-        selected={selectedSlideIndex + 1}
-        theme={THEME.LIGHT}
-      />
+      <div className={classes['paginatorSlider']}>
+        <Paginator
+          amount={ANIMALS.length}
+          selected={selectedSlideIndex + 1}
+          theme={THEME.LIGHT}
+        />
+      </div>
     </div>
   );
 };

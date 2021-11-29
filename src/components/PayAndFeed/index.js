@@ -3,6 +3,7 @@ import { DONATION_STEPS } from '../../constants';
 import { SectionWrapper } from '../SectionWrapper';
 import DonationArrowImg from '../../assets/donation/Arrow.png';
 import { Heading } from '../BlockHeading/BlockHeading';
+import { DonationPopup } from '../../donationPopup/DonationPopup';
 
 import styles from './style.module.scss';
 
@@ -28,8 +29,13 @@ export const PayAndFeed = () => {
             ])}
           </div>
 
-          <Button name='donate'/>
+          <Button name='donate'
+            onClick={() => {
+              
+            }}
+          />
       </SectionWrapper>
     </div>
   );
 };
+
