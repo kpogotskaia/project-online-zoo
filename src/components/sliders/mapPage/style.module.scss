@@ -53,7 +53,7 @@
           width: 60px;
           height: 60px;
 
-          @include media-from-tablet {
+          @include media-from-tablet-min {
             width: 108px;
             height: 108px;
           }
@@ -67,7 +67,7 @@
         width: 85px;
         height: 85px;
 
-        @include media-from-tablet {
+        @include media-from-tablet-min {
           margin: 0px 10px 0 -5px;
           width: 158px;
           height: 158px;
@@ -78,7 +78,7 @@
           width: 75px;
           height: 75px;
 
-          @include media-from-tablet {
+          @include media-from-tablet-min {
             margin: 7px;
             width: 138px;
             height: 138px;

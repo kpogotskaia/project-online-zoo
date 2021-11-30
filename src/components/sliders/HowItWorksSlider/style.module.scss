@@ -19,7 +19,7 @@
       box-shadow: none !important;
     }
 
-    @include media-from-tablet {
+    @include media-from-tablet-min {
       max-width: 630px;
     }
 

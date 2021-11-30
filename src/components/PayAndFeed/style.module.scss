@@ -9,7 +9,7 @@
 .charityPharagraph {
   display: none;
 
-  @include media-from-tablet {
+  @include media-from-tablet-min {
     display: block;
     margin: 15px 40px;
     text-align: center;
@@ -98,7 +98,7 @@
     }
   }
 
-  @include media-from-tablet {
+  @include media-from-tablet-min {
     width: 100%;
   }
 

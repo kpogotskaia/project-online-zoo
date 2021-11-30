@@ -1,17 +1,9 @@
 import { useState } from 'react';
 import { Paginator, THEME } from '../../Paginator/index';
 import { ANIMALS } from '../../../constants';
+import { clamp } from '../../../utils';
 
 import classes from './SliderFavoriteAnimal.module.scss';
-
-const clamp = (cur, shift, minInclusive, maxExclusive) => {
-  const target = cur + shift;
-  return target >= minInclusive
-    ? target < maxExclusive
-      ? target
-      : minInclusive
-    : maxExclusive + target;
-};
 
 const reArrangeItems = (arr, shift) =>
   arr.reduce((target, item, i) => {

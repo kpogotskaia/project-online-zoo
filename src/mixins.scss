@@ -1,11 +1,35 @@
-@mixin media-from-tablet {
+@mixin media-from-tablet-min {
   @media screen and (min-width: 640px) {
+    @content;
+  }
+}
+
+@mixin media-tablet-min {
+  @media screen and (min-width: 641px) and (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin media-till-tablet {
+  @media screen and (max-width: 959px) {
+    @content;
+  }
+}
+
+@mixin media-from-tablet {
+  @media screen and (min-width: 960px) {
     @content;
   }
 }
 
 @mixin media-from-desktop-min {
   @media screen and (min-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin media-from-desktop-mid {
+  @media screen and (min-width: 1440px) {
     @content;
   }
 }
