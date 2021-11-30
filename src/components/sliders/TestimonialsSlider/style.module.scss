@@ -8,7 +8,15 @@
   margin: 0 -10px;
   overflow: hidden;
 
-  @include media-from-tablet {
+  &:hover {
+    .slidesContainer {
+      .arrow {
+        visibility: visible;
+      }
+    }
+  }
+
+  @include media-from-tablet-min {
     width: calc(100% + 40px);
     margin: 0 -20px;
   }
@@ -18,85 +26,97 @@
     margin: 0 -150px;
   }
 
-  .arrowLeft, .arrowRight {
-    display: none;
-    color: $gray;
-    font-size: 40px;
-    font-weight: 900;
+  .slidesContainer {
+    position: relative;
+    max-width: 1280px;
+    margin: 36px auto 40px;
 
-    @include media-from-desktop-min {
-      display: block;
-      position: absolute;
-    }
-  }
-
-  .arrowLeft {
-    @include media-from-desktop-min {
-      left: 8%;
-      top: 35%;
-    }
-
-    @include media-from-desktop {
-      left: 15%;
-    }
-  }
-
-  .arrowRight {
-    @include media-from-desktop-min {
-      right: 8%;
-      top: 37%;
-    }
-
-    @include media-from-desktop {
-      right: 15%;
-    }
-  }
-
-  .slides {
-    display: flex;
-    margin: 36px 0 40px;
-    padding: 10px;
-    justify-content: space-between;
-    user-select: none;
-
-    @include media-from-tablet {
-      padding: 10px 20px;
-    }
-
-    @include media-from-desktop-min {
-      margin: 36px 10.8% 40px;
-      padding: 20px;
+    .slides {
+      padding: 0 20px;
+      user-select: none;
       overflow: hidden;
+      margin: 0 auto;
+
+      @include media-tablet-min {
+        max-width: 640px;
+      }
     }
 
-    @include media-from-desktop {
-      margin: 36px 17.8% 40px;
+    .arrow {
+      visibility: hidden;
+      position: absolute;
+      color: $gray;
+      font-size: 40px;
+      font-weight: 900;
+      cursor: pointer;
+      user-select: none;
+      opacity: 0.5;
+      top: 50%;
+      width: 24px;
+      height: 24px;
+      background-image: url('../../../assets/arrRight.svg');
+      background-size: cover;
+
+      &:hover {
+        opacity: 1;
+      }
+
+      &Left {
+        transform: rotateY(180deg);
+        left: 3%;
+
+        @include media-from-desktop-mid {
+          left: -20px;
+        }
+      }
+
+      &Right {
+        right: 3%;
+
+        @include media-from-desktop-mid {
+          right: -20px;
+        }
+      }
     }
+  }
+
+  .slidesMove {
+    position: relative;
+    display: flex;
+    transition: ease-out 0.4s;
   }
 
   .slide {
     background: $white;
-    box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
     border-radius: 5px;
     flex-shrink: 0;
+    margin: 20px 0;
     width: 100%;
 
-    @include media-from-desktop-min {
-      width: calc(50% - 10px);
+    &Active {
+      box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
     }
 
-      img {
-        width: 70px;
-        height: 70px;
-        display: block;
-        pointer-events: none;
-        margin: 50px auto;
-        border-radius: 50%;
+    @include media-from-tablet {
+      width: calc(50% - 10px);
 
-        @include media-from-tablet {
-          margin: 50px auto 20px;
-        }
+      &Active + .slide {
+        box-shadow: 2px 4px 15px rgba(6, 12, 70, 0.15);
       }
+    }
+
+    img {
+      width: 70px;
+      height: 70px;
+      display: block;
+      pointer-events: none;
+      margin: 50px auto;
+      border-radius: 50%;
+
+      @include media-from-tablet-min {
+        margin: 50px auto 20px;
+      }
+    }
 
     .name {
       text-align: center;
@@ -116,28 +136,18 @@
       line-height: 16px;
       color: $gray;
 
-      @include media-from-tablet {
+      @include media-from-tablet-min {
         margin: 20px 50px 110px;
       }
     }
   }
 
   .slide + .slide {
-    margin-left: 10px;
-
-    @include media-from-tablet {
-      margin-left: 20px;
-    }
-
-    @include media-from-desktop {
-      margin-left: 30px;
-    }
+    margin-left: 20px;
   }
 
-  .slide:nth-child(3) {
-    @include media-from-desktop-min {
-      margin-left: 40px;
-    }
+  .paginator {
+    margin: 30px auto;
   }
 
   .paginatorSection {
