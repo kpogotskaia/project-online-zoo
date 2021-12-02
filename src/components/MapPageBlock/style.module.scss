@@ -2,11 +2,15 @@
 @import '../../mixins';
 
 .map {
-  margin: 35px 10px 0;
-  height: 145px;
-  background: url('../../assets/map.png') no-repeat;
-  background-size: contain;
+  width: 100%;
+  height: 100%;
+  background: #F2F2F2;
   position: relative;
+
+  .mapImage {
+    width: 100%;
+    height: 100%;
+  }
 
   .mapVector {
     width: 34px;
