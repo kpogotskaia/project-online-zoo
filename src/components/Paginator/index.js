@@ -1,3 +1,5 @@
+import classNames from 'classnames';
+
 import './Paginator.scss';
 
 export const THEME = {
@@ -7,7 +9,7 @@ export const THEME = {
 
 export const Paginator = (props) => {
   return (
-    <div className="paginator">
+    <div className={classNames(props.className, 'paginator')}>
       <span>
         {props.selected}/<span className="amount-style">{props.amount}</span>
       </span>

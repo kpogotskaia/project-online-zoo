@@ -6,7 +6,7 @@
   align-items: center;
   padding: 50px 10px;
 
-  @include media-from-tablet {
+  @include media-from-tablet-min {
     padding: 100px 20px;
   }
 
