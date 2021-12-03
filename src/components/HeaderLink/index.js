@@ -14,6 +14,6 @@ export const HeaderLink = ({ to, label }) => {
       `}
       to={to}>
         {label}
-      </Link>
+    </Link>
   );
 };

@@ -26,7 +26,9 @@ export const Header = () => {
         <nav className={classNames(styles.headerMenuContainer, openedClassName)}>
           <ul>
             {ROUTES.map(({ link, label }) =>
-              <HeaderLink key={`${link}${label}`} to={link} label={label} />
+            <li key={`${link}${label}`} className={classNames(styles.item)}>
+              <HeaderLink to={link} label={label} />
+            </li>
             )}
           </ul>
         </nav>
