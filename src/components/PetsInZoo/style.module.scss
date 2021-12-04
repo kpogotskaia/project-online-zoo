@@ -8,8 +8,12 @@
     padding: 0 10px;
     position: relative;
 
-    @include media-from-tablet {
+    @include media-from-tablet-min {
       padding: 0 20px;
+    }
+
+    @include media-from-tablet {
+      padding: 0 30px;
     }
 
     @include media-from-desktop-min {

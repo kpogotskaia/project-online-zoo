@@ -13,3 +13,4 @@ export const Resizer = ({ Component }) => {
     <Component screenWidth={screenWidth} />
   );
 };
+

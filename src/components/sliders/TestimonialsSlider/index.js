@@ -47,7 +47,6 @@ export const TestimonialsSlider = () => {
               </div>
             ))}
           </div>
-
         </div>
         <div
           className={classNames(styles.arrow, styles.arrowLeft)}

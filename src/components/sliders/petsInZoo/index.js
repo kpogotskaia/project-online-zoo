@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { ANIMALS, ARROW } from '../../../constants';
+import { ANIMALS } from '../../../constants';
 import { Paginator, THEME } from '../../Paginator/index';
 
 import classes from './style.module.scss';
@@ -24,11 +24,23 @@ export const PetsInZooSlider = () => {
   const [selectedSlideIndex, setSelectedSlideIndex] = useState(1);
   const [slides, setSlides] = useState(ANIMALS);
 
-  return (
-    <div className={classes['slider']}>
-      <div className={classes['arrowLeft']}>{ARROW.arrowLeft}</div>
+  const changeSlideIndex = (shift) => {
+    setSelectedSlideIndex(clamp(selectedSlideIndex, shift, 1, ANIMALS.length));
+  };
 
+  return (
+      <div className={classes['slider']}>
         <div className={classes['slider-slides']}>
+          <div
+              className={classes['arrowLeft']}
+              onClick={e => changeSlideIndex(-1)}
+          ></div>
+
+          <div
+            className={classes['arrowRight']}
+            onClick={e => changeSlideIndex(1)}
+          ></div>
+
           {slides.map((animal, i) =>
             <div
               key={animal.alt}
@@ -70,16 +82,14 @@ export const PetsInZooSlider = () => {
           )}
         </div>
 
-      <div className={classes['arrowRight']}>{ARROW.arrowRight}</div>
-
-    <div className={classes['paginatorSection']}>
-      <Paginator
-          amount={ANIMALS.length}
-          selected={selectedSlideIndex}
-          theme={THEME.LIGHT}
-      />
-    </div>
-    </div>
+        <div className={classes['paginatorSection']}>
+          <Paginator
+              amount={ANIMALS.length}
+              selected={selectedSlideIndex}
+              theme={THEME.LIGHT}
+          />
+        </div>
+      </div>
   );
 };
 
