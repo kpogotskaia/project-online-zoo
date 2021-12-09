@@ -1,9 +1,21 @@
-import './DonationPopup.scss';
+import { Button } from "../Button";
+import React from "react";
+import { useState } from 'react';
+import styles from './style.module.scss';
+import classNames from 'classnames';
 
-export const DonationPopup = () => {
+export const RenderPopup = () => {
+  const [isOpened, setIsOpened] = useState(false);
+  const openedClassName = isOpened ? styles.opened : styles.closed;
 
-  return (
-    <div className="donation-popup is-hidden">
+  return ( [
+    <Button name='donate'
+      className={classNames(styles.buttonPopup)}
+      onClick={() => setIsOpened(!isOpened)}
+    />,
+    <div
+      className={classNames(styles.donationPopup, openedClassName)}
+    >
       <div className="donation-popup__wrapper">
         <div className="donation-popup__img"></div>
           <form className="donation_form">
@@ -71,5 +83,7 @@ export const DonationPopup = () => {
       <button className="js-donation-popup-close donation-popup__close"
       >×</button>
     </div>
+    ]
   );
 };
+

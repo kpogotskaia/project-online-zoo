@@ -13,13 +13,13 @@ export const Header = () => {
   return (
     <header>
       <div className={styles.headerBlock}>
-        <Link to="/" className={classNames(styles.headerLogo, openedClassName)}>
+        <Link to="/" className={classNames(styles.headerLogo)}>
           <span>zoo</span>
           <span>online</span>
         </Link>
 
         <span
-          className={classNames(styles.headerMenuIcon, openedClassName)}
+          className={classNames(styles.headerMenuIcon)}
           onClick={() => setIsOpened(!isOpened)}
         ></span>
 
@@ -32,7 +32,7 @@ export const Header = () => {
             )}
           </ul>
         </nav>
-        <div className={classNames(styles.revers, openedClassName)}>
+        <div className={classNames(styles.revers)}>
           <div className={styles.reversBtn}></div>
         </div>
       </div>

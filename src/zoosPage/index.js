@@ -1,37 +1,31 @@
 import { Header } from '../components/Header';
 import { Footer } from '../components/Footer/Footer';
-
-import './CountryZoo.scss';
 import { CountryZooLeftAside } from '../components/sliders/countryZooAside/CountryZooLeftAside';
 import { CountryZooVideo } from '../components/sliders/countryZooVideo/CountryZooVideo';
+import { Button } from '../components/Button';
+import { COUNTRY_ZOO_DESCRIPTION } from '../constants';
+
+import styles from './style.module.scss';
 
 export const CountryZoo = () => [
   <Header key="0" />,
-  <section key="1" className="info-zoo">
-    <div className="container">
-      <div className="info-zoo__content">
+  <section key="1" className={styles.infoZoo}>
+    <div className={styles.container}>
+      <div className={styles.infoZooContent}>
         <CountryZooLeftAside />
 
-        <div className="content">
+        <div className={styles.content}>
           <CountryZooVideo />
 
-          <div className="content-info">
-            <h5 className="content-info__heading">Population:</h5>
-            <p className="content-info__pharagraph">About 1,590 individuals</p>
-            <h5 className="content-info__heading">Habitat:</h5>
-            <p className="content-info__pharagraph">Temperate forests high in the mountains of southwest China</p>
-            <h5 className="content-info__heading">Diet:</h5>
-            <p className="content-info__pharagraph">
-              A panda's daily diet consists almost entirely
-              of the leaves, stems and shoots of
-              various bamboo species. Bamboo contains
-              very little nutritional value so pandas
-              must eat 12-38kg every day to meet their
-              energy needs.
-            </p>
-            <h5 className="content-info__heading">Donated</h5>
-            <p className="content-info__pharagraph">687.546$</p>
-            <button className="content-button">feed</button>
+          <div className={styles.contentInfo}>
+            {COUNTRY_ZOO_DESCRIPTION.map((info, i) => [
+              <div key={i}>
+                <h5 className={styles.heading}>{info.heading}</h5>
+                <p className={styles.pharagraph}>{info.desc}</p>
+              </div>
+            ])}
+
+            <Button className={styles.contentButton} name='feed'/>
           </div>
         </div>
       </div>
