@@ -15,6 +15,8 @@ export const TestimonialsSlider = () => {
     setActiveIndex(clamp(activeIndex, shift, 0, TESTIMONIALS.length));
   };
 
+  let curOffset = offset;
+
   return (
     <div className={styles.testimonialsSlider}>
       <div className={styles.slidesContainer}>
@@ -32,8 +34,9 @@ export const TestimonialsSlider = () => {
                     // 20 - horizontal margin
                     const nextOffset = e.offsetWidth + 20;
 
-                    if (offset !== nextOffset) {
+                    if (curOffset !== nextOffset) {
                       setOffset(nextOffset);
+                      curOffset = nextOffset;
                     }
                   }
                 }}
