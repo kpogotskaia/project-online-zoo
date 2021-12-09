@@ -49,6 +49,8 @@ import MapPageCroc from './assets/left-menu/croc.png';
 import MapPageMonkey from './assets/left-menu/monkey.png';
 
 
+export const HIDDEN_SCROLL = 'hidden-scroll';
+
 export const COUNTRY_ZOO_DESCRIPTION = [
   {
     heading: 'Population:',
