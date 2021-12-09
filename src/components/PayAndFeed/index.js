@@ -1,14 +1,16 @@
+import { DONATION_STEPS } from '../../constants';
+
 import { useState } from 'react';
 import classNames from 'classnames';
 
 import { Button } from '../Button';
 import { DONATION_STEPS, HIDDEN_SCROLL } from '../../constants';
+
 import { SectionWrapper } from '../SectionWrapper';
 import { Heading } from '../BlockHeading/BlockHeading';
-import { DonationPopup } from '../../donationPopup/DonationPopup';
+
 
 import styles from './style.module.scss';
-import DonationArrowImg from '../../assets/donation/Arrow.png';
 
 export const PayAndFeed = () => {
   const [isOpened, setIsOpened] = useState(false);
@@ -47,15 +49,6 @@ export const PayAndFeed = () => {
               <img key={`${i}1`} className={styles.donationArrow} src={DonationArrowImg} alt="arrow" />
             ])}
           </div>
-
-          <Button name='donate'
-            className={classNames(styles.buttonPopup)}
-            onClick={togglePopup}
-          />
-
-          {isOpened &&
-            <DonationPopup isOpened={isOpened} close={togglePopup} />
-          }
 
       </SectionWrapper>
 
