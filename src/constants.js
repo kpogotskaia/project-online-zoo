@@ -48,6 +48,33 @@ import MapPageEagle from './assets/left-menu/eagle.png';
 import MapPageCroc from './assets/left-menu/croc.png';
 import MapPageMonkey from './assets/left-menu/monkey.png';
 
+
+export const HIDDEN_SCROLL = 'hidden-scroll';
+
+export const COUNTRY_ZOO_DESCRIPTION = [
+  {
+    heading: 'Population:',
+    desc: 'About 1,590 individuals'
+  },
+  {
+    heading: 'Habitat:',
+    desc: 'Temperate forests high in the mountains of southwest China'
+  },
+  {
+    heading: 'Diet:',
+     desc: `A panda's daily diet consists almost entirely
+            of the leaves, stems and shoots of
+            various bamboo species. Bamboo contains
+            very little nutritional value so pandas
+            must eat 12-38kg every day to meet their
+            energy needs.`
+  },
+  {
+    heading: 'Donated',
+    desc: '687.546$'
+  }
+]
+
 export const MAP_PAGE_BLOCK = [
   {
     imgUrl: MapPagePanda,

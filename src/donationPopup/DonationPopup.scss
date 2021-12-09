@@ -7,9 +7,24 @@
   width: 100%;
   top: 0;
   left: 0;
+  z-index: 2;
+  transition: all ease-out 0.3s;
+  transform-origin: center;
 
   background: #f9f9f9;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.19);
+
+  &__background-listener {
+    position: fixed;
+    top: -9999px;
+    left: -9999px;
+    right: -9999px;
+    bottom: -9999px;
+    background-color: rgba(1, 1, 1, 0.3);
+
+    // prevent clicks on main popup body
+    z-index: 1;
+  }
 
   &__wrapper {
     display: flex;
@@ -64,7 +79,7 @@
       position: relative;
       display: block;
 
-      & input {
+      &input {
         position: relative;
         height: 56px;
         border: 1px solid #628d90;
@@ -74,11 +89,11 @@
         background: #f9f9f9;
       }
 
-      & input.is-focused {
+      &input.is-focused {
         border: 1px solid $focus-color;
       }
 
-      & input.is-focused + .input-section__message {
+      &input.is-focused + .input-section__message {
         color: $focus-color;
         top: -6px;
       }
@@ -152,6 +167,10 @@
     background-color: #c7c7c770;
     font-size: 40px;
   }
+}
+
+.donation-popup.donation-popup--closing {
+  transform: scale(0.7);
 }
 
 @media screen and (min-width: 640px) {
@@ -245,5 +264,9 @@
         margin: 40px 110px;
       }
     }
+  }
+
+  .donation-popup.donation-popup--closing {
+    transform: translate(-50%, -50%) scale(0);
   }
 }
