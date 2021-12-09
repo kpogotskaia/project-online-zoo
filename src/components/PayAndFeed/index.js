@@ -1,11 +1,11 @@
-import { Button } from '../Button';
 import { DONATION_STEPS } from '../../constants';
 import { SectionWrapper } from '../SectionWrapper';
 import DonationArrowImg from '../../assets/donation/Arrow.png';
 import { Heading } from '../BlockHeading/BlockHeading';
-import { DonationPopup } from '../../donationPopup/DonationPopup';
+
 
 import styles from './style.module.scss';
+import { RenderPopup } from '../RenderPopup/RenderPopup';
 
 export const PayAndFeed = () => {
   return (
@@ -29,13 +29,9 @@ export const PayAndFeed = () => {
             ])}
           </div>
 
-          <Button name='donate'
-            onClick={() => {
-              
-            }}
-          />
+       <RenderPopup />
       </SectionWrapper>
+
     </div>
   );
 };
-

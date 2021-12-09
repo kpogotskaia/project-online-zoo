@@ -12,7 +12,7 @@ header {
   }
 
   @include media-from-desktop {
-
+    padding: 20px 360px;
   }
 }
 
@@ -68,7 +68,6 @@ header {
       }
     }
 
-
     @include media-from-desktop-min {
       display: flex;
       justify-content: space-between;
@@ -81,6 +80,8 @@ header {
     height: auto;
     display: block;
   }
+
+
 }
 
 .headerMenuContainer.opened {
@@ -97,6 +98,14 @@ header {
     top: 18%;
     left: 25%;
   }
+
+  @include media-from-desktop-mid {
+      left: 30%;
+  }
+
+  @include media-from-desktop-mid {
+    left: 35%;
+}
 }
 
 .headerMenuIcon {
@@ -196,7 +205,7 @@ header {
 
   @include media-from-desktop {
     margin: 23px 0%;
-    right: 150px;
+    right: 360px;
   }
 }
 

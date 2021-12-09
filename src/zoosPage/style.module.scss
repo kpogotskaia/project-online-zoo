@@ -1,21 +1,21 @@
 @import '../variables';
 @import '../mixins.scss';
 
-.info-zoo {
+.infoZoo {
   box-shadow: 0px 6px 20px rgba(41, 70, 58, 0.08);
 
   .container {
     margin: 0 10px;
 
-    .info-zoo__content {
+    .infoZooContent {
       display: flex;
 
       .content {
 
-        &-info {
+        .contentInfo {
           padding-top: 10px;
 
-          &__heading {
+          .heading {
             margin: 0 0 8px;
             font-style: normal;
             font-weight: 900;
@@ -23,7 +23,7 @@
             line-height: 16px;
           }
 
-          &__pharagraph {
+          .pharagraph {
             font-family: $font;
             font-style: normal;
             font-weight: normal;
@@ -33,7 +33,7 @@
             margin-bottom: 15px;
           }
 
-          .content-button {
+          .contentButton {
             width: 185px;
             height: 55px;
             background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
@@ -51,19 +51,17 @@
         }
       }
     }
-
-    
   }
 }
 
 // tablet
 @media screen and (min-width: 640px) {
-  .info-zoo {
+  .infoZoo {
     .container {
-      .info-zoo__content {
+      .infoZooContent {
         .content {
 
-          &-info {
+          .contentInfo {
             &__heading {
               font-size: 20px;
               line-height: 23px;
@@ -87,13 +85,13 @@
 // desktop
 @media screen and (min-width: 1280px) {
     /* Zoos - next page*/
-    .info-zoo {
+    .infoZoo {
       .container {
-        .info-zoo__content {
+        .infoZooContent {
           .content {
             display: flex;
 
-            &-info {
+            .contentInfo {
               margin: 138px 210px 35px 0;
 
               &__heading {
