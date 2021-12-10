@@ -24,9 +24,11 @@ export const CountryZoo = () => [
                 <p className={styles.pharagraph}>{info.desc}</p>
               </div>
             ])}
-
             <Button className={styles.contentButton} name='feed'/>
+
           </div>
+
+          <Button className={styles.contentButton} name='feed'/>
         </div>
       </div>
     </div>
