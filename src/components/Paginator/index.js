@@ -9,19 +9,25 @@ export const THEME = {
 
 const paginatorWidth = 245;
 
-export const Paginator = ({ className, amount, selected }) => {
+export const Paginator = ({ className, amount, selected, theme }) => {
 
   const width = paginatorWidth / amount;
-  const left = width * (selected - 1)
+  const left = width * (selected - 1);
 
   return (
     <div className={classNames(className, styles.paginator)}>
-      <span>
-        {selected}/<span className={styles['amount-style']}>{amount}</span>
+      <span
+        className={classNames(styles.amount, {
+          [styles.amountLight]: theme === THEME.LIGHT
+        })}
+      >
+        {selected}/<span className={styles.amountStyle}>{amount}</span>
       </span>
       <div className={styles.paginatorLine}>
         <div
-          className={styles.paginatorLineButton}
+          className={classNames(styles.paginatorLineButton, {
+            [styles.paginatorLineButtonLight]: theme === THEME.LIGHT
+          })}
           style={{ left, width }}
         ></div>
       </div>

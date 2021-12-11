@@ -86,7 +86,6 @@ export const PetsInZooSlider = () => {
           className={classes.paginatorSection}
           amount={ANIMALS.length}
           selected={selectedSlideIndex}
-          theme={THEME.LIGHT}
         />
       </div>
   );
