@@ -3,13 +3,13 @@ import classNames from 'classnames';
 
 import './DonationPopup.scss';
 
-const isEmpty = v => v
+/* const isEmpty = v => v
   ? ''
   : 'Error: value shoudnt be empty';
 
 const minChars = minInclusive => v => v.length >= minInclusive
   ? ''
-  : `Error: value should be more than ${minInclusive} characters`;
+  : `Error: value should be more than ${minInclusive} characters`; */
 
 export const DonationPopup = (props) => {
   const [isClosing, setIsClosing] = useState(false);
