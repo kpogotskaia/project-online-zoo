@@ -1,0 +1,48 @@
+@import '../../variables.scss';
+@import '../../mixins.scss';
+
+.benefits {
+  display: flex;
+  flex-direction: column;
+  background: $section-bg;
+
+  &Card {
+    @include media-till-tablet {
+      & + & {
+        margin-top: 20px;
+      }
+    }
+
+    @include media-from-tablet {
+      & + & {
+        margin-left: 20px;
+      }
+    }
+
+    &BlockImg {
+      display: block;
+      margin: 0 auto;
+    }
+
+    &BlockHeading {
+      margin: 15px auto;
+      font-weight: 900;
+      font-size: 20px;
+      line-height: 23px;
+      text-align: center;
+    }
+
+    &BlockPharagraph {
+      text-align: center;
+      margin: 0 auto;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 16px;
+      color: $gray;
+    }
+  }
+
+  @include media-from-tablet {
+    flex-direction: row;
+  }
+}

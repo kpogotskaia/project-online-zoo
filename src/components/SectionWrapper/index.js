@@ -1,8 +1,10 @@
+import classNames from 'classnames';
+
 import styles from './style.module.scss';
 
-export const SectionWrapper = ({ children }) => {
+export const SectionWrapper = ({ className, children }) => {
   return (
-    <section className={styles.sectionWrapper}>
+    <section className={classNames(className, styles.sectionWrapper)}>
       {children}
     </section>
   );

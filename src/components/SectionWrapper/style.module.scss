@@ -1,9 +1,6 @@
 @import '../../mixins.scss';
 
 .sectionWrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   padding: 50px 10px;
 
   @include media-from-tablet-min {
