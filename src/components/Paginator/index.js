@@ -1,20 +1,35 @@
 import classNames from 'classnames';
 
-import './Paginator.scss';
+import styles from './style.module.scss';
 
 export const THEME = {
   LIGHT: 'L',
   DARK: 'D'
 };
 
-export const Paginator = (props) => {
+const paginatorWidth = 245;
+
+export const Paginator = ({ className, amount, selected, theme }) => {
+
+  const width = paginatorWidth / amount;
+  const left = width * (selected - 1);
+
   return (
-    <div className={classNames(props.className, 'paginator')}>
-      <span>
-        {props.selected}/<span className="amount-style">{props.amount}</span>
+    <div className={classNames(className, styles.paginator)}>
+      <span
+        className={classNames(styles.amount, {
+          [styles.amountLight]: theme === THEME.LIGHT
+        })}
+      >
+        {selected}/<span className={styles.amountStyle}>{amount}</span>
       </span>
-      <div className="paginator__line">
-        <div className="paginator__line-button"></div>
+      <div className={styles.paginatorLine}>
+        <div
+          className={classNames(styles.paginatorLineButton, {
+            [styles.paginatorLineButtonLight]: theme === THEME.LIGHT
+          })}
+          style={{ left, width }}
+        ></div>
       </div>
     </div>
   );

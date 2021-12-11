@@ -2,61 +2,60 @@
 @import '../../../mixins.scss';
 
 
-  .slider {
-    margin: 0 auto;
-    overflow: hidden;
+.slider {
+  margin: 0 auto 30px;
+  overflow: hidden;
 
-    @include media-from-tablet {
-      max-width: 900px;
-    }
+  @include media-from-tablet {
+    max-width: 900px;
+  }
+
+  @include media-from-desktop-mid {
+    max-width: 1200px;
+  }
+
+  .arrowLeft, .arrowRight{
+    visibility: hidden;
+    position: absolute;
+    color: $gray;
+    font-size: 40px;
+    font-weight: 900;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.5;
+    top: 42%;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../assets/arrRight.svg');
+    background-size: cover;
+  }
+
+  .arrowLeft {
+    transform: rotateY(180deg);
+    left: 9%;
 
     @include media-from-desktop-mid {
-      max-width: 1200px;
+      left: 15%;
     }
 
-    .arrowLeft, .arrowRight{
-      visibility: hidden;
-      position: absolute;
-      color: $gray;
-      font-size: 40px;
-      font-weight: 900;
-      cursor: pointer;
-      user-select: none;
-      opacity: 0.5;
-      top: 42%;
-      width: 24px;
-      height: 24px;
-      background-image: url('../../../assets/arrRight.svg');
-      background-size: cover;
+    @include media-from-desktop-min {
+      visibility: visible;
+      z-index: 1;
+    }
+  }
+
+  .arrowRight {
+    right: 10%;
+
+    @include media-from-desktop-mid {
+      right: 15%;
     }
 
-    .arrowLeft {
-      transform: rotateY(180deg);
-      left: 9%;
-
-      @include media-from-desktop-mid {
-        left: 15%;
-      }
-
-      @include media-from-desktop-min {
-        visibility: visible;
-        z-index: 1;
-      }
+    @include media-from-desktop-min {
+      visibility: visible;
+      z-index: 1;
     }
-
-    .arrowRight {
-      right: 10%;
-
-      @include media-from-desktop-mid {
-        right: 15%;
-      }
-
-      @include media-from-desktop-min {
-        visibility: visible;
-        z-index: 1;
-      }
-    }
-
+  }
 
   .slider-slides {
     display: flex;
@@ -69,131 +68,92 @@
     }
   }
 
-    &__slide {
-      $slide: &;
+  &__slide {
+    $slide: &;
 
-      position: relative;
+    position: relative;
+    width: 210px;
+    height: 300px;
+    flex-shrink: 0;
+    margin-right: 15px;
+    background-size: cover;
+    cursor: pointer;
+
+    &--active {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+      padding: 10px;
       width: 210px;
       height: 300px;
-      flex-shrink: 0;
-      margin-right: 15px;
-      background-size: cover;
-      cursor: pointer;
 
-      &--active {
+      #{$slide}-info {
+        display:block;
+      }
+
+      #{$slide}-btns {
         display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        padding: 10px;
-        width: 210px;
-        height: 300px;
+      }
+    }
 
-        #{$slide}-info {
-          display:block;
+    &-info {
+      display: none;
+      font-weight: 700;
+      font-size: 14px;
+      line-height: 16px;
+      color: $white;
+    }
+
+    &-btns {
+      display: none;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+
+    &-btn {
+      display: flex;
+      align-items: center;
+      margin: 5px 0;
+      background: none;
+      color: $white;
+      font-weight: 500;
+      font-size: 12px;
+      text-transform: uppercase;
+
+      svg {
+        margin-right: 3px;
+
+        circle {
+          stroke: $white;
         }
 
-        #{$slide}-btns {
-          display: flex;
+        path {
+          fill: $white;
         }
       }
 
-      &-info {
-        display: none;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 16px;
-        color: $white;
-      }
-
-      &-btns {
-        display: none;
-        flex-direction: column;
-        justify-content: space-around;
-      }
-
-      &-btn {
-        display: flex;
-        align-items: center;
-        margin: 5px 0;
-        background: none;
-        color: $white;
-        font-weight: 500;
-        font-size: 12px;
-        text-transform: uppercase;
+      &:hover {
+        color: $focus-color;
 
         svg {
-          margin-right: 3px;
-
           circle {
-            stroke: $white;
+            stroke: $focus-color;
           }
 
           path {
-            fill: $white;
-          }
-        }
-
-        &:hover {
-          color: $focus-color;
-
-          svg {
-            circle {
-              stroke: $focus-color;
-            }
-
-            path {
-              fill: $focus-color;
-            }
+            fill: $focus-color;
           }
         }
       }
+    }
 
-      @include media-from-tablet {
-        .slider__slide {
-          margin: 0 1vw;
-
-          &-info {
-            font-size: 14px;
-            line-height: 16px;
-          }
-
-          &-btns {
-            flex-direction: row;
-          }
-
-          &-btn {
-            font-size: 11px;
-          }
-        }
-      }
-
-      @include media-from-desktop-min {
-
-        .slider__slide {
-          width: 280px;
-          height: 400px;
-          margin: 0 1vw;
-
-          &--active {
-            width: 280px;
-            height: 400px;
-          }
-
-          &-info {
-            font-size: 14px;
-            line-height: 16px;
-          }
-        }
-      }
-
-      @include media-from-desktop {
-        width: 277px;
-        height: 400px;
-        margin-right: 30px;
+    @include media-from-tablet {
+      .slider__slide {
+        margin: 0 1vw;
 
         &-info {
-          font-size: 16px;
-          margin: 0 20px;
+          font-size: 14px;
+          line-height: 16px;
         }
 
         &-btns {
@@ -205,12 +165,47 @@
         }
       }
     }
+
+    @include media-from-desktop-min {
+
+      .slider__slide {
+        width: 280px;
+        height: 400px;
+        margin: 0 1vw;
+
+        &--active {
+          width: 280px;
+          height: 400px;
+        }
+
+        &-info {
+          font-size: 14px;
+          line-height: 16px;
+        }
+      }
+    }
+
+    @include media-from-desktop {
+      width: 277px;
+      height: 400px;
+      margin-right: 30px;
+
+      &-info {
+        font-size: 16px;
+        margin: 0 20px;
+      }
+
+      &-btns {
+        flex-direction: row;
+      }
+
+      &-btn {
+        font-size: 11px;
+      }
+    }
   }
 
-
-.paginatorSection {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 30px;
+  .paginatorSection {
+    margin: 0 auto;
+  }
 }

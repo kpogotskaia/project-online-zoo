@@ -8,14 +8,6 @@
   margin: 0 -10px;
   overflow: hidden;
 
-  &:hover {
-    .slidesContainer {
-      .arrow {
-        visibility: visible;
-      }
-    }
-  }
-
   @include media-from-tablet-min {
     width: calc(100% + 40px);
     margin: 0 -20px;
@@ -43,7 +35,6 @@
     }
 
     .arrow {
-      visibility: hidden;
       position: absolute;
       color: $gray;
       font-size: 40px;
@@ -83,7 +74,8 @@
   .slidesMove {
     position: relative;
     display: flex;
-    transition: ease-out 0.4s;
+
+    @include slider-animate();
   }
 
   .slide {

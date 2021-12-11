@@ -82,13 +82,11 @@ export const PetsInZooSlider = () => {
           )}
         </div>
 
-        <div className={classes['paginatorSection']}>
-          <Paginator
-              amount={ANIMALS.length}
-              selected={selectedSlideIndex}
-              theme={THEME.LIGHT}
-          />
-        </div>
+        <Paginator
+          className={classes.paginatorSection}
+          amount={ANIMALS.length}
+          selected={selectedSlideIndex}
+        />
       </div>
   );
 };
