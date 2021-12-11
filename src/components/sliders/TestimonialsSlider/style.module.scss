@@ -83,7 +83,8 @@
   .slidesMove {
     position: relative;
     display: flex;
-    transition: ease-out 0.4s;
+
+    @include slider-animate();
   }
 
   .slide {
