@@ -43,7 +43,8 @@ export const DonationPopup = (props) => {
               <h3 className={classNames('heading')}>Donate for your animal</h3>
               <fieldset className={classNames('donation-form__choose')}>
                 <label className={classNames('input-section')}>
-                  <input type="text" placeholder="" data-min-length="3" />
+                  <input type="text" placeholder="" data-min-length="3"/>
+
                   <span className={classNames('input-section__message')}>Choose an animal</span>
                   {chooseAnimalError &&
                     <span className={classNames('js-error-message input-section__error-message')}>Invalid value</span>
@@ -108,7 +109,7 @@ export const DonationPopup = (props) => {
                   </label>
                 </fieldset>
               </div>
-              <p className={classNames('donation-form__checkout')}>
+              <p className={classNames('donation-form__pharagraph')}>
                 If don’t cancel your subscription
                 before the trial ends on April 15,
                 2021, you agree that you will

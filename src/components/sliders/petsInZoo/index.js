@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ANIMALS } from '../../../constants';
-import { Paginator, THEME } from '../../Paginator/index';
+import { Paginator } from '../../Paginator/index';
 
 import classes from './style.module.scss';
 
