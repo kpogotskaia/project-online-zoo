@@ -10,18 +10,10 @@
   font-size: 14px;
   line-height: 16px;
   color: $gray;
+  min-width: 300px;
+  text-align: center;
 
   @include media-from-tablet-min {
-    margin: 30px auto;
-  }
-
-  @include media-from-desktop-min {
-    margin: 30px auto 15px;
-    padding: 0 80px;
-  }
-
-  @include media-from-desktop {
-    margin: 30px auto;
-    padding: 0 410px;
+   max-width: 790px;
   }
 }

@@ -5,7 +5,7 @@
 
   .slider {
     margin: auto;
-    max-width: 300px;
+    min-width: 300px;
     height: 300px;
     overflow: hidden;
     position: relative;
@@ -21,14 +21,6 @@
     }
 
     @include media-from-tablet-min {
-      max-width: 630px;
-    }
-
-    @include media-from-desktop-min {
-      max-width: 740px;
-    }
-
-    @include media-from-desktop {
       max-width: 790px;
     }
   }
