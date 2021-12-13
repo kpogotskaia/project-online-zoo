@@ -28,6 +28,9 @@ export const DonationPopup = (props) => {
     props.close(e);
   };
 
+  const openList = e => {
+  }
+
   return (
     <>
       <div
@@ -42,8 +45,21 @@ export const DonationPopup = (props) => {
             <form className={classNames('donation-form')}>
               <h3 className={classNames('heading')}>Donate for your animal</h3>
               <fieldset className={classNames('donation-form__choose')}>
-                <label className={classNames('input-section')}>
+                <label className={classNames('input-section input-section__list-menu')}>
                   <input type="text" placeholder="" data-min-length="3"/>
+
+                  <div className={classNames('list-menu')}>
+                    <svg onClick={openList} className={classNames('drop-btn')} width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path d="M4 6L0.535898 0.75L7.4641 0.75L4 6Z" fill="#313131"/>
+                    </svg>
+                    <ul className={classNames('list-menu__item')}>
+                      <li>panda</li>
+                      <li>elephant</li>
+                      <li>tiger</li>
+                      <li>eagle</li>
+                      <li>monkey</li>
+                    </ul>
+                  </div>
 
                   <span className={classNames('input-section__message')}>Choose an animal</span>
                   {chooseAnimalError &&

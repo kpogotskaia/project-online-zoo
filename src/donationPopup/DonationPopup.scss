@@ -183,6 +183,42 @@
           }
         }
       }
+
+      .input-section__list-menu {
+        position: relative;
+
+        .list-menu {
+          width: 150px;
+          position: absolute;
+          right: 20px;
+          top: 25px;
+          cursor: pointer;
+          z-index: 1;
+
+          svg {
+            float: right;
+          }
+
+          .list-menu__item {
+            background-color: $light-gray;
+            margin: 0;
+            display: none;
+
+
+            li {
+              border-bottom: 1px solid $gray;
+            }
+
+            &:hover {
+              display: block;
+            }
+          }
+
+          .show {
+            display: block;
+          }
+        }
+      }
     }
 
     .input-section + .input-section {
