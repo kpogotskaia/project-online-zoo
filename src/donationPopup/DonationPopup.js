@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import classNames from 'classnames';
 
-import './DonationPopup.scss';
+import './style.scss';
 
 /* const isEmpty = v => v
   ? ''

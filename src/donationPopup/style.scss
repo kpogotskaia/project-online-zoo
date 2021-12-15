@@ -199,7 +199,7 @@
             float: right;
           }
 
-          .list-menu__item {
+          .listMenuItem {
             background-color: $light-gray;
             margin: 0;
             display: none;
@@ -208,15 +208,16 @@
             li {
               border-bottom: 1px solid $gray;
             }
-
-            &:hover {
-              display: block;
-            }
           }
 
-          .show {
+          .listMenuItem.opened {
             display: block;
           }
+
+          .listMenuItem.closed {
+            display: none;
+          }
+
         }
       }
     }

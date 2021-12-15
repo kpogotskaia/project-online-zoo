@@ -5,7 +5,7 @@
   background: $section-bg;
 }
 
-.charityPharagraph {
+.blockDonationPharagraph {
   display: none;
 
   @include media-from-tablet-min {
@@ -25,22 +25,41 @@
 
 .blockDonation {
   position: relative;
-  display: block;
+  display: flex;
+  justify-content: space-around;
+  flex-direction: column;
   margin: 35px auto;
 
-  .charityCard {
+  @include media-from-desktop-min {
+    flex-direction: row;
+  }
+
+  @include media-from-desktop {
+    padding: 0 210px;
+  }
+
+  &Card {
+    position: relative;
     width: 245px;
     height: 245px;
-    margin: 0 auto 100px;
+    margin: 0 auto;
     border: 2px solid #628d90;
     border-radius: 50%;
 
-    img {
+    & + & {
+      margin-top: 100px;
+
+      @include media-from-desktop-min {
+        margin-top: 0;
+      }
+    }
+
+    &Img {
       display: block;
       margin: 70px auto 0;
     }
 
-    h5 {
+    &Heading {
       font-weight: 900;
       font-size: 18px;
       line-height: 23px;
@@ -51,63 +70,34 @@
     @include media-from-desktop {
       margin: 0;
     }
-  }
 
-  .donationArrow {
-    width: 60px;
-    position: absolute;
-    margin: -50px 38%;
-    display: block;
-    transform: rotate(90deg) ;
-
-    &:nth-child(6) {
-      display: none;
-    }
-
-    @include media-from-tablet {
-      margin: -50px 45%;
-    }
-
-    @include media-from-desktop-min {
+    &Arrow {
+      display: block;
       width: 40px;
-      transform: rotate(0deg);
-      margin: 120px 31%;
+      position: absolute;
+      left: 40%;
+      bottom: -22%;
+      transform: rotate(90deg);
 
-      &:nth-child(4) {
-        margin-left: 64.4%;
+      @include media-from-desktop-min {
+        transform: rotate(0deg);
+        left: 105%;
+        bottom: 50%;
+      }
+
+      @include media-from-desktop-mid {
+        width: 107px;
+        left: 108%;
+      }
+
+      @include media-from-desktop {
+
+      }
+
+      &:nth-child() {
+        display: none;
       }
     }
-
-    @include media-from-desktop {
-      width: 105px;
-      margin: 120px 19%;
-
-      &:nth-child(4) {
-        display: block;
-        margin-left: 48.2%;
-      }
-    }
-  }
-
-  &:nth-child(3) {
-    //margin-bottom: -60px;
-
-    @include media-from-desktop {
-      margin-bottom: 50px;
-    }
-  }
-
-  @include media-from-tablet-min {
-    width: 100%;
-  }
-
-  @include media-from-desktop-min {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  @include media-from-desktop {
-    padding: 0 210px;
 
   }
 }

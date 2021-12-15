@@ -32,21 +32,21 @@ export const PayAndFeed = () => {
       <SectionWrapper>
           <Heading name='Pay and Feed'/>
 
-          <p className={styles.charityPharagraph}>
+          <p className={styles.blockDonationPharagraph}>
             The opportunity to easily and naturally
             (but as often as possible) donate to the
             needs of animals that you like.
           </p>
 
           <div className={styles.blockDonation}>
-            {DONATION_STEPS.map((donation, i) => [
-              <div key={`${i}0`} className={styles.charityCard}>
-                <img src={donation.imgUrl} alt={donation.alt} />
-                <h5>{donation.heading}</h5>
-              </div>,
-              <img key={`${i}1`} className={styles.donationArrow} src={DonationArrowImg} alt="arrow" />
-            ])}
-          </div>
+            {DONATION_STEPS.map((donation, i) =>
+              <div key={`${i}0`} className={styles.blockDonationCard}>
+                <img className={styles.blockDonationCardImg} src={donation.imgUrl} alt={donation.alt} />
+                <h5 className={styles.blockDonationCardHeading}>{donation.heading}</h5>
+                <img className={styles.blockDonationCardArrow} src={DonationArrowImg} alt="arrow" />
+              </div>
+            )}
+           </div>
 
           <Button name='donate'
             className={classNames(styles.buttonPopup)}
