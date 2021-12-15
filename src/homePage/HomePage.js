@@ -2,7 +2,7 @@ import { Header } from '../components/Header';
 import { Footer } from '../components/Footer/Footer';
 import { SectionOne } from '../components/SectionOne/SectionOne';
 import { HowItWorks } from '../components/HowItWorks/HowItWorks';
-import { PetsInZoo } from '../components/PetsInZoo';
+import { PetsInZoo } from '../components/PetsInZoo/index';
 import { PayAndFeed } from '../components/PayAndFeed';
 import { Benefits } from '../components/Benefits';
 import { Testimonials } from '../components/Testimonials';
