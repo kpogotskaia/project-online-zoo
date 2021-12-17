@@ -48,6 +48,30 @@ import MapPageEagle from './assets/left-menu/eagle.png';
 import MapPageCroc from './assets/left-menu/croc.png';
 import MapPageMonkey from './assets/left-menu/monkey.png';
 
+import VectorEagleImg from './assets/vector/eagle.png';
+import VectorCrocImg from './assets/vector/croc.png';
+import VectorMonkeyImg from './assets/vector/monkey.png';
+import VectorPandaImg from './assets/vector/panda.png';
+
+
+export const VECTOR_IMG = [
+  {
+    imgUrl: VectorPandaImg,
+    alt: 'panda'
+  },
+  {
+    imgUrl: VectorEagleImg,
+    alt: 'eagle'
+  },
+  {
+    imgUrl: VectorCrocImg,
+    alt: 'croc'
+  },
+  {
+    imgUrl: VectorMonkeyImg,
+    alt: 'monkey'
+  }
+]
 
 export const HIDDEN_SCROLL = 'hidden-scroll';
 

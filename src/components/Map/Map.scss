@@ -3,23 +3,31 @@
 
 .map {
   background: #F2F2F2;
-  position: relative;
 
   &__block {
     position: relative;
-    padding: 30px 10px;
+    background: url(../../assets/map.png) top center no-repeat;
+    background-size: contain;
+    min-height: 320px;
+    z-index: 0;
 
-    .map-image {
-      width: 100%;
-      height: 100%;
+    .map-image__canada-usa {
+      display: block;
+      position: absolute;
+      left: 0.13%;
+      right: 71.71%;
+      top: 3%;
+      bottom: 53.42%;
       cursor: pointer;
+      z-index: 1;
+     // min-height: 320px;
     }
 
-    &-vector {
+      &-vector {
       position: relative;
       width: 33px;
       height: 46px;
-      background-image: url('../../assets/Vector.png');
+      background: url('../../assets/Vector.png');
       background-size: cover;
 
       .eagle, .crocodille,
@@ -57,10 +65,10 @@
     }
 
     @include  media-from-tablet {
-      
+
     }
   }
-
+/*
   &__tooltip {
     position: absolute;
     top: 43%;
@@ -93,7 +101,7 @@
       line-height: 13px;
       color: #4f4f4f;
     }
-  }
+  } */
 }
 
 @media screen and (min-width: 640px) {

@@ -5,12 +5,10 @@
   position: absolute;
   left: 7%;
   top: 55%;
-  //bottom: 0;
 
   &-slides {
     top: 30%;
     display: flex;
-    //justify-content: space-between;
     align-items: center;
     margin-bottom: 15px;
   }
@@ -97,7 +95,7 @@
 
   &__line {
     position: absolute;
-    top: 32%;
+    top: 40%;
     left: -4vw;
     right: -10vw;
     height: 0;
@@ -128,9 +126,9 @@
     }
   }
 
-  @include media-from-tablet {
+  @include media-from-tablet-min {
     top: 43%;
-    left: 18%;
+    left: 20%;
 
     .slider__slide {
       width: 180px;
@@ -157,17 +155,15 @@
     }
   }
 
-  @include media-from-desktop-min {
-    left: 55%;
+  @include media-from-tablet {
+    left: 46%;
+  }
 
-    .slider-slides {
-      display: flex;
-      justify-content: space-between;
-    }
+  @include media-from-desktop-min {
 
     .slider__slide {
-      width: 140px;
-      height: 205px;
+      width: 180px;
+      height: 260px;
       margin: 0 1vw;
 
       &--active {
@@ -184,10 +180,6 @@
         font-size: 12px;
       }
     }
-  }
-
-  @include media-from-desktop {
-    left: 51%;
   }
 }
 
