@@ -3,6 +3,7 @@
 
 
 .slider {
+  position: relative;
   margin: 0 auto 30px;
   overflow: hidden;
 
@@ -10,7 +11,7 @@
     max-width: 900px;
   }
 
-  @include media-from-desktop-mid {
+  @include media-from-desktop {
     max-width: 1200px;
   }
 
@@ -28,32 +29,22 @@
     height: 24px;
     background-image: url('../../../assets/arrRight.svg');
     background-size: cover;
+    z-index: 999;
   }
 
   .arrowLeft {
     transform: rotateY(180deg);
-    left: 9%;
-
-    @include media-from-desktop-mid {
-      left: 15%;
-    }
 
     @include media-from-desktop-min {
       visibility: visible;
-      z-index: 1;
+
     }
   }
 
   .arrowRight {
-    right: 10%;
-
-    @include media-from-desktop-mid {
-      right: 15%;
-    }
 
     @include media-from-desktop-min {
       visibility: visible;
-      z-index: 1;
     }
   }
 
@@ -83,7 +74,7 @@
       display: flex;
       flex-direction: column;
       justify-content: flex-end;
-      padding: 10px;
+      padding: 0 10px 30px;
       width: 210px;
       height: 300px;
 
@@ -192,7 +183,7 @@
 
       &-info {
         font-size: 16px;
-        margin: 0 20px;
+        margin: 20px 20px;
       }
 
       &-btns {

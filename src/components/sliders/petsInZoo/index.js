@@ -30,7 +30,7 @@ export const PetsInZooSlider = () => {
 
   return (
       <div className={classes['slider']}>
-        <div className={classes['slider-slides']}>
+
           <div
               className={classes['arrowLeft']}
               onClick={e => changeSlideIndex(-1)}
@@ -40,6 +40,8 @@ export const PetsInZooSlider = () => {
             className={classes['arrowRight']}
             onClick={e => changeSlideIndex(1)}
           ></div>
+
+        <div className={classes['slider-slides']}>
 
           {slides.map((animal, i) =>
             <div
