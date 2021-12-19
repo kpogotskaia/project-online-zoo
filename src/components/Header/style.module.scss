@@ -65,6 +65,16 @@ header {
 
       &:hover {
         background: $light-gray;
+
+        @include media-from-desktop-min {
+          background: none;
+        }
+      }
+
+      a {
+        &:hover {
+          font-weight: 700;
+        }
       }
     }
 
@@ -100,10 +110,6 @@ header {
   @include media-from-desktop-mid {
       left: 30%;
   }
-
-  @include media-from-desktop-mid {
-    left: 35%;
-}
 }
 
 .headerMenuIcon {
@@ -186,6 +192,7 @@ header {
   height: 30px;
   background: #f2f2f2;
   border-radius: 190px;
+  cursor: pointer;
 
   .reversBtn {
     width: 20px;

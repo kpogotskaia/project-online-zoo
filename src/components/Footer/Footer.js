@@ -6,11 +6,12 @@ import { ROUTES } from '../../navigation';
 
 import './Footer.scss';
 import ArrowImg from '../../assets/Arrow4.png';
+import { SectionWrapper } from '../SectionWrapper';
 
 export const Footer = () => {
   return (
     <footer>
-      <div className="container">
+      <SectionWrapper>
         <div className="footer">
           <Link to="/" className="footer__logo">
             <span>zoo</span>
@@ -77,10 +78,10 @@ export const Footer = () => {
 
           </div>
         </div>
-        <Button  name='donate for volonteers' className="footer-button"/>
+        <Button name='donate for volonteers' className="footer-button"/>
         <div className="footer-line"></div>
         <div className="signature">@Krystsina Pogotskaia</div>
-      </div>
+      </SectionWrapper>
     </footer>
   );
 };
