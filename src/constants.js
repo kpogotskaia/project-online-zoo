@@ -53,6 +53,7 @@ import VectorCrocImg from './assets/vector/croc.png';
 import VectorMonkeyImg from './assets/vector/monkey.png';
 import VectorPandaImg from './assets/vector/panda.png';
 
+export const HIDDEN_SCROLL = 'hidden-scroll';
 
 export const VECTOR_IMG = [
   {
@@ -72,8 +73,6 @@ export const VECTOR_IMG = [
     alt: 'monkey'
   }
 ]
-
-export const HIDDEN_SCROLL = 'hidden-scroll';
 
 export const COUNTRY_ZOO_DESCRIPTION = [
   {

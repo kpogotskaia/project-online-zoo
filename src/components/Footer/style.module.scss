@@ -1,0 +1,263 @@
+@import '../../variables';
+@import '../../mixins.scss';
+
+footer {
+  background-color: #333333;
+
+  .footer {
+    position: relative;
+    display: block;
+
+    @include  media-from-desktop-min {
+      display: flex;
+    }
+
+    &Logo {
+      text-decoration: none;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 40px;
+
+      span:first-child {
+        color: #fef;
+        font-size: 36px;
+        font-weight: 900;
+        line-height: 42px;
+      }
+
+      span:nth-child(2) {
+        margin-top: -6px;
+        color: #fefefe;
+        font-size: 18px;
+        font-weight: 900;
+        font-size: 18px;
+        line-height: 21px;
+        letter-spacing: 0.08em;
+      }
+    }
+
+    &Menu {
+      &List {
+        &Item {
+
+          a {
+            font-family: $font;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 19px;
+            color: #fefefe;
+
+            @include media-from-desktop-min {
+              margin-left: 70px;
+
+              &:hover {
+                color: $focus-color;
+              }
+            }
+          }
+
+          &:nth-child(4) {
+            display: none;
+          }
+        }
+
+        @include media-from-desktop-min {
+          display: flex;
+          margin: 4% 0 0 63%;
+        }
+
+        @include media-from-desktop-min {
+          display: flex;
+          margin: 4% 0 0 146%;
+        }
+      }
+    }
+  }
+
+  .footerContacts {
+    margin: 50px 0;
+
+    @include media-from-desktop-min {
+      margin: 30px 0;
+    }
+
+    .form {
+      @include media-from-desktop-min {
+        margin-right: 75px;
+      }
+
+      @include media-from-desktop {
+        margin-right: 440px;
+      }
+
+      &Heading {
+        margin: 0px;
+        font-family: $font;
+        font-style: normal;
+        font-weight: 900;
+        font-size: 20px;
+        line-height: 23px;
+        color: #fefefe;
+      }
+    }
+
+    @include media-from-desktop-min {
+      display: flex;
+    }
+
+    form {
+      margin: 20px 0 55px;
+
+      .contactForm {
+        .inputSection {
+          border-bottom: 1px solid #bdbdbd;
+          padding-bottom: 10px;
+
+          input {
+            width: 100%;
+            background-color: #333333;
+            margin: 0 0 30px 0;
+
+            &::-webkit-input-placeholder {
+              color: #e0e0e0;
+              font-size: 14px;
+              line-height: 16px;
+            }
+          }
+        }
+
+        .inputMessage {
+          position: relative;
+          display: block;
+          margin-top: 10px;
+
+          input {
+            width: 100%;
+            position: relative;
+            height: 115px;
+            border: 1px solid #bdbdbd;
+            border-radius: 5px;
+            padding-left: 8px;
+            background-color: #333333;
+          }
+
+          span {
+            position: absolute;
+            background-color: #333333;
+            left: 6px;
+            top: -8px;
+            padding: 0 10px;
+            font-family: $font;
+            font-style: normal;
+            font-weight: normal;
+            font-size: 12px;
+            line-height: 14px;
+            color: #bdbdbd;
+            transition: all 0.25s;
+          }
+        }
+
+        .checkbox {
+          color: #bdbdbd;
+          font-family: $font;
+          font-style: normal;
+          font-weight: normal;
+          font-size: 12px;
+          line-height: 14px;
+
+          input {
+            margin-top: 20px;
+            border: 1px solid #bdbdbd;
+            border-radius: 2px;
+            background-color: #333333;
+          }
+        }
+      }
+
+      .sendButton {
+        margin-left: 62%;
+
+        button {
+          margin-top: 20px;
+          background-color: #333333;
+          font-family: $font;
+          font-style: normal;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 16px;
+          color: #fefefe;
+          text-transform: uppercase;
+        }
+
+        img {
+          margin: 22px 0 0 20px;
+        }
+
+        @include media-from-tablet-min {
+          margin-left: 81%;
+        }
+
+        @include media-from-desktop-min {
+          margin-left: 65%;
+        }
+      }
+    }
+
+    .contact {
+     // padding-top: 20px;
+
+      &Heading {
+        font-family: $font;
+        font-style: normal;
+        font-weight: bold;
+        font-size: 14px;
+        line-height: 16px;
+        text-transform: uppercase;
+        color: #fefefe;
+
+        @include media-from-desktop-min {
+          margin: 0 0 35px;
+        }
+      }
+
+      .address, .phone  {
+        display: block;
+        margin-bottom: 20px;
+        font-family: $font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 14px;
+        line-height: 16px;
+        color: #fefefe;
+      }
+
+      .sociales {
+        width: 125px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 50px;
+      }
+
+      .footerButton {
+        font-weight: 500;
+        font-size: 17px;
+      }
+    }
+  }
+
+  .footerLine {
+    border-bottom: 0.5px solid #fefefe;
+    margin-top: 50px;
+  }
+
+  .signature {
+    margin-top: 30px;
+    font-family: $font;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+    line-height: 14px;
+    color: #bdbdbd;
+  }
+}
