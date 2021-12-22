@@ -6,7 +6,6 @@ import TooltipEagleImg from '../../assets/vector/eagleTooltip.png';
 import buttonIcon from '../../assets/buttonIcon.png'
 import { Heading } from '../BlockHeading/BlockHeading';
 import { SectionWrapper } from '../SectionWrapper';
-import countryUsa from '../../assets/map/canada-usa.png';
 
 export const Map = () => {
   return (
@@ -15,11 +14,9 @@ export const Map = () => {
         <Heading name='Map' />
         <div className="map__block">
 
-          <div className="map-image__canada-usa">
-            <img  src={countryUsa}></img>
-          </div>
-          <div className="map-image__afr"></div>
-          <div className="map-image__china"></div>
+          <div className='country-usa'></div>
+          <div className='country-afr'></div>
+          <div className='country-china'></div>
 
           <div className="map__block-vector vector__eagle">
             {VECTOR_IMG.map((vector, i) => (

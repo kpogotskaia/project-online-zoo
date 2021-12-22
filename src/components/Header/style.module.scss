@@ -17,8 +17,8 @@ header {
 }
 
 .headerBlock {
-  height: 100%;
-  width: 100%;
+ // height: 100%;
+ // width: 100%;
   display: flex;
 }
 
@@ -109,6 +109,10 @@ header {
 
   @include media-from-desktop-mid {
       left: 30%;
+  }
+
+  @include media-from-desktop {
+    left: 35%;
   }
 }
 

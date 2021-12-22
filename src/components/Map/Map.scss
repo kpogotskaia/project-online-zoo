@@ -6,24 +6,51 @@
 
   &__block {
     position: relative;
-    background: url(../../assets/map.png) top center no-repeat;
+    background: url(../../assets/map.png) no-repeat;
     background-size: contain;
-    min-height: 320px;
+    min-height: 146px;
     z-index: 0;
 
-    .map-image__canada-usa {
-      display: block;
+    .country-usa {
       position: absolute;
+      background: url(../../assets/map/canada-usa.png) no-repeat;
+      background-size: contain;
+      min-height: 54.88px;
+      z-index: 1;
+      cursor: pointer;
       left: 0.13%;
       right: 71.71%;
-      top: 3%;
+      top: 7.2%;
       bottom: 53.42%;
-      cursor: pointer;
-      z-index: 1;
-     // min-height: 320px;
     }
 
-      &-vector {
+    .country-afr {
+      position: absolute;
+      min-height: 54.88px;
+      z-index: 1;
+      cursor: pointer;
+      background: url(../../assets/map/afr.svg) no-repeat;
+      background-size: contain;
+      left: 49.37%;
+      right: 48.39%;
+      top: 43.9%;
+      bottom: 41.14%;
+    }
+
+    .country-china {
+      position: absolute;
+      min-height: 54.88px;
+      z-index: 1;
+      cursor: pointer;
+      background: url(../../assets/map/china.png) no-repeat;
+      background-size: contain;
+      left: 67.62%;
+      right: 16.1%;
+      top: 18.83%;
+      bottom: 52.91%
+    }
+
+    &-vector {
       position: relative;
       width: 33px;
       height: 46px;
@@ -62,10 +89,6 @@
       position: absolute;
       left: 71%;
       top: 15.52%;
-    }
-
-    @include  media-from-tablet {
-
     }
   }
 /*
@@ -177,7 +200,7 @@
     &__block {
       width: 1198px;
       height: 497px;
-      margin: 60px 360px 35px;
+      // margin: 60px 360px 35px;
 
       background-size: cover;
       position: relative;

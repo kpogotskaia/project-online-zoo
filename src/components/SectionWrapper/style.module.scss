@@ -10,4 +10,8 @@
   @include media-from-desktop-min {
     padding: 100px 150px;
   }
+
+  @include media-from-desktop {
+    padding: 100px 360px;
+  }
 }

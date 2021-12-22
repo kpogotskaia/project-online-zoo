@@ -34,10 +34,6 @@
     flex-direction: row;
   }
 
-  @include media-from-desktop {
-    padding: 0 210px;
-  }
-
   &Card {
     position: relative;
     width: 245px;
@@ -93,11 +89,6 @@
       @include media-from-desktop {
 
       }
-
-      &:nth-child() {
-        display: none;
-      }
     }
-
   }
 }
