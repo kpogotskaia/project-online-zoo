@@ -49,16 +49,14 @@ export const DonationPopup = (props) => {
                   <input type="text" placeholder="" data-min-length="3"/>
 
                   <div className={classNames('list-menu')}>
-                    <svg onClick={openList} className={classNames('drop-btn')} width="8" height="6" viewBox="0 0 8 6" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path d="M4 6L0.535898 0.75L7.4641 0.75L4 6Z" fill="#313131"/>
-                    </svg>
-                    <ul className={classNames('list-menu__item')}>
-                      <li>panda</li>
-                      <li>elephant</li>
-                      <li>tiger</li>
-                      <li>eagle</li>
-                      <li>monkey</li>
-                    </ul>
+                    <select className={classNames('drop-list')}>
+                      <option value={"panda"}></option>
+                      <option value={"panda"}>panda</option>
+                      <option value={"elephant"}>elephant</option>
+                      <option value={"tiger"}>tiger</option>
+                      <option value={"eagle"}>eagle</option>
+                      <option value={"monkey"}>monkey</option>
+                    </select>
                   </div>
 
                   <span className={classNames('input-section__message')}>Choose an animal</span>
@@ -93,10 +91,25 @@ export const DonationPopup = (props) => {
                   </label>
                   <label className={classNames('input-section')}>
                     <input type="tel" placeholder="" data-min-length="3" />
+                    <input className='tell-input' type="tel" placeholder="" data-min-length="3" />
                     <span className={classNames('input-section__message')}>Phone</span>
+
+                    <div className={classNames('phone-menu')}>
+                    <select className={classNames('drop-list')}>
+                      <option value={"panda"}>+1</option>
+                      <option value={"panda"}>+7</option>
+                      <option value={"elephant"}>+375</option>
+                      <option value={"tiger"}>+370</option>
+                      <option value={"eagle"}>+410</option>
+                      <option value={"monkey"}>+8</option>
+                    </select>
+                  </div>
+
+                    <span className={classNames('deviding-line')}></span>
                     {phoneError &&
                       <span className={classNames('js-error-message input-section__error-message')}>Invalid value</span>
                     }
+
                   </label>
                 </fieldset>
 
