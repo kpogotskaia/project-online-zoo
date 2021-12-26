@@ -98,7 +98,10 @@ export const DonationPopup = (props) => {
 
   const nameHandler = (e) => {
     setName(e.target.value);
-    if (e.target.value < 3) {
+
+    const re = /^[a-zA-Z]+ [a-zA-Z]+$/;
+
+    if (!re.test(e.target.value)) {
       setNameError('Incorrect value');
     } else {
       setNameError('');
@@ -118,8 +121,11 @@ export const DonationPopup = (props) => {
 
   const phoneHandler = (e) => {
     setPhone(e.target.value);
-    if (e.target.value <= 9 || e.target.value === '') {
-      setPhoneError('Phone cannot be < 10 numbers');
+
+    const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
+
+    if (!re.test(e.target.value)) {
+      setPhoneError('Phone cannot be < 9 numbers');
       if (!e.target.value) {
         setPhoneError('Input cannot be clear');
       }
@@ -130,10 +136,12 @@ export const DonationPopup = (props) => {
 
   const cardNumberHandler = (e) => {
     setCardNumber(e.target.value);
-    if (e.target.value < 16) {
-      setCardNumberError('Incorrect value');
-    } else {
+    const cardNo = /^(?:3[47][0-9]{16})$/;
+
+    if (e.target.value.match(cardNo)) {
       setCardNumberError('');
+    } else {
+      setCardNumberError('Please enter your 16 digit credit card numbers');
     }
   }
 
