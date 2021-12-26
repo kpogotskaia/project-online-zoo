@@ -170,6 +170,7 @@
           left: 0;
           font-weight: 400;
           font-size: 13px;
+          color: $error-color;
         }
 
         .is-invalid {
@@ -177,9 +178,8 @@
             border: 1px solid $error-color;
           }
 
-          .input-section__message.input-section__message,
           .input-section__error-message {
-            color: $error-color;
+           color: red;
           }
         }
       }
