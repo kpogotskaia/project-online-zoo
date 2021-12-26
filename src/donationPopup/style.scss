@@ -15,15 +15,15 @@
   background: #f9f9f9;
   box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.19);
 
-    @include media-from-desktop-min {
-      position: fixed;
-      width: 1200px;
-      height: 795px;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      margin: 0;
-    }
+  @include media-from-desktop-min {
+    position: fixed;
+    width: 1200px;
+    height: 795px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin: 0;
+  }
 
   &__background-listener {
     position: fixed;
@@ -133,7 +133,7 @@
           border: 1px solid #628d90;
           border-radius: 5px;
           width: 100%;
-          padding-left: $input-padding;
+          padding-left: 25px;
           background: #f9f9f9;
 
           @include media-from-desktop-min {
@@ -170,6 +170,7 @@
           left: 0;
           font-weight: 400;
           font-size: 13px;
+          color: $error-color;
         }
 
         .is-invalid {
@@ -177,9 +178,8 @@
             border: 1px solid $error-color;
           }
 
-          .input-section__message.input-section__message,
           .input-section__error-message {
-            color: $error-color;
+           color: red;
           }
         }
       }
@@ -188,36 +188,26 @@
         position: relative;
 
         .list-menu {
-          width: 150px;
+          width: 87%;
           position: absolute;
           right: 20px;
-          top: 25px;
-          cursor: pointer;
+          top: 15px;
           z-index: 1;
 
-          svg {
-            float: right;
-          }
+          .drop-list {
+            cursor: pointer;
+            width: 100%;
+            background: none;
 
-          .listMenuItem {
-            background-color: $light-gray;
-            margin: 0;
-            display: none;
+            option {
+              color: $gray;
+              min-height: 0.9em;
 
-
-            li {
-              border-bottom: 1px solid $gray;
+              &:nth-child(1) {
+                display: none;
+              }
             }
           }
-
-          .listMenuItem.opened {
-            display: block;
-          }
-
-          .listMenuItem.closed {
-            display: none;
-          }
-
         }
       }
     }
@@ -231,6 +221,51 @@
     }
 
     &__about {
+
+
+      .input-section {
+        position: relative;
+
+        .phone-menu {
+          position: absolute;
+          top: 28%;
+          left: 4%;
+
+          .drop-list {
+            cursor: pointer;
+            background: none;
+            width: 100%;
+
+            option {
+              background: none;
+
+              option:hover {
+                background: $light-gray;
+              }
+            }
+          }
+        }
+
+        .tell-input {
+          cursor: pointer;
+          position: absolute;
+          height: 50%;
+          width: 77%;
+          top: 25%;
+          right: 1%;
+          border: none;
+        }
+
+        .deviding-line {
+          height: 40px;
+          display: block;
+          position: absolute;
+          border-left: 1px solid $light-gray;
+          right: 77%;
+          top: 15%;
+          z-index: 1;
+        }
+      }
 
       @include media-from-tablet-min {
         display: block;
