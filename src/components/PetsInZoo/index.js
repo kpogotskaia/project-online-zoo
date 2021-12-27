@@ -1,5 +1,5 @@
 import { Button } from '../Button';
-import { PetsInZooSlider } from '../sliders/PetsInZoo';
+import { PetsInZooSlider } from '../sliders/PetsInZooSlider';
 import { Heading } from '../BlockHeading/BlockHeading';
 import { SectionWrapper } from '../SectionWrapper';
 
