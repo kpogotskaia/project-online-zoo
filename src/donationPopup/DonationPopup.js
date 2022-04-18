@@ -1,7 +1,6 @@
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 
-
 import './style.scss';
 
 export const DonationPopup = (props) => {
@@ -12,101 +11,55 @@ export const DonationPopup = (props) => {
     props.close(e);
   };
 
-  const [chooseAnimal, setChooseAnimal] = useState('');
+  const [chooseAnimal, setChooseAnimal] = useState('panda');
   const [toDonate, setToDonate] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
-  const [cardNumber, setCardNumber] = useState('');
+  const [cardNumberValue, setCardNumberValue] = useState('');
   const [expiryDate, setExpiryDate] = useState('');
   const [cvc, setCvc] = useState('');
 
-  const [chooseAnimalDirty, setChooseAnimalDirty] = useState(false);
-  const [toDonatDirty, setToDonateDirty] = useState(false);
-  const [nameDirty, setNameDirty] = useState(false);
   const [emailDirty, setEmailDirty] = useState(false);
   const [phoneDirty, setPhoneDirty] = useState(false);
-  const [cardNumberDirty, setCardNumberDirty] = useState(false);
   const [expiryDateDirty, setExpiryDateDirty] = useState(false);
   const [cvcDirty, setCvcDirty] = useState(false);
 
-  const [chooseAnimalError, setChooseAnimalError] = useState('Input cannot be clear');
-  const [toDonateError, setToDonateError] = useState('Input cannot be clear');
-  const [nameError, setNameError] = useState('Input cannot be clear');
+  const [toDonateError, setToDonateError] = useState('');
+  const [nameError, setNameError] = useState('');
   const [emailError, setEmailError] = useState('Input cannot be clear');
   const [phoneError, setPhoneError] = useState('Input cannot be clear');
-  const [cardNumberError, setCardNumberError] = useState('Input cannot be clear');
+  const [cardNumberError, setCardNumberError] = useState('');
   const [expiryDateError, setExpiryDateError] = useState('Input cannot be clear');
   const [cvcError, setCvcError] = useState('Input cannot be clear');
 
   const [formValid, setFormValid] = useState(false);
 
   useEffect(() => {
-    if (chooseAnimalError || toDonateError || nameError ||
-      cardNumberError || emailError || expiryDateError || phoneError || cvcError) {
-        setFormValid(false)
-      } else {
-        setFormValid(true)
-      }
-  }, [chooseAnimalError, toDonateError, nameError,
-    cardNumberError, emailError, expiryDateError, phoneError, cvcError]
-  )
+    if (
+      toDonateError ||
+      nameError ||
+      cardNumberError ||
+      emailError ||
+      expiryDateError ||
+      phoneError ||
+      cvcError
+    ) {
+      setFormValid(false)
+    } else {
+      setFormValid(true)
+    }
+  }, [
+    toDonateError,
+    nameError,
+    cardNumberError,
+    emailError,
+    expiryDateError,
+    phoneError,
+    cvcError
+  ]);
 
   const blurHandler = (e) => {
-    switch (e.target.name) {
-      case 'text':
-        setChooseAnimalDirty(true);
-        setNameDirty(true);
-        break;
-
-      case 'number':
-        setToDonateDirty(true);
-        setCardNumberDirty(true);
-        setCvcDirty(true);
-        break;
-
-      case 'email':
-        setEmailDirty(true);
-        break;
-
-      case 'tel':
-        setPhoneDirty(true);
-        break;
-
-      case 'date':
-        setExpiryDateDirty(true);
-        break;
-    }
-  }
-
-  const chooseAnimalHandler = (e) => {
-    setChooseAnimal(e.target.value);
-    if (e.target.value < 3) {
-      setChooseAnimalError('Incorrect value');
-    } else {
-      setChooseAnimalError('');
-    }
-  }
-
-  const toDonateHandler = (e) => {
-    setToDonate(e.target.value);
-    if (e.target.value < 3) {
-      setToDonateError('Incorrect value');
-    } else {
-      setToDonateError('');
-    }
-  }
-
-  const nameHandler = (e) => {
-    setName(e.target.value);
-
-    const re = /^[a-zA-Z]+ [a-zA-Z]+$/;
-
-    if (!re.test(e.target.value)) {
-      setNameError('Incorrect value');
-    } else {
-      setNameError('');
-    }
   }
 
   const emailHandler = (e) => {
@@ -117,7 +70,7 @@ export const DonationPopup = (props) => {
         setEmailError('Incorrect email')
       } else {
         setEmailError('');
-        }
+      }
   }
 
   const phoneHandler = (e) => {
@@ -132,17 +85,6 @@ export const DonationPopup = (props) => {
       }
     } else {
       setPhoneError('');
-    }
-  }
-
-  const cardNumberHandler = (e) => {
-    setCardNumber(e.target.value);
-    const cardNo = /^(?:3[47][0-9]{16})$/;
-
-    if (e.target.value.match(cardNo)) {
-      setCardNumberError('');
-    } else {
-      setCardNumberError('Please enter your 16 digit credit card numbers');
     }
   }
 
@@ -179,56 +121,61 @@ export const DonationPopup = (props) => {
             <form className={classNames('donation-form')}>
               <h3 className={classNames('heading')}>Donate for your animal</h3>
               <fieldset className={classNames('donation-form__choose')}>
-                <label className={classNames('input-section input-section__list-menu')}>
 
-
-{(chooseAnimalDirty && chooseAnimalError) &&
-<span className={classNames('input-section__error-message')}>{chooseAnimalError}</span>
-}
-<input onChange={e => chooseAnimalHandler(e)} value={chooseAnimal} onBlur={e => blurHandler(e)} type="text" name='text'/>
-
-
-
-                  <div className={classNames('list-menu')}>
-                    <select className={classNames('drop-list')}>
-                      <option value={"panda"}></option>
-                      <option value={"panda"}>panda</option>
-                      <option value={"elephant"}>elephant</option>
-                      <option value={"tiger"}>tiger</option>
-                      <option value={"eagle"}>eagle</option>
-                      <option value={"monkey"}>monkey</option>
-                    </select>
-                  </div>
-                  <span className={classNames('input-section__message')}>Choose an animal</span>
-                </label>
+                {/* choose animal dropdown */}
                 <label className={classNames('input-section')}>
-
-
-{(toDonatDirty && toDonateError) &&
-  <span className={classNames('input-section__error-message')}>{toDonateError}</span>
-}
-<input onChange={e => toDonateHandler(e)} value={toDonate} onBlur={e => blurHandler(e)} type="number" name='number'  />
-
-
-                  <span className={classNames('input-section__message')}>To donate</span>
+                  <span className={classNames('input-section__message')}>Choose an animal</span>
+                  <select
+                    className={classNames('drop-list')}
+                    onChange={e => setChooseAnimal(e.target.value)}
+                  >
+                    <option value={"panda"}>panda</option>
+                    <option value={"elephant"}>elephant</option>
+                    <option value={"tiger"}>tiger</option>
+                    <option value={"eagle"}>eagle</option>
+                    <option value={"monkey"}>monkey</option>
+                  </select>
                 </label>
+
+                {/* to donate input */}
+                <label className={classNames('input-section')}>
+                  <span className={classNames('input-section__message')}>To donate</span>
+                  {toDonateError &&
+                    <span className={classNames('input-section__error-message')}>
+                      {toDonateError}
+                    </span>
+                  }
+                  <input
+                    type="number"
+                    value={toDonate}
+                    onChange={e => setToDonate(e.target.value)}
+                    onBlur={validateAndSetError(setToDonateError, [isEmpty, lessThan3])}
+                  />
+                </label>
+
               </fieldset>
+
               <div className={classNames('donation-form__about')}>
                 <fieldset>
                   <legend>About you</legend>
+
+                  {/* name input field */}
                   <label className={classNames('input-section')}>
-
-
-
-{(nameDirty && nameError) &&
-<span className={classNames('input-section__error-message')}>{nameError}</span>
-}
-<input onChange={e => nameHandler(e)} value={name} onBlur={e => blurHandler(e)} type="text" name='text'/>
-
-
-
                     <span className={classNames('input-section__message')}>Name</span>
+                    {nameError &&
+                      <span className={classNames('input-section__error-message')}>
+                        {nameError}
+                      </span>
+                    }
+                    <input
+                      onChange={e => setName(e.target.value)}
+                      value={name}
+                      onBlur={validateAndSetError(setNameError, [isEmpty, twoWords])}
+                      type="text"
+                    />
                   </label>
+
+
                   <label className={classNames('input-section')}>
 
 
@@ -270,19 +217,23 @@ export const DonationPopup = (props) => {
 
                 <fieldset>
                   <legend>Checkout</legend>
+
+                  {/* card number input */}
                   <label className={classNames('input-section')}>
-
-
-
-{(cardNumberDirty && cardNumberError) &&
-<span className={classNames('input-section__error-message')}>{cardNumberError}</span>
-}
-<input onChange={e => cardNumberHandler(e)} value={cardNumber} onBlur={e => blurHandler(e)} type="number" name='number' data-min-length="5" />
-
-
-
                     <span className={classNames('input-section__message')}>Card number</span>
+                    {cardNumberError &&
+                      <span className={classNames('input-section__error-message')}>
+                        {cardNumberError}
+                      </span>
+                    }
+                    <input
+                      onChange={e => setCardNumberValue(e.target.value)}
+                      value={cardNumberValue}
+                      onBlur={validateAndSetError(setCardNumberError, [isEmpty, cardNumber])}
+                      type="number"
+                    />
                   </label>
+
                   <label className={classNames('input-section')}>
 
 
