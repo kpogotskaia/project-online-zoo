@@ -6,14 +6,14 @@
 
   &__block {
     position: relative;
-    background: url(../../assets/map.png) no-repeat;
+   // background: url(../../assets/map.png) no-repeat;
     background-size: contain;
     min-height: 146px;
     z-index: 0;
 
     .country-usa {
       position: absolute;
-      background: url(../../assets/map/canada-usa.png) no-repeat;
+     // background: url(../../assets/map/canada-usa.png) no-repeat;
       background-size: contain;
       min-height: 54.88px;
       z-index: 1;
@@ -29,7 +29,7 @@
       min-height: 54.88px;
       z-index: 1;
       cursor: pointer;
-      background: url(../../assets/map/afr.svg) no-repeat;
+     // background: url(../../assets/map/afr.svg) no-repeat;
       background-size: contain;
       left: 49.37%;
       right: 48.39%;
@@ -42,7 +42,7 @@
       min-height: 54.88px;
       z-index: 1;
       cursor: pointer;
-      background: url(../../assets/map/china.png) no-repeat;
+    //  background: url(../../assets/map/china.png) no-repeat;
       background-size: contain;
       left: 67.62%;
       right: 16.1%;

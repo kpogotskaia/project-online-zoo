@@ -1,6 +1,8 @@
 import { useEffect, useState } from 'react';
 import classNames from 'classnames';
 
+import { validateAndSetError, isEmpty, lessThan3, twoWords, cardNumber, exprCardDate, moreThan3 } from '../validation';
+
 import './style.scss';
 
 export const DonationPopup = (props) => {
@@ -20,18 +22,13 @@ export const DonationPopup = (props) => {
   const [expiryDate, setExpiryDate] = useState('');
   const [cvc, setCvc] = useState('');
 
-  const [emailDirty, setEmailDirty] = useState(false);
-  const [phoneDirty, setPhoneDirty] = useState(false);
-  const [expiryDateDirty, setExpiryDateDirty] = useState(false);
-  const [cvcDirty, setCvcDirty] = useState(false);
-
   const [toDonateError, setToDonateError] = useState('');
   const [nameError, setNameError] = useState('');
-  const [emailError, setEmailError] = useState('Input cannot be clear');
-  const [phoneError, setPhoneError] = useState('Input cannot be clear');
+  const [emailError, setEmailError] = useState('');
+  const [phoneError, setPhoneError] = useState('');
   const [cardNumberError, setCardNumberError] = useState('');
-  const [expiryDateError, setExpiryDateError] = useState('Input cannot be clear');
-  const [cvcError, setCvcError] = useState('Input cannot be clear');
+  const [expiryDateError, setExpiryDateError] = useState('');
+  const [cvcError, setCvcError] = useState('');
 
   const [formValid, setFormValid] = useState(false);
 
@@ -60,50 +57,6 @@ export const DonationPopup = (props) => {
   ]);
 
   const blurHandler = (e) => {
-  }
-
-  const emailHandler = (e) => {
-    setEmail(e.target.value);
-      const re = /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-
-      if (!re.test(String(e.target.value).toLowerCase())) {
-        setEmailError('Incorrect email')
-      } else {
-        setEmailError('');
-      }
-  }
-
-  const phoneHandler = (e) => {
-    setPhone(e.target.value);
-
-    const re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im;
-
-    if (!re.test(e.target.value)) {
-      setPhoneError('Phone cannot be < 9 numbers');
-      if (!e.target.value) {
-        setPhoneError('Input cannot be clear');
-      }
-    } else {
-      setPhoneError('');
-    }
-  }
-
-  const ExpiryDateHandler = (e) => {
-    setExpiryDate(e.target.value);
-    if (e.target.value < 8) {
-      setExpiryDateError('Incorrect value');
-    } else {
-      setExpiryDateError('');
-    }
-  }
-
-  const cvcHandler = (e) => {
-    setCvc(e.target.value);
-    if (e.target.value < 3) {
-      setCvcError('Incorrect value');
-    } else {
-      setCvcError('');
-    }
   }
 
   return (
@@ -175,43 +128,36 @@ export const DonationPopup = (props) => {
                     />
                   </label>
 
-
+                  {/* email input field */}
                   <label className={classNames('input-section')}>
-
-
-
-{(emailDirty && emailError) &&
-<span className={classNames('input-section__error-message')}>{emailError}</span>
-}
-<input onChange={e => emailHandler(e)} value={email} onBlur={e => blurHandler(e)} type="email" name='email'  />
-
-
                     <span className={classNames('input-section__message')}>Email</span>
+                    {emailError &&
+                      <span className={classNames('input-section__error-message')}>
+                        {emailError}
+                      </span>
+                    }
+                    <input
+                      onChange={e => setEmail(e.target.value)}
+                      value={email}
+                      onBlur={e => validateAndSetError(setEmailError, [isEmpty, email])}
+                      type="email"
+                    />
                   </label>
+
+                  {/* phone input field */}
                   <label className={classNames('input-section')}>
-                    <input type="tel"  data-min-length="3" />
-
-
-
-{(phoneDirty && phoneError) &&
-<span className={classNames('input-section__error-message')}>{phoneError}</span>
-}
-<input onChange={e => phoneHandler(e)} value={phone} onBlur={e => blurHandler(e)} className='tell-input' name='tel' type="tel"  data-min-length="3" />
-
-
-
                     <span className={classNames('input-section__message')}>Phone</span>
-                  <div className={classNames('phone-menu')}>
-                    <select className={classNames('drop-list')}>
-                      <option value={"panda"}>+1</option>
-                      <option value={"panda"}>+7</option>
-                      <option value={"elephant"}>+375</option>
-                      <option value={"tiger"}>+370</option>
-                      <option value={"eagle"}>+410</option>
-                      <option value={"monkey"}>+8</option>
-                    </select>
-                  </div>
-                    <span className={classNames('deviding-line')}></span>
+                    {phoneError &&
+                      <span className={classNames('input-section__error-message')}>
+                        {phoneError}
+                      </span>
+                    }
+                    <input
+                      onChange={e => setPhone(e.target.value)}
+                      value={phone}
+                      onBlur={e => validateAndSetError(setPhoneError, [isEmpty, phone])} className='tell-input'
+                      type="tel"
+                    />
                   </label>
                 </fieldset>
 
@@ -234,31 +180,36 @@ export const DonationPopup = (props) => {
                     />
                   </label>
 
+                    {/* Exp date card number input */}
                   <label className={classNames('input-section')}>
-
-
-
-{(expiryDateDirty && expiryDateError) &&
-<span className={classNames('input-section__error-message')}>{expiryDateError}</span>
-}
-<input onChange={e => ExpiryDateHandler(e)} value={expiryDate} onBlur={e => blurHandler(e)} type="date" name='date'  data-min-length="3" />
-
-
-
                     <span className={classNames('input-section__message')}>Expiry date</span>
+                    {expiryDateError &&
+                      <span className={classNames('input-section__error-message')}>{expiryDateError}
+                        {expiryDateError}
+                      </span>
+                    }
+                    <input
+                      onChange={e => setExpiryDate(e.target.value)}
+                      value={expiryDate}
+                      onBlur={validateAndSetError(setExpiryDateError, [isEmpty, exprCardDate])}
+                      type="date"
+                    />
                   </label>
+
+                    {/* Input CVC card number */}
                   <label className={classNames('input-section')}>
-
-
-
-{(cvcDirty && cvcError) &&
-<span className={classNames('input-section__error-message')}>{cvcError}</span>
-}
-<input onChange={e => cvcHandler(e)} value={cvc} onBlur={e => blurHandler(e)} type="number" name='number'  data-min-length="4" />
-
-
-
                     <span className={classNames('input-section__message')}>CVC</span>
+                    {cvcError &&
+                      <span className={classNames('input-section__error-message')}>
+                        {cvcError}
+                      </span>
+                    }
+                    <input
+                    onChange={e => setCvc(e.target.value)}
+                    value={cvc}
+                    onBlur={validateAndSetError(setCvcError, [isEmpty, moreThan3])}
+                    type="number"
+                    />
                   </label>
                 </fieldset>
               </div>
@@ -268,7 +219,7 @@ export const DonationPopup = (props) => {
                 2021, you agree that you will
                 automatically be charged
               </p>
-              <input disabled={!formValid} value="DONATE" className={classNames('donation-form__submit')} type="submit"></input>
+              <input value="DONATE" className={classNames('donation-form__submit')} type="submit"></input>
             </form>
 
         </div>
