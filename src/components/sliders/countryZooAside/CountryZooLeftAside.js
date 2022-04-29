@@ -20,7 +20,10 @@ export const CountryZooLeftAside = (props) => {
           ${classes['arrow']}
           ${classes['arrow-top']}
         `}
-        onClick={e => setSlides(reArrangeItems(slides, 1))}
+        onClick={e => {
+          props.setSelectedAnimalIndex(clamp(props.selectedAnimalIndex, -1, 0, props.slides.length));
+          setSlides(reArrangeItems(slides, 1));
+        }}
       ></div>
       {slides.filter((_, i) => i < lastVisibleItem).map((animal, i) => (
         <div
@@ -31,8 +34,9 @@ export const CountryZooLeftAside = (props) => {
           `}
           onClick={() => {
             if (i !== 0) {
-              props.setSelectedAnimal(animal);
-              setSlides(reArrangeItems(props.slides, -props.slides.findIndex(a => a.alt === animal.alt)));
+              const ind = props.slides.findIndex(a => a.alt === animal.alt);
+              props.setSelectedAnimalIndex(ind);
+              setSlides(reArrangeItems(props.slides, -ind));
             }
           }}
         >
@@ -47,7 +51,10 @@ export const CountryZooLeftAside = (props) => {
           ${classes['arrow']}
           ${classes['arrow-bottom']}
         `}
-        onClick={e => setSlides(reArrangeItems(slides, -1))}
+        onClick={e => {
+          props.setSelectedAnimalIndex(clamp(props.selectedAnimalIndex, 1, 0, props.slides.length));
+          setSlides(reArrangeItems(slides, -1));
+        }}
       ></div>
     </aside>
   );

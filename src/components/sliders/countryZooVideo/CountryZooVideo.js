@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 
 import './CountryZooVideo.scss';
 
@@ -14,9 +14,15 @@ export const CountryZooVideo = ({videos}) => {
     i < (curSectionIndex + 1 * slidesPerSection)
   );
 
+  const activeVideoUrl = videos[0].videoUrl;
+
+  useEffect(() => {
+    setActiveVideo(videos[0]);
+  }, [videos, activeVideoUrl]);
+
   return (
     <div className="content-video">
-      <img className="active-video" src={activeVideo.videoUrl} alt={activeVideo.alt}/>
+      <img className="active-video" src={activeVideo.videoUrl} alt={activeVideo.alt} />
       <div className="content-video__slider">
         {curSlides.map((video, i) => (
           <div

@@ -8,12 +8,17 @@ import { Button } from '../components/Button';
 import styles from './style.module.scss';
 
 export const CountryZoo = ({animals}) => {
-  const [selectedAnimal, setSelectedAnimal] = useState(animals[0]);
+  const [selectedAnimalIndex, setSelectedAnimalIndex] = useState(0);
+  const selectedAnimal = animals[selectedAnimalIndex];
 
   return [
     <Header key="0" />,
     <section key="1" className={styles['country-zoo']}>
-      <CountryZooLeftAside slides={animals} setSelectedAnimal={setSelectedAnimal} />
+      <CountryZooLeftAside
+        slides={animals}
+        selectedAnimalIndex={selectedAnimalIndex}
+        setSelectedAnimalIndex={setSelectedAnimalIndex}
+      />
 
       <div className={styles.content}>
         <h2 className={styles['page-title']}>
