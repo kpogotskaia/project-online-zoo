@@ -1,136 +1,51 @@
 @import '../variables';
 @import '../mixins.scss';
 
-.infoZoo {
-  box-shadow: 0px 6px 20px rgba(41, 70, 58, 0.08);
+.country-zoo {
+  display: flex;
+  margin-top: 80px;
 
-  .container {
+  .content {
+    margin: 0 6.5vw 150px;
 
-    .infoZooContent {
-      display: flex;
+    .page-title {
+      margin: 0;
+      margin-bottom: 20px;
+      font-size: 24px;
+      font-weight: 900;
+      word-spacing: -6px;
 
-      .content {
-
-        .contentInfo {
-
-          //padding-top: 10px;
-
-          padding-top: 10px;
-
-
-          .heading {
-            margin: 0 0 8px;
-            font-style: normal;
-            font-weight: 900;
-            font-size: 14px;
-            line-height: 16px;
-          }
-
-          .pharagraph {
-            font-family: $font;
-            font-style: normal;
-            font-weight: normal;
-            font-size: 12px;
-            line-height: 14px;
-            color: #4f4f4f;
-            margin-bottom: 15px;
-          }
-
-        }
-
-        .contentButton {
-          width: 155px;
-          height: 55px;
-          background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
-          border-radius: 3px;
-
-          font-style: normal;
-          font-weight: 700;
-          font-size: 18px;
-          line-height: 21px;
-          text-align: center;
-          text-transform: uppercase;
-          color: #ffffff;
-          margin-bottom: 60px;
-
-          .contentButton {
-            width: 185px;
-            height: 55px;
-            background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
-            border-radius: 3px;
-
-            font-style: normal;
-            font-weight: 700;
-            font-size: 18px;
-            line-height: 21px;
-            text-align: center;
-            text-transform: uppercase;
-            color: #ffffff;
-            margin-bottom: 60px;
-          }
-        }
+      @include media-from-tablet-min {
+        margin-bottom: 35px;
+        font-size: 48px;
       }
+
+      @include media-from-desktop-min {
+        margin-bottom: 40px;
+      }
+    }
+
+    .horizontal-section {
+      @include media-from-desktop-min {
+        display: flex;
+      }
+    }
+
+    .contentInfo {
+      @include media-from-desktop-min {
+        margin-left: 30px;
+      }
+
+      .pharagraph {
+        font-family: $font;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 12px;
+        line-height: 14px;
+        color: #4f4f4f;
+        margin-bottom: 15px;
+      }
+
     }
   }
-}
-
-// tablet
-@media screen and (min-width: 640px) {
-  .infoZoo {
-    .container {
-      .infoZooContent {
-        .content {
-
-          .contentInfo {
-            &__heading {
-              font-size: 20px;
-              line-height: 23px;
-            }
-
-            &__pharagraph {
-              font-size: 14px;
-              line-height: 16px;
-            }
-
-            .content-button {
-              margin-bottom: 80px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-// desktop
-@media screen and (min-width: 1280px) {
-    /* Zoos - next page*/
-    .infoZoo {
-      .container {
-        .infoZooContent {
-          .content {
-            display: flex;
-
-            .contentInfo {
-              margin: 138px 210px 35px 0;
-
-              &__heading {
-                font-size: 20px;
-                line-height: 23px;
-              }
-
-              &__pharagraph {
-                font-size: 14px;
-                line-height: 16px;
-              }
-            }
-
-            &-button {
-              width: 195px;
-              margin-top: 22px;
-            }
-          }
-        }
-      }
-    }
 }

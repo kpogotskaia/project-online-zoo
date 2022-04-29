@@ -42,6 +42,7 @@ import LeftMenuZebra from './assets/left-menu/zebra.png';
 import LeftMenuArrowTop from './assets/left-menu/VectorTop.png';
 import LeftMenuArrowBottom from './assets/left-menu/Vectorbottom.png';
 import CountryZooVideo from './assets/Zoos-video/small-video.png';
+import GorillaVideo from './assets/Zoos-video/gorilla.png';
 
 import MapPagePanda from './assets/left-menu/panda.png';
 import MapPageEagle from './assets/left-menu/eagle.png';
@@ -71,30 +72,6 @@ export const VECTOR_IMG = [
   {
     imgUrl: VectorMonkeyImg,
     alt: 'monkey'
-  }
-]
-
-export const COUNTRY_ZOO_DESCRIPTION = [
-  {
-    heading: 'Population:',
-    desc: 'About 1,590 individuals'
-  },
-  {
-    heading: 'Habitat:',
-    desc: 'Temperate forests high in the mountains of southwest China'
-  },
-  {
-    heading: 'Diet:',
-     desc: `A panda's daily diet consists almost entirely
-            of the leaves, stems and shoots of
-            various bamboo species. Bamboo contains
-            very little nutritional value so pandas
-            must eat 12-38kg every day to meet their
-            energy needs.`
-  },
-  {
-    heading: 'Donated',
-    desc: '687.546$'
   }
 ]
 
@@ -157,31 +134,6 @@ export const LEFT_MENU_ARROW = {
     LeftMenuArrowBottom: LeftMenuArrowBottom,
     alt: 'arrow'
 }
-
-export const COUNTRY_ZOO_VODEO = [
-  {
-    videoUrl: CountryZooVideo,
-    alt: 'animal video'
-  },
-  {
-    videoUrl: CountryZooVideo,
-    alt: 'animal video'
-  },
-  {
-    videoUrl: CountryZooVideo,
-    alt: 'animal video'
-  },
-  {
-    videoUrl: CountryZooVideo,
-    alt: 'animal video'
-  },
-]
-
-export const COUNTRY_ZOO_VODEO_SCROLL = [
-  {},
-  {},
-  {}
-]
 
 export const LEFT_MENU_ANIMAL = [
   {
@@ -352,60 +304,436 @@ export const ANIMALS = [
   {
     imgUrl: EagleImg,
     alt: 'eagle',
+    population: 6590,
+    donated: '687.546$',
+    habitat: 'Temperate forests high in the mountains of southwest China',
     desc: `Eagle’s name is King. He
-    is 2 years old. King is
-    from USA. He loves meat.`,
+      is 2 years old. King is
+      from USA. He loves meat.`,
+    descLong: `A panda's daily diet consists almost entirely
+      of the leaves, stems and shoots of
+      various bamboo species. Bamboo contains
+      very little nutritional value so pandas
+      must eat 12-38kg every day to meet their
+      energy needs.`,
+    videos: [
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+    ],
   },
   {
     imgUrl: PandaImg,
     alt: 'panda',
+    population: 7590,
+    donated: '687.546$',
+    habitat: 'Temperate forests high in the mountains of southwest China',
     desc: `
       Panda’s name is Bei Bei. She
       is 5 years old. Bei Bei is
       from Kongo. He loves bananas.
     `,
+    descLong: `A panda's daily diet consists almost entirely
+      of the leaves, stems and shoots of
+      various bamboo species. Bamboo contains
+      very little nutritional value so pandas
+      must eat 12-38kg every day to meet their
+      energy needs.`,
+    videos: [
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+    ],
   },
   {
     imgUrl: MonkeyImg,
     alt: 'monkey',
-    desc: ` Monkey’s name is Lu-Lu. She
+    population: 9590,
+    donated: '687.546$',
+    habitat: 'Temperate forests high in the mountains of southwest China',
+    desc: `Monkey’s name is Lu-Lu. She
     is 5 years old. Lu-Lu is
     from Kongo. He loves bananas.`,
+    descLong: `A panda's daily diet consists almost entirely
+      of the leaves, stems and shoots of
+      various bamboo species. Bamboo contains
+      very little nutritional value so pandas
+      must eat 12-38kg every day to meet their
+      energy needs.`,
+    videos: [
+      {
+        videoUrl: GorillaVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: GorillaVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: GorillaVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: GorillaVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: GorillaVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: GorillaVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: GorillaVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: GorillaVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: GorillaVideo,
+        alt: 'animal video'
+      },
+    ],
   },
   {
     imgUrl: CrocImg,
     alt: 'croc',
+    population: 3590,
+    donated: '6587.546$',
+    habitat: 'Temperate forests high in the mountains of southwest China',
     desc: `Crocodile’s name is Gena. She
     is 1 years old. Gena is
     from Florida, USA. She loves testy food.`,
+    descLong: `A panda's daily diet consists almost entirely
+      of the leaves, stems and shoots of
+      various bamboo species. Bamboo contains
+      very little nutritional value so pandas
+      must eat 12-38kg every day to meet their
+      energy needs.`,
+    videos: [
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+    ],
   },
   {
     imgUrl: FoxImg,
     alt: 'fox',
+    population: 2590,
+    donated: '487.546$',
+    habitat: 'Temperate forests high in the mountains of southwest China',
     desc: ` Fex’s name is Mila. She
     is 3 years old. Mila is
     from Belarus. She loves chicken.`,
+    descLong: `A panda's daily diet consists almost entirely
+      of the leaves, stems and shoots of
+      various bamboo species. Bamboo contains
+      very little nutritional value so pandas
+      must eat 12-38kg every day to meet their
+      energy needs.`,
+    videos: [
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+    ],
   },
   {
     imgUrl: ElephImg,
     alt: 'elephant',
+    population: 1190,
+    donated: '387.546$',
+    habitat: 'Temperate forests high in the mountains of southwest China',
     desc: ` Elephant’s name is Barney. He
     is 5 years old. Barney is
     from Kongo. He loves bananas.`,
+    descLong: `A panda's daily diet consists almost entirely
+      of the leaves, stems and shoots of
+      various bamboo species. Bamboo contains
+      very little nutritional value so pandas
+      must eat 12-38kg every day to meet their
+      energy needs.`,
+    videos: [
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+    ],
   },
   {
     imgUrl: CatImg,
     alt: 'cat',
+    population: 1290,
+    donated: '187.546$',
+    habitat: 'Temperate forests high in the mountains of southwest China',
     desc: ` Leopard’s name is Maysis. He
     is 8 years old. Barney is
     from Kongo. He loves beef.`,
+    descLong: `A panda's daily diet consists almost entirely
+      of the leaves, stems and shoots of
+      various bamboo species. Bamboo contains
+      very little nutritional value so pandas
+      must eat 12-38kg every day to meet their
+      energy needs.`,
+    videos: [
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+    ],
   },
   {
     imgUrl: AnmImg,
     alt: 'anm',
+    population: 1590,
+    donated: '687.546$',
+    habitat: 'Temperate forests high in the mountains of southwest China',
     desc: ` Leopard’s name is Maysis. He
     is 8 years old. Barney is
     from Kongo. He loves beef.`,
+    descLong: `A panda's daily diet consists almost entirely
+      of the leaves, stems and shoots of
+      various bamboo species. Bamboo contains
+      very little nutritional value so pandas
+      must eat 12-38kg every day to meet their
+      energy needs.`,
+    videos: [
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+      {
+        videoUrl: CountryZooVideo,
+        alt: 'animal video'
+      },
+    ],
   }
 ];
 

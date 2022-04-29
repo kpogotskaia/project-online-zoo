@@ -1,152 +1,108 @@
 @import '../../../variables.scss';
 @import '../../../mixins.scss';
 
-.left-menu {
-  margin-top: 80px;
+.slider {
+  position: relative;
+  padding: 0 1.35vw;
+  margin-bottom: auto;
+  margin-top: 40px;
 
-  &__imgs {
-    height: 200px;
-    overflow: hidden;
+  .slide {
+    position: relative;
+    border-radius: 50%;
+    margin: auto;
+    cursor: pointer;
 
-    > div {
-      height: 400px;
-      padding: 0 5px;
-      position: relative;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+    width: 11vw;
+    height: 11vw;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 108px;
+    max-height: 108px;
 
-      .slide {
-        border-radius: 50%;
-        margin: auto;
-        cursor: pointer;
+    &:not(.slide--active) {
+      transition: all ease-out 0.125s;
+    }
 
-        &--active {
-          border: 2px solid #49d6df;
+    .image {
+      background-size: cover;
+      border-radius: 50%;
 
-          div {
-            width: 65px;
-            height: 65px;
-          }
-        }
+      width: 96%;
+      height: 96%;
+      margin: 2%;
+    }
 
-        div {
-          background-size: cover;
-          border-radius: 50%;
-          margin: 2px;
-          width: 40px;
-          height: 40px;
-        }
-      }
+    &:hover {
+      border: 2px solid #cb49df;
+      width: 13.3vw;
+      height: 13.3vw;
+      min-width: 65px;
+      min-height: 65px;
+      max-width: 157px;
+      max-height: 157px;
+    }
 
-      .arrow {
-        left: 50%;
-        position: absolute;
-        color: $gray;
-        font-size: 40px;
-        font-weight: 900;
-        cursor: pointer;
-        user-select: none;
-        opacity: 0.5;
-        width: 24px;
-        height: 24px;
-        background-image: url('../../../assets/arrRight.svg');
-        background-size: cover;
+    &--active {
+      border: 2px solid #49d6df;
+      margin: 2px;
+      width: 13.3vw;
+      height: 13.3vw;
+      min-width: 65px;
+      min-height: 65px;
+      max-width: 157px;
+      max-height: 157px;
 
-        &:hover {
-          opacity: 1;
-        }
-
-        @include media-from-desktop-min {
-          width: 35px;
-          height: 35px;
-        }
-      }
-
-      .arrow-top {
-        transform: translateX(-50%) rotate(-90deg);
-        top: -30px;
-      }
-
-      .arrow-bottom {
-        transform: translateX(-50%) rotate(90deg);
-        bottom: -30px;
+      &:hover {
+        border-color: #cb49df;
       }
     }
   }
-}
 
-@include media-from-tablet-min {
-  .left-menu {
-    margin-top: 95px;
+  .slide + .slide {
+    margin-top: 5px;
+  }
 
-    &__imgs {
-      height: 650px;
-      padding: 0 5px;
+  .arrow {
+    left: 50%;
+    position: absolute;
+    color: $gray;
+    font-size: 40px;
+    font-weight: 900;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.5;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../assets/arrRight.svg');
+    background-size: cover;
+    transition: all ease-out 0.125s;
 
-      .slide {
-        div {
-          width: 70px;
-          height: 70px;
-        }
+    &:hover {
+      opacity: 1;
+    }
 
-        &--active {
-          div {
-            width: 90px;
-            height: 90px;
-          }
-        }
-      }
+    @include media-from-desktop-min {
+      width: 35px;
+      height: 35px;
     }
   }
-}
 
-@include media-from-desktop-min {
-  .left-menu {
-    margin-top: 110px;
+  .arrow-top {
+    transform: translateX(-50%) rotate(-90deg);
+    top: -30px;
 
-    &__imgs {
-      height: 650px;
-      padding: 0 5px;
-
-      .slide {
-        div {
-          width: 95px;
-          height: 95px;
-        }
-
-        &--active {
-          div {
-            width: 120px;
-            height: 120px;
-          }
-        }
-      }
+    @include media-from-desktop-min {
+      top: -40px;
     }
   }
-}
 
-@include media-from-desktop {
-  .left-menu {
-    margin-top: 130px;
+  .arrow-bottom {
+    transform: translateX(-50%) rotate(90deg);
+    bottom: -30px;
 
-    &__imgs {
-      height: 650px;
-      padding: 0 5px;
-
-      .slide {
-        div {
-          width: 108px;
-          height: 108px;
-        }
-
-        &--active {
-          div {
-            width: 157px;
-            height: 157px;
-          }
-        }
-      }
+    @include media-from-desktop-min {
+      bottom: -40px;
     }
   }
 }
