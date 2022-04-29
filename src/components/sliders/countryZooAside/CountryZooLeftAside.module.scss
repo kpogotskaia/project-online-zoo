@@ -2,175 +2,151 @@
 @import '../../../mixins.scss';
 
 .left-menu {
-  width: 75px;
   margin-top: 80px;
 
-  .arrow {
-    margin-left: 25px;
-    position: absolute;
-    color: $gray;
-    font-size: 40px;
-    font-weight: 900;
-    cursor: pointer;
-    user-select: none;
-    opacity: 0.5;
-    top: 50%;
-    width: 24px;
-    height: 24px;
-    background-image: url('../../../assets/arrRight.svg');
-    background-size: cover;
-
-    &:hover {
-      opacity: 1;
-    }
-
-    @include media-from-tablet-min {
-      left: 2%;
-    }
-
-    @include media-from-desktop-min {
-      width: 35px;
-      height: 35px;
-    }
-
-    @include media-from-desktop {
-      left: 3.5%;
-    }
-  }
-
-  .arrow-top {
-    transform: rotate(-90deg);
-    top: 19%;
-
-    @include media-from-tablet-min {
-      top: 22%;
-    }
-
-    @include media-from-desktop-min {
-      top: 16%;
-    }
-
-    @include media-from-desktop {
-      top: 19%;
-    }
-  }
-
-  .arrow-bottom {
-    transform: rotate(90deg);
-    top: 51%;
-
-    @include media-from-tablet-min {
-      top: 71%;
-    }
-
-    @include media-from-desktop-min {
-      top: 67%;
-    }
-
-    @include media-from-desktop {
-      top: 85%;
-    }
-  }
-
-
-  .slidesMove {
-    position: relative;
-    @include slider-animate();
-  }
-
   &__imgs {
-    height: 207px;
+    height: 200px;
     overflow: hidden;
-  }
 
-  &__animal {
-    border-radius: 50%;
-    margin: 5px 18px;
-    position: relative;
-    width: 40px;
-    height: 40px;
-    flex-shrink: 0;
-    background-size: cover;
-    cursor: pointer;
-  }
+    > div {
+      height: 400px;
+      padding: 0 5px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
 
-  &--active {
-    margin-left: 5px;
-    border: 3px solid #49d6df;
-    border-radius: 50%;
-    width: 65px;
-    height: 65px;
+      .slide {
+        border-radius: 50%;
+        margin: auto;
+        cursor: pointer;
+
+        &--active {
+          border: 2px solid #49d6df;
+
+          div {
+            width: 65px;
+            height: 65px;
+          }
+        }
+
+        div {
+          background-size: cover;
+          border-radius: 50%;
+          margin: 2px;
+          width: 40px;
+          height: 40px;
+        }
+      }
+
+      .arrow {
+        left: 50%;
+        position: absolute;
+        color: $gray;
+        font-size: 40px;
+        font-weight: 900;
+        cursor: pointer;
+        user-select: none;
+        opacity: 0.5;
+        width: 24px;
+        height: 24px;
+        background-image: url('../../../assets/arrRight.svg');
+        background-size: cover;
+
+        &:hover {
+          opacity: 1;
+        }
+
+        @include media-from-desktop-min {
+          width: 35px;
+          height: 35px;
+        }
+      }
+
+      .arrow-top {
+        transform: translateX(-50%) rotate(-90deg);
+        top: -30px;
+      }
+
+      .arrow-bottom {
+        transform: translateX(-50%) rotate(90deg);
+        bottom: -30px;
+      }
+    }
   }
 }
 
 @include media-from-tablet-min {
-
   .left-menu {
-    width: 125px;
     margin-top: 95px;
 
     &__imgs {
-      height: 340px;
-    }
+      height: 650px;
+      padding: 0 5px;
 
-    &__animal {
-      margin: 10px 35px 10px 17px;
-      width: 70px;
-      height: 70px;
-    }
+      .slide {
+        div {
+          width: 70px;
+          height: 70px;
+        }
 
-    &--active {
-      margin-left: 7px;
-      width: 90px;
-      height: 90px;
+        &--active {
+          div {
+            width: 90px;
+            height: 90px;
+          }
+        }
+      }
     }
   }
 }
 
 @include media-from-desktop-min {
-
   .left-menu {
     margin-top: 110px;
-    width: 210px;
 
     &__imgs {
-      height: 455px;
-    }
+      height: 650px;
+      padding: 0 5px;
 
-    &__animal {
-      margin-left: 28px;
-      width: 95px;
-      height: 95px;
-    }
+      .slide {
+        div {
+          width: 95px;
+          height: 95px;
+        }
 
-    &--active {
-      margin-left: 15px;
-      width: 120px;
-      height: 120px;
+        &--active {
+          div {
+            width: 120px;
+            height: 120px;
+          }
+        }
+      }
     }
   }
 }
 
 @include media-from-desktop {
-
   .left-menu {
     margin-top: 130px;
-    width: 210px;
 
     &__imgs {
-      height: 522px;
-    }
+      height: 650px;
+      padding: 0 5px;
 
-    &__animal {
-      margin-left: 51px;
-      width: 108px;
-      height: 108px;
-    }
+      .slide {
+        div {
+          width: 108px;
+          height: 108px;
+        }
 
-    &--active {
-      margin-left: 32px;
-      width: 157px;
-      height: 157px;
+        &--active {
+          div {
+            width: 157px;
+            height: 157px;
+          }
+        }
+      }
     }
   }
 }
