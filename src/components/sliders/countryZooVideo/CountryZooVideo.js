@@ -14,11 +14,10 @@ export const CountryZooVideo = ({videos}) => {
     i < (curSectionIndex + 1 * slidesPerSection)
   );
 
-  const activeVideoUrl = videos[0].videoUrl;
-
   useEffect(() => {
     setActiveVideo(videos[0]);
-  }, [videos, activeVideoUrl]);
+    setCurSectionIndex(0);
+  }, [videos]);
 
   return (
     <div className="content-video">
