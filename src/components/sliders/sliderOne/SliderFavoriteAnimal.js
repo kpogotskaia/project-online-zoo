@@ -70,7 +70,7 @@ export const SliderFavoriteAnimal = () => {
         <Paginator
           amount={ANIMALS.length}
           selected={selectedSlideIndex + 1}
-          theme={THEME.DARK}
+          theme={THEME.LIGHT}
         />
       </div>
     </div>

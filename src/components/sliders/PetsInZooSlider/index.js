@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { ANIMALS } from '../../../constants';
-import { Paginator } from '../../Paginator/index';
+import { Paginator, THEME } from '../../Paginator/index';
 
 import classes from './style.module.scss';
 
@@ -88,6 +88,7 @@ export const PetsInZooSlider = () => {
           className={classes.paginatorSection}
           amount={ANIMALS.length}
           selected={selectedSlideIndex}
+          theme={THEME.DARK}
         />
       </div>
   );

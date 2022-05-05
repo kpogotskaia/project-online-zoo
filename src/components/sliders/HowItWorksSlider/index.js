@@ -26,21 +26,21 @@ export const HowItWorksSlider = () => {
   const nextImgIndex = activeIndex === IMG.length - 1 ? 0 : activeIndex + 1;
 
   return (
-      <div className={styles.howItWorksSlider}>
-        <div className={styles.slider}>
-          <img src={IMG[prevImgIndex]} alt="prev" />
-          {IMG[activeIndex]}
-          <img src={IMG[nextImgIndex]} alt="next" />
-        </div>
+    <div className={styles.howItWorksSlider}>
+      <div className={styles.slider}>
+        <img src={IMG[prevImgIndex]} alt="prev" />
+        {IMG[activeIndex]}
+        <img src={IMG[nextImgIndex]} alt="next" />
+      </div>
 
-        <div className={styles.paginatorSection}>
+      <div className={styles.paginatorSection}>
         <Paginator
           amount={IMG.length}
           selected={activeIndex + 1}
           theme={THEME.DARK}
         />
-        </div>
       </div>
+    </div>
   );
 };
 

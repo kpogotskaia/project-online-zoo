@@ -44,7 +44,7 @@ export const MapPageGallery = () => {
           <Paginator
             amount={ANIMALS.length}
             selected={selectedSlideIndex + 1}
-            theme={THEME.LIGHT}
+            theme={THEME.DARK}
           />
         </div>
       </div>
