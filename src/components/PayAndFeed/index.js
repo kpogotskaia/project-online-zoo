@@ -27,6 +27,8 @@ export const PayAndFeed = () => {
     }, delay);
   };
 
+
+
   return (
     <div className={styles.payAndFeed}>
       <SectionWrapper>
@@ -43,7 +45,10 @@ export const PayAndFeed = () => {
               <div key={`${i}0`} className={styles.blockDonationCard}>
                 <img className={styles.blockDonationCardImg} src={donation.imgUrl} alt={donation.alt} />
                 <h5 className={styles.blockDonationCardHeading}>{donation.heading}</h5>
-                <img className={styles.blockDonationCardArrow} src={DonationArrowImg} alt="arrow" />
+
+                {i !== DONATION_STEPS.length - 1 &&
+                  <img className={styles.blockDonationCardArrow} src={DonationArrowImg} alt="arrow"/>
+                }
               </div>
             )}
            </div>
