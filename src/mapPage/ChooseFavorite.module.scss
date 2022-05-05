@@ -2,7 +2,7 @@
 @import '../mixins';
 
 .pharagraphSection {
-  margin: 10px 0 30px;
+  margin: 10px auto;
   font-family: $font;
   font-style: normal;
   font-weight: normal;
@@ -11,17 +11,15 @@
   color: #4F4F4F;
 
   @include media-from-tablet-min {
-    margin: 20px auto 35px;
   }
 
   @include media-from-desktop-min {
-    margin: 20px auto 35px;
     padding: 0 80px;
   }
 
   @include media-from-desktop {
-    margin: 20px auto 55px;
-    padding: 0 415px;
+    font-size: 14px;
+    line-height: 17px;
   }
 }
 
