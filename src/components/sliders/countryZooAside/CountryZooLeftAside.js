@@ -1,29 +1,61 @@
-import { LEFT_MENU_ANIMAL,  LEFT_MENU_ARROW} from '../../../constants';
-import './CountryZooLeftAside.scss';
+import { useState } from 'react';
+import { clamp } from '../../../utils';
+import classes from './CountryZooLeftAside.module.scss';
 
-export const CountryZooLeftAside = () => {
+const lastVisibleItem = 4;
+
+const reArrangeItems = (arr, shift) =>
+  arr.reduce((target, item, i) => {
+    target[clamp(i, shift, 0, arr.length)] = item;
+    return target;
+  }, []);
+
+export const CountryZooLeftAside = (props) => {
+  const [slides, setSlides] = useState(props.slides);
+
   return (
-    <aside className="left-menu">
-      <img className="arrow-top" src={LEFT_MENU_ARROW.LeftMenuArrowTop} alt={LEFT_MENU_ARROW.alt} />
-
-      <div className='left-menu__imgs'>
-        {LEFT_MENU_ANIMAL.map((animals, i) => (
+    <aside className={classes['slider']}>
+      <div
+        className={`
+          ${classes['arrow']}
+          ${classes['arrow-top']}
+        `}
+        onClick={e => {
+          props.setSelectedAnimalIndex(clamp(props.selectedAnimalIndex, -1, 0, props.slides.length));
+          setSlides(reArrangeItems(slides, 1));
+        }}
+      ></div>
+      {slides.filter((_, i) => i < lastVisibleItem).map((animal, i) => (
+        <div
+          key={animal.alt}
+          className={`
+            ${classes['slide']}
+            ${i === 0 ? classes['slide--active'] : ''}
+          `}
+          onClick={() => {
+            if (i !== 0) {
+              const ind = props.slides.findIndex(a => a.alt === animal.alt);
+              props.setSelectedAnimalIndex(ind);
+              setSlides(reArrangeItems(props.slides, -ind));
+            }
+          }}
+        >
           <div
-            key={i}
-            className={`
-              ${'left-menu__animal'}
-              ${i === 0 ? 'left-menu__animal-active' : ''}
-            `}
-          >
-            <img className="left-menu__animal" src={animals.imgUrl} alt={animals.alt} />
-          </div>
-        ))}
-      </div>
-
-      <img className="arrow-bottom" src={LEFT_MENU_ARROW.LeftMenuArrowBottom} alt={LEFT_MENU_ARROW.alt} />
-
-  </aside>
+            className={classes['image']}
+            style={{backgroundImage: `url('${animal.imgUrl}'`}}
+          ></div>
+        </div>
+      ))}
+      <div
+        className={`
+          ${classes['arrow']}
+          ${classes['arrow-bottom']}
+        `}
+        onClick={e => {
+          props.setSelectedAnimalIndex(clamp(props.selectedAnimalIndex, 1, 0, props.slides.length));
+          setSlides(reArrangeItems(slides, -1));
+        }}
+      ></div>
+    </aside>
   );
 };
-
-

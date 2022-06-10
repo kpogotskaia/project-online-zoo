@@ -23,6 +23,7 @@ export const Paginator = ({ className, amount, selected, theme }) => {
       >
         {selected}/<span className={styles.amountStyle}>{amount}</span>
       </span>
+
       <div className={styles.paginatorLine}>
         <div
           className={classNames(styles.paginatorLineButton, {

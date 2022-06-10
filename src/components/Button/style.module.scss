@@ -7,7 +7,7 @@
   margin: 0 auto;
   align-items: center;
   justify-content: center;
-  width: 245px;
+  width: 185px;
   height: 55px;
   background: linear-gradient(106.89deg, #84928a -14.32%, #628d90 100.68%);
   border-radius: 3px;
@@ -21,8 +21,8 @@
   .icon {
     padding-right: 10px;
   }
-}
 
-.button:hover {
-  background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
+  &:hover {
+    background: linear-gradient(106.89deg, #4bd8b5 -14.32%, #49d6df 100.68%);
+  }
 }

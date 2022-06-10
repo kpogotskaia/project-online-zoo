@@ -1,0 +1,108 @@
+@import '../../../variables.scss';
+@import '../../../mixins.scss';
+
+.slider {
+  position: relative;
+  padding: 0 1.35vw;
+  margin-bottom: auto;
+  margin-top: 40px;
+
+  .slide {
+    position: relative;
+    border-radius: 50%;
+    margin: auto;
+    cursor: pointer;
+
+    width: 11vw;
+    height: 11vw;
+    min-width: 40px;
+    min-height: 40px;
+    max-width: 108px;
+    max-height: 108px;
+
+    &:not(.slide--active) {
+      transition: all ease-out 0.125s;
+    }
+
+    .image {
+      background-size: cover;
+      border-radius: 50%;
+
+      width: 96%;
+      height: 96%;
+      margin: 2%;
+    }
+
+    &:hover {
+      border: 2px solid #cb49df;
+      width: 13.3vw;
+      height: 13.3vw;
+      min-width: 65px;
+      min-height: 65px;
+      max-width: 157px;
+      max-height: 157px;
+    }
+
+    &--active {
+      border: 2px solid #49d6df;
+      margin: 2px;
+      width: 13.3vw;
+      height: 13.3vw;
+      min-width: 65px;
+      min-height: 65px;
+      max-width: 157px;
+      max-height: 157px;
+
+      &:hover {
+        border-color: #cb49df;
+      }
+    }
+  }
+
+  .slide + .slide {
+    margin-top: 5px;
+  }
+
+  .arrow {
+    left: 50%;
+    position: absolute;
+    color: $gray;
+    font-size: 40px;
+    font-weight: 900;
+    cursor: pointer;
+    user-select: none;
+    opacity: 0.5;
+    width: 24px;
+    height: 24px;
+    background-image: url('../../../assets/arrRight.svg');
+    background-size: cover;
+    transition: all ease-out 0.125s;
+
+    &:hover {
+      opacity: 1;
+    }
+
+    @include media-from-desktop-min {
+      width: 35px;
+      height: 35px;
+    }
+  }
+
+  .arrow-top {
+    transform: translateX(-50%) rotate(-90deg);
+    top: -30px;
+
+    @include media-from-desktop-min {
+      top: -40px;
+    }
+  }
+
+  .arrow-bottom {
+    transform: translateX(-50%) rotate(90deg);
+    bottom: -30px;
+
+    @include media-from-desktop-min {
+      bottom: -40px;
+    }
+  }
+}

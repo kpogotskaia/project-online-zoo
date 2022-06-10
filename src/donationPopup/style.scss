@@ -38,7 +38,7 @@
   }
 
   &__wrapper {
-    margin: 100px 20px;
+    margin: 100px 20px 0;
     display: flex;
   }
 
@@ -46,7 +46,7 @@
     visibility: hidden;
 
     @include media-from-tablet-min {
-      margin: -100px -20px;
+      margin: -100px -20px 0;
       visibility: visible;
       min-width: 139px;
       height: auto;
@@ -303,7 +303,7 @@
       font-weight: 900;
       font-size: 18px;
       border-radius: 5px;
-      margin: 40px auto;
+      margin: 40px auto 64px;
       color: #f2f2f2;
       width: 245px;
       height: 55px;
