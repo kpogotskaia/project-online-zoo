@@ -114,7 +114,9 @@ export const DonationPopup = (props) => {
                   <label className={classNames('input-section')}>
                     <span className={classNames('input-section__message')}>Name</span>
                     {nameError &&
-                      <span className={classNames('input-section__error-message')}>
+                      <span className={classNames('input-section__error-message', {
+                        'valid-input': formValid
+                      })}>
                         {nameError}
                       </span>
                     }
