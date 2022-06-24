@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/project-online-zoo/static/css/main.58a59efc.chunk.css",
-    "main.js": "/project-online-zoo/static/js/main.a3f070a6.chunk.js",
-    "main.js.map": "/project-online-zoo/static/js/main.a3f070a6.chunk.js.map",
+    "main.css": "/project-online-zoo/static/css/main.42b83708.chunk.css",
+    "main.js": "/project-online-zoo/static/js/main.730033bf.chunk.js",
+    "main.js.map": "/project-online-zoo/static/js/main.730033bf.chunk.js.map",
     "runtime-main.js": "/project-online-zoo/static/js/runtime-main.c2e1fe3e.js",
     "runtime-main.js.map": "/project-online-zoo/static/js/runtime-main.c2e1fe3e.js.map",
-    "static/js/2.71dcd8e3.chunk.js": "/project-online-zoo/static/js/2.71dcd8e3.chunk.js",
-    "static/js/2.71dcd8e3.chunk.js.map": "/project-online-zoo/static/js/2.71dcd8e3.chunk.js.map",
+    "static/js/2.bdedae19.chunk.js": "/project-online-zoo/static/js/2.bdedae19.chunk.js",
+    "static/js/2.bdedae19.chunk.js.map": "/project-online-zoo/static/js/2.bdedae19.chunk.js.map",
     "static/js/3.401d759d.chunk.js": "/project-online-zoo/static/js/3.401d759d.chunk.js",
     "static/js/3.401d759d.chunk.js.map": "/project-online-zoo/static/js/3.401d759d.chunk.js.map",
     "index.html": "/project-online-zoo/index.html",
-    "static/css/main.58a59efc.chunk.css.map": "/project-online-zoo/static/css/main.58a59efc.chunk.css.map",
-    "static/js/2.71dcd8e3.chunk.js.LICENSE.txt": "/project-online-zoo/static/js/2.71dcd8e3.chunk.js.LICENSE.txt",
+    "static/css/main.42b83708.chunk.css.map": "/project-online-zoo/static/css/main.42b83708.chunk.css.map",
+    "static/js/2.bdedae19.chunk.js.LICENSE.txt": "/project-online-zoo/static/js/2.bdedae19.chunk.js.LICENSE.txt",
     "static/media/anm.afce69bd.png": "/project-online-zoo/static/media/anm.afce69bd.png",
-    "static/media/style.module.scss": "/project-online-zoo/static/media/wild.2fe7bfc8.jpg",
+    "static/media/CountryZooLeftAside.module.scss": "/project-online-zoo/static/media/arrRight.18aa13bd.svg",
     "static/media/cat.583fc01b.png": "/project-online-zoo/static/media/cat.583fc01b.png",
     "static/media/croc.b524878a.png": "/project-online-zoo/static/media/croc.b524878a.png",
     "static/media/croc.b9a27b18.png": "/project-online-zoo/static/media/croc.b9a27b18.png",
@@ -23,6 +23,7 @@
     "static/media/eleph.3a665358.png": "/project-online-zoo/static/media/eleph.3a665358.png",
     "static/media/eleph.54752255.png": "/project-online-zoo/static/media/eleph.54752255.png",
     "static/media/fox.111d7a37.png": "/project-online-zoo/static/media/fox.111d7a37.png",
+    "static/media/gorilla.9a94653e.png": "/project-online-zoo/static/media/gorilla.9a94653e.png",
     "static/media/kro.d0e4db60.png": "/project-online-zoo/static/media/kro.d0e4db60.png",
     "static/media/leo.3c6c91be.png": "/project-online-zoo/static/media/leo.3c6c91be.png",
     "static/media/monkey.372148ad.png": "/project-online-zoo/static/media/monkey.372148ad.png",
@@ -33,16 +34,17 @@
     "static/media/panda.84fe1c31.png": "/project-online-zoo/static/media/panda.84fe1c31.png",
     "static/media/panda.d0a0a2c7.png": "/project-online-zoo/static/media/panda.d0a0a2c7.png",
     "static/media/panda.e107248b.png": "/project-online-zoo/static/media/panda.e107248b.png",
-    "static/media/DonationPopup.scss": "/project-online-zoo/static/media/popap.136b2e38.png",
+    "static/media/style.scss": "/project-online-zoo/static/media/popap.136b2e38.png",
     "static/media/small-video.348f218e.png": "/project-online-zoo/static/media/small-video.348f218e.png",
     "static/media/tiger.bbd821c6.png": "/project-online-zoo/static/media/tiger.bbd821c6.png",
     "static/media/twomonk.7c0065a7.png": "/project-online-zoo/static/media/twomonk.7c0065a7.png",
+    "static/media/style.module.scss": "/project-online-zoo/static/media/wild.2fe7bfc8.jpg",
     "static/media/zebra.7e3af7f6.png": "/project-online-zoo/static/media/zebra.7e3af7f6.png"
   },
   "entrypoints": [
     "static/js/runtime-main.c2e1fe3e.js",
-    "static/js/2.71dcd8e3.chunk.js",
-    "static/css/main.58a59efc.chunk.css",
-    "static/js/main.a3f070a6.chunk.js"
+    "static/js/2.bdedae19.chunk.js",
+    "static/css/main.42b83708.chunk.css",
+    "static/js/main.730033bf.chunk.js"
   ]
 }
