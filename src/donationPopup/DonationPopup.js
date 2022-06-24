@@ -13,7 +13,7 @@ export const DonationPopup = (props) => {
     props.close(e);
   };
 
-  const [chooseAnimal, setChooseAnimal] = useState('panda');
+  const [setChooseAnimal] = useState('panda');
   const [toDonate, setToDonate] = useState('');
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
@@ -56,8 +56,6 @@ export const DonationPopup = (props) => {
     cvcError
   ]);
 
-  const blurHandler = (e) => {
-  }
 
   return (
     <>
